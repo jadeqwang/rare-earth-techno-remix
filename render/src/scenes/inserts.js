@@ -144,6 +144,52 @@ export const journey = {
 
 // ------------------------------------------------------------------ SPLIT: two worlds side by side
 let splitMat = null;
+// CONTACT: both signals meet halfway. Earth's beam from the left limb, theirs from the right, and a flare
+// where they touch that blooms on every kick (the anime beam-clash, as a handshake).
+export const clash = {
+  async draw(ctx, shot, t, lt) {
+    const e = ctx.engine, A = ctx.audio;
+    const k = clamp(lt / Math.max(0.01, shot.t1 - shot.t0));
+    await SCENES.burst.draw(ctx, { ...shot, p: { stars: true, c1: INK.yellow, c2: INK.pale, center: [960, 540], lines: 1.2 } }, t, lt);
+    const em = earthMaterial(e);
+    setEarth(ctx, { mode: 'light', center: [-330 + 40 * k, 540], radius: 760, lat: 18, lon: -95 + lt * 6, sun: [-0.2, 0.25, -1.0], roll: 0.05 });
+    e.passOver(em, e.rtScene);
+    await SCENES.planet.draw(ctx, { ...shot, p: { mode: 'light', noSky: true, center: [2250 - 40 * k, 540], radius: 760, zoomRate: 0, blink: 1, infra: 0, spin0: 2.0 } }, t, lt);
+    const c = K(ctx).begin(null);
+    c.globalCompositeOperation = 'lighter';
+    const kick = A.kick(t, 0.12);
+    const y = 540, xe = 430 + 40 * k, xz = 1490 - 40 * k;
+    const reach = easeOutCubic(clamp(lt / 0.16));
+    const beam = (x0, x1, rgb) => {
+      c.lineCap = 'round';
+      for (const [w, a] of [[54 + kick * 44, 0.10], [20 + kick * 16, 0.30], [6 + kick * 5, 0.95]]) {
+        c.strokeStyle = `rgba(${rgb},${a})`; c.lineWidth = w;
+        c.beginPath(); c.moveTo(x0, y); c.lineTo(x1, y); c.stroke();
+      }
+    };
+    beam(xe, lerp(xe, 960, reach), '156,203,255');
+    beam(xz, lerp(xz, 960, reach), '255,72,176');
+    if (reach >= 1) {
+      const R = 70 + kick * 150;
+      const g = c.createRadialGradient(960, y, 0, 960, y, R * 2.2);
+      g.addColorStop(0, 'rgba(255,255,255,1)'); g.addColorStop(0.18, 'rgba(255,240,170,0.95)');
+      g.addColorStop(0.5, 'rgba(255,225,77,0.35)'); g.addColorStop(1, 'rgba(255,225,77,0)');
+      c.fillStyle = g; c.fillRect(960 - R * 2.2, y - R * 2.2, R * 4.4, R * 4.4);
+      // anamorphic streaks
+      c.save(); c.translate(960, y);
+      c.fillStyle = `rgba(255,236,150,${0.55 + 0.4 * kick})`; c.beginPath(); c.ellipse(0, 0, 700 + kick * 520, 3 + kick * 3, 0, 0, 7); c.fill();
+      c.fillStyle = `rgba(255,255,255,${0.4 + 0.4 * kick})`; c.beginPath(); c.ellipse(0, 0, 4 + kick * 3, 180 + kick * 160, 0, 0, 7); c.fill();
+      c.restore();
+    }
+    c.globalCompositeOperation = 'source-over';
+    font(c, 'JetBrainsMono', 26, 600); c.fillStyle = css(INK.paper, 0.9);
+    c.fillText('SOL III', 90, 1000);
+    const lab = 'ETZ-1715 b'; c.fillText(lab, 1830 - c.measureText(lab).width, 1000);
+    const mid = 'SIGNAL LOCK  ·  BOTH WAYS'; c.fillStyle = css(INK.yellow, 0.95); c.fillText(mid, 960 - c.measureText(mid).width / 2, 1000);
+    K(ctx).end({ over: true });
+  },
+};
+
 export const split = {
   init(ctx) {
     splitMat = ctx.engine.shader(/* glsl */`

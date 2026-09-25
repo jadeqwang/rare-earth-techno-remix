@@ -87,8 +87,8 @@ export function buildTimeline(A) {
 
   add({ id: 'pullback', t0: 12.73, t1: 14.81, scene: 'roto', p: R('sd04'), look: PRINT,
     type: (ty, t) => {
-      ty.keyword(t, 'A RARE EARTH', W(4, 0), { size: 200, y: 560, plate: css(INK.orange, 0.9) });
-      ty.keyword(t, 'LOOKING FOR', W(4, 3), { size: 90, y: 690, stretch: 'normal' });
+      ty.keyword(t, 'A RARE EARTH', W(4, 0), { size: 200, y: 215, plate: css(INK.orange, 0.9) });
+      ty.keyword(t, 'LOOKING FOR', W(4, 3), { size: 90, y: 335, stretch: 'normal' });
     } });
 
   add({ id: 'zoomout', t0: 14.81, t1: 18.04, scene: 'zoom', p: { from: 14.81, to: 18.04 }, look: PRINT,
@@ -333,8 +333,9 @@ export function buildTimeline(A) {
   const fb = A.beats.filter((b) => b >= 112.0 && b < 123.5);
   const B2 = (i) => fb[i];                     // i-th beat of the final drop (0 = 112.02)
   const galaxyBG = { scene: 'galaxy', p: { mode: 'light', view: 'bg' } };
-  add({ id: 'contact', t0: 112.02, t1: B2(2), scene: 'roto', p: R('sd17', { mode: 'light', bg: burstBG({ c1: INK.yellow, c2: INK.pale }) }),
-    look: (t) => ({ ...LIGHT, invert: t < 112.1 ? 1 : 0, flash: pulse(t - 112.02, 0.08) }) });
+  add({ id: 'contact', t0: 112.02, t1: B2(2), scene: 'clash', p: {},
+    look: (t) => ({ ...LIGHT, invert: t < 112.1 ? 1 : 0, flash: pulse(t - 112.02, 0.08) }),
+    type: (ty, t) => ty.decode(t, 'CONTACT', 112.08, { size: 210, y: 330, dur: 0.32, stagger: 0.02, latinColor: YELLOW }) });
   add({ id: 'dance_split', t0: B2(2), t1: B2(4), scene: 'split', p: { left: { scene: 'array', p: { mode: 'light', choreo: 'dance', cam: 'low' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'dance' } } }, look: LIGHT3D });
   add({ id: 'dance2', t0: B2(4), t1: B2(6), scene: 'roto', p: R('sd17', { mode: 'light', bg: burstBG({ c1: INK.mint, c2: INK.yellow }) }), look: LIGHT });
   add({ id: 'lightsticks', t0: B2(6), t1: B2(8), scene: 'earth', p: { mode: 'light', blink: 2, view: 'night', blinkT0: B2(6) }, look: LIGHT });

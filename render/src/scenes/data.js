@@ -258,29 +258,53 @@ export const mutual = {
     const A = ctx.audio;
     const k = clamp((t - p.t0) / (p.t1 - p.t0));
     const c = K().begin('#04050b');
-    const merge = smooth(range(k, 0.55, 0.85));
+    const merge = smooth(range(k, 0.6, 0.85));
+    const R = 190, pr = 44, cy = 430;
     const sides = [
-      { cx: lerp(520, 960, merge), col: 'rgba(255,140,110,1)', planet: css(INK.pink), label: 'ETZ-1715 b  ·  seen from Earth', glyph: false },
-      { cx: lerp(1400, 960, merge), col: 'rgba(255,225,140,1)', planet: css(INK.pale), label: 'EARTH  ·  seen from ETZ-1715', glyph: true },
+      { cx: lerp(500, 960, merge), col: 'rgba(255,140,110,1)', planet: css(INK.pink), rgb: '255,72,176', label: 'ETZ-1715 b  ·  SEEN FROM EARTH', ph0: 0.0 },
+      { cx: lerp(1420, 960, merge), col: 'rgba(255,225,140,1)', planet: css(INK.pale), rgb: '156,203,255', glyphs: 'EARTH SEEN FROM HOME', ph0: 0.05 },
     ];
+    // the line of sight between the two systems
+    if (merge < 0.99) {
+      const a = 1 - merge;
+      c.setLineDash([10, 12]); c.strokeStyle = `rgba(255,225,77,${0.65 * a})`; c.lineWidth = 2;
+      c.beginPath(); c.moveTo(sides[0].cx + R + 40, cy); c.lineTo(sides[1].cx - R - 40, cy); c.stroke(); c.setLineDash([]);
+      font(c, 'JetBrainsMono', 24, 600); c.fillStyle = `rgba(255,225,77,${0.95 * a})`;
+      const s217 = '217 LY'; c.fillText(s217, (sides[0].cx + sides[1].cx) / 2 - c.measureText(s217).width / 2, cy - 16);
+    }
     for (const [i, s] of sides.entries()) {
-      c.globalAlpha = 1 - merge * (i === 1 ? 0.5 : 0);
-      drawStarDisk(c, s.cx, 400, 210, s.col, '#04050b', true);
-      const pk = easeInOutCubic(range(k, 0.05 + i * 0.03, 0.9));
-      c.fillStyle = '#04050b'; c.beginPath(); c.arc(lerp(s.cx - 260, s.cx + 260, pk), 430, 34, 0, 7); c.fill();
-      c.strokeStyle = s.planet; c.lineWidth = 3; c.beginPath(); c.arc(lerp(s.cx - 260, s.cx + 260, pk), 430, 34, 0, 7); c.stroke();
-      font(c, 'JetBrainsMono', 26, 600); c.fillStyle = s.planet;
-      if (s.glyph) { let xx = s.cx - 200; for (const ch of 'EARTH SEEN FROM HOME') { drawGlyph(c, ch, xx, 692, 28, s.planet, 0.09); xx += 22; } }
-      else c.fillText(s.label, s.cx - c.measureText(s.label).width / 2, 692);
+      const alpha = 1 - merge * (i === 1 ? 0.5 : 0);
+      c.globalAlpha = alpha;
+      drawStarDisk(c, s.cx, cy, R, s.col, '#04050b', true);
+      // each world watches the other cross its star (planet path offset a little below the equator)
+      const xOf = (u) => lerp(s.cx - R - pr - 30, s.cx + R + pr + 30, easeInOutCubic(range(u, 0.05 + s.ph0, 0.6 + s.ph0)));
+      const px = xOf(k), py = cy + 34;
+      c.fillStyle = '#04050b'; c.beginPath(); c.arc(px, py, pr, 0, 7); c.fill();
+      c.strokeStyle = s.planet; c.lineWidth = 3; c.beginPath(); c.arc(px, py, pr, 0, 7); c.stroke();
+      c.globalAlpha = alpha * (1 - merge);
+      if (s.glyphs) { let xx = s.cx - 200; for (const ch of s.glyphs) { drawGlyph(c, ch, xx, 692, 28, s.planet, 0.09); xx += 22; } }
+      else { font(c, 'JetBrainsMono', 26, 600); c.fillStyle = s.planet; c.fillText(s.label, s.cx - c.measureText(s.label).width / 2, 692); }
+      // honest light curve (flux = 1 - covered area / disc area, depth drawn x6 so the dip reads) in a small panel
+      if (merge < 1) {
+        const x0 = s.cx - 250, w = 500, y0 = 730, h = 110;
+        c.globalAlpha = alpha * Math.pow(1 - merge, 3);
+        c.strokeStyle = `rgba(${s.rgb},0.35)`; c.lineWidth = 1.5; c.strokeRect(x0, y0, w, h);
+        c.strokeStyle = `rgba(${s.rgb},0.95)`; c.lineWidth = 4; c.beginPath();
+        const N = 120, area = Math.PI * R * R;
+        for (let j = 0; j <= N; j++) {
+          const u = (j / N) * k;
+          const d = Math.hypot(xOf(u) - s.cx, 34);
+          const f = 1 - 6 * overlap(d, R, pr) / area + (hash1(j * 3.1 + i) - 0.5) * 0.01;
+          const X = x0 + (j / N) * w * k, Y = y0 + 18 + (1 - f) * (h - 30);
+          if (j === 0) c.moveTo(X, Y); else c.lineTo(X, Y);
+        }
+        c.stroke();
+      }
     }
     c.globalAlpha = 1;
-    // light curves: two dips that slide together, then become one heartbeat line pulsing on the kicks
-    const y = 820;
-    if (merge < 1) {
-      lightCurve(c, lerp(160, 560, merge), y, 800, 18, clamp(k * 1.4), 0.04, 'rgba(255,72,176,0.95)', 4);
-      lightCurve(c, lerp(960, 560, merge), y + 6, 800, 18, clamp(k * 1.4), 0.04, 'rgba(156,203,255,0.95)', 4);
-    }
+    // then the two dips become one heartbeat, pulsing on the kicks
     if (merge > 0) {
+      const y = 820;
       c.globalAlpha = merge;
       c.strokeStyle = css(INK.yellow); c.lineWidth = 5; c.beginPath();
       for (let x = 160; x <= 1760; x += 4) {
@@ -294,3 +318,4 @@ export const mutual = {
     K().end({});
   },
 };
+

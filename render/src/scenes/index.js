@@ -9,8 +9,8 @@ import { waterfall, wow, star, transit, mutual } from './data.js';
 import { planet, otherworld } from './etz.js';
 import { petals } from './petals.js';
 import { galaxy } from './galaxy.js';
-import { drake, brutal, journey, split, endcard } from './inserts.js';
+import { drake, brutal, journey, split, endcard, clash } from './inserts.js';
 import { burst } from './burst.js';
 
 export const SCENES = { sky, roto, solid, array, earth, dot, zoom, waterfall, wow, star, transit, mutual, planet, otherworld,
-  petals, galaxy, drake, brutal, journey, split, endcard, burst };
+  petals, galaxy, drake, brutal, journey, split, endcard, burst, clash };

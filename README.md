@@ -5,6 +5,8 @@ life, written in 2011 for a SETI event.
 
 **▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09)
 
+![Twelve frames from the video](docs/storyboard.jpg)
+
 Every frame you see is drawn by JavaScript: WebGL shaders and canvas type, rendered frame by frame
 in headless Chromium. AI video generation (Seedance 2.5) was used only as rotoscope reference for
 DOT's performances and the other world's plates. The generated footage itself never appears. The
