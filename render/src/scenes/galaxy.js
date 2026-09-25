@@ -3,6 +3,8 @@
 import * as THREE from 'three';
 import { rng, clamp, smooth, easeInOutCubic, range, lerp, INK } from '../util.js';
 import { skyMaterial, setSky } from './sky.js';
+import { C2D } from '../c2d.js';
+let c2d = null, edgeList = [];
 
 let scene, camera, points, links, linkMat, starMat, earthPos, civ = [];
 const N = 42000;
@@ -56,8 +58,10 @@ function build() {
     for (const [b, d] of near) if (a < b) edges.push([a, b, d]);
   }
   const dist = new Array(civ.length).fill(Infinity); dist[0] = 0;
+  edgeList = edges;
   for (let it = 0; it < 60; it++) for (const [a, b, d] of edges) { dist[b] = Math.min(dist[b], dist[a] + d); dist[a] = Math.min(dist[a], dist[b] + d); }
   const maxD = Math.max(...dist.filter(isFinite));
+  for (const e of edges) e.push(Math.min(dist[e[0]], dist[e[1]]) / maxD);
   const lp = [], lr = [];
   for (const [a, b] of edges) { lp.push(civ[a].x, civ[a].y, civ[a].z, civ[b].x, civ[b].y, civ[b].z); const r = Math.min(dist[a], dist[b]) / maxD; lr.push(r, r); }
   const lg = new THREE.BufferGeometry();
@@ -102,7 +106,7 @@ export const galaxy = {
       camera.lookAt(0, -40, 0);
       prog = view === 'title' ? 0 : 0.0;
     }
-    links.visible = view === 'web';
+    links.visible = false; // drawn as glowing 2D strokes below
     linkMat.uniforms.prog.value = prog;
     starMat.uniforms.bright.value = 1 + ctx.audio.kick(t, 0.2) * 0.8;
     camera.aspect = 16 / 9; camera.updateProjectionMatrix();
@@ -112,5 +116,33 @@ export const galaxy = {
     r.clearDepth();
     r.render(scene, camera);
     r.autoClear = true;
+    if (view === 'web') {
+      if (!c2d) c2d = new C2D(e);
+      const c = c2d.begin(null);
+      c.globalCompositeOperation = 'lighter';
+      const proj = (v) => { const q = v.clone().project(camera); return [(q.x * 0.5 + 0.5) * 1920, (1 - (q.y * 0.5 + 0.5)) * 1080, q.z]; };
+      const P = civ.map(proj);
+      const kick = ctx.audio.kick(t, 0.15);
+      for (const pass of [0, 1]) {         // wide soft glow, then a crisp core
+        for (const [a, b, , rv] of edgeList) {
+          if (prog < rv) continue;
+          const pa = P[a], pb = P[b];
+          if (pa[2] > 1 || pb[2] > 1) continue;
+          const head = Math.exp(-Math.pow((prog - rv) * 18, 2));
+          const warm = head > 0.3;
+          const al = pass === 0 ? 0.16 + 0.1 * kick : (warm ? 0.6 + 0.4 * head : 0.62 + 0.3 * kick);
+          c.strokeStyle = warm ? `rgba(255,236,150,${al})` : `rgba(63,224,197,${al})`;
+          c.lineWidth = pass === 0 ? 7 + head * 6 : 2.0 + head * 2.5;
+          c.beginPath(); c.moveTo(pa[0], pa[1]); c.lineTo(pb[0], pb[1]); c.stroke();
+        }
+      }
+      for (let i = 0; i < P.length; i++) {
+        const lit = edgeList.some(([a, b, , rv]) => (a === i || b === i) && prog >= rv);
+        if (!lit || P[i][2] > 1) continue;
+        c.fillStyle = i === 0 ? 'rgba(156,203,255,1)' : 'rgba(255,245,210,0.9)';
+        c.beginPath(); c.arc(P[i][0], P[i][1], i === 0 ? 7 + kick * 5 : 3.2 + kick * 2, 0, 7); c.fill();
+      }
+      c2d.end({ over: true });
+    }
   },
 };

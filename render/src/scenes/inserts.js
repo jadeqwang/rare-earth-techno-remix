@@ -17,7 +17,7 @@ export const drake = {
     const c = K(ctx).begin(css(INK.paper));
     const terms = ['N', '=', 'R*', '·', 'fₚ', '·', 'nₑ', '·', 'fₗ', '·', 'fᵢ', '·', 'f꜀', '·', 'L'];
     const b = A.beat(t);
-    font(c, 'NotoSerifDisplay', 150, 700, 'semi-condensed', 'italic');
+    font(c, 'NotoSerifDisplay', 196, 700, 'semi-condensed', 'italic');
     const widths = terms.map((s) => c.measureText(s + ' ').width);
     let x = 960 - widths.reduce((a, b2) => a + b2, 0) / 2;
     const shown = Math.min(terms.length, 3 + Math.floor((t - shot.t0) / (b.period * 0.5)));
@@ -25,22 +25,22 @@ export const drake = {
       if (i < shown) {
         const isL = i === terms.length - 1;
         c.fillStyle = isL ? css(INK.red) : css(INK.ink);
-        c.fillText(terms[i], x, 520);
+        c.fillText(terms[i], x, 560);
         if (isL) {
           // L = the lifetime of a transmitting civilization; circle it, flicker on the snare
           const f = 0.6 + 0.4 * (A.snare(t) > 0.3 ? 1 : 0);
           c.strokeStyle = css(INK.red, f); c.lineWidth = 7;
-          c.beginPath(); c.ellipse(x + 42, 470, 95, 110, -0.1, 0, Math.PI * 2 * clamp((t - shot.t0) / 0.8)); c.stroke();
+          c.beginPath(); c.ellipse(x + 55, 495, 118, 140, -0.1, 0, Math.PI * 2 * clamp((t - shot.t0) / 0.8)); c.stroke();
           font(c, 'JetBrainsMono', 30, 700);
-          c.fillStyle = css(INK.red); c.fillText('L = ?', x - 10, 650);
-          font(c, 'NotoSerifDisplay', 150, 700, 'semi-condensed', 'italic');
+          c.fillStyle = css(INK.red); c.fillText('L = ?', x - 10, 700);
+          font(c, 'NotoSerifDisplay', 196, 700, 'semi-condensed', 'italic');
         }
       }
       x += widths[i];
     }
     font(c, 'JetBrainsMono', 24, 500);
     c.fillStyle = css(INK.ink, 0.8);
-    c.fillText('L — how long a civilization keeps transmitting before it goes quiet', 480, 740);
+    c.fillText('L — how long a civilization keeps transmitting before it goes quiet', 480, 790);
     // hard red flicker on "wars"
     const wars = A.W(11, 1);
     if (t > wars && t < wars + 0.5 && Math.floor((t - wars) * 16) % 2 === 0) { c.fillStyle = css(INK.red, 0.85); c.fillRect(0, 0, 1920, 1080); }

@@ -290,6 +290,7 @@ export class TypeLayer {
     c.globalAlpha = o.alpha ?? 0.9;
     c.fillStyle = o.color ?? css(INK.paper);
     if (o.align === 'right') c.fillText(str, x - c.measureText(str).width, y);
+    else if (o.align === 'center') c.fillText(str, x - c.measureText(str).width / 2, y);
     else c.fillText(str, x, y);
     c.globalAlpha = 1;
   }

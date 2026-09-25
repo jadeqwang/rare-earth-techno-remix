@@ -125,18 +125,20 @@ function mkWorld(engine) {
       // tower (their signal tower): a slender white spire rising out of the cloud sea, a halo ring of lights near the top
       vec2 tp = px - vec2(820., 0.);
       float hN = clamp(tp.y / 980., 0., 1.);
-      float w = mix(64., 12., pow(hN, .7));
+      float w = mix(86., 12., pow(hN, .65));
       float spire = step(abs(tp.x), w) * step(tp.y, 930.) + step(abs(tp.x), 3.) * step(tp.y, 1040.) * step(930., tp.y);
       float seam = step(abs(tp.x), 1.2) * step(tp.y, 900.);
-      float ringY = 790.;
-      vec2 rq = (px - vec2(820., ringY)) / vec2(150., 30.);
-      float ringD = abs(length(rq) - 1.) * 30.;
-      float halo = 1. - smoothstep(3., 5., ringD);
+      float ringY = 800.;
+      vec2 rq = (px - vec2(820., ringY)) / vec2(235., 46.);
+      float ringD = abs(length(rq) - 1.) * 46.;
+      float halo = 1. - smoothstep(4., 7., ringD);
+      vec2 rq2 = (px - vec2(820., 560.)) / vec2(140., 26.);
+      halo = max(halo, (1. - smoothstep(2.5, 4.5, abs(length(rq2) - 1.) * 26.)) * .9);
       float haloFront = step(0., -rq.y + .05);      // front half of the ring draws over the spire
       float lights = 0.;
-      for (int k = 0; k < 14; k++) {
-        float a = float(k) / 14. * 6.2832 + time * .6;
-        vec2 lp = vec2(820. + cos(a) * 150., ringY + sin(a) * 30.);
+      for (int k = 0; k < 20; k++) {
+        float a = float(k) / 20. * 6.2832 + time * .6;
+        vec2 lp = vec2(820. + cos(a) * 235., ringY + sin(a) * 46.);
         float on = .35 + .65 * step(.45, fract(float(k) * .37 + time * 1.7)) + kick * 1.8;
         lights += on * exp(-length(px - lp) / 6.5);
       }
@@ -170,6 +172,10 @@ function mkWorld(engine) {
         c = mix(c, vec3(.05, .03, .09), tower);
         c += pink * tower * .12 + mint * ringBar * .25;
         c += mint * (lights * 2. + wins * 1.5);
+        if (view < .5 || view > 2.5) {
+          float beam = exp(-abs(px.x - 820.) / (3. + kick * 6.)) * step(1040., px.y) * (.4 + 1.2 * kick);
+          c += mint * beam;
+        }
         c += vec3(.61, .8, 1.) * solv * 2.;
         col = c;
       }
@@ -214,7 +220,7 @@ export const otherworld = {
       const light = p.mode === 'light';
       return SCENES.roto.draw(ctx, { ...shot, p: { clip: 'se04', start: shot.t0 - (p.clipOffset ?? 0), lag: 0, mode: p.mode || 'print',
         inkA: INK.violet, inkB: INK.pink, inkC: INK.mint, paper: light ? [0.02, 0.01, 0.04] : INK.paper,
-        glow: INK.pink, glow2: INK.mint, cell: 6, twos: true } }, t, lt);
+        glow: INK.pink, glow2: INK.mint, cell: 6, twos: true, envFill: light ? 0.9 : 0 } }, t, lt);
     }
     const u = worldMat.uniforms;
     u.time.value = t; u.kick.value = ctx.audio.kick(t, 0.15);

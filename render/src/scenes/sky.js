@@ -58,10 +58,10 @@ export function skyMaterial(engine) {
       }
       // milky way band
       vec2 bp = rot(bandAngle) * (p * .0012);
-      float bd = exp(-pow(bp.y * 3.2 + (fbm(bp * 3.) - .5) * .9, 2.));
-      float dust = fbm(bp * 7. + 4.);
+      float bdx = bp.y * 3.2 + (fbm3(bp * 3.) - .5) * .9; float bd = exp(-bdx * bdx);
+      float dust = fbm3(bp * 7. + 4.);
       float mw = band * bd * (.55 + .6 * dust);
-      float lanes = smoothstep(.55, .75, fbm(bp * 11. + 9.)) * bd * band;
+      float lanes = smoothstep(.55, .75, fbm3(bp * 11. + 9.)) * bd * band;
       // horizon glow
       float hz = horizon < 0. ? 0. : horizonAmt * exp(-max(0., vUv.y - horizon) * 7.) * smoothstep(horizon - .25, horizon, vUv.y + .2);
       vec3 col;

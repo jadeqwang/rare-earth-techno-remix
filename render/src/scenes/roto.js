@@ -45,6 +45,7 @@ export const roto = {
     u.alphaOut.value = keyed && p.bg ? 1 : 0;
     u.lineGain.value = p.lineGain ?? 1.3;
     u.toneGamma.value = p.toneGamma ?? 1.0;
+    u.envFill.value = p.envFill ?? 0;
     if (keyed && p.bg) e.passOver(mat, e.rtScene); else e.pass(mat, e.rtScene);
   },
 };

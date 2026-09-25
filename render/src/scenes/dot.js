@@ -4,7 +4,31 @@ import * as THREE from 'three';
 import { earthMaterial, setEarth } from './earth.js';
 import { INK, clamp, smooth, range, easeInOutCubic, lerp } from '../util.js';
 
-let mat = null;
+let mat = null, moonMat = null;
+
+function moonMaterial(engine) {
+  if (moonMat) return moonMat;
+  moonMat = engine.shader(/* glsl */`
+    uniform vec2 res; uniform float S; uniform vec2 c; uniform float R; uniform float cell;
+    void main(){
+      vec2 px = vUv * res / S; vec2 q = (px - c) / R; float r2 = dot(q, q);
+      if (r2 > 1.) { fragColor = vec4(0.); return; }
+      vec3 n = vec3(q, sqrt(1. - r2));
+      float lam = clamp(dot(n, normalize(vec3(-.7, .45, .55))), 0., 1.);
+      // craters: cellular dimples
+      vec2 g = q * 9.; vec2 id = floor(g); float cr = 0.;
+      for (int i = -1; i <= 1; i++) for (int j = -1; j <= 1; j++) { vec2 o = vec2(i, j); vec2 h = hash22(id + o); float d = length(fract(g) - o - h); cr += smoothstep(.35 * h.x + .1, .0, d) * .5; }
+      float mare = smoothstep(.5, .7, fbm3(q * 3. + 7.));
+      float tone = clamp(lam * (1. - mare * .35) - cr * .25 * lam + .05, 0., 1.);
+      vec3 paperC = vec3(.953, .937, .902);
+      vec3 col = overprint(paperC, vec3(.043,.043,.078), halftone(px, 1. - tone, cell, .26));
+      float rim = smoothstep(.97, 1., sqrt(r2));
+      col = mix(col, vec3(.043,.043,.078), rim);
+      fragColor = vec4(col, 1.);
+    }`, { res: { value: new THREE.Vector2(engine.W, engine.H) }, S: { value: engine.S }, c: { value: new THREE.Vector2() }, R: { value: 1000 }, cell: { value: 5 } });
+  moonMat.transparent = true;
+  return moonMat;
+}
 
 function dotMaterial(engine) {
   if (mat) return mat;
@@ -48,7 +72,7 @@ function dotMaterial(engine) {
       fragColor = vec4(col, 1.);
     }`, {
     res: { value: new THREE.Vector2(engine.W, engine.H) }, S: { value: engine.S }, time: { value: 0 }, kick: { value: 0 },
-    dotPos: { value: new THREE.Vector2(1020, 560) }, dotR: { value: 3.5 }, bands: { value: 1 }, ping: { value: 0 },
+    dotPos: { value: new THREE.Vector2(1020, 540) }, dotR: { value: 3.5 }, bands: { value: 1 }, ping: { value: 0 },
     zoom: { value: 1 }, zc: { value: new THREE.Vector2(1020, 560) },
     inkA: { value: new THREE.Color(...INK.orange) }, inkB: { value: new THREE.Color(0.95, 0.75, 0.55) }, inkC: { value: new THREE.Color(...INK.pale) },
     dotC: { value: new THREE.Color(...INK.pale) }, mode: { value: 0 },
@@ -60,12 +84,12 @@ export function drawDot(ctx, p) {
   const m = dotMaterial(ctx.engine);
   const u = m.uniforms;
   u.time.value = ctx.t; u.kick.value = ctx.audio.kick(ctx.t);
-  u.dotPos.value.set(...(p.dotPos ?? [1020, 560]));
+  u.dotPos.value.set(...(p.dotPos ?? [1020, 540]));
   u.dotR.value = p.dotR ?? 3.5;
   u.bands.value = p.bands ?? 1;
   u.ping.value = p.ping ?? 0;
   u.zoom.value = p.zoom ?? 1;
-  u.zc.value.set(...(p.dotPos ?? [1020, 560]));
+  u.zc.value.set(...(p.dotPos ?? [1020, 540]));
   u.mode.value = p.mode === 'light' ? 1 : 0;
   ctx.engine.pass(m, ctx.engine.rtScene);
 }
@@ -90,9 +114,13 @@ export const zoom = {
     const k = clamp((t - from) / (to - from));
     // radius falls exponentially: 5200 px (continent-scale) -> 3.5 px (a dot)
     const r = Math.exp(lerp(Math.log(5200), Math.log(3.5), easeInOutCubic(Math.min(1, k * 1.12))));
-    const dotPos = [lerp(960, 1020, smooth(range(k, 0.3, 0.9))), lerp(540, 560, smooth(range(k, 0.3, 0.9)))];
+    const dotPos = [lerp(960, 1020, smooth(range(k, 0.3, 0.9))), 540];
     const bands = smooth(range(k, 0.35, 0.85));
     drawDot(ctx, { dotPos, dotR: Math.max(3.5, 0), bands, mode: 'print' });
+    // EARTHSET (after Artemis II, April 2026): the lunar limb rises in front as we pull away, Earth sets behind it
+    const mk = range(k, 0.22, 0.62);
+    const moonUp = Math.sin(Math.PI * mk);                     // rises then falls away
+    const moonOn = mk > 0 && mk < 1;
     if (r > 4) {
       const em = earthMaterial(ctx.engine);
       // keep SF at the center while zoomed in, the globe rotates slightly as we pull away
@@ -100,6 +128,14 @@ export const zoom = {
         lon: -122.4 + (1 - k) * 0, lat: 37.8 - k * 12, sun: [0.95, 0.25, -0.2], cell: r > 200 ? 5 : 3, lightsGain: 3.2 });
       em.uniforms.center.value.set(dotPos[0], dotPos[1]);
       ctx.engine.passOver(em, ctx.engine.rtScene);
+    }
+    if (moonOn) {
+      const m = moonMaterial(ctx.engine);
+      const R = 2600;
+      // shader space is y-up: the limb rises from the bottom edge
+      m.uniforms.c.value.set(960 + (mk - 0.5) * 500, 150 + 380 * moonUp - R);
+      m.uniforms.R.value = R;
+      ctx.engine.passOver(m, ctx.engine.rtScene);
     }
   },
 };

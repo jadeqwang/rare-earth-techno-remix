@@ -33,10 +33,12 @@ async function shoot(page, t, file) {
 }
 
 const server = await serve(PORT);
-const browser = await chromium.launch({
+const launch = () => chromium.launch({
   executablePath: CHROME,
   args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--disable-web-security'],
 });
+const browser = await launch();
+const extraBrowsers = [];
 
 try {
   if (args.stills) {
@@ -56,7 +58,10 @@ try {
     const frameDir = args.framedir || `/tmp/work/frames_${Date.now()}`;
     fs.mkdirSync(frameDir, { recursive: true });
     const n = Math.round((to - from) * FPS);
-    const pages = await Promise.all(Array.from({ length: JOBS }, () => openPage(browser)));
+    // one browser process per job: SwiftShader rasterizes in the GPU process, so pages in one browser contend
+    const browsers = [browser];
+    for (let j = 1; j < JOBS; j++) { const b = await launch(); browsers.push(b); extraBrowsers.push(b); }
+    const pages = await Promise.all(browsers.map((b) => openPage(b)));
     const t0 = Date.now();
     let done = 0;
     await Promise.all(pages.map(async (page, j) => {
@@ -79,5 +84,6 @@ try {
   }
 } finally {
   await browser.close();
+  for (const b of extraBrowsers) await b.close();
   server.close();
 }

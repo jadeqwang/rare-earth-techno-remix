@@ -78,6 +78,7 @@ export class Engine {
 
     this.materials = {};
     this._mkPost();
+    this._bakePaper();
   }
 
   // Create a fullscreen shader material (glsl3)
@@ -150,9 +151,11 @@ export class Engine {
       uniform float scan;       // CRT scanline amount
       uniform float ca;         // chromatic aberration (design px)
       uniform float fade;       // 0 = black, 1 = image
-      uniform vec3 paperCol;
+      uniform float zoom;       // global zoom punch
+      uniform float spin;       // tiny roll
+      uniform vec3 paperCol; uniform sampler2D tPaper;
       void main(){
-        vec2 uv = vUv + shake * S / res;
+        vec2 uv = (rot(spin) * ((vUv - .5) * vec2(res.x / res.y, 1.)) / vec2(res.x / res.y, 1.)) / zoom + .5 + shake * S / res;
         vec2 o = vec2(misreg * S) / res;
         vec2 c2 = vec2(ca * S) / res * (uv - .5) * 2.;
         vec3 col;
@@ -166,11 +169,8 @@ export class Engine {
         col = mix(col, ty.rgb, ty.a);
         // paper stock: fibres + mottling (multiplied, strongest in the light areas)
         if (paper > 0.) {
-          vec2 px = vUv * res / S;
-          float fib = fbm(px * vec2(.018, .06)) * .6 + vnoise(px * .9) * .4;
-          float mott = fbm(px * .004 + 3.);
-          vec3 stock = paperCol * (0.93 + .07 * fib) * (0.96 + .06 * mott);
-          col = mix(col, col * stock / max(paperCol, vec3(.001)), paper * .9);
+          float st = texture(tPaper, vUv).r;          // baked fibres + mottling (0.89..1)
+          col = mix(col, col * st, paper * .9);
         }
         // grain
         float g = hash12(vUv * res + fract(time * 13.7) * 1000.) - .5;
@@ -195,8 +195,23 @@ export class Engine {
       paper: { value: 0 }, grain: { value: 0.05 }, bloom: { value: 0 }, misreg: { value: 0 }, flash: { value: 0 },
       invert: { value: 0 }, invertInk: { value: new THREE.Color(0.043, 0.043, 0.078) }, vignette: { value: 0.3 },
       shake: { value: new THREE.Vector2() }, scan: { value: 0 }, ca: { value: 0 }, fade: { value: 1 },
-      paperCol: { value: new THREE.Color(0.953, 0.937, 0.902) },
+      paperCol: { value: new THREE.Color(0.953, 0.937, 0.902) }, zoom: { value: 1 }, spin: { value: 0 }, tPaper: { value: null },
     });
+  }
+
+  _bakePaper() {
+    this.rtPaper = new THREE.WebGLRenderTarget(this.W, this.H, { type: THREE.UnsignedByteType, depthBuffer: false });
+    const m = this.shader(/* glsl */`
+      uniform vec2 res; uniform float S;
+      void main(){
+        vec2 px = vUv * res / S;
+        float fib = fbm(px * vec2(.018, .06)) * .6 + vnoise(px * .9) * .4;
+        float mott = fbm(px * .004 + 3.);
+        float st = (0.93 + .07 * fib) * (0.96 + .06 * mott);
+        fragColor = vec4(vec3(st), 1.);
+      }`, { res: { value: new THREE.Vector2(this.W, this.H) }, S: { value: this.S } });
+    this.pass(m, this.rtPaper);
+    this.matFinal.uniforms.tPaper.value = this.rtPaper.texture;
   }
 
   bloomChain(src, threshold = 0.6) {
@@ -240,6 +255,8 @@ export class Engine {
     u.scan.value = post.scan || 0;
     u.ca.value = post.ca || 0;
     u.fade.value = post.fade ?? 1;
+    u.zoom.value = post.zoom ?? 1;
+    u.spin.value = post.spin ?? 0;
     this.pass(this.matFinal, null);
   }
 }

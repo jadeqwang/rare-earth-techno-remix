@@ -3,7 +3,7 @@
 import { Engine } from './engine.js';
 import { AudioMap } from './audio.js';
 import { TypeLayer, loadFonts } from './type.js';
-import { buildTimeline } from './timeline.js';
+import { buildTimeline, buildGlobalPost } from './timeline.js';
 import { SCENES } from './scenes/index.js';
 
 const qs = new URLSearchParams(location.search);
@@ -23,7 +23,7 @@ async function boot() {
   const shots = buildTimeline(audio);
   const ctx = { engine, audio, type, W, H, S: engine.S, state: {} };
   for (const s of Object.values(SCENES)) if (s.init) await s.init(ctx);
-  Object.assign(state, { engine, audio, type, shots, ctx });
+  Object.assign(state, { engine, audio, type, shots, ctx, globalPost: buildGlobalPost(audio) });
   window.__shots = shots.map((s) => ({ id: s.id, t0: s.t0, t1: s.t1, scene: s.scene }));
 }
 
@@ -46,7 +46,15 @@ async function renderAt(t) {
     type.begin();
     if (shot.type) shot.type(type, t, lt, shot, ctx);
     const look = typeof shot.look === 'function' ? shot.look(t, lt, ctx) : (shot.look || {});
-    const post = { ...(state.globalPost ? state.globalPost(t) : {}), ...look };
+    const g = state.globalPost ? state.globalPost(t, shot) : {};
+    const post = { ...look };
+    // global rhythm layer composes with the shot's look (additive where it makes sense)
+    post.zoom = (look.zoom ?? 1) * (g.zoom ?? 1);
+    post.misreg = (look.misreg ?? 0) + (g.misreg ?? 0);
+    post.ca = (look.ca ?? 0) + (g.ca ?? 0);
+    post.flash = look.flash ? look.flash : (g.flash ?? 0);
+    post.invert = Math.max(look.invert ?? 0, g.invert ?? 0);
+    post.shakeX = (look.shakeX ?? 0) + (g.shakeX ?? 0); post.shakeY = (look.shakeY ?? 0) + (g.shakeY ?? 0);
     if (shot.post) Object.assign(post, shot.post(t, lt, ctx, post));
     engine.composite(post, t);
     const hud = document.getElementById('hud');

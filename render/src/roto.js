@@ -70,6 +70,7 @@ export function makeRotoMaterial(engine) {
     uniform float toneGamma;
     uniform vec3 glowCol; uniform vec3 glowCol2;
     uniform float alphaOut;      // write matte into alpha
+    uniform float envFill;       // light mode: luminous areas of environment plates glow in the inks
     void main(){
       vec2 uv = (vUv - frameRect.xy) / frameRect.zw;
       if (uv.x < 0. || uv.y < 0. || uv.x > 1. || uv.y > 1.) { fragColor = vec4(paperC, 0.); return; }
@@ -91,7 +92,7 @@ export function makeRotoMaterial(engine) {
         else hue = (col.r - col.g) / (mx - mn) + 4.;
         hue /= 6.;
       }
-      float orange = smoothstep(.25, .45, sat) * (1. - smoothstep(.07, .13, abs(hue - .06))) * step(.35, mx);
+      float orange = smoothstep(.42, .6, sat) * (1. - smoothstep(.06, .11, abs(hue - .06))) * step(.45, mx);
       float blueish = smoothstep(.2, .4, sat) * (1. - smoothstep(.06, .12, abs(hue - .58)));
       float skin = (1. - smoothstep(.05, .1, abs(hue - .06))) * smoothstep(.08, .2, sat) * (1. - smoothstep(.45, .6, sat)) * step(.55, mx);
       vec3 outc; float a = 1.;
@@ -112,11 +113,16 @@ export function makeRotoMaterial(engine) {
         outc = c; a = m;
       } else if (mode < 1.5) {
         // LIGHT: neon linework + faint fill on dark
-        float fillv = (1. - tone) * .0 + tone * .18;
-        vec3 c = paperC + glowCol2 * fillv * matte * .6;
+        float dotsF = halftone(px, tone * .55, cell * .9, .5);
+        vec3 c = paperC + glowCol * dotsF * matte * .22;
         vec3 lc = mix(glowCol, glowCol2, orange);
         c += lc * line * 1.6;
         c += glowCol * smoothstep(.75, 1., tone) * matte * .35;
+        if (envFill > 0.) {
+          float lum = smoothstep(.18, 1., tone);
+          c += mix(glowCol2, glowCol, smoothstep(.35, .9, tone)) * lum * lum * envFill;
+          c += glowCol * halftone(px, lum * .5, cell, .5) * envFill * .25;
+        }
         outc = c; a = mix(1., matte, 1. - bgKeep);
       } else {
         // DATA: 1-bit ordered dither of tone, in glowCol
@@ -134,6 +140,6 @@ export function makeRotoMaterial(engine) {
     inkLine: { value: new THREE.Color(0.043, 0.043, 0.078) }, paperC: { value: new THREE.Color(0.953, 0.937, 0.902) },
     cell: { value: 7 }, boil: { value: 1.2 }, drawSeed: { value: 0 }, frameRect: { value: new THREE.Vector4(0, 0, 1, 1) },
     bgKeep: { value: 1 }, lineGain: { value: 1.3 }, toneGamma: { value: 1.0 },
-    glowCol: { value: new THREE.Color() }, glowCol2: { value: new THREE.Color() }, alphaOut: { value: 0 },
+    glowCol: { value: new THREE.Color() }, glowCol2: { value: new THREE.Color() }, alphaOut: { value: 0 }, envFill: { value: 0 },
   });
 }

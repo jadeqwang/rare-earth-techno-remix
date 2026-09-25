@@ -191,27 +191,62 @@ function lightCurve(c, x, y, w, h, k, depth, col, lw = 4, label = true) {
   }
   c.stroke();
 }
+// circle-circle overlap area (for an honest transit dip)
+function overlap(d, R, r) {
+  if (d >= R + r) return 0;
+  if (d <= R - r) return Math.PI * r * r;
+  const a = Math.acos((d * d + r * r - R * R) / (2 * d * r)), b = Math.acos((d * d + R * R - r * r) / (2 * d * R));
+  return r * r * a + R * R * b - 0.5 * Math.sqrt(Math.max(0, (-d + r + R) * (d + r - R) * (d - r + R) * (d + r + R)));
+}
 export const transit = {
   init(ctx) { if (!c2d) c2d = new C2D(ctx.engine); },
   async draw(ctx, shot, t, lt) {
     const p = typeof shot.p === 'function' ? shot.p(t, lt, ctx) : (shot.p || {});
     const k = clamp((t - p.t0) / (p.t1 - p.t0));
     const c = K().begin(css(INK.klein));
-    // star (orange ink disc) + planet silhouette crossing
-    const cx = 960, cy = 470, R = 300;
-    drawStarDisk(c, cx, cy, R, css(INK.orange), css(INK.klein), false);
-    // granulation hint
-    c.fillStyle = 'rgba(255,255,255,0.06)';
-    for (let i = 0; i < 90; i++) { const a = hash1(i) * 7, rr = Math.sqrt(hash1(i + 9)) * R * 0.95; c.beginPath(); c.arc(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr, 10 + hash1(i + 3) * 18, 0, 7); c.fill(); }
-    const pxp = lerp(cx - R - 90, cx + R + 90, easeInOutCubic(range(k, 0.05, 0.95)));
-    c.fillStyle = css(INK.ink); c.beginPath(); c.arc(pxp, cy + 30, 74, 0, 7); c.fill();
-    // light-curve panel
-    c.fillStyle = css(INK.paper); c.fillRect(260, 820, 1400, 200);
-    c.strokeStyle = css(INK.ink); c.lineWidth = 2; c.strokeRect(260, 820, 1400, 200);
-    lightCurve(c, 290, 850, 1340, 20, easeInOutCubic(range(k, 0.02, 0.98)), 0.06, css(INK.ink), 6);
-    font(c, 'JetBrainsMono', 20, 600); c.fillStyle = css(INK.ink);
-    c.fillText('RELATIVE FLUX', 280, 1010); c.fillText('ΔF 3.6%', 1540, 1010);
-    K().end({ halftone: 0.5 });
+    // faint star field
+    c.fillStyle = 'rgba(243,239,230,0.55)';
+    for (let i = 0; i < 140; i++) { c.beginPath(); c.arc(hash1(i) * 1920, hash1(i + 50) * 760, 0.8 + hash1(i + 9) * 1.6, 0, 7); c.fill(); }
+    const cx = 960, cy = 400, R = 270, r = 62;
+    // star with limb darkening + granulation, crisp edge
+    const g = c.createRadialGradient(cx - 40, cy - 40, 10, cx, cy, R);
+    g.addColorStop(0, '#ffd9a0'); g.addColorStop(0.55, css(INK.orange)); g.addColorStop(1, '#c2360c');
+    c.fillStyle = g; c.beginPath(); c.arc(cx, cy, R, 0, 7); c.fill();
+    c.save(); c.beginPath(); c.arc(cx, cy, R, 0, 7); c.clip();
+    for (let i = 0; i < 260; i++) {
+      const a = hash1(i * 1.3) * 7, rr = Math.sqrt(hash1(i * 2.7)) * R;
+      c.fillStyle = `rgba(255,230,190,${0.06 + 0.08 * hash1(i * 5.1)})`;
+      c.beginPath(); c.arc(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr, 6 + hash1(i * 3.3) * 12, 0, 7); c.fill();
+    }
+    c.restore();
+    // planet crossing, with a thin sunlit atmosphere rim
+    const px = lerp(cx - R - 160, cx + R + 160, easeInOutCubic(range(k, 0.0, 1.0)));
+    const py = cy + 70;
+    c.fillStyle = css(INK.ink); c.beginPath(); c.arc(px, py, r, 0, 7); c.fill();
+    c.strokeStyle = 'rgba(156,203,255,0.9)'; c.lineWidth = 3; c.beginPath(); c.arc(px, py, r + 2, 0, 7); c.stroke();
+    // light curve panel, dip = true geometric overlap
+    const X = 210, Y = 760, Wd = 1500, Ht = 230;
+    c.fillStyle = css(INK.paper); c.fillRect(X, Y, Wd, Ht);
+    c.strokeStyle = 'rgba(11,11,20,0.15)'; c.lineWidth = 1;
+    for (let gx = X; gx <= X + Wd; gx += 75) { c.beginPath(); c.moveTo(gx, Y); c.lineTo(gx, Y + Ht); c.stroke(); }
+    const flux = (u) => { const x = lerp(cx - R - 160, cx + R + 160, easeInOutCubic(u)); const d = Math.hypot(x - cx, py - cy); return 1 - overlap(d, R, r) / (Math.PI * R * R); };
+    const minF = 1 - (r * r) / (R * R);
+    c.strokeStyle = css(INK.ink); c.lineWidth = 6; c.lineJoin = 'round'; c.beginPath();
+    const N = 240;
+    for (let i = 0; i <= N * k; i++) {
+      const u = i / N; const f = flux(u) + (hash1(i * 7.7) - 0.5) * 0.004;
+      const yy = Y + 40 + (1 - f) / (1 - minF) * (Ht - 80);
+      const xx = X + 20 + u * (Wd - 40);
+      if (i === 0) c.moveTo(xx, yy); else c.lineTo(xx, yy);
+    }
+    c.stroke();
+    const f = flux(k);
+    const hx = X + 20 + k * (Wd - 40), hy = Y + 40 + (1 - f) / (1 - minF) * (Ht - 80);
+    c.fillStyle = css(INK.orange); c.beginPath(); c.arc(hx, hy, 11, 0, 7); c.fill();
+    font(c, 'JetBrainsMono', 22, 700); c.fillStyle = css(INK.ink);
+    c.fillText('RELATIVE FLUX', X + 16, Y + 28); c.fillText(`${(f * 100).toFixed(2)}%`, X + Wd - 130, Y + 28);
+    c.fillText('TIME →', X + Wd - 110, Y + Ht - 14);
+    K().end({ halftone: 0.25 });
   },
 };
 
