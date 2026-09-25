@@ -47,7 +47,7 @@ function dotMaterial(engine) {
       float b3 = band(x, 1330., 170.) * .6;
       float b4 = band(x, 1640., 50.) * .5;
       float streak = smoothstep(.97, 1., vnoise(vec2(x * .05, px.y * .0008)));
-      float g = hash12(floor(px0 * .75) + floor(time * 12.)) * .08;   // sensor grain
+      float g = hash12(floor(px0 * .5) + floor(time * 12.)) * .05;    // sensor grain (on twos)
       vec3 col;
       float dd = length(px - dotPos);
       float dotv = 1. - smoothstep(dotR - .8, dotR + .8, dd);

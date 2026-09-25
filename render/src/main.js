@@ -55,6 +55,7 @@ async function renderAt(t) {
     post.flash = look.flash ? look.flash : (g.flash ?? 0);
     post.invert = Math.max(look.invert ?? 0, g.invert ?? 0);
     post.shakeX = (look.shakeX ?? 0) + (g.shakeX ?? 0); post.shakeY = (look.shakeY ?? 0) + (g.shakeY ?? 0);
+    post.grainSeed = shot.t0;          // grain is re-seeded per shot, static within it (print texture, and cheap to encode)
     if (shot.post) Object.assign(post, shot.post(t, lt, ctx, post));
     engine.composite(post, t);
     const hud = document.getElementById('hud');

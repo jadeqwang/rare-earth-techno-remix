@@ -373,8 +373,6 @@ export function buildGlobalPost(A) {
       g.zoom = 1 + 0.018 * k;
       g.ca = 2.5 * k;
       g.shakeX = (Math.sin(t * 97.0) * 2.2) * k; g.shakeY = (Math.cos(t * 83.0) * 1.6) * k;
-    } else {
-      g.zoom = 1 + 0.006 * k;
     }
     g.misreg = 2.2 * sn;
     for (const h of hits) {

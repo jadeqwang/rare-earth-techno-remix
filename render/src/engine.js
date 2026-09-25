@@ -141,6 +141,7 @@ export class Engine {
       uniform vec2 res; uniform float time; uniform float S;
       uniform float paper;      // 0..1 paper stock texture (print look)
       uniform float grain;      // film/riso grain amount
+      uniform float grainSeed;  // per-shot grain seed
       uniform float bloom;      // bloom mix (light look)
       uniform float misreg;     // plate misregistration in design px
       uniform float flash;      // + white flash, - ink flash
@@ -173,9 +174,10 @@ export class Engine {
           col = mix(col, col * st, paper * .9);
         }
         // grain
-        // 2-design-px grain cells, re-seeded on twos (12 fps) like the drawings: reads as print grain and keeps the encode lean
-        float g = hash12(floor(vUv * res / (2. * S)) + fract(floor(time * 12.) * .1371) * 1000.) - .5;
-        col += g * grain * (0.35 + .65 * (1. - luma(col)));
+        // 2-design-px grain cells, seeded per shot and static within it: reads as the print's paper tooth,
+        // and costs almost nothing to encode (per-frame noise would eat most of a 6 Mbit/s budget)
+        float g = hash12(floor(vUv * res / (2. * S)) + fract(grainSeed * .1371) * 1000.) - .5;
+        col += g * grain * .7 * (0.35 + .65 * (1. - luma(col)));
         // scanlines
         if (scan > 0.) { float sl = .5 + .5 * sin(vUv.y * res.y * 3.14159); col *= 1. - scan * .35 * sl; }
         // impact frame: hard two-tone
@@ -193,7 +195,7 @@ export class Engine {
       }`, {
       tScene: { value: null }, tType: { value: this.typeTex }, tBloom: { value: null },
       res: { value: new THREE.Vector2(this.W, this.H) }, time: { value: 0 }, S: { value: this.S },
-      paper: { value: 0 }, grain: { value: 0.05 }, bloom: { value: 0 }, misreg: { value: 0 }, flash: { value: 0 },
+      paper: { value: 0 }, grain: { value: 0.05 }, grainSeed: { value: 0 }, bloom: { value: 0 }, misreg: { value: 0 }, flash: { value: 0 },
       invert: { value: 0 }, invertInk: { value: new THREE.Color(0.043, 0.043, 0.078) }, vignette: { value: 0.3 },
       shake: { value: new THREE.Vector2() }, scan: { value: 0 }, ca: { value: 0 }, fade: { value: 1 },
       paperCol: { value: new THREE.Color(0.953, 0.937, 0.902) }, zoom: { value: 1 }, spin: { value: 0 }, tPaper: { value: null },
@@ -247,6 +249,7 @@ export class Engine {
     if (u.bloom.value > 0) u.tBloom.value = this.bloomChain(this.rtScene, post.bloomThreshold ?? 0.55);
     u.paper.value = post.paper || 0;
     u.grain.value = post.grain ?? 0.05;
+    u.grainSeed.value = post.grainSeed ?? 0;
     u.misreg.value = post.misreg || 0;
     u.flash.value = post.flash || 0;
     u.invert.value = post.invert || 0;

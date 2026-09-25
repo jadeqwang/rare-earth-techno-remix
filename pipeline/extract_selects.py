@@ -6,7 +6,8 @@ from roto_extract import process
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SEL = json.load(open(os.path.join(HERE, "selects.json")))
-PROD = "/tmp/work/sd/prod"
+PROD = "/tmp/work/sd/prod"                       # all Seedance takes (working dir)
+ARCHIVE = os.path.join(HERE, "base_clips")       # the selected takes, archived in the repo (CRF 25 re-encode)
 GUIDES = "/tmp/work/guides"
 
 
@@ -16,7 +17,9 @@ def job(item):
     stamp = f"{out}/.src"
     if os.path.exists(stamp) and open(stamp).read() == s["file"] and "--force" not in sys.argv:
         return sid, "cached"
-    n, key = process(f"{PROD}/{s['file']}", out)
+    src = f"{PROD}/{s['file']}"
+    if not os.path.exists(src): src = f"{ARCHIVE}/{s['file']}"
+    n, key = process(src, out)
     open(stamp, "w").write(s["file"])
     return sid, f"{n} frames, key={key}"
 
