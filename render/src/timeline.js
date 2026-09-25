@@ -130,8 +130,8 @@ export function buildTimeline(A) {
 
   add({ id: 'blink', t0: 25.30, t1: 27.82, scene: 'roto', p: R('sd06'), look: PRINT,
     type: (ty, t) => {
-      ty.keyword(t, 'BEATING', W(7, 1), { size: 150, y: 1010, x: 480, maxW: 840, kickAmt: 0.12 });
-      ty.keyword(t, 'BLINKING', W(7, 2), { size: 150, y: 1010, x: 1440, maxW: 840, kickAmt: 0.12 });
+      ty.keyword(t, 'BEATING', W(7, 1), { size: 132, y: 1030, x: 480, maxW: 780, kickAmt: 0.12 });
+      ty.keyword(t, 'BLINKING', W(7, 2), { size: 132, y: 1030, x: 1440, maxW: 780, kickAmt: 0.12 });
     } });
 
   add({ id: 'star', t0: 27.82, t1: 28.64, scene: 'star', p: { mode: 'light' }, look: LIGHT,
@@ -144,7 +144,7 @@ export function buildTimeline(A) {
     } });
 
   add({ id: 'transit_eye', t0: 30.98, t1: 35.94, scene: 'roto', p: R('sd07'), look: PRINT,
-    type: (ty, t) => ty.stack(t, [8], { x: 70, y: 190, size: 104, lineH: 112, maxW: 520, accent: PALE, fromScale: 1.3,
+    type: (ty, t) => ty.stack(t, [8], { x: 60, y: 180, size: 92, lineH: 100, maxW: 440, accent: PALE, fromScale: 1.3,
       filter: (w) => w.t >= 30.9 }) });
 
   add({ id: 'alone', t0: 35.94, t1: 39.95, scene: 'roto', p: R('sd08'), look: PRINT,

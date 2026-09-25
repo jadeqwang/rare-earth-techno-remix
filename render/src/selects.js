@@ -6,7 +6,7 @@ export const SELECT = {
  },
  "sd02": {
   "start": 5.2,
-  "lag": 0
+  "lag": 0.083
  },
  "sd03": {
   "start": 10.4,

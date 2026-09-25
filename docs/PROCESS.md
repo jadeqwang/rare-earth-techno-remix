@@ -62,6 +62,13 @@ when run in background mode).
 | sd14 | The beating blinking of a star (V5) | 9c9b39007d | +0.083 s | 0.70 | 0.50 |
 | sd15 | far from my own (ECU) | bac460481f | −0.167 s | 0.42 | 0.08 |
 
+  sd02 (*You're yearning to see the life out there*) is a three-quarter view looking up, with a strong
+  push-in, so the face cascade never locks on. It was measured instead with a colour mouth metric: the
+  count of dark-red mouth-interior pixels, normalised by the zoom and high-passed. That metric
+  correlates best at +0.083 s (r = 0.27, against 0.17 at zero lag), and the lag was applied. An
+  independent video review (Gemini 3.8 Flash, watching the 540p preview with audio) had flagged the
+  same shot as 2–3 frames late.
+
   The correlation scores sd11 (*Do you still care*, V4) at 0.04. The camera pushes in through that
   take, so the face in a fixed crop keeps growing and the openness curve drifts with it. It was accepted
   on the word strip instead: a small round mouth on the held "Do", then wide open on "care". Measured
@@ -126,7 +133,16 @@ full-size stills. What each pass changed:
    * *How could we be alone* is bilingual across the split.
    * The pale-blue-dot callback now plays from their side.
    * A signal-lost static burst covers the blank, and the reply lands on the end card.
-4. **Final 1080p:** reviewed the same way before encoding.
+4. **Outside review.** Gemini 3.8 Flash watched the 540p preview with its audio and scored it; the
+   prompt is in the session notes. The actionable findings were acted on:
+   * yearning lip sync measured 1–2 frames late (fixed, see §3);
+   * line boil strobing under bloom in the neon dance shots (light-mode boil halved);
+   * type crowding the eye in *not that far* and the colliding BEATING / BLINKING (both resized).
+
+   Its other findings were already fixed in the newer build (the words beside the ECU face, the decode
+   over the waterfall), or were deliberate: the white impact frame on the drop after the blank.
+5. **Final 1080p:** reviewed the same way before encoding. Changed shots were re-rendered in place from
+   the shot table (`render/tools/shots.mjs`, then `render.mjs --resume`).
 
 ## 7. Sound design
 

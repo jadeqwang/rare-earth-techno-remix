@@ -36,7 +36,7 @@ export const roto = {
     col('paperC', p.paper ?? (mode === 'print' ? INK.paper : [0.015, 0.016, 0.03]));
     col('glowCol', p.glow ?? INK.mint); col('glowCol2', p.glow2 ?? INK.yellow);
     u.cell.value = p.cell ?? 6.5;
-    u.boil.value = p.boil ?? 1.2;
+    u.boil.value = p.boil ?? (mode === 'light' ? 0.5 : 1.2);   // neon lines hold steadier than ink (boil reads as strobing under bloom)
     u.drawSeed.value = fi * 0.37 + (p.seed || 0);
     const r = p.rect ?? [0, 0, 1, 1];
     u.frameRect.value.set(...r);
