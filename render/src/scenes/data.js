@@ -269,9 +269,9 @@ export const mutual = {
       const pk = easeInOutCubic(range(k, 0.05 + i * 0.03, 0.9));
       c.fillStyle = '#04050b'; c.beginPath(); c.arc(lerp(s.cx - 260, s.cx + 260, pk), 430, 34, 0, 7); c.fill();
       c.strokeStyle = s.planet; c.lineWidth = 3; c.beginPath(); c.arc(lerp(s.cx - 260, s.cx + 260, pk), 430, 34, 0, 7); c.stroke();
-      font(c, 'JetBrainsMono', 20, 600); c.fillStyle = s.planet;
-      if (s.glyph) { let xx = s.cx - 160; for (const ch of 'EARTH SEEN FROM HOME') { drawGlyph(c, ch, xx, 690, 22, s.planet, 0.09); xx += 18; } }
-      else c.fillText(s.label, s.cx - 190, 690);
+      font(c, 'JetBrainsMono', 26, 600); c.fillStyle = s.planet;
+      if (s.glyph) { let xx = s.cx - 200; for (const ch of 'EARTH SEEN FROM HOME') { drawGlyph(c, ch, xx, 692, 28, s.planet, 0.09); xx += 22; } }
+      else c.fillText(s.label, s.cx - c.measureText(s.label).width / 2, 692);
     }
     c.globalAlpha = 1;
     // light curves: two dips that slide together, then become one heartbeat line pulsing on the kicks

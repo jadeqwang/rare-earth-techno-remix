@@ -76,10 +76,15 @@ try {
         }
       }
     }));
+    // --audio: the mix to mux (default: the song; the release uses the song + sound-design layer, which runs past the last note)
+    const audio = args.audio || path.resolve('..', 'audio', 'Rare_Earth_DDR.mp3');
+    const venc = args.bitrate
+      ? ['-b:v', args.bitrate, '-maxrate', args.maxrate || args.bitrate, '-bufsize', args.bufsize || '16M']
+      : ['-crf', args.crf || '17'];
     const enc = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-i', path.join(frameDir, 'f_%05d.jpg'),
-      '-ss', String(from), '-t', String(to - from), '-i', path.resolve('..', 'audio', 'Rare_Earth_DDR.mp3'),
-      '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', args.preset || 'medium', '-crf', args.crf || '17',
-      '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', out], { stdio: 'inherit' });
+      '-ss', String(from), '-t', String(to - from), '-i', audio,
+      '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', args.preset || 'medium', ...venc,
+      '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', args.abitrate || '256k', '-t', String(to - from), '-movflags', '+faststart', out], { stdio: 'inherit' });
     console.log(enc.status === 0 ? `wrote ${out}` : 'ffmpeg failed');
   }
 } finally {

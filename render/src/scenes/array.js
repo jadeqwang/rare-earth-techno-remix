@@ -7,31 +7,41 @@ import { rng, clamp, smooth, easeOutBack, easeOutCubic, hash1, lerp, INK } from 
 let toon, scene, camera, dishes = [], built = false;
 
 function buildDish(matDish, matMetal, matAccent) {
+  // proportions after a 6 m alt-az array dish: squat pedestal, gearbox housing, back cone, quadrupod feed.
+  // (a thin pole under a shallow disc reads as an umbrella; the heavy mount is what says "radio telescope")
   const root = new THREE.Group();
-  const ped = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.5, 4.2, 10), matMetal);
-  ped.position.y = 2.1; root.add(ped);
-  const az = new THREE.Group(); az.position.y = 4.4; root.add(az);
-  const yoke = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.6, 0.8), matMetal); az.add(yoke);
-  const el = new THREE.Group(); el.position.y = 0.6; az.add(el);
+  const plinth = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.6, 0.4, 14), matMetal);
+  plinth.position.y = 0.2; root.add(plinth);
+  const ped = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 1.0, 3.6, 14), matMetal);
+  ped.position.y = 2.2; root.add(ped);
+  const az = new THREE.Group(); az.position.y = 4.0; root.add(az);
+  const housing = new THREE.Mesh(new THREE.BoxGeometry(1.9, 1.1, 1.5), matMetal);
+  housing.position.y = 0.45; az.add(housing);
+  const el = new THREE.Group(); el.position.y = 1.0; az.add(el);
+  const axle = new THREE.Mesh(new THREE.CylinderGeometry(0.26, 0.26, 2.3, 10), matMetal);
+  axle.rotation.z = Math.PI / 2; el.add(axle);
+  const back = new THREE.Mesh(new THREE.CylinderGeometry(1.7, 0.45, 0.9, 16), matMetal);
+  back.position.y = 0.55; el.add(back);
   // paraboloid dish, opening along +Y in the elevation frame
-  const pts = []; const R = 3.0, f = 2.4;
+  const pts = []; const R = 3.0, f = 2.4, v = 1.0;
   for (let i = 0; i <= 14; i++) { const r = (i / 14) * R; pts.push(new THREE.Vector2(Math.max(0.001, r), (r * r) / (4 * f))); }
-  const dish = new THREE.Mesh(new THREE.LatheGeometry(pts, 36), matDish);
-  dish.position.y = 0.2; el.add(dish);
-  const rim = new THREE.Mesh(new THREE.TorusGeometry(R, 0.09, 6, 48), matMetal);
-  rim.rotation.x = Math.PI / 2; rim.position.y = 0.2 + (R * R) / (4 * f); el.add(rim);
-  // feed: 3 struts to the focus + feed horn
-  const focus = new THREE.Vector3(0, f + 0.2, 0);
-  for (let k = 0; k < 3; k++) {
-    const a = (k / 3) * Math.PI * 2;
-    const rim = new THREE.Vector3(Math.cos(a) * R * 0.95, (R * R) / (4 * f) + 0.2, Math.sin(a) * R * 0.95);
-    const len = rim.distanceTo(focus);
-    const strut = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, len, 5), matMetal);
-    strut.position.copy(rim.clone().add(focus).multiplyScalar(0.5));
-    strut.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), focus.clone().sub(rim).normalize());
+  const dish = new THREE.Mesh(new THREE.LatheGeometry(pts, 40), matDish);
+  dish.position.y = v; el.add(dish);
+  const rimY = v + (R * R) / (4 * f);
+  const rim = new THREE.Mesh(new THREE.TorusGeometry(R, 0.1, 6, 48), matMetal);
+  rim.rotation.x = Math.PI / 2; rim.position.y = rimY; el.add(rim);
+  // feed: 4 struts to the focus + feed horn
+  const focus = new THREE.Vector3(0, v + f, 0);
+  for (let k = 0; k < 4; k++) {
+    const a = (k / 4) * Math.PI * 2 + Math.PI / 4;
+    const rp = new THREE.Vector3(Math.cos(a) * R * 0.92, rimY - 0.08, Math.sin(a) * R * 0.92);
+    const len = rp.distanceTo(focus);
+    const strut = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, len, 5), matMetal);
+    strut.position.copy(rp.clone().add(focus).multiplyScalar(0.5));
+    strut.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), focus.clone().sub(rp).normalize());
     el.add(strut);
   }
-  const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.28, 0.6, 10), matAccent);
+  const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.26, 0.36, 0.8, 12), matAccent);
   horn.position.copy(focus); el.add(horn);
   return { root, az, el };
 }
@@ -131,8 +141,9 @@ export const array = {
     // camera
     const cam = p.cam || 'low';
     if (cam === 'low') {
-      camera.position.set(-6 + lt * 1.2, 2.2, 14 - lt * 2.0);
-      camera.lookAt(8, 9, -60);
+      // worm's-eye: the nearest dishes loom over the lens, the array recedes to the ridge
+      camera.position.set(-5 + lt * 1.2, 1.7, 5 - lt * 1.6);
+      camera.lookAt(7, 12, -55);
     } else if (cam === 'high') {
       camera.position.set(40 - lt * 3, 36, 30);
       camera.lookAt(0, 0, -50);

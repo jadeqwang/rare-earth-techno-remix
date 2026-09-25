@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { rng, clamp, smooth, easeInOutCubic, range, lerp, INK } from '../util.js';
 import { skyMaterial, setSky } from './sky.js';
 import { C2D } from '../c2d.js';
-let c2d = null, edgeList = [];
+let c2d = null, edgeList = [], nodeReveal = [];
 
 let scene, camera, points, links, linkMat, starMat, earthPos, civ = [];
 const N = 42000;
@@ -47,21 +47,36 @@ function build() {
   // civilizations (a few hundred stars) and the links between them
   earthPos = new THREE.Vector3(Math.cos(2.2) * 260, 0, Math.sin(2.2) * 260);
   civ = [earthPos.clone()];
-  for (let i = 0; i < 360; i++) {
+  for (let i = 0; i < 640; i++) {
     const k = Math.floor(R() * N * 0.82 + N * 0.18);
     civ.push(new THREE.Vector3(pos[k * 3], pos[k * 3 + 1], pos[k * 3 + 2]));
   }
-  // links: nearest neighbours; each link gets a reveal "distance" = graph distance from Earth
-  const edges = [];
-  for (let a = 0; a < civ.length; a++) {
-    const near = civ.map((v, b) => [b, v.distanceTo(civ[a])]).filter(([b]) => b !== a).sort((x, y) => x[1] - y[1]).slice(0, 3);
-    for (const [b, d] of near) if (a < b) edges.push([a, b, d]);
+  // links: a Euclidean minimum spanning tree (so every civilization is reachable from Earth) plus 2 nearest neighbours
+  const n = civ.length, edges = [], seen = new Set();
+  const addE = (a, b) => { const key = a < b ? a * 4096 + b : b * 4096 + a; if (seen.has(key)) return; seen.add(key); edges.push([a, b, civ[a].distanceTo(civ[b])]); };
+  const inT = new Array(n).fill(false), best = new Array(n).fill(Infinity), from = new Array(n).fill(-1);
+  best[0] = 0;
+  for (let it = 0; it < n; it++) {
+    let u = -1; for (let i = 0; i < n; i++) if (!inT[i] && (u < 0 || best[i] < best[u])) u = i;
+    inT[u] = true; if (from[u] >= 0) addE(from[u], u);
+    for (let v = 0; v < n; v++) if (!inT[v]) { const d = civ[u].distanceTo(civ[v]); if (d < best[v]) { best[v] = d; from[v] = u; } }
   }
-  const dist = new Array(civ.length).fill(Infinity); dist[0] = 0;
-  edgeList = edges;
-  for (let it = 0; it < 60; it++) for (const [a, b, d] of edges) { dist[b] = Math.min(dist[b], dist[a] + d); dist[a] = Math.min(dist[a], dist[b] + d); }
-  const maxD = Math.max(...dist.filter(isFinite));
+  for (let a = 0; a < n; a++) {
+    const near = civ.map((v, b) => [b, v.distanceTo(civ[a])]).filter(([b]) => b !== a).sort((x, y) => x[1] - y[1]).slice(0, 2);
+    for (const [b] of near) addE(a, b);
+  }
+  // reveal order = shortest-path distance from Earth through the graph (Dijkstra, O(n^2) is fine here)
+  const adj = Array.from({ length: n }, () => []);
+  for (const [a, b, d] of edges) { adj[a].push([b, d]); adj[b].push([a, d]); }
+  const dist = new Array(n).fill(Infinity), done = new Array(n).fill(false); dist[0] = 0;
+  for (let it = 0; it < n; it++) {
+    let u = -1; for (let i = 0; i < n; i++) if (!done[i] && (u < 0 || dist[i] < dist[u])) u = i;
+    done[u] = true; for (const [v, d] of adj[u]) if (dist[u] + d < dist[v]) dist[v] = dist[u] + d;
+  }
+  const maxD = Math.max(...dist);
   for (const e of edges) e.push(Math.min(dist[e[0]], dist[e[1]]) / maxD);
+  edgeList = edges;
+  nodeReveal = dist.map((d) => d / maxD);
   const lp = [], lr = [];
   for (const [a, b] of edges) { lp.push(civ[a].x, civ[a].y, civ[a].z, civ[b].x, civ[b].y, civ[b].z); const r = Math.min(dist[a], dist[b]) / maxD; lr.push(r, r); }
   const lg = new THREE.BufferGeometry();
@@ -137,8 +152,7 @@ export const galaxy = {
         }
       }
       for (let i = 0; i < P.length; i++) {
-        const lit = edgeList.some(([a, b, , rv]) => (a === i || b === i) && prog >= rv);
-        if (!lit || P[i][2] > 1) continue;
+        if (prog < nodeReveal[i] || P[i][2] > 1) continue;
         c.fillStyle = i === 0 ? 'rgba(156,203,255,1)' : 'rgba(255,245,210,0.9)';
         c.beginPath(); c.arc(P[i][0], P[i][1], i === 0 ? 7 + kick * 5 : 3.2 + kick * 2, 0, 7); c.fill();
       }

@@ -17,8 +17,12 @@ export const drake = {
     const c = K(ctx).begin(css(INK.paper));
     const terms = ['N', '=', 'R*', '·', 'fₚ', '·', 'nₑ', '·', 'fₗ', '·', 'fᵢ', '·', 'f꜀', '·', 'L'];
     const b = A.beat(t);
-    font(c, 'NotoSerifDisplay', 196, 700, 'semi-condensed', 'italic');
-    const widths = terms.map((s) => c.measureText(s + ' ').width);
+    // fit the whole equation (L included) to the frame
+    let fs = 196;
+    font(c, 'NotoSerifDisplay', fs, 700, 'semi-condensed', 'italic');
+    let widths = terms.map((s) => c.measureText(s + ' ').width);
+    const tw0 = widths.reduce((a, b2) => a + b2, 0);
+    if (tw0 > 1700) { fs = Math.floor(fs * 1700 / tw0); font(c, 'NotoSerifDisplay', fs, 700, 'semi-condensed', 'italic'); widths = terms.map((s) => c.measureText(s + ' ').width); }
     let x = 960 - widths.reduce((a, b2) => a + b2, 0) / 2;
     const shown = Math.min(terms.length, 3 + Math.floor((t - shot.t0) / (b.period * 0.5)));
     for (let i = 0; i < terms.length; i++) {
@@ -30,10 +34,11 @@ export const drake = {
           // L = the lifetime of a transmitting civilization; circle it, flicker on the snare
           const f = 0.6 + 0.4 * (A.snare(t) > 0.3 ? 1 : 0);
           c.strokeStyle = css(INK.red, f); c.lineWidth = 7;
-          c.beginPath(); c.ellipse(x + 55, 495, 118, 140, -0.1, 0, Math.PI * 2 * clamp((t - shot.t0) / 0.8)); c.stroke();
+          const wl = c.measureText('L').width;
+          c.beginPath(); c.ellipse(x + wl * 0.5, 560 - fs * 0.33, fs * 0.55, fs * 0.66, -0.1, 0, Math.PI * 2 * clamp((t - shot.t0) / 0.8)); c.stroke();
           font(c, 'JetBrainsMono', 30, 700);
-          c.fillStyle = css(INK.red); c.fillText('L = ?', x - 10, 700);
-          font(c, 'NotoSerifDisplay', 196, 700, 'semi-condensed', 'italic');
+          c.fillStyle = css(INK.red); c.fillText('L = ?', x - 20, 560 + fs * 0.62);
+          font(c, 'NotoSerifDisplay', fs, 700, 'semi-condensed', 'italic');
         }
       }
       x += widths[i];
@@ -183,17 +188,34 @@ export const endcard = {
     // the thin line between them
     c.strokeStyle = css(INK.ink, 0.7); c.lineWidth = 2;
     c.beginPath(); c.moveTo(x1, y); c.lineTo(lerp(x1, x2, link), y); c.stroke();
-    const blink = t > 126.2 && t < 126.5 ? 1.8 : 1;
+    // their reply crosses the line and lands on Sol exactly when "Still here." is heard (sound design, 128.02 s)
+    const arrive = 128.02;
+    const blink = t > arrive && t < arrive + 0.35 ? 1.9 : 1;
     c.fillStyle = css(INK.pale); c.beginPath(); c.arc(x1, y, 16 * k * blink, 0, 7); c.fill();
-    c.fillStyle = css(INK.pink); c.beginPath(); c.arc(x2, y, 16 * k * blink, 0, 7); c.fill();
+    c.fillStyle = css(INK.pink); c.beginPath(); c.arc(x2, y, 16 * k, 0, 7); c.fill();
+    if (t > arrive) {
+      const rr = 16 + (t - arrive) * 160, ra = Math.max(0, 1 - (t - arrive) / 0.9);
+      c.strokeStyle = css(INK.pale, ra); c.lineWidth = 3; c.beginPath(); c.arc(x1, y, rr, 0, 7); c.stroke();
+    }
     font(c, 'JetBrainsMono', 20, 600); c.fillStyle = css(INK.ink, 0.8);
     c.fillText('SOL III', x1 - 40, y + 60); c.fillText('ETZ-1715 b', x2 - 60, y + 60);
-    font(c, 'NotoSerifDisplay', 120, 900, 'extra-condensed');
+    if (t > arrive + 0.1) { c.fillStyle = css(INK.orange, smooth(range(t, arrive + 0.1, arrive + 0.4))); c.fillText('RX  STILL HERE.', x1 - 40, y + 92); }
+    // the reply in flight: one bright pulse crossing from their world to ours
+    const ph = range(t, 126.3, arrive);
+    if (ph > 0 && ph < 1) {
+      const px = lerp(x2, x1, easeInOutCubic(ph));
+      c.fillStyle = css(INK.orange, 0.95);
+      c.beginPath(); c.arc(px, y, 7, 0, 7); c.fill();
+    }
+    font(c, 'NotoSerifDisplay', 190, 900, 'extra-condensed');
     const s = 'RARE EARTH'; const w = c.measureText(s).width;
-    c.fillStyle = css(INK.ink, smooth(range(lt, 0.8, 1.6))); c.fillText(s, 960 - w / 2, 720);
+    c.fillStyle = css(INK.ink, smooth(range(lt, 0.8, 1.6))); c.fillText(s, 960 - w / 2, 760);
+    const a2 = smooth(range(lt, 1.2, 2.0));
+    font(c, 'BlackHanSans', 34); c.fillStyle = css(INK.klein, a2); c.fillText('희귀한 지구', 960 - 250, 830);
+    font(c, 'DelaGothicOne', 30); c.fillStyle = css(INK.pink, a2); c.fillText('レアアース', 960 + 70, 830);
     font(c, 'JetBrainsMono', 20, 500); c.fillStyle = css(INK.ink, 0.75 * smooth(range(lt, 1.4, 2.2)));
-    const cr = 'song: jade wang, for SETI (2011)   ·   video: rendered in javascript   ·   keep looking';
-    c.fillText(cr, 960 - c.measureText(cr).width / 2, 800);
+    const cr = 'written in 2011 for a SETI event   ·   video drawn in javascript   ·   keep looking';
+    c.fillText(cr, 960 - c.measureText(cr).width / 2, 900);
     K(ctx).end({ halftone: 0.1 });
   },
 };

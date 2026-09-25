@@ -173,7 +173,8 @@ export class Engine {
           col = mix(col, col * st, paper * .9);
         }
         // grain
-        float g = hash12(vUv * res + fract(time * 13.7) * 1000.) - .5;
+        // 2-design-px grain cells, re-seeded on twos (12 fps) like the drawings: reads as print grain and keeps the encode lean
+        float g = hash12(floor(vUv * res / (2. * S)) + fract(floor(time * 12.) * .1371) * 1000.) - .5;
         col += g * grain * (0.35 + .65 * (1. - luma(col)));
         // scanlines
         if (scan > 0.) { float sl = .5 + .5 * sin(vUv.y * res.y * 3.14159); col *= 1. - scan * .35 * sl; }

@@ -54,7 +54,7 @@ export function buildTimeline(A) {
         ty.font('NotoSerifDisplay', 250, 900, 'extra-condensed');
         ty.plateText('RARE', 90, 400, P, css(INK.orange, 0.9), off);
         ty.plateText('EARTH', 90, 640, P, css(INK.orange, 0.9), off);
-        ty.font('BlackHanSans', 46); c.fillStyle = PALE; c.fillText('희귀한 지구', 96, 720);
+        ty.font('BlackHanSans', 46); c.fillStyle = P; c.fillText('희귀한 지구', 96, 720);
         ty.font('DelaGothicOne', 40); c.fillText('レアアース', 96, 780);
         if (dis > 0) {
           c.globalCompositeOperation = 'destination-out';
@@ -72,7 +72,7 @@ export function buildTimeline(A) {
     } });
 
   add({ id: 'yearning', t0: 5.70, t1: 8.86, scene: 'roto', p: R('sd02'), look: PRINT,
-    type: (ty, t) => ty.stack(t, [1], { x: 90, y: 250, size: 118, lineH: 125, maxW: 900, accent: PALE }) });
+    type: (ty, t) => ty.stack(t, [1], { x: 90, y: 250, size: 112, lineH: 122, maxW: 620, stretch: 'normal', accent: PALE }) });
 
   add({ id: 'searching', t0: 8.86, t1: 10.88, scene: 'array',
     p: { mode: 'print', choreo: 'sweep', cam: 'low' }, look: PRINT,
@@ -130,8 +130,8 @@ export function buildTimeline(A) {
 
   add({ id: 'blink', t0: 25.30, t1: 27.82, scene: 'roto', p: R('sd06'), look: PRINT,
     type: (ty, t) => {
-      ty.keyword(t, 'BEATING', W(7, 1), { size: 170, y: 1030, x: 480, kickAmt: 0.12 });
-      ty.keyword(t, 'BLINKING', W(7, 2), { size: 170, y: 1030, x: 1440, kickAmt: 0.12 });
+      ty.keyword(t, 'BEATING', W(7, 1), { size: 150, y: 1010, x: 480, maxW: 840, kickAmt: 0.12 });
+      ty.keyword(t, 'BLINKING', W(7, 2), { size: 150, y: 1010, x: 1440, maxW: 840, kickAmt: 0.12 });
     } });
 
   add({ id: 'star', t0: 27.82, t1: 28.64, scene: 'star', p: { mode: 'light' }, look: LIGHT,
@@ -139,8 +139,8 @@ export function buildTimeline(A) {
 
   add({ id: 'transit', t0: 28.64, t1: 30.98, scene: 'transit', p: { mode: 'print', t0: 28.64, t1: 30.98 }, look: PRINT,
     type: (ty, t) => {
-      ty.subtitle(t, 8, { y: 150, size: 46, text: 'A planet’s transit', end: 30.9 });
-      ty.keyword(t, 'TRANSIT', W(8, 2), { size: 180, y: 330, color: P, plate: css(INK.orange, 0.9) });
+      ty.subtitle(t, 8, { y: 100, size: 46, text: 'A planet’s transit', end: 30.9 });
+      ty.keyword(t, 'TRANSIT', W(8, 2), { size: 170, x: 1580, y: 300, maxW: 600, color: P, plate: css(INK.orange, 0.9) });
     } });
 
   add({ id: 'transit_eye', t0: 30.98, t1: 35.94, scene: 'roto', p: R('sd07'), look: PRINT,
@@ -149,12 +149,12 @@ export function buildTimeline(A) {
 
   add({ id: 'alone', t0: 35.94, t1: 39.95, scene: 'roto', p: R('sd08'), look: PRINT,
     type: (ty, t) => {
-      ty.keyword(t, t < W(9, 3) ? 'HOW COULD WE' : 'HOW COULD WE BE', W(9, 0), { size: 110, y: 200, stretch: 'normal', inDur: t < W(9, 3) ? 0.22 : 0.001 });
+      ty.keyword(t, t < W(9, 3) ? 'HOW COULD WE' : 'HOW COULD WE BE', W(9, 0), { size: 96, y: 140, stretch: 'normal', inDur: t < W(9, 3) ? 0.22 : 0.001 });
       const k = range(t, W(9, 4), 39.9);
-      ty.font('Archivo', 210, 900, 'expanded');
+      ty.font('Archivo', 190, 900, 'expanded');
       const word = 'ALONE?'; const sp = lerp(0, 60, easeOutCubic(k));
       let x = 960 - (ty.ctx.measureText(word).width + sp * (word.length - 1)) / 2;
-      if (t >= W(9, 3)) for (const ch of word) { ty.plateText(ch, x, 400, P, css(INK.orange, 0.9), [7, 6]); x += ty.ctx.measureText(ch).width + sp; }
+      if (t >= W(9, 3)) for (const ch of word) { ty.plateText(ch, x, 330, P, css(INK.orange, 0.9), [7, 6]); x += ty.ctx.measureText(ch).width + sp; }
     } });
 
   // ================================================================ BUILD (the other world)
@@ -184,12 +184,12 @@ export function buildTimeline(A) {
     type: (ty, t) => {
       ty.hud('ETZ-1715 b   ·   SUPER-EARTH   ·   1.7 R⊕   ·   RINGED', 90, 70);
       ty.hud('INHABITED', 1830, 70, { align: 'right', color: css(INK.pink) });
-      ty.glyphLine('WE ARE LISTENING', 90, 1010, 30, css(INK.ink, 0.9));
+      ty.glyphLine('WE ARE LISTENING', 90, 1010, 30, css(INK.pink));
     } });
 
   add({ id: 'theircity', t0: 47.55, t1: 49.36, scene: 'otherworld', p: { mode: 'print', view: 'city' }, look: PRINT });
   add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se05', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint }), look: PRINT,
-    type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, color: css(INK.ink), latinColor: css(INK.ink), glyphColor: css(INK.ink) }) });
+    type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, latinColor: P }) });
   add({ id: 'theirtower', t0: 51.16, t1: 52.96, scene: 'otherworld', p: { mode: 'print', view: 'tower' }, look: PRINT });
 
   // one-beat alternation into the drop
@@ -212,7 +212,7 @@ export function buildTimeline(A) {
 
   add({ id: 'selfdestruct', t0: 56.87, t1: 57.59, scene: 'earth', p: { mode: 'light', red: 1 },
     look: (t) => ({ ...LIGHT, ca: 6, shakeX: Math.sin(t * 90) * 6, shakeY: Math.cos(t * 77) * 4 }),
-    type: (ty, t) => ty.keyword(t, 'SELF-DESTRUCT', W(10, 4), { size: 200, y: 580, color: css(INK.red), kickAmt: 0.2 }) });
+    type: (ty, t) => ty.keyword(t, 'SELF-DESTRUCT', W(10, 4), { size: 200, y: 600, maxW: 1700, color: P, plate: css(INK.red, 0.95), kickAmt: 0.2 }) });
 
   add({ id: 'drake', t0: 57.59, t1: 61.03, scene: 'drake', p: {}, look: { paper: 0.9, grain: 0.07 },
     type: (ty, t) => {
@@ -234,7 +234,7 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.keyword(t, 'LOOKING', W(12, 2), { size: 260, y: 1000, color: P }) });
 
   add({ id: 'faith', t0: 63.23, t1: 64.89, scene: 'petals', p: { mode: 'light', choreo: 'bloom' }, look: LIGHT3D,
-    type: (ty, t) => ty.keyword(t, 'KEEP THE FAITH', W(12, 3), { size: 170, y: 560, color: P }) });
+    type: (ty, t) => ty.keyword(t, 'KEEP THE FAITH', W(12, 3), { size: 170, y: 300, maxW: 1500, color: P }) });
 
   add({ id: 'funding', t0: 64.89, t1: 67.17, scene: 'brutal', p: { view: 'funding', t0: 64.89 }, look: { paper: 0.8, grain: 0.07 } });
 
@@ -254,8 +254,8 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.keyword(t, 'VISION', W(15, 4), { size: 330, y: 1000, color: YELLOW }) });
 
   // ================================================================ DROP 2a / V4 (call and response)
-  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11', { mode: 'light', bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [960, 380] }) }), look: LIGHT,
-    type: (ty, t) => ty.stack(t, [16], { x: 80, y: 320, size: 190, lineH: 185, maxW: 900, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
+  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11', { mode: 'light', rect: [0.17, 0, 1, 1], bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
+    type: (ty, t) => ty.stack(t, [16], { x: 70, y: 300, size: 168, lineH: 172, maxW: 700, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
 
   add({ id: 'yearning2', t0: 77.66, t1: W(17, 5), scene: 'otherworld', p: { mode: 'light', view: 'vista' }, look: LIGHT,
     type: (ty, t) => ty.decode(t, 'YOU\u2019RE YEARNING TO SEE', W(17, 0), { size: 84, y: 190 }) });
@@ -265,21 +265,39 @@ export function buildTimeline(A) {
   add({ id: 'searching2', t0: 81.00, t1: 82.20, scene: 'split', p: { left: { scene: 'array', p: { mode: 'light', choreo: 'sweep' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'sweep' } } },
     look: LIGHT3D, type: (ty, t) => ty.keyword(t, 'SEARCHING FOR ME', W(18, 0), { size: 130, y: 1000, color: P }) });
 
-  add({ id: 'listen2', t0: 82.20, t1: 84.60, scene: 'roto', p: R('sd12', { mode: 'light', bg: burstBG({ c1: INK.pale, c2: INK.mint }) }), look: LIGHT,
-    type: (ty, t) => ty.stack(t, [19], { x: 1100, y: 330, size: 140, lineH: 140, maxW: 760, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
+  add({ id: 'listen2', t0: 82.20, t1: 84.60, scene: 'roto', p: R('sd12', { mode: 'light', rect: [-0.15, 0, 1, 1], bg: burstBG({ c1: INK.pale, c2: INK.mint, center: [672, 620] }) }), look: LIGHT,
+    type: (ty, t) => ty.stack(t, [19], { x: 1130, y: 330, size: 140, lineH: 140, maxW: 740, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
 
   add({ id: 'journey', t0: 84.60, t1: 90.47, scene: 'journey', p: { t0: 84.60, t1: 90.47 }, look: LIGHT,
     type: (ty, t) => {
       ty.keyword(t, 'A RARE EARTH', W(20, 0), { size: 170, y: 230, color: P, t1: W(20, 3) });
-      if (t < 88.4) ty.keyword(t, 'LOOKING FOR A FRIEND', W(20, 3), { size: 110, y: 230, color: P });
+      if (t < 88.4) ty.keyword(t, 'LOOKING FOR A FRIEND', W(20, 3), { size: 110, y: 230, maxW: 1700, color: P });
       else ty.decode(t, 'FRIEND', 88.4, { size: 220, y: 600, dur: 1.2, glyphColor: MINT, latinColor: P });
     } });
 
   // ================================================================ DROP 2b / V5 (arrival)
-  add({ id: 'dot2', t0: 90.47, t1: 93.59, scene: 'otherworld', p: { mode: 'light', view: 'night', sol: 1 }, look: LIGHT,
+  // the signal arrives: their listening field at night, and in their sky our Sun is the pale dot — same annotation, other side
+  add({ id: 'dot2', t0: 90.47, t1: 93.59, scene: 'roto',
+    p: (t) => { const z = 1 + 0.07 * smooth(range(t, 90.47, 93.59)); return R('se05', { mode: 'light', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint,
+      glow: INK.pink, glow2: INK.mint, envFill: 0.8, start: 90.47 - 0.4, rect: [0.5 - z / 2, 0.5 - z / 2, z, z] }); },
+    look: LIGHT,
     type: (ty, t) => {
-      ty.decode(t, 'LIVED MY LIFE ON A', W(21, 0), { size: 70, y: 180 });
-      ty.decode(t, 'PALE BLUE DOT', W(21, 5), { size: 150, y: 330, latinColor: PALE });
+      const c = ty.ctx, sx = 1510, sy = 250;
+      const a = smooth(range(t, 90.7, 91.2));
+      c.save(); c.globalCompositeOperation = 'lighter';
+      const g = c.createRadialGradient(sx, sy, 0, sx, sy, 26);
+      g.addColorStop(0, `rgba(190,225,255,${a})`); g.addColorStop(1, 'rgba(0,0,0,0)');
+      c.fillStyle = g; c.fillRect(sx - 30, sy - 30, 60, 60); c.restore();
+      if (a > 0) {
+        c.globalAlpha = a; c.strokeStyle = MINT; c.lineWidth = 2.5;
+        c.beginPath(); c.arc(sx, sy, 34 + 4 * Math.sin(t * 3), 0, Math.PI * 2 * a); c.stroke();
+        c.beginPath(); c.moveTo(sx - 26, sy + 24); c.lineTo(sx - 110, sy + 110); c.lineTo(sx - 330, sy + 110); c.stroke();
+        ty.glyphLine('YOU ARE HERE', sx - 330, sy + 96, 26, MINT);
+        ty.hud('SOL  ·  217 LY  ·  3RD PLANET', sx - 330, sy + 146, { size: 22, color: MINT });
+        c.globalAlpha = 1;
+      }
+      ty.decode(t, 'LIVED MY LIFE ON A', W(21, 0), { size: 70, x: 90, align: 'left', y: 170 });
+      ty.decode(t, 'PALE BLUE DOT', W(21, 5), { size: 140, x: 90, align: 'left', y: 320, latinColor: PALE });
     } });
 
   add({ id: 'reply', t0: 93.59, t1: W(22, 2), scene: 'waterfall', p: { mode: 'light', signalAt: 93.62 }, look: LIGHT,
@@ -291,21 +309,24 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.keyword(t, 'BEATING', W(23, 1), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
   add({ id: 'blinketz', t0: 98.80, t1: 99.76, scene: 'planet', p: { mode: 'light', blink: 1 }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'BLINKING', W(23, 2), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
-  add({ id: 'blinkdance', t0: 99.76, t1: 100.75, scene: 'roto', p: R('sd14', { mode: 'light', bg: burstBG({ c1: INK.yellow, c2: INK.pink }) }), look: LIGHT,
-    type: (ty, t) => ty.keyword(t, 'OF A STAR', W(23, 4), { size: 170, y: 250, color: YELLOW }) });
+  add({ id: 'blinkdance', t0: 99.76, t1: 100.75, scene: 'roto', p: R('sd14', { mode: 'light', rect: [0.1, 0, 0.8, 0.8], bg: burstBG({ c1: INK.yellow, c2: INK.pink, center: [960, 560] }) }), look: LIGHT,
+    type: (ty, t) => ty.keyword(t, 'OF A STAR', W(23, 3), { size: 150, y: 190, color: YELLOW, maxW: 1500 }) });
 
   add({ id: 'mutual', t0: 100.75, t1: 104.34, scene: 'mutual', p: { t0: 100.75, t1: 104.34 }, look: LIGHT,
-    type: (ty, t) => ty.subtitle(t, 24, { y: 1010, size: 46, color: P, end: 104.3 }) });
+    type: (ty, t) => ty.stack(t, [24], { x: 90, y: 130, size: 76, lineH: 90, maxW: 1760, stretch: 'normal', accent: YELLOW, fromScale: 1.3, filter: (w) => w.t < 104.3 }) });
 
   add({ id: 'own', t0: 104.34, t1: 107.79, scene: 'roto', p: R('sd15'), look: PRINT,
-    type: (ty, t) => ty.stack(t, [24], { x: 1180, y: 250, size: 110, lineH: 118, maxW: 680, accent: PALE, filter: (w) => w.t >= 104.3 }) });
+    type: (ty, t) => ty.stack(t, [24], { x: 1190, y: 862, size: 96, lineH: 106, maxW: 700, accent: PALE, filter: (w) => w.t >= 104.3 }) });
 
   add({ id: 'alone2', t0: 107.79, t1: 112.02, scene: 'split',
     p: { left: { scene: 'roto', p: R('sd16', { mode: 'light' }) }, right: { scene: 'otherworld', p: { mode: 'light', view: 'tower' } } },
     look: (t) => ({ ...LIGHT, flash: range(t, 111.3, 112.02) * 0.9 }),
     type: (ty, t) => {
-      ty.keyword(t, 'HOW COULD WE BE ALONE?', W(25, 0), { size: 100, x: 480, y: 980, color: P, stretch: 'normal' });
-      if (t > W(25, 0)) ty.glyphLine('HOW COULD WE BE ALONE', 1010, 990, 38, MINT);
+      ty.keyword(t, 'HOW COULD WE BE', W(25, 0), { size: 84, x: 480, y: 925, color: P, stretch: 'normal', maxW: 840 });
+      ty.keyword(t, 'ALONE?', W(25, 4), { size: 150, x: 480, y: 1050, color: YELLOW, maxW: 840 });
+      const gw = 'HOW COULD WE BE'.length * 46 * 0.9;
+      if (t > W(25, 0)) ty.glyphLine('HOW COULD WE BE', 1440 - gw / 2, 905, 46, MINT);
+      if (t > W(25, 4)) ty.glyphLine('ALONE', 1440 - 5 * 84 * 0.9 / 2, 1020, 84, YELLOW);
     } });
 
   // ================================================================ FINAL DROP (contact) — instrumental
@@ -320,12 +341,17 @@ export function buildTimeline(A) {
   add({ id: 'dance3', t0: B2(8), t1: B2(10), scene: 'roto', p: R('sd17', { mode: 'light', bg: galaxyBG }), look: LIGHT });
   add({ id: 'etzblink', t0: B2(10), t1: B2(12), scene: 'planet', p: { mode: 'light', blink: 1, radius: 330 }, look: LIGHT });
   add({ id: 'galaxyweb', t0: B2(12), t1: 120.90, scene: 'galaxy', p: { mode: 'light', view: 'web', t0: B2(12), t1: 120.90 }, look: LIGHT,
-    type: (ty, t) => { ty.hud('CONTACT GRAPH  ·  ' + Math.floor(1 + 360 * Math.min(1, Math.max(0, (t - 117.6) / 3.0))) + ' CIVILIZATIONS', 90, 1010, { size: 26, color: YELLOW }); } });
-  add({ id: 'stillhere', t0: 120.90, t1: 123.40, scene: 'roto', p: R('sd18', { mode: 'light', bg: galaxyBG }),
-    look: LIGHT, type: (ty, t) => ty.decode(t, 'STILL HERE.', 121.0, { size: 230, y: 340, dur: 1.0, latinColor: YELLOW }) });
+    type: (ty, t) => { ty.hud('CONTACT GRAPH  ·  ' + Math.floor(1 + 640 * Math.min(1, Math.max(0, (t - 117.6) / 3.0))) + ' CIVILIZATIONS', 90, 1010, { size: 26, color: YELLOW }); } });
+  add({ id: 'stillhere', t0: 120.90, t1: 123.40, scene: 'roto', p: R('sd18', { mode: 'light', bg: galaxyBG, rect: [0.25, 0, 0.88, 0.88] }),
+    look: LIGHT, type: (ty, t) => {
+      ty.decode(t, 'STILL', 121.0, { size: 220, x: 80, align: 'left', y: 470, dur: 1.0, latinColor: YELLOW });
+      ty.decode(t, 'HERE.', 121.2, { size: 220, x: 80, align: 'left', y: 700, dur: 1.0, latinColor: YELLOW });
+      ty.hud('REPLY  ·  ORIGIN ETZ-1715 b  ·  ROUND TRIP 434 YEARS', 86, 800, { size: 24, color: MINT, alpha: smooth(range(t, 121.9, 122.3)) });
+    } });
 
   // ================================================================ OUTRO
-  add({ id: 'end', t0: 123.40, t1: 128.2, scene: 'endcard', p: {}, look: (t) => ({ paper: 1, grain: 0.05, fade: 1 - range(t, 127.2, 127.96) }) });
+  // the song ends at 127.96; the card holds for the reply ("Still here." in the sound design) and fades out
+  add({ id: 'end', t0: 123.40, t1: 129.7, scene: 'endcard', p: {}, look: (t) => ({ paper: 1, grain: 0.05, fade: 1 - range(t, 129.0, 129.6) }) });
 
   // sanity: contiguous, non-overlapping
   S.sort((a, b) => a.t0 - b.t0);

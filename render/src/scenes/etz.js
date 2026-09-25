@@ -8,7 +8,7 @@ let planetMat = null, worldMat = null;
 
 function mkPlanet(engine) {
   planetMat = engine.shader(/* glsl */`
-    uniform vec2 res; uniform float S; uniform float time; uniform float kick; uniform float mode; uniform float blink;
+    uniform vec2 res; uniform float S; uniform float time; uniform float kick; uniform float mode; uniform float blink; uniform float infra;
     uniform vec2 center; uniform float radius; uniform float spin; uniform float tilt; uniform vec3 sunDir;
     uniform vec3 inkA; uniform vec3 inkB; uniform vec3 inkC; uniform vec3 paperC; uniform float cell;
     const float PI = 3.14159265;
@@ -83,9 +83,38 @@ function mkPlanet(engine) {
         float atm = (1. - inside) * exp(-(sqrt(r2) - 1.) * 16.);
         col += inkB * atm * 1.2; alpha = max(alpha, atm);
       }
+      // --- orbital infrastructure: a satellite train in equatorial orbit and a space elevator with its climber
+      if (infra > 0.) {
+        vec3 U = normalize(cross(nR, vec3(0., 0., 1.)));
+        vec3 V = -normalize(cross(nR, U));
+        float sats = 0., satHalo = 0.;
+        for (int i = 0; i < 24; i++) {
+          float ph = -2.4 + time * .3 + float(i) * .05;
+          vec3 sp = 1.2 * (cos(ph) * U + sin(ph) * V);
+          float vis = (sp.z > 0. || dot(sp.xy, sp.xy) > 1.) ? 1. : 0.;
+          float d = length(q - sp.xy) * radius;
+          sats += vis * smoothstep(3.6, 2.0, d); satHalo += vis * smoothstep(6.5, 4.4, d);
+        }
+        vec3 D = cos(.8) * U + sin(.8) * V;
+        vec2 e0 = D.xy, e1 = D.xy * 3.0, ab = e1 - e0;
+        float hh = clamp(dot(q - e0, ab) / dot(ab, ab), 0., 1.);
+        float tether = smoothstep(2.4, 1.0, length(q - e0 - ab * hh) * radius);
+        float climber = smoothstep(6.5, 4., length(q - e0 - ab * fract(time * .2)) * radius);
+        float cw = smoothstep(11., 8.5, length((q - e1) * radius * vec2(1., 1.6)));
+        sats = clamp(sats, 0., 1.) * infra; satHalo = clamp(satHalo, 0., 1.) * infra;
+        tether *= infra; climber *= infra; cw *= infra;
+        if (mode < .5) {
+          vec3 inkK = vec3(.043, .043, .078);
+          col = overprint(col, inkK, max(max(tether * .9, cw), satHalo));
+          col = mix(col, paperC, max(sats, climber));
+        } else {
+          col += inkC * tether * .9 + vec3(1., .92, .6) * (climber * 2.5 + sats * 1.8) + inkC * cw * 1.5;
+        }
+        alpha = max(alpha, max(max(tether, cw), max(satHalo, climber)));
+      }
       fragColor = vec4(col, clamp(alpha, 0., 1.));
     }`, {
-    res: { value: new THREE.Vector2(engine.W, engine.H) }, S: { value: engine.S }, time: { value: 0 }, kick: { value: 0 },
+    res: { value: new THREE.Vector2(engine.W, engine.H) }, S: { value: engine.S }, time: { value: 0 }, kick: { value: 0 }, infra: { value: 1 },
     mode: { value: 0 }, blink: { value: 0 }, center: { value: new THREE.Vector2(960, 540) }, radius: { value: 300 },
     spin: { value: 0 }, tilt: { value: 1.25 }, sunDir: { value: new THREE.Vector3(-0.8, 0.3, 0.5) },
     inkA: { value: new THREE.Color(...INK.violet) }, inkB: { value: new THREE.Color(...INK.pink) }, inkC: { value: new THREE.Color(...INK.mint) },
@@ -206,6 +235,7 @@ export const planet = {
     u.radius.value = (p.radius ?? 300) * (1 + (p.zoomRate ?? 0.03) * lt);
     u.spin.value = (p.spin0 ?? 0) + lt * 0.12;
     u.tilt.value = p.tilt ?? 0.32;
+    u.infra.value = p.infra ?? 1;
     u.paperC.value.setRGB(...(light ? [0, 0, 0] : INK.paper));
     e.passOver(planetMat, e.rtScene);
   },
