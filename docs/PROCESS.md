@@ -133,8 +133,8 @@ full-size stills. What each pass changed:
    * *How could we be alone* is bilingual across the split.
    * The pale-blue-dot callback now plays from their side.
    * A signal-lost static burst covers the blank, and the reply lands on the end card.
-4. **Outside review.** Gemini 3.8 Flash watched the 540p preview with its audio and scored it; the
-   prompt is in the session notes. The actionable findings were acted on:
+4. **Outside review.** Gemini 3.8 Flash watched the 540p preview with its audio and scored it
+   (`docs/reviews/gemini_preview3.md`). The actionable findings were acted on:
    * yearning lip sync measured 1–2 frames late (fixed, see §3);
    * line boil strobing under bloom in the neon dance shots (light-mode boil halved);
    * type crowding the eye in *not that far* and the colliding BEATING / BLINKING (both resized).

@@ -81,11 +81,14 @@ try {
     const venc = args.bitrate
       ? ['-b:v', args.bitrate, '-maxrate', args.maxrate || args.bitrate, '-bufsize', args.bufsize || '16M']
       : ['-crf', args.crf || '17'];
-    const enc = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-i', path.join(frameDir, 'f_%05d.jpg'),
-      '-ss', String(from), '-t', String(to - from), '-i', audio,
-      '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', args.preset || 'medium', ...venc,
-      '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', args.abitrate || '256k', '-t', String(to - from), '-movflags', '+faststart', out], { stdio: 'inherit' });
-    console.log(enc.status === 0 ? `wrote ${out}` : 'ffmpeg failed');
+    if (args.noenc) console.log(`frames in ${frameDir} (not encoded)`);
+    else {
+      const enc = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-i', path.join(frameDir, 'f_%05d.jpg'),
+        '-ss', String(from), '-t', String(to - from), '-i', audio,
+        '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', args.preset || 'medium', ...venc,
+        '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', args.abitrate || '256k', '-t', String(to - from), '-movflags', '+faststart', out], { stdio: 'inherit' });
+      console.log(enc.status === 0 ? `wrote ${out}` : 'ffmpeg failed');
+    }
   }
 } finally {
   await browser.close();
