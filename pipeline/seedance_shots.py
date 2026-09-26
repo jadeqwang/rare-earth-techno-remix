@@ -37,9 +37,9 @@ SHOTS = [
                 " The camera slowly pushes in from behind her."),
     dict(id="sd02_cu_yearning", t0=5.2, dur=4, audio="voc", bg="context", refs=[DOT, TOWER], takes=2,
          prompt="Close-up of DOT on the top platform of a red-and-white antenna tower at night far above the fog, three-quarter"
-                " view from her left; she looks up and off to the left at the stars, singing with longing, wind lifting her hair so"
-                " the pale-blue under-layer flashes, orange foam headphones around her neck, cool blue night light and warm orange"
-                " city glow from below." + SING),
+                " front view with her face clearly visible to the camera; she looks up and off to the left at the stars, singing"
+                " with longing, wind lifting her long black hair and curtain bangs, orange foam headphones around her neck, cool"
+                " blue night light and warm orange city glow from below. Slow push-in." + SING),
     dict(id="sd03_mcu_listen", t0=10.4, dur=4, audio="voc", bg="context", refs=[DOT, TOWER], takes=2,
          prompt="Medium close-up of DOT facing the camera on the antenna tower platform at night; as she sings she cups her right"
                 " hand behind her right ear in a listening gesture and tilts her head up toward the sky, eyes searching the stars,"
@@ -75,7 +75,9 @@ SHOTS = [
                 " shining with conviction, hair moving." + SING + GREEN),
     # ---------------- drop 2a / verse 4 (light mode, green screen)
     dict(id="sd11_care", t0=75.0, dur=4, audio="voc", bg="green", refs=[DOT], takes=2,
-         prompt="Close-up of DOT singing directly into the camera with intense emotion, strong white rim light, hair moving." + SING + GREEN),
+         prompt="Medium close-up (head, shoulders and the top of her white jacket) of DOT singing directly into the camera,"
+                " yearning and hopeful, eyebrows lifted, pleading and warm rather than angry, strong white rim light, hair moving."
+                + SING + GREEN),
     dict(id="sd12_search_listen", t0=81.0, dur=4, audio="voc", bg="green", refs=[DOT], takes=2,
          prompt="Medium shot of DOT performing a sharp K-pop point move: she snaps her head left, then right, searching, then cups"
                 " her hand behind her ear to listen, singing." + SING + GREEN),

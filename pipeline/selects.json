@@ -1,93 +1,93 @@
 {
  "sd01": {
-  "file": "sd01_tower_back__b75ccc69a6.mp4",
+  "file": "sd01_tower_back__e03e289da5.mp4",
   "start": 0.0,
-  "lag": 0
+  "lag": 0.0
  },
  "sd02": {
-  "file": "sd02_cu_yearning__1089f18a90.mp4",
+  "file": "sd02_cu_yearning__c8b3647c99.mp4",
   "start": 5.2,
-  "lag": 0.083
- },
- "sd03": {
-  "file": "sd03_mcu_listen__12046ab509.mp4",
-  "start": 10.4,
-  "lag": 0.125
- },
- "sd04": {
-  "file": "sd04_wide_pullback__037fa5a49c.mp4",
-  "start": 12.7,
-  "lag": 0
- },
- "sd05": {
-  "file": "sd05_console_caught__8d17e4249e.mp4",
-  "start": 21.5,
-  "lag": 0
- },
- "sd06": {
-  "file": "sd06_blink__8a7e7c3e89.mp4",
-  "start": 25.0,
   "lag": -0.083
  },
+ "sd03": {
+  "file": "sd03_mcu_listen__17fad81acf.mp4",
+  "start": 10.4,
+  "lag": -0.292
+ },
+ "sd04": {
+  "file": "sd04_wide_pullback__3dd548770f.mp4",
+  "start": 12.7,
+  "lag": 0.0
+ },
+ "sd05": {
+  "file": "sd05_console_caught__ab5341ea87.mp4",
+  "start": 21.5,
+  "lag": 0.0
+ },
+ "sd06": {
+  "file": "sd06_blink__a30f474b95.mp4",
+  "start": 25.0,
+  "lag": 0.292
+ },
  "sd07": {
-  "file": "sd07_transit__efef2556bd.mp4",
+  "file": "sd07_transit__9681e0518b.mp4",
   "start": 30.0,
-  "lag": -0.167
+  "lag": 0.0
  },
  "sd08": {
-  "file": "sd08_alone__07ecd36aff.mp4",
+  "file": "sd08_alone__bed9967237.mp4",
   "start": 35.5,
-  "lag": 0.167
+  "lag": 0.0
  },
  "sd09": {
-  "file": "sd09_keep_looking__38a6fbaf1f.mp4",
+  "file": "sd09_keep_looking__c6c9c8b95f.mp4",
   "start": 61.4,
-  "lag": 0
+  "lag": -0.083
  },
  "sd10": {
-  "file": "sd10_vision__601824893f.mp4",
+  "file": "sd10_vision__1368eb119a.mp4",
   "start": 71.0,
   "lag": 0.042
  },
  "sd11": {
-  "file": "sd11_care__e3ec5eb2bd.mp4",
+  "file": "sd11_care__03ce0c9203.mp4",
   "start": 75.0,
-  "lag": 0
+  "lag": 0.125
  },
  "sd12": {
-  "file": "sd12_search_listen__da838b364d.mp4",
+  "file": "sd12_search_listen__58e3680064.mp4",
   "start": 81.0,
-  "lag": -0.042
+  "lag": -0.25
  },
  "sd13": {
-  "file": "sd13_caught_reply__3cfdb90d7d.mp4",
+  "file": "sd13_caught_reply__d1fa06cb74.mp4",
   "start": 93.3,
-  "lag": 0.042
+  "lag": 0.208
  },
  "sd14": {
-  "file": "sd14_blink_dance__9c9b39007d.mp4",
+  "file": "sd14_blink_dance__bd2b906427.mp4",
   "start": 97.2,
-  "lag": 0.083
+  "lag": -0.146
  },
  "sd15": {
-  "file": "sd15_own_ecu__bac460481f.mp4",
+  "file": "sd15_own_ecu__afca32f85b.mp4",
   "start": 102.8,
-  "lag": -0.167
+  "lag": -0.125
  },
  "sd16": {
-  "file": "sd16_alone_beam__cc757af88f.mp4",
+  "file": "sd16_alone_beam__c43ef1f6ef.mp4",
   "start": 107.5,
-  "lag": 0
+  "lag": 0.0
  },
  "sd17": {
-  "file": "sd17_dance_a__d99507c7ca.mp4",
+  "file": "sd17_dance_a__e8980134c1.mp4",
   "start": 112.0,
-  "lag": 0
+  "lag": 0.0
  },
  "sd18": {
-  "file": "sd18_dance_b__a8356f122e.mp4",
+  "file": "sd18_dance_b__1c9ae224b0.mp4",
   "start": 118.0,
-  "lag": 0
+  "lag": 0.0
  },
  "se01": {
   "file": "se01_fog_tower__da6181cace.mp4",

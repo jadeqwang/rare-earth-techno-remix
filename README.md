@@ -3,7 +3,9 @@
 A music video for **"Rare Earth"** (DDR / techno version), a song about hoping to find intelligent
 life, written in 2011 for a SETI event.
 
-**▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09)
+**▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09). DOT has the
+v3 hairstyle: centre part, long curtain bangs, long layers. The first cut, with a hime cut, is in the
+git history at commit `8dedea7`.
 
 ![Twelve frames from the video](docs/storyboard.jpg)
 
@@ -41,8 +43,9 @@ never its people. The full treatment is in [`docs/TREATMENT.md`](docs/TREATMENT.
 
 Generation ran through Cloudflare's unified model catalog (`pipeline/gen.py`) with a small relay
 Worker (`pipeline/relay/`) that receives async webhooks and mirrors results into KV. Every request is
-logged in `pipeline/ledger.jsonl`. Total generation spend was roughly $55: 47 Seedance runs
-(222 s of 720p video) plus about 16 image runs, and small change for voice and transcription.
+logged in `pipeline/ledger.jsonl`. Total generation spend was roughly $115. Seedance accounts for
+about $110: 103 runs, 478 s of 720p video, including the full re-shoot for DOT's new hairstyle (v3).
+The rest is about 19 image runs plus small change for voice, transcription and one video review.
 
 ## Render it yourself
 

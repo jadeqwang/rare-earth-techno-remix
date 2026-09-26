@@ -47,32 +47,63 @@ when run in background mode).
   envelope, but **only over the window the edit actually uses**. Whole-clip scores were misleading,
   because Seedance often idles before and after the reference phrase. The best lag is written into
   `selects.json` and applied in the renderer (`clipTime = t − start + lag`). `wordstrip.py` renders
-  face crops at every sung word onset for five candidate lags, as the visual check.
+  face crops at every sung word onset for candidate lags, as the visual check.
+* **Two metrics, one method.** Profiles, push-ins and hands at the face defeat the cascade, so
+  `mouth_color.py` adds a second, independent openness measure: the largest skin blob is taken as the
+  face, and the dark-red mouth-interior pixels in its lower half are counted. `lag_curve.py` measures
+  both metrics exactly the way the renderer plays a take. For every lag it resamples the openness curve
+  at `t − start + lag` for each song time in the window and correlates that with the vocal envelope. A
+  lag is trusted when both curves peak together. The first scorer (`score.py`) slid the curves inside
+  the window instead. That drops edge samples, and on short rhythmic windows it can pick the wrong one
+  of two periodic peaks: sd06 v3 read −0.33 s there and +0.29 s here, where both metrics agree.
 
-| shot | lyric | take | lag | corr @ lag | corr @ 0 |
+Current selects (character revision v3; *r* = correlation with the vocal envelope at the applied lag /
+at zero lag):
+
+| shot | lyric | take | lag | face r | colour r |
 |---|---|---|---|---|---|
-| sd03 | Are you still there | 12046ab509 | +0.125 s | 0.68 | 0.42 |
-| sd06 | The beating blinking of a star | 8a7e7c3e89 | −0.083 s | 0.46 | 0.33 |
-| sd07 | not that far from my own | efef2556bd | −0.167 s | 0.45 | 0.33 |
-| sd08 | How could we be alone | 07ecd36aff | +0.167 s | 0.53 | 0.47 |
-| sd09 | Keep on looking | 38a6fbaf1f | 0 | 0.91 | 0.91 |
-| sd10 | Our science has a vision | 601824893f | +0.042 s | 0.43 | 0.40 |
-| sd12 | Are you still there (V4) | da838b364d | −0.042 s | 0.46 | 0.42 |
-| sd13 | Your signal here I think I've caught | 3cfdb90d7d | +0.042 s | 0.31 | 0.30 |
-| sd14 | The beating blinking of a star (V5) | 9c9b39007d | +0.083 s | 0.70 | 0.50 |
-| sd15 | far from my own (ECU) | bac460481f | −0.167 s | 0.42 | 0.08 |
+| sd02 | You're yearning to see the life out there | c8b3647c99 | −0.083 s | 0.78 / 0.32 | profile, n/a |
+| sd03 | Are you still there | 17fad81acf | −0.292 s | 0.72 / −0.32 | 0.13 / −0.28 |
+| sd06 | The beating blinking of a star | a30f474b95 | +0.292 s | 0.44 / 0.03 | 0.38 / 0.07 |
+| sd07 | not that far from my own | 9681e0518b | 0 | ECU, n/a | 0.52 / 0.52 |
+| sd09 | Keep on looking | c6c9c8b95f | −0.083 s | 0.82 / 0.18 | hand at face, n/a |
+| sd10 | Our science has a vision | 1368eb119a | +0.042 s | 0.49 / 0.41 | 0.40 / 0.31 |
+| sd11 | Do you still care | 03ce0c9203 | +0.125 s | 0.41 / 0.09 | 0.46 / 0.16 |
+| sd12 | Are you still there (V4) | 58e3680064 | −0.250 s | 0.69 / −0.70 | 0.60 / −0.61 |
+| sd13 | Your signal here I think I've caught | d1fa06cb74 | +0.208 s | 0.22 / −0.08 | 0.32 / −0.18 |
+| sd14 | The beating blinking of a star (V5) | bd2b906427 | −0.146 s | 0.68 / 0.03 | 0.75 / 0.01 |
+| sd15 | far from my own (ECU) | afca32f85b | −0.125 s | 0.36 / −0.08 | 0.40 / −0.09 |
 
-  sd02 (*You're yearning to see the life out there*) is a three-quarter view looking up, with a strong
-  push-in, so the face cascade never locks on. It was measured instead with a colour mouth metric: the
-  count of dark-red mouth-interior pixels, normalised by the zoom and high-passed. That metric
-  correlates best at +0.083 s (r = 0.27, against 0.17 at zero lag), and the lag was applied. An
-  independent video review (Gemini 3.8 Flash, watching the 540p preview with audio) had flagged the
-  same shot as 2–3 frames late.
+  sd05 (hands over the face), sd08 (tiny in frame until the held "alone") and sd16 (seen from behind)
+  play at zero lag; neither metric is meaningful there. The v3 takes needed larger corrections than the
+  v2 batch, which stayed within ±0.17 s. Without them sd12 would have played visibly out of sync
+  (r = −0.70 at zero lag). A few corrections run a plate past its end; for sd13, the cut to the next shot
+  moved 0.3 s earlier rather than freezing the last drawings.
 
-  The correlation scores sd11 (*Do you still care*, V4) at 0.04. The camera pushes in through that
-  take, so the face in a fixed crop keeps growing and the openness curve drifts with it. It was accepted
-  on the word strip instead: a small round mouth on the held "Do", then wide open on "care". Measured
-  lags fall within about ±0.17 s, which is within 4 frames at 24 fps.
+## 3b. Character revision v3 (new hairstyle)
+
+After v1 was delivered, the songwriter asked for DOT to get a different hairstyle, from a reference
+photo. The photo itself was not sent to any model. The hairstyle was written into a text-only edit of the
+canonical sheet (`pipeline/prompts/dot_sheet_v3_hair.txt`): long, straight black hair with a centre part,
+long curtain bangs framing the face, and long layered ends past the shoulders. It replaces the hime cut
+and drops the blue under-layer. Everything else on the sheet was kept.
+
+GPT Image 2.5 made two edits of the v2 sheet and Nano Banana Pro one. The first GPT edit became
+`design/dot_character_sheet.jpg`. The Nano Banana edit ignored the instruction and kept the hime cut.
+The v2 sheet is kept as `design/dot_character_sheet_v2_hime.jpg`.
+
+All 18 DOT shots were regenerated with the new sheet as the image reference: 56 Seedance takes, with
+takes tagged by revision in the manifest. The picks were made on contact sheets of each shot's used
+window and verified with the lip-sync loop above. Two prompts were changed after the first round:
+* sd02: the three-quarter view came back as a pure profile, so the prompt now asks for the face to be
+  visible.
+* sd11: the extreme close-up looked angry, so it was reframed and the prompt asks for a pleading look.
+
+Some new takes also frame DOT differently, and type was moved to match:
+* the poster's star flare now follows the star in the new plate;
+* "ALONE?" moved below DOT, because the new sd08 cranes in until her head fills the top third;
+* *far from my own* moved onto her hair;
+* the listen plate is pushed in so her cupped hand clears the lyric.
 
 ## 4. Rotoscope guides
 

@@ -24,15 +24,17 @@
    },
    {
     "job": "sd01_tower_back-510957fe5b",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381912.4672177,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd01_tower_back__510957fe5b.mp4"
    },
    {
     "job": "sd01_tower_back-e03e289da5",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381912.8318927,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd01_tower_back__e03e289da5.mp4"
    }
   ]
  },
@@ -44,7 +46,7 @@
    "audio": "voc",
    "bg": "context",
    "takes": 2,
-   "prompt": "Close-up of DOT on the top platform of a red-and-white antenna tower at night far above the fog, three-quarter view from her left; she looks up and off to the left at the stars, singing with longing, wind lifting her hair so the pale-blue under-layer flashes, orange foam headphones around her neck, cool blue night light and warm orange city glow from below. She sings the words of the reference audio with precise, clearly articulated lip sync."
+   "prompt": "Close-up of DOT on the top platform of a red-and-white antenna tower at night far above the fog, three-quarter front view with her face clearly visible to the camera; she looks up and off to the left at the stars, singing with longing, wind lifting her long black hair and curtain bangs, orange foam headphones around her neck, cool blue night light and warm orange city glow from below. Slow push-in. She sings the words of the reference audio with precise, clearly articulated lip sync."
   },
   "takes": [
    {
@@ -70,21 +72,69 @@
    },
    {
     "job": "sd02_cu_yearning-1a46770efd",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381886.990747,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__1a46770efd.mp4",
+    "sync": {
+     "error": "face found in only 3% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd02_cu_yearning-b94125b1df",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381887.7766936,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__b94125b1df.mp4",
+    "sync": {
+     "error": "face found in only 10% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd02_cu_yearning-6aa2bbb842",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381888.589277,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__6aa2bbb842.mp4",
+    "sync": {
+     "error": "face found in only 24% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-0df0f25b42",
+    "state": "done",
+    "ts": 1790382671.9623125,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__0df0f25b42.mp4",
+    "sync": {
+     "error": "face found in only 1% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-7f0ac164d9",
+    "state": "done",
+    "ts": 1790382672.4998012,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__7f0ac164d9.mp4",
+    "sync": {
+     "hit": 0.474,
+     "lag": 0.0,
+     "corr": 0.265,
+     "corr0": 0.265
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-c8b3647c99",
+    "state": "done",
+    "ts": 1790382673.3274443,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__c8b3647c99.mp4",
+    "sync": {
+     "hit": 0.619,
+     "lag": -0.08333333333333333,
+     "corr": 0.584,
+     "corr0": 0.502
+    }
    }
   ]
  },
@@ -125,21 +175,42 @@
    },
    {
     "job": "sd03_mcu_listen-0e25e07308",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381889.9449959,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__0e25e07308.mp4",
+    "sync": {
+     "hit": 0.753,
+     "lag": -0.20833333333333334,
+     "corr": 0.124,
+     "corr0": 0.095
+    }
    },
    {
     "job": "sd03_mcu_listen-17fad81acf",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381890.381543,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__17fad81acf.mp4",
+    "sync": {
+     "hit": 0.876,
+     "lag": -0.3333333333333333,
+     "corr": 0.681,
+     "corr0": 0.115
+    }
    },
    {
     "job": "sd03_mcu_listen-07c157eb6c",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381891.1758811,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__07c157eb6c.mp4",
+    "sync": {
+     "hit": 0.948,
+     "lag": -0.125,
+     "corr": 0.44,
+     "corr0": 0.304
+    }
    }
   ]
  },
@@ -168,15 +239,17 @@
    },
    {
     "job": "sd04_wide_pullback-3dd548770f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381913.1908398,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__3dd548770f.mp4"
    },
    {
     "job": "sd04_wide_pullback-82ca906f02",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381914.1544766,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__82ca906f02.mp4"
    }
   ]
  },
@@ -214,21 +287,36 @@
    },
    {
     "job": "sd05_console_caught-9c8f1b933f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381891.8639684,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__9c8f1b933f.mp4",
+    "sync": {
+     "hit": 0.485,
+     "lag": -0.16666666666666666,
+     "corr": 0.217,
+     "corr0": 0.118
+    }
    },
    {
     "job": "sd05_console_caught-1bc3e632db",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381892.403504,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__1bc3e632db.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd05_console_caught-ab5341ea87",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381892.7387414,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__ab5341ea87.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
    }
   ]
  },
@@ -269,21 +357,42 @@
    },
    {
     "job": "sd06_blink-bfb6530fba",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381893.4464908,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__bfb6530fba.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.3333333333333333,
+     "corr": 0.206,
+     "corr0": 0.024
+    }
    },
    {
     "job": "sd06_blink-f6304f252e",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381893.8110077,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__f6304f252e.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.3333333333333333,
+     "corr": 0.275,
+     "corr0": -0.025
+    }
    },
    {
     "job": "sd06_blink-a30f474b95",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381894.5440457,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__a30f474b95.mp4",
+    "sync": {
+     "hit": 0.938,
+     "lag": -0.3333333333333333,
+     "corr": 0.251,
+     "corr0": -0.033
+    }
    }
   ]
  },
@@ -318,21 +427,36 @@
    },
    {
     "job": "sd07_transit-9681e0518b",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381894.893021,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__9681e0518b.mp4",
+    "sync": {
+     "error": "face found in only 8% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd07_transit-c456582800",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381895.356204,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__c456582800.mp4",
+    "sync": {
+     "error": "face found in only 9% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd07_transit-b08f667f0b",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381896.0708025,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__b08f667f0b.mp4",
+    "sync": {
+     "hit": 0.455,
+     "lag": -0.125,
+     "corr": 0.223,
+     "corr0": 0.168
+    }
    }
   ]
  },
@@ -373,21 +497,36 @@
    },
    {
     "job": "sd08_alone-c1545acf4d",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381896.4349256,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__c1545acf4d.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd08_alone-0cd6c4b0ac",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381896.7938569,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__0cd6c4b0ac.mp4",
+    "sync": {
+     "hit": 0.62,
+     "lag": 0.25,
+     "corr": 0.611,
+     "corr0": 0.417
+    }
    },
    {
     "job": "sd08_alone-bed9967237",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381897.1297896,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__bed9967237.mp4",
+    "sync": {
+     "error": "face found in only 19% of frames (profile/wide shot) - review visually"
+    }
    }
   ]
  },
@@ -428,21 +567,42 @@
    },
    {
     "job": "sd09_keep_looking-a545f103dd",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381897.6119275,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__a545f103dd.mp4",
+    "sync": {
+     "hit": 0.856,
+     "lag": -0.3333333333333333,
+     "corr": 0.033,
+     "corr0": -0.114
+    }
    },
    {
     "job": "sd09_keep_looking-df78dbc8bd",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381897.9712267,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__df78dbc8bd.mp4",
+    "sync": {
+     "hit": 0.866,
+     "lag": 0.3333333333333333,
+     "corr": 0.117,
+     "corr0": -0.327
+    }
    },
    {
     "job": "sd09_keep_looking-c6c9c8b95f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381898.4851167,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__c6c9c8b95f.mp4",
+    "sync": {
+     "hit": 0.66,
+     "lag": 0.3333333333333333,
+     "corr": 0.689,
+     "corr0": 0.348
+    }
    }
   ]
  },
@@ -483,21 +643,42 @@
    },
    {
     "job": "sd10_vision-5b864e8190",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381899.3143058,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__5b864e8190.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.3333333333333333,
+     "corr": 0.201,
+     "corr0": -0.179
+    }
    },
    {
     "job": "sd10_vision-eb7627974f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381900.0277429,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__eb7627974f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.0,
+     "corr": 0.11,
+     "corr0": 0.11
+    }
    },
    {
     "job": "sd10_vision-1368eb119a",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381900.404811,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__1368eb119a.mp4",
+    "sync": {
+     "hit": 0.975,
+     "lag": 0.08333333333333333,
+     "corr": 0.207,
+     "corr0": 0.184
+    }
    }
   ]
  },
@@ -509,7 +690,7 @@
    "audio": "voc",
    "bg": "green",
    "takes": 2,
-   "prompt": "Close-up of DOT singing directly into the camera with intense emotion, strong white rim light, hair moving. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+   "prompt": "Medium close-up (head, shoulders and the top of her white jacket) of DOT singing directly into the camera, yearning and hopeful, eyebrows lifted, pleading and warm rather than angry, strong white rim light, hair moving. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
   },
   "takes": [
    {
@@ -544,21 +725,81 @@
    },
    {
     "job": "sd11_care-03ce0c9203",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381900.7712324,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__03ce0c9203.mp4",
+    "sync": {
+     "hit": 0.959,
+     "lag": 0.20833333333333334,
+     "corr": 0.095,
+     "corr0": -0.213
+    }
    },
    {
     "job": "sd11_care-24a37c350c",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381901.1102996,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__24a37c350c.mp4",
+    "sync": {
+     "hit": 0.979,
+     "lag": 0.0,
+     "corr": 0.056,
+     "corr0": 0.056
+    }
    },
    {
     "job": "sd11_care-515ba71b82",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381901.4804368,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__515ba71b82.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.25,
+     "corr": -0.116,
+     "corr0": -0.235
+    }
+   },
+   {
+    "job": "sd11_care-587015fc82",
+    "state": "done",
+    "ts": 1790382673.663605,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__587015fc82.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.20833333333333334,
+     "corr": 0.139,
+     "corr0": -0.057
+    }
+   },
+   {
+    "job": "sd11_care-5a3217546d",
+    "state": "done",
+    "ts": 1790382674.0065625,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__5a3217546d.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.041666666666666664,
+     "corr": 0.289,
+     "corr0": 0.256
+    }
+   },
+   {
+    "job": "sd11_care-5c9f03616f",
+    "state": "done",
+    "ts": 1790382674.408525,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__5c9f03616f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.16666666666666666,
+     "corr": 0.032,
+     "corr0": -0.003
+    }
    }
   ]
  },
@@ -599,21 +840,42 @@
    },
    {
     "job": "sd12_search_listen-1eb000554e",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381901.837848,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__1eb000554e.mp4",
+    "sync": {
+     "hit": 0.546,
+     "lag": -0.25,
+     "corr": 0.152,
+     "corr0": -0.171
+    }
    },
    {
     "job": "sd12_search_listen-58e3680064",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381903.0069845,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__58e3680064.mp4",
+    "sync": {
+     "hit": 0.588,
+     "lag": -0.125,
+     "corr": 0.506,
+     "corr0": 0.31
+    }
    },
    {
     "job": "sd12_search_listen-029c40c53f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381903.580884,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__029c40c53f.mp4",
+    "sync": {
+     "hit": 0.649,
+     "lag": -0.125,
+     "corr": 0.078,
+     "corr0": 0.01
+    }
    }
   ]
  },
@@ -654,21 +916,39 @@
    },
    {
     "job": "sd13_caught_reply-d1fa06cb74",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381904.3640685,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__d1fa06cb74.mp4",
+    "sync": {
+     "hit": 0.835,
+     "lag": 0.3333333333333333,
+     "corr": 0.363,
+     "corr0": 0.104
+    }
    },
    {
     "job": "sd13_caught_reply-5b98e2543a",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381904.70317,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__5b98e2543a.mp4",
+    "sync": {
+     "hit": 0.804,
+     "lag": 0.25,
+     "corr": 0.046,
+     "corr0": -0.038
+    }
    },
    {
     "job": "sd13_caught_reply-7dc8f266d7",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381905.2544022,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__7dc8f266d7.mp4",
+    "sync": {
+     "error": "face found in only 19% of frames (profile/wide shot) - review visually"
+    }
    }
   ]
  },
@@ -709,21 +989,42 @@
    },
    {
     "job": "sd14_blink_dance-bd2b906427",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381905.9648733,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__bd2b906427.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.08333333333333333,
+     "corr": 0.658,
+     "corr0": 0.529
+    }
    },
    {
     "job": "sd14_blink_dance-782f9e00e6",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381906.7074735,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__782f9e00e6.mp4",
+    "sync": {
+     "hit": 0.99,
+     "lag": 0.0,
+     "corr": 0.463,
+     "corr0": 0.463
+    }
    },
    {
     "job": "sd14_blink_dance-72d5234828",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381907.4557726,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__72d5234828.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.08333333333333333,
+     "corr": 0.568,
+     "corr0": 0.461
+    }
    }
   ]
  },
@@ -761,21 +1062,36 @@
    },
    {
     "job": "sd15_own_ecu-f5797b91f9",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381907.8288808,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__f5797b91f9.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd15_own_ecu-afca32f85b",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381908.8648417,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__afca32f85b.mp4",
+    "sync": {
+     "hit": 0.496,
+     "lag": 0.0,
+     "corr": 0.358,
+     "corr0": 0.358
+    }
    },
    {
     "job": "sd15_own_ecu-bed8113678",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381909.2087858,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__bed8113678.mp4",
+    "sync": {
+     "error": "face found in only 2% of frames (profile/wide shot) - review visually"
+    }
    }
   ]
  },
@@ -813,21 +1129,33 @@
    },
    {
     "job": "sd16_alone_beam-5a4c671c43",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381909.7427762,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__5a4c671c43.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd16_alone_beam-1736c8440f",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381910.6490674,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__1736c8440f.mp4",
+    "sync": {
+     "error": "face found in only 3% of frames (profile/wide shot) - review visually"
+    }
    },
    {
     "job": "sd16_alone_beam-c43ef1f6ef",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381911.4415514,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__c43ef1f6ef.mp4",
+    "sync": {
+     "error": "face found in only 6% of frames (profile/wide shot) - review visually"
+    }
    }
   ]
  },
@@ -856,15 +1184,17 @@
    },
    {
     "job": "sd17_dance_a-e8980134c1",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381914.582535,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd17_dance_a__e8980134c1.mp4"
    },
    {
     "job": "sd17_dance_a-9c5e567e4a",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381915.4940994,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd17_dance_a__9c5e567e4a.mp4"
    }
   ]
  },
@@ -893,15 +1223,17 @@
    },
    {
     "job": "sd18_dance_b-c1c3e36a17",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381916.1799495,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd18_dance_b__c1c3e36a17.mp4"
    },
    {
     "job": "sd18_dance_b-1c9ae224b0",
-    "state": "submitted",
+    "state": "done",
     "ts": 1790381917.0031185,
-    "hair": "v3"
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd18_dance_b__1c9ae224b0.mp4"
    }
   ]
  },

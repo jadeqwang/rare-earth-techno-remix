@@ -31,7 +31,8 @@ after that count — a world that saw us the same way we saw it.
 ## Characters and worlds
 
 **DOT** — the voice of the pale blue dot. 20, night-shift radio-observatory listener and singer.
-Hime cut with a hidden pale-blue under-layer, 1977-style orange-foam headphones (the year of the Wow!
+Long straight black hair with a centre part and long curtain bangs (revision v3; v1 had a hime cut with a
+pale-blue under-layer), 1977-style orange-foam headphones (the year of the Wow!
 signal and the Voyager Golden Record), oversized white flight jacket with a giant pale-blue dot on the
 back, handheld Yagi antenna as her hero prop. Signature: a pale-blue dot catchlight in each eye.
 Point moves: **LISTEN** (hand cupped to ear, eyes up), **BLINK** (hands flash open/closed like a

@@ -33,8 +33,17 @@ export function buildTimeline(A) {
     look: PRINT,
     type: (ty, t) => {
       const c = ty.ctx;
-      // 1) the star she reaches for flares and blinks (foreshadows "the beating blinking of a star")
-      const starX = 372, starY = 96;
+      // 1) the star she reaches for flares and blinks (foreshadows "the beating blinking of a star").
+      //    Position tracked in the sd01 plate (clip px), mapped through the poster's slow push-in rect.
+      const TRACK = [[1.5, 431, 89], [2.0, 429, 93], [2.5, 426, 99], [3.0, 423, 106], [3.5, 420, 114], [4.0, 417, 125],
+        [4.5, 413, 135], [5.0, 409, 146], [5.5, 407, 156], [5.75, 405, 161]];
+      let cx = TRACK[0][1], cy = TRACK[0][2];
+      for (let i = 1; i < TRACK.length; i++) if (t >= TRACK[i - 1][0]) {
+        const u = clamp((t - TRACK[i - 1][0]) / (TRACK[i][0] - TRACK[i - 1][0]));
+        cx = lerp(TRACK[i - 1][1], TRACK[i][1], u); cy = lerp(TRACK[i - 1][2], TRACK[i][2], u);
+      }
+      const pk = smooth(t / 5.7), rr = [-0.04 * pk, -0.03 * pk, 1 + 0.08 * pk, 1 + 0.08 * pk];
+      const starX = (rr[0] + (cx / 1280) * rr[2]) * 1920, starY = (1 - (rr[1] + (1 - cy / 720) * rr[3])) * 1080;
       const blinkT = [0.55, 1.35, 2.15, 2.75];
       let fl = 0.35;
       for (const bt of blinkT) fl = Math.max(fl, Math.exp(-Math.pow((t - bt) / 0.09, 2)) * 1.0);
@@ -82,8 +91,8 @@ export function buildTimeline(A) {
       ty.hud(`SCANNING  ${(1.4e9 + Math.floor((t - 8.86) * 3.1e8)).toLocaleString('en-US')}  CHANNELS`, 90, 1010);
     } });
 
-  add({ id: 'listen', t0: 10.88, t1: 12.73, scene: 'roto', p: R('sd03'), look: PRINT,
-    type: (ty, t) => ty.stack(t, [3], { x: 70, y: 260, size: 140, lineH: 140, maxW: 560, accent: PALE }) });
+  add({ id: 'listen', t0: 10.88, t1: 12.73, scene: 'roto', p: R('sd03', { rect: [0, -0.06, 1.12, 1.12] }), look: PRINT,
+    type: (ty, t) => ty.stack(t, [3], { x: 70, y: 260, size: 128, lineH: 132, maxW: 540, accent: PALE, fromScale: 1.3 }) });
 
   add({ id: 'pullback', t0: 12.73, t1: 14.81, scene: 'roto', p: R('sd04'), look: PRINT,
     type: (ty, t) => {
@@ -149,12 +158,12 @@ export function buildTimeline(A) {
 
   add({ id: 'alone', t0: 35.94, t1: 39.95, scene: 'roto', p: R('sd08'), look: PRINT,
     type: (ty, t) => {
-      ty.keyword(t, t < W(9, 3) ? 'HOW COULD WE' : 'HOW COULD WE BE', W(9, 0), { size: 96, y: 140, stretch: 'normal', inDur: t < W(9, 3) ? 0.22 : 0.001 });
+      ty.keyword(t, t < W(9, 3) ? 'HOW COULD WE' : 'HOW COULD WE BE', W(9, 0), { size: 84, y: 118, stretch: 'normal', inDur: t < W(9, 3) ? 0.22 : 0.001 });
       const k = range(t, W(9, 4), 39.9);
-      ty.font('Archivo', 190, 900, 'expanded');
+      ty.font('Archivo', 200, 900, 'expanded');
       const word = 'ALONE?'; const sp = lerp(0, 60, easeOutCubic(k));
       let x = 960 - (ty.ctx.measureText(word).width + sp * (word.length - 1)) / 2;
-      if (t >= W(9, 3)) for (const ch of word) { ty.plateText(ch, x, 330, P, css(INK.orange, 0.9), [7, 6]); x += ty.ctx.measureText(ch).width + sp; }
+      if (t >= W(9, 3)) for (const ch of word) { ty.plateText(ch, x, 1010, P, css(INK.orange, 0.9), [7, 6]); x += ty.ctx.measureText(ch).width + sp; }
     } });
 
   // ================================================================ BUILD (the other world)
@@ -302,10 +311,11 @@ export function buildTimeline(A) {
 
   add({ id: 'reply', t0: 93.59, t1: W(22, 2), scene: 'waterfall', p: { mode: 'light', signalAt: 93.62 }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'YOUR SIGNAL', W(22, 0), { size: 200, y: 600, color: MINT }) });
-  add({ id: 'caught2', t0: W(22, 2), t1: 97.45, scene: 'roto', p: R('sd13', { mode: 'print', inkA: INK.klein, inkC: INK.mint }), look: PRINT,
+  // (sd13 plays with a +0.21 s lip-sync lag, so its 4 s plate runs out at 97.13: cut to the Earth there)
+  add({ id: 'caught2', t0: W(22, 2), t1: 97.13, scene: 'roto', p: R('sd13', { mode: 'print', inkA: INK.klein, inkC: INK.mint }), look: PRINT,
     type: (ty, t) => ty.stack(t, [22], { x: 90, y: 230, size: 104, lineH: 112, maxW: 700, accent: MINT, filter: (w) => w.t >= W(22, 2) - 0.05 }) });
 
-  add({ id: 'blinkearth', t0: 97.45, t1: 98.80, scene: 'earth', p: { mode: 'light', blink: 1, view: 'night' }, look: LIGHT,
+  add({ id: 'blinkearth', t0: 97.13, t1: 98.80, scene: 'earth', p: { mode: 'light', blink: 1, view: 'night' }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'BEATING', W(23, 1), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
   add({ id: 'blinketz', t0: 98.80, t1: 99.76, scene: 'planet', p: { mode: 'light', blink: 1 }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'BLINKING', W(23, 2), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
@@ -316,7 +326,7 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.stack(t, [24], { x: 90, y: 130, size: 76, lineH: 90, maxW: 1760, stretch: 'normal', accent: YELLOW, fromScale: 1.3, filter: (w) => w.t < 104.3 }) });
 
   add({ id: 'own', t0: 104.34, t1: 107.79, scene: 'roto', p: R('sd15'), look: PRINT,
-    type: (ty, t) => ty.stack(t, [24], { x: 1190, y: 862, size: 96, lineH: 106, maxW: 700, accent: PALE, filter: (w) => w.t >= 104.3 }) });
+    type: (ty, t) => ty.stack(t, [24], { x: 1330, y: 820, size: 86, lineH: 98, maxW: 560, accent: PALE, fromScale: 1.25, filter: (w) => w.t >= 104.3 }) });
 
   add({ id: 'alone2', t0: 107.79, t1: 112.02, scene: 'split',
     p: { left: { scene: 'roto', p: R('sd16', { mode: 'light' }) }, right: { scene: 'otherworld', p: { mode: 'light', view: 'tower' } } },
