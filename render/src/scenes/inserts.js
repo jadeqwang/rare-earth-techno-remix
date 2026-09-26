@@ -257,8 +257,12 @@ export const endcard = {
     const s = 'RARE EARTH'; const w = c.measureText(s).width;
     c.fillStyle = css(INK.ink, smooth(range(lt, 0.8, 1.6))); c.fillText(s, 960 - w / 2, 760);
     const a2 = smooth(range(lt, 1.2, 2.0));
-    font(c, 'BlackHanSans', 34); c.fillStyle = css(INK.klein, a2); c.fillText('희귀한 지구', 960 - 250, 830);
-    font(c, 'DelaGothicOne', 30); c.fillStyle = css(INK.pink, a2); c.fillText('レアアース', 960 + 70, 830);
+    const zh = '稀有地球', ru = 'Редкая Земля';
+    font(c, 'NotoSansSC', 36, 900); const wz = c.measureText(zh).width;
+    font(c, 'Unbounded', 26, 800); const wr = c.measureText(ru).width;
+    const x0 = 960 - (wz + 40 + wr) / 2;
+    font(c, 'NotoSansSC', 36, 900); c.fillStyle = css(INK.klein, a2); c.fillText(zh, x0, 832);
+    font(c, 'Unbounded', 26, 800); c.fillStyle = css(INK.pink, a2); c.fillText(ru, x0 + wz + 40, 830);
     font(c, 'JetBrainsMono', 20, 500); c.fillStyle = css(INK.ink, 0.75 * smooth(range(lt, 1.4, 2.2)));
     const cr = 'written in 2011 for a SETI event   ·   video drawn in javascript   ·   keep looking';
     c.fillText(cr, 960 - c.measureText(cr).width / 2, 900);

@@ -79,7 +79,9 @@ Planets, dish arrays, the space elevator, signals, UI and all typography are pro
 * **Verse 2**: key words big (PALE BLUE DOT, SIGNAL, STAR, TRANSIT, ALONE), the rest as elegant subtitles.
 * **Verse 3**: brutalist — monospace terminal lines, headline slams, a censor bar at the blank.
 * **Verse 4–5**: the same lyrics arrive first as ETZ glyphs and *decode* into English — the song was received.
-* **Title card** "RARE EARTH / 희귀한 지구 / レアアース" drops on the first drop, anime-OP style.
+* **Title card** "RARE EARTH / 稀有地球 / Редкая Земля" drops on the first drop, anime-OP style. Both
+  translations mean Earth the planet, as in the Rare Earth hypothesis, not rare-earth metals (稀土 /
+  редкоземельные). The ETZ-1715 b chapter card reads 第二地球 / Вторая Земля, "a second Earth".
 * UI: `RX 1420.40575 MHz`, SNR, drift, latency — the hydrogen line SETI listens on.
 
 ## Motion rules

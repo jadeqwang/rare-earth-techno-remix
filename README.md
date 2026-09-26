@@ -70,7 +70,7 @@ SwiftShader, so no GPU is needed.
 ## Credits
 
 * Song: "Rare Earth", written in 2011 for a SETI event (`audio/Rare_Earth_DDR.mp3`).
-* Fonts: Archivo, Noto Serif Display, JetBrains Mono, Black Han Sans, Dela Gothic One, DotGothic16,
+* Fonts: Archivo, Noto Serif Display, Noto Sans SC (subset to the title characters), JetBrains Mono,
   Anton, Big Shoulders Display, Instrument Serif, Space Mono, Unbounded, VT323. All SIL Open Font
   License; the licence texts are in `render/assets/fonts/`.
 * Coastlines and populated places: [Natural Earth](https://www.naturalearthdata.com/) (public domain).

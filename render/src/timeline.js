@@ -63,8 +63,14 @@ export function buildTimeline(A) {
         ty.font('NotoSerifDisplay', 250, 900, 'extra-condensed');
         ty.plateText('RARE', 90, 400, P, css(INK.orange, 0.9), off);
         ty.plateText('EARTH', 90, 640, P, css(INK.orange, 0.9), off);
-        ty.font('BlackHanSans', 46); c.fillStyle = P; c.fillText('희귀한 지구', 96, 720);
-        ty.font('DelaGothicOne', 40); c.fillText('レアアース', 96, 780);
+        // translations on small ink labels, legible over the pale fog
+        const label = (str, fam, size, wt, x, y) => {
+          ty.font(fam, size, wt); const w = c.measureText(str).width;
+          c.fillStyle = css(INK.ink, 0.88); c.fillRect(x - 12, y - size * 0.98, w + 24, size * 1.3);
+          c.fillStyle = P; c.fillText(str, x, y);
+        };
+        label('稀有地球', 'NotoSansSC', 50, 900, 96, 726);
+        label('Редкая Земля', 'Unbounded', 34, 800, 96, 796);
         if (dis > 0) {
           c.globalCompositeOperation = 'destination-out';
           const cell = 18, rr = cell * 0.75 * dis;
@@ -174,8 +180,14 @@ export function buildTimeline(A) {
       ty.font('NotoSerifDisplay', 210, 900, 'extra-condensed');
       const s1 = 'ETZ-1715 b'; const w1 = c.measureText(s1).width;
       ty.plateText(s1, 960 - w1 / 2, 560, P, css(INK.pink, 0.9), [7, 6]);
-      ty.font('DelaGothicOne', 54); c.fillStyle = MINT; c.fillText('もうひとつの地球', 960 - 440, 680);
-      ty.font('BlackHanSans', 58); c.fillText('또 하나의 지구', 960 + 60, 682);
+      // "second Earth", the usual phrase for an Earth-like exoplanet in both languages
+      const zh = '第二地球', ru = 'Вторая Земля';
+      ty.font('NotoSansSC', 58, 900); const wz = c.measureText(zh).width;
+      ty.font('Unbounded', 44, 800); const wr = c.measureText(ru).width;
+      const x0 = 960 - (wz + 60 + wr) / 2;
+      c.fillStyle = MINT;
+      ty.font('NotoSansSC', 58, 900); c.fillText(zh, x0, 684);
+      ty.font('Unbounded', 44, 800); c.fillText(ru, x0 + wz + 60, 680);
       ty.hud('217 LIGHT-YEARS  ·  INSIDE THE EARTH TRANSIT ZONE  ·  IT HAS SEEN US TOO', 960, 780, { align: 'center', size: 22 });
     } });
 

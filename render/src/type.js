@@ -9,8 +9,8 @@ export const FONTS = [
   ['SpaceMono', 'assets/fonts/SpaceMono-Regular.ttf', {}],
   ['SpaceMonoB', 'assets/fonts/SpaceMono-Bold.ttf', {}],
   ['JetBrainsMono', 'assets/fonts/JetBrainsMono-VF.ttf', { weight: '100 800' }],
-  ['BlackHanSans', 'assets/fonts/BlackHanSans-Regular.ttf', {}],
-  ['DelaGothicOne', 'assets/fonts/DelaGothicOne-Regular.ttf', {}],
+  // Noto Sans SC Black, subset to the six characters the titles use (稀有地球第二); OFL
+  ['NotoSansSC', 'assets/fonts/NotoSansSC-Black-subset.ttf', { weight: '900' }],
   ['InstrumentSerif', 'assets/fonts/InstrumentSerif-Regular.ttf', {}],
   ['InstrumentSerifI', 'assets/fonts/InstrumentSerif-Italic.ttf', {}],
   ['BigShoulders', 'assets/fonts/BigShouldersDisplay-VF.ttf', { weight: '100 900' }],
@@ -251,7 +251,7 @@ export class TypeLayer {
     return xx - x;
   }
 
-  // TITLE CARD: RARE EARTH / 희귀한 지구 / レアアース
+  // TITLE CARD: RARE EARTH / 稀有地球 / Редкая Земля (Rare Earth as in the hypothesis: the planet, not the metals)
   title(t, t0, o = {}) {
     const c = this.ctx;
     const dt = t - t0;
@@ -270,13 +270,14 @@ export class TypeLayer {
     c.scale(lerp(1.25, 1, k) * fit, lerp(1.25, 1, k) * fit);
     this.plateText(s, -tw / 2, 0, o.color ?? css(INK.paper), o.plate ?? css(INK.orange, 0.95), [8, 7]);
     c.restore();
-    // sub lines
-    this.font('BlackHanSans', 64, 400);
-    const ko = '희귀한 지구';
-    c.fillStyle = o.sub ?? css(INK.pale); c.fillText(ko, 960 - c.measureText(ko).width - 30, 780);
-    this.font('DelaGothicOne', 58, 400);
-    const ja = 'レアアース';
-    c.fillStyle = o.sub ?? css(INK.pale); c.fillText(ja, 990, 780);
+    // sub lines, centred as a pair
+    const zh = '稀有地球', ru = 'Редкая Земля';
+    this.font('NotoSansSC', 64, 900); const wz = c.measureText(zh).width;
+    this.font('Unbounded', 46, 800); const wr = c.measureText(ru).width;
+    const x0 = 960 - (wz + 56 + wr) / 2;
+    c.fillStyle = o.sub ?? css(INK.pale);
+    this.font('NotoSansSC', 64, 900); c.fillText(zh, x0, 782);
+    this.font('Unbounded', 46, 800); c.fillText(ru, x0 + wz + 56, 778);
     this.font('JetBrainsMono', 22, 500);
     const meta = 'PALE BLUE DOT  ·  RX 1420.40575 MHz  ·  2011 → 2026';
     c.fillStyle = css(INK.paper, 0.8); c.fillText(meta, 960 - c.measureText(meta).width / 2, 850);
