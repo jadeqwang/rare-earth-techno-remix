@@ -13,7 +13,7 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "sync"))
 import gen  # noqa: E402
-from seedance_shots import SHOTS, STYLE  # noqa: E402
+from seedance_shots import SHOTS, STYLE, HAIR  # noqa: E402
 
 WORK = "/tmp/work/sd/prod"
 MANIFEST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seedance_manifest.json")
@@ -82,14 +82,15 @@ def submit(ids, extra=0):
             m = load()
             entry = m.setdefault(s["id"], {"spec": {}, "takes": []})
             entry["spec"] = {k: v for k, v in s.items() if k != "refs"}
-            live = [t for t in entry["takes"] if t.get("state") not in ("error",)]
+            # only takes of the current character revision count (older takes stay in the manifest for the record)
+            live = [t for t in entry["takes"] if t.get("state") not in ("error",) and t.get("hair", "v2") == HAIR]
             need = max(0, s["takes"] - len(live)) + extra
             save(m)
         for k in range(need):
             jid = gen.submit("bytedance/seedance-2.5", build_input(s), tag=s["id"])
             with locked():
                 m = load()
-                m[s["id"]]["takes"].append({"job": jid, "state": "submitted", "ts": time.time()})
+                m[s["id"]]["takes"].append({"job": jid, "state": "submitted", "ts": time.time(), "hair": HAIR})
                 save(m)
             print("submitted", s["id"], jid, flush=True)
 
@@ -147,7 +148,8 @@ def status():
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "submit":
-        submit(sys.argv[2:])
+        submit([a for a in sys.argv[2:] if not a.startswith("--")],
+               extra=int(next((a.split("=")[1] for a in sys.argv[2:] if a.startswith("--extra=")), 0)))
     elif cmd == "collect":
         collect()
     else:

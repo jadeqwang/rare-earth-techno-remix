@@ -8,15 +8,18 @@ bg: "context" = drawn in its environment (print-mode shots); "green" = chroma-ke
 (light-mode shots composited over procedural JS backgrounds).
 """
 
+# character revision: v2 = hime cut with a pale-blue under-layer; v3 = centre part, long curtain bangs, layered
+HAIR = "v3"
 STYLE = (" Clean modern anime style, crisp black lineart, flat cel shading, faithful to the character"
-         " reference sheet (DOT: long black hime-cut hair with a hidden pale-blue under-layer, orange foam"
+         " reference sheet (DOT: long straight black hair with a centre part, long curtain bangs framing her face,"
+         " long layered slightly choppy ends past her shoulders, no blunt fringe; orange foam"
          " headphones, cropped white flight jacket with orange stripe and a big pale-blue dot on the back,"
          " black crop top, navy cargo pants). No text, no subtitles, no logos.")
 SING = " She sings the words of the reference audio with precise, clearly articulated lip sync."
 GREEN = (" Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole"
          " frame, with nothing else in it.")
 
-DOT = "/tmp/work/sd/dot_sheet.jpg"
+DOT = "/tmp/work/sd/dot_sheet_v3.jpg"       # design/dot_character_sheet.jpg (v2 hime-cut sheet: dot_character_sheet_v2_hime.jpg)
 TOWER = "/tmp/work/refs/env_tower_top.jpg"
 SUTRO = "/tmp/work/refs/env_sutro_fog.jpg"
 ROOM = "/tmp/work/refs/env_control_room.jpg"

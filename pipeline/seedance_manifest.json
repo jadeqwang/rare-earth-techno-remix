@@ -21,6 +21,18 @@
     "state": "done",
     "ts": 1790373308.9644427,
     "file": "/tmp/work/sd/prod/sd01_tower_back__c8d55791f1.mp4"
+   },
+   {
+    "job": "sd01_tower_back-510957fe5b",
+    "state": "submitted",
+    "ts": 1790381912.4672177,
+    "hair": "v3"
+   },
+   {
+    "job": "sd01_tower_back-e03e289da5",
+    "state": "submitted",
+    "ts": 1790381912.8318927,
+    "hair": "v3"
    }
   ]
  },
@@ -55,6 +67,24 @@
     "sync": {
      "error": "a cannot be empty"
     }
+   },
+   {
+    "job": "sd02_cu_yearning-1a46770efd",
+    "state": "submitted",
+    "ts": 1790381886.990747,
+    "hair": "v3"
+   },
+   {
+    "job": "sd02_cu_yearning-b94125b1df",
+    "state": "submitted",
+    "ts": 1790381887.7766936,
+    "hair": "v3"
+   },
+   {
+    "job": "sd02_cu_yearning-6aa2bbb842",
+    "state": "submitted",
+    "ts": 1790381888.589277,
+    "hair": "v3"
    }
   ]
  },
@@ -92,6 +122,24 @@
      "corr": 0.409,
      "corr0": 0.217
     }
+   },
+   {
+    "job": "sd03_mcu_listen-0e25e07308",
+    "state": "submitted",
+    "ts": 1790381889.9449959,
+    "hair": "v3"
+   },
+   {
+    "job": "sd03_mcu_listen-17fad81acf",
+    "state": "submitted",
+    "ts": 1790381890.381543,
+    "hair": "v3"
+   },
+   {
+    "job": "sd03_mcu_listen-07c157eb6c",
+    "state": "submitted",
+    "ts": 1790381891.1758811,
+    "hair": "v3"
    }
   ]
  },
@@ -117,6 +165,18 @@
     "state": "done",
     "ts": 1790373312.9154983,
     "file": "/tmp/work/sd/prod/sd04_wide_pullback__037fa5a49c.mp4"
+   },
+   {
+    "job": "sd04_wide_pullback-3dd548770f",
+    "state": "submitted",
+    "ts": 1790381913.1908398,
+    "hair": "v3"
+   },
+   {
+    "job": "sd04_wide_pullback-82ca906f02",
+    "state": "submitted",
+    "ts": 1790381914.1544766,
+    "hair": "v3"
    }
   ]
  },
@@ -151,6 +211,24 @@
     "sync": {
      "error": "a cannot be empty"
     }
+   },
+   {
+    "job": "sd05_console_caught-9c8f1b933f",
+    "state": "submitted",
+    "ts": 1790381891.8639684,
+    "hair": "v3"
+   },
+   {
+    "job": "sd05_console_caught-1bc3e632db",
+    "state": "submitted",
+    "ts": 1790381892.403504,
+    "hair": "v3"
+   },
+   {
+    "job": "sd05_console_caught-ab5341ea87",
+    "state": "submitted",
+    "ts": 1790381892.7387414,
+    "hair": "v3"
    }
   ]
  },
@@ -188,6 +266,24 @@
      "corr": 0.226,
      "corr0": -0.146
     }
+   },
+   {
+    "job": "sd06_blink-bfb6530fba",
+    "state": "submitted",
+    "ts": 1790381893.4464908,
+    "hair": "v3"
+   },
+   {
+    "job": "sd06_blink-f6304f252e",
+    "state": "submitted",
+    "ts": 1790381893.8110077,
+    "hair": "v3"
+   },
+   {
+    "job": "sd06_blink-a30f474b95",
+    "state": "submitted",
+    "ts": 1790381894.5440457,
+    "hair": "v3"
    }
   ]
  },
@@ -219,6 +315,24 @@
     "sync": {
      "error": "a cannot be empty"
     }
+   },
+   {
+    "job": "sd07_transit-9681e0518b",
+    "state": "submitted",
+    "ts": 1790381894.893021,
+    "hair": "v3"
+   },
+   {
+    "job": "sd07_transit-c456582800",
+    "state": "submitted",
+    "ts": 1790381895.356204,
+    "hair": "v3"
+   },
+   {
+    "job": "sd07_transit-b08f667f0b",
+    "state": "submitted",
+    "ts": 1790381896.0708025,
+    "hair": "v3"
    }
   ]
  },
@@ -256,6 +370,24 @@
      "corr": 0.463,
      "corr0": 0.379
     }
+   },
+   {
+    "job": "sd08_alone-c1545acf4d",
+    "state": "submitted",
+    "ts": 1790381896.4349256,
+    "hair": "v3"
+   },
+   {
+    "job": "sd08_alone-0cd6c4b0ac",
+    "state": "submitted",
+    "ts": 1790381896.7938569,
+    "hair": "v3"
+   },
+   {
+    "job": "sd08_alone-bed9967237",
+    "state": "submitted",
+    "ts": 1790381897.1297896,
+    "hair": "v3"
    }
   ]
  },
@@ -293,6 +425,24 @@
      "corr": 0.779,
      "corr0": 0.727
     }
+   },
+   {
+    "job": "sd09_keep_looking-a545f103dd",
+    "state": "submitted",
+    "ts": 1790381897.6119275,
+    "hair": "v3"
+   },
+   {
+    "job": "sd09_keep_looking-df78dbc8bd",
+    "state": "submitted",
+    "ts": 1790381897.9712267,
+    "hair": "v3"
+   },
+   {
+    "job": "sd09_keep_looking-c6c9c8b95f",
+    "state": "submitted",
+    "ts": 1790381898.4851167,
+    "hair": "v3"
    }
   ]
  },
@@ -330,6 +480,24 @@
      "corr": 0.367,
      "corr0": 0.325
     }
+   },
+   {
+    "job": "sd10_vision-5b864e8190",
+    "state": "submitted",
+    "ts": 1790381899.3143058,
+    "hair": "v3"
+   },
+   {
+    "job": "sd10_vision-eb7627974f",
+    "state": "submitted",
+    "ts": 1790381900.0277429,
+    "hair": "v3"
+   },
+   {
+    "job": "sd10_vision-1368eb119a",
+    "state": "submitted",
+    "ts": 1790381900.404811,
+    "hair": "v3"
    }
   ]
  },
@@ -373,6 +541,24 @@
      "corr": -0.179,
      "corr0": -0.201
     }
+   },
+   {
+    "job": "sd11_care-03ce0c9203",
+    "state": "submitted",
+    "ts": 1790381900.7712324,
+    "hair": "v3"
+   },
+   {
+    "job": "sd11_care-24a37c350c",
+    "state": "submitted",
+    "ts": 1790381901.1102996,
+    "hair": "v3"
+   },
+   {
+    "job": "sd11_care-515ba71b82",
+    "state": "submitted",
+    "ts": 1790381901.4804368,
+    "hair": "v3"
    }
   ]
  },
@@ -410,6 +596,24 @@
      "corr": 0.408,
      "corr0": 0.327
     }
+   },
+   {
+    "job": "sd12_search_listen-1eb000554e",
+    "state": "submitted",
+    "ts": 1790381901.837848,
+    "hair": "v3"
+   },
+   {
+    "job": "sd12_search_listen-58e3680064",
+    "state": "submitted",
+    "ts": 1790381903.0069845,
+    "hair": "v3"
+   },
+   {
+    "job": "sd12_search_listen-029c40c53f",
+    "state": "submitted",
+    "ts": 1790381903.580884,
+    "hair": "v3"
    }
   ]
  },
@@ -447,6 +651,24 @@
      "corr": 0.409,
      "corr0": 0.409
     }
+   },
+   {
+    "job": "sd13_caught_reply-d1fa06cb74",
+    "state": "submitted",
+    "ts": 1790381904.3640685,
+    "hair": "v3"
+   },
+   {
+    "job": "sd13_caught_reply-5b98e2543a",
+    "state": "submitted",
+    "ts": 1790381904.70317,
+    "hair": "v3"
+   },
+   {
+    "job": "sd13_caught_reply-7dc8f266d7",
+    "state": "submitted",
+    "ts": 1790381905.2544022,
+    "hair": "v3"
    }
   ]
  },
@@ -484,6 +706,24 @@
      "corr": 0.56,
      "corr0": 0.409
     }
+   },
+   {
+    "job": "sd14_blink_dance-bd2b906427",
+    "state": "submitted",
+    "ts": 1790381905.9648733,
+    "hair": "v3"
+   },
+   {
+    "job": "sd14_blink_dance-782f9e00e6",
+    "state": "submitted",
+    "ts": 1790381906.7074735,
+    "hair": "v3"
+   },
+   {
+    "job": "sd14_blink_dance-72d5234828",
+    "state": "submitted",
+    "ts": 1790381907.4557726,
+    "hair": "v3"
    }
   ]
  },
@@ -518,6 +758,24 @@
      "corr": 0.407,
      "corr0": 0.222
     }
+   },
+   {
+    "job": "sd15_own_ecu-f5797b91f9",
+    "state": "submitted",
+    "ts": 1790381907.8288808,
+    "hair": "v3"
+   },
+   {
+    "job": "sd15_own_ecu-afca32f85b",
+    "state": "submitted",
+    "ts": 1790381908.8648417,
+    "hair": "v3"
+   },
+   {
+    "job": "sd15_own_ecu-bed8113678",
+    "state": "submitted",
+    "ts": 1790381909.2087858,
+    "hair": "v3"
    }
   ]
  },
@@ -552,6 +810,24 @@
     "sync": {
      "error": "a cannot be empty"
     }
+   },
+   {
+    "job": "sd16_alone_beam-5a4c671c43",
+    "state": "submitted",
+    "ts": 1790381909.7427762,
+    "hair": "v3"
+   },
+   {
+    "job": "sd16_alone_beam-1736c8440f",
+    "state": "submitted",
+    "ts": 1790381910.6490674,
+    "hair": "v3"
+   },
+   {
+    "job": "sd16_alone_beam-c43ef1f6ef",
+    "state": "submitted",
+    "ts": 1790381911.4415514,
+    "hair": "v3"
    }
   ]
  },
@@ -577,6 +853,18 @@
     "state": "done",
     "ts": 1790373327.7521398,
     "file": "/tmp/work/sd/prod/sd17_dance_a__d99507c7ca.mp4"
+   },
+   {
+    "job": "sd17_dance_a-e8980134c1",
+    "state": "submitted",
+    "ts": 1790381914.582535,
+    "hair": "v3"
+   },
+   {
+    "job": "sd17_dance_a-9c5e567e4a",
+    "state": "submitted",
+    "ts": 1790381915.4940994,
+    "hair": "v3"
    }
   ]
  },
@@ -602,6 +890,18 @@
     "state": "done",
     "ts": 1790373328.724959,
     "file": "/tmp/work/sd/prod/sd18_dance_b__c5c032e780.mp4"
+   },
+   {
+    "job": "sd18_dance_b-c1c3e36a17",
+    "state": "submitted",
+    "ts": 1790381916.1799495,
+    "hair": "v3"
+   },
+   {
+    "job": "sd18_dance_b-1c9ae224b0",
+    "state": "submitted",
+    "ts": 1790381917.0031185,
+    "hair": "v3"
    }
   ]
  },
