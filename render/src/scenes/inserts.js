@@ -257,7 +257,7 @@ export const endcard = {
     const s = 'RARE EARTH'; const w = c.measureText(s).width;
     c.fillStyle = css(INK.ink, smooth(range(lt, 0.8, 1.6))); c.fillText(s, 960 - w / 2, 760);
     const a2 = smooth(range(lt, 1.2, 2.0));
-    const zh = '稀有地球', ru = 'Редкая Земля';
+    const zh = '稀有地球', ru = 'Уникальная Земля';
     font(c, 'NotoSansSC', 36, 900); const wz = c.measureText(zh).width;
     font(c, 'Unbounded', 26, 800); const wr = c.measureText(ru).width;
     const x0 = 960 - (wz + 40 + wr) / 2;

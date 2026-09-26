@@ -251,7 +251,7 @@ export class TypeLayer {
     return xx - x;
   }
 
-  // TITLE CARD: RARE EARTH / 稀有地球 / Редкая Земля (Rare Earth as in the hypothesis: the planet, not the metals)
+  // TITLE CARD: RARE EARTH / 稀有地球 / Уникальная Земля (Rare Earth as in the hypothesis: the planet, not the metals)
   title(t, t0, o = {}) {
     const c = this.ctx;
     const dt = t - t0;
@@ -271,7 +271,7 @@ export class TypeLayer {
     this.plateText(s, -tw / 2, 0, o.color ?? css(INK.paper), o.plate ?? css(INK.orange, 0.95), [8, 7]);
     c.restore();
     // sub lines, centred as a pair
-    const zh = '稀有地球', ru = 'Редкая Земля';
+    const zh = '稀有地球', ru = 'Уникальная Земля';
     this.font('NotoSansSC', 64, 900); const wz = c.measureText(zh).width;
     this.font('Unbounded', 46, 800); const wr = c.measureText(ru).width;
     const x0 = 960 - (wz + 56 + wr) / 2;

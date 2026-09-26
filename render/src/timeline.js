@@ -70,7 +70,7 @@ export function buildTimeline(A) {
           c.fillStyle = P; c.fillText(str, x, y);
         };
         label('稀有地球', 'NotoSansSC', 50, 900, 96, 726);
-        label('Редкая Земля', 'Unbounded', 34, 800, 96, 796);
+        label('Уникальная Земля', 'Unbounded', 34, 800, 96, 796);
         if (dis > 0) {
           c.globalCompositeOperation = 'destination-out';
           const cell = 18, rr = cell * 0.75 * dis;
