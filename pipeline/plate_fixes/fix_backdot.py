@@ -3,8 +3,8 @@
 The character sheet and every other back view (the poster, the pull-back) show a big solid pale-blue dot on the back
 of the white jacket. se03 drew only a faint teal ring there, under her hair. The ring's centre and radius were read off
 the frames by hand at a few keys (the camera pulls back, so it shrinks) and interpolated; the dot is filled in pale
-blue over the drawn ring, light enough for the renderer to ink it as its own patch, with a thin rim and the hair
-left in front of it.
+in the drawn ring's own blue (the dot's colour in this shot's night light), with a thin rim and the hair left in
+front of it.
 
   python3 pipeline/plate_fixes/fix_backdot.py     # writes se03_..._dot.mp4 next to the take
 """
@@ -41,13 +41,18 @@ def main():
         hair = (V < 0.30) | ((S > 0.45) & (V > 0.5))
         keep = cv2.GaussianBlur((~hair).astype(np.float32), (0, 0), 0.7)
         a = disc * keep
-        # lit like a printed patch: light enough that the renderer reads it as its own pale-blue ink, not the jacket's
-        # night shadow (the jacket itself renders dark in this shot), with the plate's soft shading kept
+        # the colour of the ring the take drew there: the dot's blue as it looks in this shot's night light (a lighter
+        # fill reads as lit by a light of its own); the plate's soft shading is kept across it
+        ann = np.zeros(f.shape[:2], np.uint8)
+        cv2.circle(ann, (int(cx), int(cy)), int(r), 1, -1)
+        cv2.circle(ann, (int(cx), int(cy)), int(r * 0.72), 0, -1)
+        sel = (ann > 0) & ~hair & (S > 0.2)
+        ring_hsv = np.median(hsv[sel], 0) if sel.sum() > 5 else np.array([95, 0.45 * 255, 0.55 * 255])
         shade = cv2.GaussianBlur(hsv[..., 2], (0, 0), max(2.0, r * 0.6)) / 255
         dot = hsv.copy()
-        dot[..., 0] = 105                                    # pale blue (#9CCBFF's hue, OpenCV scale)
-        dot[..., 1] = 0.42 * 255
-        dot[..., 2] = np.clip(0.97 * np.clip(shade / max(1e-3, np.median(shade[disc > 0.5])), 0.92, 1.03), 0, 1) * 255
+        dot[..., 0] = ring_hsv[0]
+        dot[..., 1] = ring_hsv[1]
+        dot[..., 2] = np.clip(ring_hsv[2] * np.clip(shade / max(1e-3, np.median(shade[disc > 0.5])), 0.92, 1.05), 0, 255)
         # a thin dark rim, drawn like the sheet's outline, so the ink redraw gives the dot an edge
         rim = np.zeros(f.shape[:2], np.float32)
         cv2.circle(rim, (int(round(cx * 4)), int(round(cy * 4))), int(round(r * 4)), 1, max(1, int(r / 18)), cv2.LINE_AA, shift=2)

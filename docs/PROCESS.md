@@ -406,9 +406,10 @@ replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps i
 * *my own* (0:34.7): the voice breaks from "my" into "own" at 34.66 s, not at 34.85 s where the phones had it, so the
   round "o" came about four frames late. "own" now starts there and asks for a rounded mouth (`round`).
 * *our planet waits* (1:07): se03 drew only a faint teal ring on the back of her jacket, and the ink redraw lost it in the
-  jacket's night shading, so the jacket didn't match the opening shot's. `pipeline/plate_fixes/fix_backdot.py` paints the
-  sheet's solid pale-blue dot over the ring, tracked by hand as the camera pulls back, with her hair left in front
-  (`se03_..._dot.mp4`).
+  jacket's night shading, so the jacket didn't match the opening shot's. `pipeline/plate_fixes/fix_backdot.py` paints a
+  solid dot over the ring, tracked by hand as the camera pulls back, with her hair left in front (`se03_..._dot.mp4`). Its
+  colour is the drawn ring's own blue, the sheet's pale blue as it looks in that night light; a lighter fill looked lit
+  by a light of its own.
 
 ## 4. Rotoscope guides
 
