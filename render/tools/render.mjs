@@ -1,5 +1,5 @@
 // Frame-accurate capture of the renderer with headless Chromium.
-//   node tools/render.mjs --stills 3.2,10,22.5 --w 960 --h 540 --outdir /tmp/work/stills
+//   node tools/render.mjs --stills 3.2,10,22.5 --w 960 --h 540 --outdir /tmp/work/stills   (--png: lossless stills)
 //   node tools/render.mjs --from 0 --to 128 --fps 24 --w 1920 --h 1080 --jobs 2 --out out/rare_earth.mp4
 import { chromium } from 'playwright-core';
 import fs from 'node:fs';
@@ -29,7 +29,8 @@ async function openPage(browser) {
 
 async function shoot(page, t, file) {
   await page.evaluate((tt) => window.renderAt(tt), t);
-  await page.screenshot({ path: file, type: 'jpeg', quality: Number(args.q || 94), clip: { x: 0, y: 0, width: W, height: H } });
+  const fmt = file.endsWith('.png') ? { type: 'png' } : { type: 'jpeg', quality: Number(args.q || 94) };
+  await page.screenshot({ path: file, ...fmt, clip: { x: 0, y: 0, width: W, height: H } });
 }
 
 const server = await serve(PORT);
@@ -47,7 +48,7 @@ try {
     const page = await openPage(browser);
     const times = args.stills.split(',').map(Number);
     for (const t of times) {
-      const f = path.join(outdir, `s_${t.toFixed(3).padStart(8, '0')}.jpg`);
+      const f = path.join(outdir, `s_${t.toFixed(3).padStart(8, '0')}.${args.png ? 'png' : 'jpg'}`);
       const t0 = Date.now();
       await shoot(page, t, f);
       console.log(`still ${t.toFixed(3)} -> ${f} (${Date.now() - t0} ms)`);

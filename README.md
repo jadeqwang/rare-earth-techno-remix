@@ -21,6 +21,16 @@ DOT's performances and the other world's plates. The generated footage itself ne
 renderer reads it as guide maps (edges, tone, matte, colour class) and redraws it as riso-print ink,
 halftone and neon light.
 
+## Extended version
+
+**▶ [`out/rare_earth_extended_1080p.mp4`](out/rare_earth_extended_1080p.mp4)** (1920×1080, 2:37) is the
+extended mix of the song (`audio/Rare_Earth_DDR_extended.mp3`, 29 s longer) over a single still: the
+title card at 0:02.15, with DOT on Sutro Tower holding out her Yagi as the star above the title flares.
+The renderer draws that frame at 3840×2160
+([`out/rare_earth_extended_still_4k.jpg`](out/rare_earth_extended_still_4k.jpg)), and
+`render/tools/encode_still.sh` averages it down to 1080p, which gives cleaner halftone than rendering at
+1080p, and holds it for the length of the track.
+
 ## The idea
 
 Two lonely worlds, each singing into the dark, find out the other one was listening the whole
@@ -78,6 +88,11 @@ python3 ../pipeline/sound_design.py
 node tools/render.mjs --stills 1.0,54.8 --w 1920 --h 1080 --outdir /tmp/work/stills
 node tools/render.mjs --from 0 --to 129.6 --fps 24 --w 1920 --h 1080 --jobs 3 \
   --audio /tmp/work/sfx/Rare_Earth_DDR_sfx.wav --out ../out/rare_earth_1080p.mp4
+# the extended version: the title card at 2.15 s, rendered at 4K and held over the extended mix
+python3 ../pipeline/extract_selects.py sd01   # guides for that one shot
+node tools/render.mjs --stills 2.15 --w 3840 --h 2160 --png --outdir /tmp/work/stills
+tools/encode_still.sh /tmp/work/stills/s_0002.150.png ../audio/Rare_Earth_DDR_extended.mp3 \
+  ../out/rare_earth_extended_1080p.mp4 "Rare Earth (DDR extended)"
 # live preview in a browser, with the song:
 npm run serve   # then open http://127.0.0.1:8800/index.html?play=1&fit=1 and click
 ```
@@ -89,7 +104,8 @@ SwiftShader, so no GPU is needed.
 ## Credits
 
 * Song: "Rare Earth", written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI
-  crowdfunding campaign in 2011 (`audio/Rare_Earth_DDR.mp3`).
+  crowdfunding campaign in 2011 (`audio/Rare_Earth_DDR.mp3`; the extended mix is
+  `audio/Rare_Earth_DDR_extended.mp3`).
 * Fonts: Archivo, Noto Serif Display, Noto Sans SC (subset to the title characters), JetBrains Mono,
   Anton, Big Shoulders Display, Instrument Serif, Space Mono, Unbounded, VT323. All SIL Open Font
   License; the licence texts are in `render/assets/fonts/`.
