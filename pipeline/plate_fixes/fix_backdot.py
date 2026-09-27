@@ -4,15 +4,21 @@ The character sheet and every other back view (the poster, the pull-back) show a
 of the white jacket. se03 drew only a faint teal ring there, under her hair. The ring's centre and radius were read off
 the frames by hand at a few keys (the camera pulls back, so it shrinks) and interpolated; the dot is filled in pale
 in the drawn ring's own blue (the dot's colour in this shot's night light), with a thin rim and the hair left in
-front of it.
+front of it. RARE EARTH is set under it, in the gap above the crop top's hem, until it is too small to print.
 
   python3 pipeline/plate_fixes/fix_backdot.py     # writes se03_..._dot.mp4 next to the take
 """
 import os
 import subprocess
 
+import sys
+
 import cv2
 import numpy as np
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lettering import font, set_lines, warp_layer, composite  # noqa: E402
+from fix_lettering import BACK_FONT, BACK_TEXT  # noqa: E402
 
 CLIPS = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'base_clips')
 SRC = 'se03_crowd_lights__698eb06939.mp4'
@@ -28,6 +34,14 @@ def main():
         if not ok: break
         frames.append(f)
     k = np.array(KEYS, float)
+    # RARE EARTH under the dot, as on the sheet and in the pull-back (fix_lettering.py's face and tracking): here the
+    # dot sits just above the crop top's hem, so the line is set in the gap between them, measured in every frame
+    f_ = font(BACK_FONT[0], 200, weight=BACK_FONT[1], width=BACK_FONT[2])
+    probe, _ = set_lines([(BACK_TEXT, f_, 1.0, 0.0, 0.0)], half=8)
+    xs = np.nonzero(probe.max(0) > 0.5)[0]
+    # set heavier than the pull-back's: here the jacket is small in frame, and the ink redraw would break thin strokes up
+    layer = set_lines([(BACK_TEXT, f_, 1.0, 0.0, (10.7 - (xs.max() - xs.min()) / 256) / (len(BACK_TEXT) - 1))], half=8,
+                      bold=0.07)
     out = []
     for i, f in enumerate(frames):
         cx, cy, r = (np.interp(i, k[:, 0], k[:, c]) for c in (1, 2, 3))
@@ -58,7 +72,19 @@ def main():
         cv2.circle(rim, (int(round(cx * 4)), int(round(cy * 4))), int(round(r * 4)), 1, max(1, int(r / 18)), cv2.LINE_AA, shift=2)
         dot[..., 2] = dot[..., 2] * (1 - 0.55 * np.clip(rim, 0, 1))
         dot = cv2.cvtColor(dot.astype(np.uint8), cv2.COLOR_HSV2BGR).astype(np.float32)
-        out.append(np.clip(f * (1 - a[..., None]) + dot * a[..., None], 0, 255).astype(np.uint8))
+        g = np.clip(f * (1 - a[..., None]) + dot * a[..., None], 0, 255).astype(np.uint8)
+        v = hsv[:, int(cx) - 3:int(cx) + 4, 2].mean(1)
+        hem = int(cy + r) + 2
+        while hem < f.shape[0] - 1 and v[hem] > 70: hem += 1
+        gap = hem - (cy + r)
+        cap = min(0.30 * r, 0.60 * gap)
+        if cap >= 2.5:
+            ty = cy + r + 0.5 * gap
+            alpha, bx = warp_layer(layer, cap * np.eye(2), np.array([cx, ty]), g.shape, soften=0.5)
+            if alpha is not None:
+                jacket = g[int(ty) - 2:int(ty) + 3, int(cx - 6 * cap):int(cx + 6 * cap)].reshape(-1, 3).astype(float)
+                composite(g, alpha, bx, 0.22 * np.median(jacket, 0))          # dark ink, in the jacket's light
+        out.append(g)
     h, w = out[0].shape[:2]
     dst = os.path.join(CLIPS, SRC.replace('.mp4', '_dot.mp4'))
     p = subprocess.Popen(['ffmpeg', '-nostdin', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'bgr24',

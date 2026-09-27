@@ -422,6 +422,14 @@ replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps i
   from the release of the "v", and it gets that mouth from the same take.
 * *you* (1:16): the drawing that comes on just before the voice (75.96 s) is now a rounded "oo" (`round`), held through
   the vowel, instead of the take's open mouth with "you" arriving a drawing later.
+* *Our* (1:11), properly this time: the vocal stem's formants show that 71.3–71.9 s is still "transmission", its "-sion"
+  rising from D4 to an open E4 and ending on a held "n" (low F1, 71.58–71.9 s); "Our" is the short, quiet syllable at
+  71.92–72.16 s, just before the "s" of "science" (Whisper, on the stem, also puts it at 72.0 s). The mouth now stays
+  small, then shut on the "n", and opens on "Our"; `render/data/audio.json` moves the word (and the OUR title) from
+  71.28 s to 71.92 s. The earlier pin to 71.28 s (§3d) was the note change inside "-sion".
+* *our planet waits* (1:08–1:09): RARE EARTH is set on the back under the dot, as on the sheet and in the pull-back, in
+  the gap above the crop top's hem, and heavier than in the pull-back so the ink redraw keeps it at this size
+  (`fix_backdot.py`).
 
 ## 4. Rotoscope guides
 

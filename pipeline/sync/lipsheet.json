@@ -37,8 +37,9 @@
    [62.98, 63.30, 0.35, "-king"]
   ],
   "vision": [
-   [71.00, 71.38, 0.00, "-sion (D4) held shut until Our starts a tone up, about 71.31"], [71.38, 71.80, 0.80, "our (a tone up)"], [71.80, 72.12, 0.50, "-r, the held E4 fading"], [72.12, 72.20, 0.20, "fade"],
-   [72.20, 72.46, 0.05, "breath"], [72.46, 72.60, 0.10, "s"]
+   [71.00, 71.14, 0.10, "sh"], [71.14, 71.56, 0.30, "-sio-, rising D4 to E4: a small uh, not an open our", "small"],
+   [71.56, 71.92, 0.05, "the held n of transmission"], [71.92, 72.16, 0.70, "our: short and quiet, just before science"],
+   [72.16, 72.22, 0.20, "fade"], [72.22, 72.60, 0.10, "s of science"]
   ],
   "vision2": [
    [73.90, 74.03, 0.10, "z"], [74.03, 74.12, 0.50, "a"], [74.12, 74.25, 0.05, "v", "hard"], 
