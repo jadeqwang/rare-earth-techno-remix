@@ -431,6 +431,14 @@ replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps i
   the gap above the crop top's hem, and heavier than in the pull-back so the ink redraw keeps it at this size
   (`fix_backdot.py`).
 
+**Re-shoots for the last three spots.** Retiming the old takes' mouths kept coming close without landing at *blink*
+(0:25), *vision* (1:11) and *care2* (1:15). Those three shots were re-shot with Seedance 2.5 the way the alt-pop cut was
+made (`pipeline/reshoot.py`): image-to-video from the shot's own first drawing, with the vocal cut to begin exactly at the
+shot's first frame as the reference audio, so the new take needs no lag and no mouth retiming. 15 takes (about $14),
+scored against the vocal and checked by eye; the chosen takes are `pipeline/base_clips/reshoot/` (`sd06r`, `sd10r`,
+`sd11r` in `selects.json`). Also: *dot2* (1:31) is back to the field of petal dishes turning to our Sun (Kenton's note),
+and Echo's night city at 1:57 glows fuchsia, like every other Echo shot.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),

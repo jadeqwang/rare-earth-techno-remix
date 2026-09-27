@@ -143,5 +143,20 @@
   "file": "se08_cliff_dish__490a672d82.mp4",
   "start": 79.0,
   "lag": 0
+ },
+ "sd06r": {
+  "file": "reshoot/blink__03ec9b2387.mp4",
+  "start": 25.3,
+  "lag": 0.0
+ },
+ "sd10r": {
+  "file": "reshoot/vision__cafc222b43.mp4",
+  "start": 71.14,
+  "lag": 0.0
+ },
+ "sd11r": {
+  "file": "reshoot/care2__68bcf9023c.mp4",
+  "start": 75.36,
+  "lag": 0.0
  }
 }
