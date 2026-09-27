@@ -1,0 +1,7 @@
+node_modules/
+render/node_modules/
+*.lock
+pipeline/seedance_manifest.json.lock
+pipeline/seedance_manifest.json.tmp
+__pycache__/
+out/frames*/

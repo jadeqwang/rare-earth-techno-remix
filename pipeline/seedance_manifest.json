@@ -1,0 +1,1692 @@
+{
+ "sd01_tower_back": {
+  "spec": {
+   "id": "sd01_tower_back",
+   "t0": 0.0,
+   "dur": 6,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Back view of DOT standing alone on the small top platform of a tall red-and-white radio antenna tower at night, far above a rolling sea of fog lit orange by the city beneath it. The big pale-blue circle on the back of her white jacket is clearly visible. Strong wind blows her long black hair and jacket. She slowly raises a small handheld Yagi antenna toward one bright star in the upper left of the sky. Blinking red aviation lights, Milky Way. The camera slowly pushes in from behind her."
+  },
+  "takes": [
+   {
+    "job": "sd01_tower_back-b75ccc69a6",
+    "state": "done",
+    "ts": 1790373308.5126717,
+    "file": "/tmp/work/sd/prod/sd01_tower_back__b75ccc69a6.mp4"
+   },
+   {
+    "job": "sd01_tower_back-c8d55791f1",
+    "state": "done",
+    "ts": 1790373308.9644427,
+    "file": "/tmp/work/sd/prod/sd01_tower_back__c8d55791f1.mp4"
+   },
+   {
+    "job": "sd01_tower_back-510957fe5b",
+    "state": "done",
+    "ts": 1790381912.4672177,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd01_tower_back__510957fe5b.mp4"
+   },
+   {
+    "job": "sd01_tower_back-e03e289da5",
+    "state": "done",
+    "ts": 1790381912.8318927,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd01_tower_back__e03e289da5.mp4"
+   }
+  ]
+ },
+ "sd02_cu_yearning": {
+  "spec": {
+   "id": "sd02_cu_yearning",
+   "t0": 5.2,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Close-up of DOT on the top platform of a red-and-white antenna tower at night far above the fog, three-quarter front view with her face clearly visible to the camera; she looks up and off to the left at the stars, singing with longing, wind lifting her long black hair and curtain bangs, orange foam headphones around her neck, cool blue night light and warm orange city glow from below. Slow push-in. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd02_cu_yearning-1089f18a90",
+    "state": "done",
+    "ts": 1790373310.3147163,
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__1089f18a90.mp4",
+    "sync": {
+     "hit": 0.155,
+     "lag": 0.3333333333333333,
+     "corr": 0.076,
+     "corr0": -0.11
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-cd6f9c1099",
+    "state": "done",
+    "ts": 1790373310.8168018,
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__cd6f9c1099.mp4",
+    "sync": {
+     "error": "a cannot be empty"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-1a46770efd",
+    "state": "done",
+    "ts": 1790381886.990747,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__1a46770efd.mp4",
+    "sync": {
+     "error": "face found in only 3% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-b94125b1df",
+    "state": "done",
+    "ts": 1790381887.7766936,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__b94125b1df.mp4",
+    "sync": {
+     "error": "face found in only 10% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-6aa2bbb842",
+    "state": "done",
+    "ts": 1790381888.589277,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__6aa2bbb842.mp4",
+    "sync": {
+     "error": "face found in only 24% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-0df0f25b42",
+    "state": "done",
+    "ts": 1790382671.9623125,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__0df0f25b42.mp4",
+    "sync": {
+     "error": "face found in only 1% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-7f0ac164d9",
+    "state": "done",
+    "ts": 1790382672.4998012,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__7f0ac164d9.mp4",
+    "sync": {
+     "hit": 0.474,
+     "lag": 0.0,
+     "corr": 0.265,
+     "corr0": 0.265
+    }
+   },
+   {
+    "job": "sd02_cu_yearning-c8b3647c99",
+    "state": "done",
+    "ts": 1790382673.3274443,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd02_cu_yearning__c8b3647c99.mp4",
+    "sync": {
+     "hit": 0.619,
+     "lag": -0.08333333333333333,
+     "corr": 0.584,
+     "corr0": 0.502
+    }
+   }
+  ]
+ },
+ "sd03_mcu_listen": {
+  "spec": {
+   "id": "sd03_mcu_listen",
+   "t0": 10.4,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Medium close-up of DOT facing the camera on the antenna tower platform at night; as she sings she cups her right hand behind her right ear in a listening gesture and tilts her head up toward the sky, eyes searching the stars, wind in her hair, fog and city glow far below. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd03_mcu_listen-12046ab509",
+    "state": "done",
+    "ts": 1790373311.4753244,
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__12046ab509.mp4",
+    "sync": {
+     "hit": 0.99,
+     "lag": -0.3333333333333333,
+     "corr": 0.41,
+     "corr0": 0.335
+    }
+   },
+   {
+    "job": "sd03_mcu_listen-7837ecb001",
+    "state": "done",
+    "ts": 1790373311.90552,
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__7837ecb001.mp4",
+    "sync": {
+     "hit": 0.99,
+     "lag": -0.20833333333333334,
+     "corr": 0.409,
+     "corr0": 0.217
+    }
+   },
+   {
+    "job": "sd03_mcu_listen-0e25e07308",
+    "state": "done",
+    "ts": 1790381889.9449959,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__0e25e07308.mp4",
+    "sync": {
+     "hit": 0.753,
+     "lag": -0.20833333333333334,
+     "corr": 0.124,
+     "corr0": 0.095
+    }
+   },
+   {
+    "job": "sd03_mcu_listen-17fad81acf",
+    "state": "done",
+    "ts": 1790381890.381543,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__17fad81acf.mp4",
+    "sync": {
+     "hit": 0.876,
+     "lag": -0.3333333333333333,
+     "corr": 0.681,
+     "corr0": 0.115
+    }
+   },
+   {
+    "job": "sd03_mcu_listen-07c157eb6c",
+    "state": "done",
+    "ts": 1790381891.1758811,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd03_mcu_listen__07c157eb6c.mp4",
+    "sync": {
+     "hit": 0.948,
+     "lag": -0.125,
+     "corr": 0.44,
+     "corr0": 0.304
+    }
+   }
+  ]
+ },
+ "sd04_wide_pullback": {
+  "spec": {
+   "id": "sd04_wide_pullback",
+   "t0": 12.7,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Epic aerial drone shot at night: starting close behind DOT standing on the very top of a red-and-white three-pronged TV antenna tower, the camera pulls back and rises fast, revealing the whole tower rising out of an ocean of fog glowing orange from the city lights underneath, the tops of the Golden Gate Bridge towers poking through the fog in the distance, a sky full of stars."
+  },
+  "takes": [
+   {
+    "job": "sd04_wide_pullback-ff0a13d2ae",
+    "state": "done",
+    "ts": 1790373312.459393,
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__ff0a13d2ae.mp4"
+   },
+   {
+    "job": "sd04_wide_pullback-037fa5a49c",
+    "state": "done",
+    "ts": 1790373312.9154983,
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__037fa5a49c.mp4"
+   },
+   {
+    "job": "sd04_wide_pullback-3dd548770f",
+    "state": "done",
+    "ts": 1790381913.1908398,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__3dd548770f.mp4"
+   },
+   {
+    "job": "sd04_wide_pullback-82ca906f02",
+    "state": "done",
+    "ts": 1790381914.1544766,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd04_wide_pullback__82ca906f02.mp4"
+   }
+  ]
+ },
+ "sd05_console_caught": {
+  "spec": {
+   "id": "sd05_console_caught",
+   "t0": 21.5,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "3 a.m. in a small radio-observatory control room: DOT sits at a desk in front of glowing monitors showing blue waterfall spectrograms with one bright vertical line. She wears the orange foam headphones ON her ears and presses them with both hands, her eyes widening in disbelief and wonder. Blue monitor light on her face. Medium close-up, slow push-in. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd05_console_caught-8d17e4249e",
+    "state": "done",
+    "ts": 1790373313.661346,
+    "file": "/tmp/work/sd/prod/sd05_console_caught__8d17e4249e.mp4",
+    "sync": {
+     "hit": 0.165,
+     "lag": 0.0,
+     "corr": 0.096,
+     "corr0": 0.096
+    }
+   },
+   {
+    "job": "sd05_console_caught-8ada4d467b",
+    "state": "done",
+    "ts": 1790373314.0752475,
+    "file": "/tmp/work/sd/prod/sd05_console_caught__8ada4d467b.mp4",
+    "sync": {
+     "error": "a cannot be empty"
+    }
+   },
+   {
+    "job": "sd05_console_caught-9c8f1b933f",
+    "state": "done",
+    "ts": 1790381891.8639684,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__9c8f1b933f.mp4",
+    "sync": {
+     "hit": 0.485,
+     "lag": -0.16666666666666666,
+     "corr": 0.217,
+     "corr0": 0.118
+    }
+   },
+   {
+    "job": "sd05_console_caught-1bc3e632db",
+    "state": "done",
+    "ts": 1790381892.403504,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__1bc3e632db.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd05_console_caught-ab5341ea87",
+    "state": "done",
+    "ts": 1790381892.7387414,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__ab5341ea87.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd05_console_caught-fea15eefa4",
+    "state": "done",
+    "ts": 1790466140.9279673,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__fea15eefa4.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd05_console_caught-6b88737552",
+    "state": "done",
+    "ts": 1790466141.281218,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__6b88737552.mp4",
+    "sync": {
+     "hit": 0.876,
+     "lag": -0.20833333333333334,
+     "corr": 0.154,
+     "corr0": -0.041
+    }
+   },
+   {
+    "job": "sd05_console_caught-ba8af2ae02",
+    "state": "done",
+    "ts": 1790466141.6256661,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__ba8af2ae02.mp4",
+    "sync": {
+     "hit": 0.907,
+     "lag": 0.20833333333333334,
+     "corr": 0.189,
+     "corr0": 0.03
+    }
+   },
+   {
+    "job": "sd05_console_caught-1eb62a2e98",
+    "state": "done",
+    "ts": 1790466141.9537427,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd05_console_caught__1eb62a2e98.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.20833333333333334,
+     "corr": 0.17,
+     "corr0": 0.117
+    }
+   }
+  ]
+ },
+ "sd06_blink": {
+  "spec": {
+   "id": "sd06_blink",
+   "t0": 25.0,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Medium shot of DOT facing the camera on the antenna tower platform at night; while singing she raises both hands beside her face and rhythmically flashes her fingers open and closed like twinkling stars, in time with the music, bright and playful, hair blowing. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd06_blink-8a7e7c3e89",
+    "state": "done",
+    "ts": 1790373314.6572974,
+    "file": "/tmp/work/sd/prod/sd06_blink__8a7e7c3e89.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.08333333333333333,
+     "corr": 0.373,
+     "corr0": 0.332
+    }
+   },
+   {
+    "job": "sd06_blink-0038f2de77",
+    "state": "done",
+    "ts": 1790373315.0408497,
+    "file": "/tmp/work/sd/prod/sd06_blink__0038f2de77.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.2916666666666667,
+     "corr": 0.226,
+     "corr0": -0.146
+    }
+   },
+   {
+    "job": "sd06_blink-bfb6530fba",
+    "state": "done",
+    "ts": 1790381893.4464908,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__bfb6530fba.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.3333333333333333,
+     "corr": 0.206,
+     "corr0": 0.024
+    }
+   },
+   {
+    "job": "sd06_blink-f6304f252e",
+    "state": "done",
+    "ts": 1790381893.8110077,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__f6304f252e.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.3333333333333333,
+     "corr": 0.275,
+     "corr0": -0.025
+    }
+   },
+   {
+    "job": "sd06_blink-a30f474b95",
+    "state": "done",
+    "ts": 1790381894.5440457,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd06_blink__a30f474b95.mp4",
+    "sync": {
+     "hit": 0.938,
+     "lag": -0.3333333333333333,
+     "corr": 0.251,
+     "corr0": -0.033
+    }
+   }
+  ]
+ },
+ "sd07_transit": {
+  "spec": {
+   "id": "sd07_transit",
+   "t0": 30.0,
+   "dur": 6,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Close-up of DOT's face at night, stars behind her: she slowly draws her index finger horizontally across in front of her eye, like a tiny planet crossing a star, then lowers her hand and looks into the camera with a tender, hopeful expression. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd07_transit-ebebde7323",
+    "state": "done",
+    "ts": 1790373315.6376028,
+    "file": "/tmp/work/sd/prod/sd07_transit__ebebde7323.mp4",
+    "sync": {
+     "error": "a cannot be empty"
+    }
+   },
+   {
+    "job": "sd07_transit-efef2556bd",
+    "state": "done",
+    "ts": 1790373316.250509,
+    "file": "/tmp/work/sd/prod/sd07_transit__efef2556bd.mp4",
+    "sync": {
+     "error": "a cannot be empty"
+    }
+   },
+   {
+    "job": "sd07_transit-9681e0518b",
+    "state": "done",
+    "ts": 1790381894.893021,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__9681e0518b.mp4",
+    "sync": {
+     "error": "face found in only 8% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd07_transit-c456582800",
+    "state": "done",
+    "ts": 1790381895.356204,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__c456582800.mp4",
+    "sync": {
+     "error": "face found in only 9% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd07_transit-b08f667f0b",
+    "state": "done",
+    "ts": 1790381896.0708025,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd07_transit__b08f667f0b.mp4",
+    "sync": {
+     "hit": 0.455,
+     "lag": -0.125,
+     "corr": 0.223,
+     "corr0": 0.168
+    }
+   }
+  ]
+ },
+ "sd08_alone": {
+  "spec": {
+   "id": "sd08_alone",
+   "t0": 35.5,
+   "dur": 5,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Wide low-angle shot: DOT stands on the top platform of the antenna tower, arms opening toward a sky full of stars, singing to the heavens; the camera cranes slowly up and around her, fog glowing below. Epic and lonely. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd08_alone-2390018316",
+    "state": "done",
+    "ts": 1790373316.8587546,
+    "file": "/tmp/work/sd/prod/sd08_alone__2390018316.mp4",
+    "sync": {
+     "hit": 0.686,
+     "lag": 0.3333333333333333,
+     "corr": 0.36,
+     "corr0": 0.202
+    }
+   },
+   {
+    "job": "sd08_alone-07ecd36aff",
+    "state": "done",
+    "ts": 1790373317.4765766,
+    "file": "/tmp/work/sd/prod/sd08_alone__07ecd36aff.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.20833333333333334,
+     "corr": 0.463,
+     "corr0": 0.379
+    }
+   },
+   {
+    "job": "sd08_alone-c1545acf4d",
+    "state": "done",
+    "ts": 1790381896.4349256,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__c1545acf4d.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd08_alone-0cd6c4b0ac",
+    "state": "done",
+    "ts": 1790381896.7938569,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__0cd6c4b0ac.mp4",
+    "sync": {
+     "hit": 0.62,
+     "lag": 0.25,
+     "corr": 0.611,
+     "corr0": 0.417
+    }
+   },
+   {
+    "job": "sd08_alone-bed9967237",
+    "state": "done",
+    "ts": 1790381897.1297896,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd08_alone__bed9967237.mp4",
+    "sync": {
+     "error": "face found in only 19% of frames (profile/wide shot) - review visually"
+    }
+   }
+  ]
+ },
+ "sd09_keep_looking": {
+  "spec": {
+   "id": "sd09_keep_looking",
+   "t0": 61.4,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Medium shot of DOT in a powerful stance: she thrusts the handheld Yagi antenna straight up like a sword, hair whipping, then turns to the camera, fierce and determined. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd09_keep_looking-38a6fbaf1f",
+    "state": "done",
+    "ts": 1790373318.1001546,
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__38a6fbaf1f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.0,
+     "corr": 0.791,
+     "corr0": 0.791
+    }
+   },
+   {
+    "job": "sd09_keep_looking-ea06439f52",
+    "state": "done",
+    "ts": 1790373318.4391875,
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__ea06439f52.mp4",
+    "sync": {
+     "hit": 0.979,
+     "lag": 0.041666666666666664,
+     "corr": 0.779,
+     "corr0": 0.727
+    }
+   },
+   {
+    "job": "sd09_keep_looking-a545f103dd",
+    "state": "done",
+    "ts": 1790381897.6119275,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__a545f103dd.mp4",
+    "sync": {
+     "hit": 0.856,
+     "lag": -0.3333333333333333,
+     "corr": 0.033,
+     "corr0": -0.114
+    }
+   },
+   {
+    "job": "sd09_keep_looking-df78dbc8bd",
+    "state": "done",
+    "ts": 1790381897.9712267,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__df78dbc8bd.mp4",
+    "sync": {
+     "hit": 0.866,
+     "lag": 0.3333333333333333,
+     "corr": 0.117,
+     "corr0": -0.327
+    }
+   },
+   {
+    "job": "sd09_keep_looking-c6c9c8b95f",
+    "state": "done",
+    "ts": 1790381898.4851167,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd09_keep_looking__c6c9c8b95f.mp4",
+    "sync": {
+     "hit": 0.66,
+     "lag": 0.3333333333333333,
+     "corr": 0.689,
+     "corr0": 0.348
+    }
+   }
+  ]
+ },
+ "sd10_vision": {
+  "spec": {
+   "id": "sd10_vision",
+   "t0": 71.0,
+   "dur": 5,
+   "audio": "voc",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Centered medium shot of DOT singing powerfully, one hand on her chest, the other reaching toward the camera, eyes shining with conviction, hair moving. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd10_vision-ca143b70ae",
+    "state": "done",
+    "ts": 1790373319.4001634,
+    "file": "/tmp/work/sd/prod/sd10_vision__ca143b70ae.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.125,
+     "corr": 0.312,
+     "corr0": 0.242
+    }
+   },
+   {
+    "job": "sd10_vision-601824893f",
+    "state": "done",
+    "ts": 1790373319.8678584,
+    "file": "/tmp/work/sd/prod/sd10_vision__601824893f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.08333333333333333,
+     "corr": 0.367,
+     "corr0": 0.325
+    }
+   },
+   {
+    "job": "sd10_vision-5b864e8190",
+    "state": "done",
+    "ts": 1790381899.3143058,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__5b864e8190.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.3333333333333333,
+     "corr": 0.201,
+     "corr0": -0.179
+    }
+   },
+   {
+    "job": "sd10_vision-eb7627974f",
+    "state": "done",
+    "ts": 1790381900.0277429,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__eb7627974f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.0,
+     "corr": 0.11,
+     "corr0": 0.11
+    }
+   },
+   {
+    "job": "sd10_vision-1368eb119a",
+    "state": "done",
+    "ts": 1790381900.404811,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__1368eb119a.mp4",
+    "sync": {
+     "hit": 0.975,
+     "lag": 0.08333333333333333,
+     "corr": 0.207,
+     "corr0": 0.184
+    }
+   },
+   {
+    "job": "sd10_vision-7c04235f9f",
+    "state": "done",
+    "ts": 1790466142.4291952,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__7c04235f9f.mp4",
+    "sync": {
+     "hit": 0.992,
+     "lag": 0.3333333333333333,
+     "corr": 0.217,
+     "corr0": -0.034
+    }
+   },
+   {
+    "job": "sd10_vision-0a2739efc3",
+    "state": "done",
+    "ts": 1790466143.3561146,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__0a2739efc3.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.0,
+     "corr": 0.296,
+     "corr0": 0.296
+    }
+   },
+   {
+    "job": "sd10_vision-31b054a645",
+    "state": "done",
+    "ts": 1790466143.7087002,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__31b054a645.mp4",
+    "sync": {
+     "hit": 0.967,
+     "lag": -0.3333333333333333,
+     "corr": 0.207,
+     "corr0": -0.031
+    }
+   },
+   {
+    "job": "sd10_vision-52ae4c794c",
+    "state": "done",
+    "ts": 1790466144.0093422,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd10_vision__52ae4c794c.mp4",
+    "sync": {
+     "hit": 0.942,
+     "lag": 0.041666666666666664,
+     "corr": 0.127,
+     "corr0": 0.126
+    }
+   }
+  ]
+ },
+ "sd11_care": {
+  "spec": {
+   "id": "sd11_care",
+   "t0": 75.0,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Medium close-up (head, shoulders and the top of her white jacket) of DOT singing directly into the camera, yearning and hopeful, eyebrows lifted, pleading and warm rather than angry, strong white rim light, hair moving. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd11_care-e3ec5eb2bd",
+    "state": "done",
+    "ts": 1790373320.3924584,
+    "file": "/tmp/work/sd/prod/sd11_care__e3ec5eb2bd.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.3333333333333333,
+     "corr": -0.218,
+     "corr0": -0.381
+    }
+   },
+   {
+    "job": "sd11_care-8f0c959a58",
+    "state": "error",
+    "ts": 1790373320.7880988,
+    "error": "{\"state\": \"error\", \"via\": \"webhook\", \"payload\": {\"id\": \"6f2bfbeabc51bf1d33ae2a81e358a8cd5d01bb95e4ff01a9ba33ee11d69cc546\", \"state\": \"Failed\", \"result\": null, \"error\": \"Model execution failed (User Input Error): {\\\"id\\\":\\\"cgt-20260926055524-jkotb\\\",\\\"model\\\":\\\"dreamina-seedance-2-5-260628\\\",\\\"status\\\":\\\"failed\\\",\\\"error\\\":{\\\"code\\\":\\\"OutputAudioSensitiveContentDetected.PolicyViolation\\\",\\\"message\\\":\\\"The request failed because the output audio may be related to copyright restrictions. Request id: 02179037365694900000000000000000000ffffc0a87bec533451\\\"},\\\"created_at\\\":1790373327,\\\"updated_at\\\":1790373792,\\\"service_tier\\\":\\\"default\\\",\\\"execution_expires_after\\\":172800,\\\"generate_audio\\\":true,\\\"draft\\\":false,\\\"priority\\\":0,\\\"output_format\\\":\\\"mp4\\\"}\", \"keySource\": null, \"provider\": \"bytedance\""
+   },
+   {
+    "job": "sd11_care-b5a2c1a590",
+    "state": "done",
+    "ts": 1790374620.806193,
+    "file": "/tmp/work/sd/prod/sd11_care__b5a2c1a590.mp4",
+    "sync": {
+     "hit": 0.557,
+     "lag": 0.08333333333333333,
+     "corr": -0.179,
+     "corr0": -0.201
+    }
+   },
+   {
+    "job": "sd11_care-03ce0c9203",
+    "state": "done",
+    "ts": 1790381900.7712324,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__03ce0c9203.mp4",
+    "sync": {
+     "hit": 0.959,
+     "lag": 0.20833333333333334,
+     "corr": 0.095,
+     "corr0": -0.213
+    }
+   },
+   {
+    "job": "sd11_care-24a37c350c",
+    "state": "done",
+    "ts": 1790381901.1102996,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__24a37c350c.mp4",
+    "sync": {
+     "hit": 0.979,
+     "lag": 0.0,
+     "corr": 0.056,
+     "corr0": 0.056
+    }
+   },
+   {
+    "job": "sd11_care-515ba71b82",
+    "state": "done",
+    "ts": 1790381901.4804368,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__515ba71b82.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.25,
+     "corr": -0.116,
+     "corr0": -0.235
+    }
+   },
+   {
+    "job": "sd11_care-587015fc82",
+    "state": "done",
+    "ts": 1790382673.663605,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__587015fc82.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.20833333333333334,
+     "corr": 0.139,
+     "corr0": -0.057
+    }
+   },
+   {
+    "job": "sd11_care-5a3217546d",
+    "state": "done",
+    "ts": 1790382674.0065625,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__5a3217546d.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.041666666666666664,
+     "corr": 0.289,
+     "corr0": 0.256
+    }
+   },
+   {
+    "job": "sd11_care-5c9f03616f",
+    "state": "done",
+    "ts": 1790382674.408525,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd11_care__5c9f03616f.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.16666666666666666,
+     "corr": 0.032,
+     "corr0": -0.003
+    }
+   }
+  ]
+ },
+ "sd12_search_listen": {
+  "spec": {
+   "id": "sd12_search_listen",
+   "t0": 81.0,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Medium shot of DOT performing a sharp K-pop point move: she snaps her head left, then right, searching, then cups her hand behind her ear to listen, singing. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd12_search_listen-da838b364d",
+    "state": "done",
+    "ts": 1790373321.3332605,
+    "file": "/tmp/work/sd/prod/sd12_search_listen__da838b364d.mp4",
+    "sync": {
+     "hit": 0.825,
+     "lag": -0.08333333333333333,
+     "corr": -0.025,
+     "corr0": -0.062
+    }
+   },
+   {
+    "job": "sd12_search_listen-669f421fdf",
+    "state": "done",
+    "ts": 1790373321.8532596,
+    "file": "/tmp/work/sd/prod/sd12_search_listen__669f421fdf.mp4",
+    "sync": {
+     "hit": 0.897,
+     "lag": 0.08333333333333333,
+     "corr": 0.408,
+     "corr0": 0.327
+    }
+   },
+   {
+    "job": "sd12_search_listen-1eb000554e",
+    "state": "done",
+    "ts": 1790381901.837848,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__1eb000554e.mp4",
+    "sync": {
+     "hit": 0.546,
+     "lag": -0.25,
+     "corr": 0.152,
+     "corr0": -0.171
+    }
+   },
+   {
+    "job": "sd12_search_listen-58e3680064",
+    "state": "done",
+    "ts": 1790381903.0069845,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__58e3680064.mp4",
+    "sync": {
+     "hit": 0.588,
+     "lag": -0.125,
+     "corr": 0.506,
+     "corr0": 0.31
+    }
+   },
+   {
+    "job": "sd12_search_listen-029c40c53f",
+    "state": "done",
+    "ts": 1790381903.580884,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd12_search_listen__029c40c53f.mp4",
+    "sync": {
+     "hit": 0.649,
+     "lag": -0.125,
+     "corr": 0.078,
+     "corr0": 0.01
+    }
+   }
+  ]
+ },
+ "sd13_caught_reply": {
+  "spec": {
+   "id": "sd13_caught_reply",
+   "t0": 93.3,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Close-up of DOT on the antenna tower platform at night: she looks up as a soft mint-green light falls on her face from the sky, astonished and joyful, hair lifting in the wind. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd13_caught_reply-204f38cace",
+    "state": "done",
+    "ts": 1790373322.4518902,
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__204f38cace.mp4",
+    "sync": {
+     "hit": 0.928,
+     "lag": 0.3333333333333333,
+     "corr": 0.192,
+     "corr0": -0.134
+    }
+   },
+   {
+    "job": "sd13_caught_reply-3cfdb90d7d",
+    "state": "done",
+    "ts": 1790373322.8303938,
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__3cfdb90d7d.mp4",
+    "sync": {
+     "hit": 0.959,
+     "lag": 0.0,
+     "corr": 0.409,
+     "corr0": 0.409
+    }
+   },
+   {
+    "job": "sd13_caught_reply-d1fa06cb74",
+    "state": "done",
+    "ts": 1790381904.3640685,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__d1fa06cb74.mp4",
+    "sync": {
+     "hit": 0.835,
+     "lag": 0.3333333333333333,
+     "corr": 0.363,
+     "corr0": 0.104
+    }
+   },
+   {
+    "job": "sd13_caught_reply-5b98e2543a",
+    "state": "done",
+    "ts": 1790381904.70317,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__5b98e2543a.mp4",
+    "sync": {
+     "hit": 0.804,
+     "lag": 0.25,
+     "corr": 0.046,
+     "corr0": -0.038
+    }
+   },
+   {
+    "job": "sd13_caught_reply-7dc8f266d7",
+    "state": "done",
+    "ts": 1790381905.2544022,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__7dc8f266d7.mp4",
+    "sync": {
+     "error": "face found in only 19% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd13_caught_reply-935323d481",
+    "state": "done",
+    "ts": 1790466144.5780587,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__935323d481.mp4",
+    "sync": {
+     "hit": 0.845,
+     "lag": 0.3333333333333333,
+     "corr": 0.25,
+     "corr0": -0.153
+    }
+   },
+   {
+    "job": "sd13_caught_reply-b04e3c7898",
+    "state": "done",
+    "ts": 1790466144.9154997,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__b04e3c7898.mp4",
+    "sync": {
+     "error": "face found in only 29% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd13_caught_reply-a661653fa7",
+    "state": "done",
+    "ts": 1790466145.2746751,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__a661653fa7.mp4",
+    "sync": {
+     "hit": 0.495,
+     "lag": 0.3333333333333333,
+     "corr": 0.228,
+     "corr0": -0.015
+    }
+   },
+   {
+    "job": "sd13_caught_reply-ccbd76f5fd",
+    "state": "done",
+    "ts": 1790466145.610096,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd13_caught_reply__ccbd76f5fd.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   }
+  ]
+ },
+ "sd14_blink_dance": {
+  "spec": {
+   "id": "sd14_blink_dance",
+   "t0": 97.2,
+   "dur": 4,
+   "audio": "voc",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Medium shot of DOT dancing rhythmically, both hands flashing open and closed beside her face like twinkling stars, bouncing to the beat, singing. She sings the words of the reference audio with precise, clearly articulated lip sync. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd14_blink_dance-9c9b39007d",
+    "state": "done",
+    "ts": 1790373323.5629466,
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__9c9b39007d.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.0,
+     "corr": 0.53,
+     "corr0": 0.53
+    }
+   },
+   {
+    "job": "sd14_blink_dance-02e0ecbddc",
+    "state": "done",
+    "ts": 1790373324.2007916,
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__02e0ecbddc.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.08333333333333333,
+     "corr": 0.56,
+     "corr0": 0.409
+    }
+   },
+   {
+    "job": "sd14_blink_dance-bd2b906427",
+    "state": "done",
+    "ts": 1790381905.9648733,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__bd2b906427.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": -0.08333333333333333,
+     "corr": 0.658,
+     "corr0": 0.529
+    }
+   },
+   {
+    "job": "sd14_blink_dance-782f9e00e6",
+    "state": "done",
+    "ts": 1790381906.7074735,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__782f9e00e6.mp4",
+    "sync": {
+     "hit": 0.99,
+     "lag": 0.0,
+     "corr": 0.463,
+     "corr0": 0.463
+    }
+   },
+   {
+    "job": "sd14_blink_dance-72d5234828",
+    "state": "done",
+    "ts": 1790381907.4557726,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd14_blink_dance__72d5234828.mp4",
+    "sync": {
+     "hit": 1.0,
+     "lag": 0.08333333333333333,
+     "corr": 0.568,
+     "corr0": 0.461
+    }
+   }
+  ]
+ },
+ "sd15_own_ecu": {
+  "spec": {
+   "id": "sd15_own_ecu",
+   "t0": 102.8,
+   "dur": 5,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "Extreme close-up of DOT's face at night, eyes glistening with tears but smiling, a soft pale-blue light in her eyes, stars softly out of focus behind her. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd15_own_ecu-bac460481f",
+    "state": "done",
+    "ts": 1790373324.7833335,
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__bac460481f.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-7e97dfe5ee",
+    "state": "done",
+    "ts": 1790373325.28687,
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__7e97dfe5ee.mp4",
+    "sync": {
+     "hit": 0.091,
+     "lag": -0.20833333333333334,
+     "corr": 0.407,
+     "corr0": 0.222
+    }
+   },
+   {
+    "job": "sd15_own_ecu-f5797b91f9",
+    "state": "done",
+    "ts": 1790381907.8288808,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__f5797b91f9.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-afca32f85b",
+    "state": "done",
+    "ts": 1790381908.8648417,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__afca32f85b.mp4",
+    "sync": {
+     "hit": 0.496,
+     "lag": 0.0,
+     "corr": 0.358,
+     "corr0": 0.358
+    }
+   },
+   {
+    "job": "sd15_own_ecu-bed8113678",
+    "state": "done",
+    "ts": 1790381909.2087858,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__bed8113678.mp4",
+    "sync": {
+     "error": "face found in only 2% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-80ef11d161",
+    "state": "done",
+    "ts": 1790466145.9484553,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__80ef11d161.mp4",
+    "sync": {
+     "error": "face found in only 3% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-3eb552a647",
+    "state": "done",
+    "ts": 1790466146.3087149,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__3eb552a647.mp4",
+    "sync": {
+     "error": "face found in only 7% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-031b85546d",
+    "state": "done",
+    "ts": 1790466146.6311913,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__031b85546d.mp4",
+    "sync": {
+     "error": "face found in only 4% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd15_own_ecu-7b34bdd000",
+    "state": "done",
+    "ts": 1790466147.011726,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd15_own_ecu__7b34bdd000.mp4",
+    "sync": {
+     "hit": 0.331,
+     "lag": -0.16666666666666666,
+     "corr": 0.489,
+     "corr0": 0.462
+    }
+   }
+  ]
+ },
+ "sd16_alone_beam": {
+  "spec": {
+   "id": "sd16_alone_beam",
+   "t0": 107.5,
+   "dur": 5,
+   "audio": "voc",
+   "bg": "context",
+   "takes": 2,
+   "prompt": "DOT on the top platform of the antenna tower at night seen from behind and slightly to the side: she raises the handheld Yagi antenna to the sky as a column of mint light descends from the stars toward her; the camera orbits around her; fog glowing below. She sings the words of the reference audio with precise, clearly articulated lip sync."
+  },
+  "takes": [
+   {
+    "job": "sd16_alone_beam-28b419d1ee",
+    "state": "done",
+    "ts": 1790373325.9227548,
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__28b419d1ee.mp4",
+    "sync": {
+     "hit": 0.314,
+     "lag": 0.0,
+     "corr": -0.269,
+     "corr0": -0.269
+    }
+   },
+   {
+    "job": "sd16_alone_beam-cc757af88f",
+    "state": "done",
+    "ts": 1790373326.7030444,
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__cc757af88f.mp4",
+    "sync": {
+     "error": "a cannot be empty"
+    }
+   },
+   {
+    "job": "sd16_alone_beam-5a4c671c43",
+    "state": "done",
+    "ts": 1790381909.7427762,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__5a4c671c43.mp4",
+    "sync": {
+     "error": "face found in only 0% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd16_alone_beam-1736c8440f",
+    "state": "done",
+    "ts": 1790381910.6490674,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__1736c8440f.mp4",
+    "sync": {
+     "error": "face found in only 3% of frames (profile/wide shot) - review visually"
+    }
+   },
+   {
+    "job": "sd16_alone_beam-c43ef1f6ef",
+    "state": "done",
+    "ts": 1790381911.4415514,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd16_alone_beam__c43ef1f6ef.mp4",
+    "sync": {
+     "error": "face found in only 6% of frames (profile/wide shot) - review visually"
+    }
+   }
+  ]
+ },
+ "sd17_dance_a": {
+  "spec": {
+   "id": "sd17_dance_a",
+   "t0": 112.0,
+   "dur": 6,
+   "audio": "inst",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Full-body shot of DOT performing an energetic, razor-sharp K-pop dance break that hits every beat of the reference music: powerful arm hits, a quick spin, hair flying; her whole body stays in frame. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd17_dance_a-232e600c24",
+    "state": "done",
+    "ts": 1790373327.3204248,
+    "file": "/tmp/work/sd/prod/sd17_dance_a__232e600c24.mp4"
+   },
+   {
+    "job": "sd17_dance_a-d99507c7ca",
+    "state": "done",
+    "ts": 1790373327.7521398,
+    "file": "/tmp/work/sd/prod/sd17_dance_a__d99507c7ca.mp4"
+   },
+   {
+    "job": "sd17_dance_a-e8980134c1",
+    "state": "done",
+    "ts": 1790381914.582535,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd17_dance_a__e8980134c1.mp4"
+   },
+   {
+    "job": "sd17_dance_a-9c5e567e4a",
+    "state": "done",
+    "ts": 1790381915.4940994,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd17_dance_a__9c5e567e4a.mp4"
+   }
+  ]
+ },
+ "sd18_dance_b": {
+  "spec": {
+   "id": "sd18_dance_b",
+   "t0": 118.0,
+   "dur": 6,
+   "audio": "inst",
+   "bg": "green",
+   "takes": 2,
+   "prompt": "Full-body shot of DOT continuing a sharp K-pop dance to the beat of the reference music, finishing in a strong final pose with the handheld Yagi antenna raised high overhead; her whole body stays in frame. Background: a plain, flat, evenly lit solid chroma-key green screen (#00FF00) filling the whole frame, with nothing else in it."
+  },
+  "takes": [
+   {
+    "job": "sd18_dance_b-a8356f122e",
+    "state": "done",
+    "ts": 1790373328.3374534,
+    "file": "/tmp/work/sd/prod/sd18_dance_b__a8356f122e.mp4"
+   },
+   {
+    "job": "sd18_dance_b-c5c032e780",
+    "state": "done",
+    "ts": 1790373328.724959,
+    "file": "/tmp/work/sd/prod/sd18_dance_b__c5c032e780.mp4"
+   },
+   {
+    "job": "sd18_dance_b-c1c3e36a17",
+    "state": "done",
+    "ts": 1790381916.1799495,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd18_dance_b__c1c3e36a17.mp4"
+   },
+   {
+    "job": "sd18_dance_b-1c9ae224b0",
+    "state": "done",
+    "ts": 1790381917.0031185,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/sd18_dance_b__1c9ae224b0.mp4"
+   }
+  ]
+ },
+ "se01_fog_tower": {
+  "spec": {
+   "id": "se01_fog_tower",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 1,
+   "prompt": "Night timelapse: thick fog pours over the hills of San Francisco like a slow waterfall, a tall red-and-white three-pronged TV antenna tower rises above the fog with blinking red lights, city lights glow orange beneath the fog, stars overhead. Anime background art, no people."
+  },
+  "takes": [
+   {
+    "job": "se01_fog_tower-da6181cace",
+    "state": "done",
+    "ts": 1790373329.1901777,
+    "file": "/tmp/work/sd/prod/se01_fog_tower__da6181cace.mp4"
+   }
+  ]
+ },
+ "se02_launch": {
+  "spec": {
+   "id": "se02_launch",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 1,
+   "prompt": "A giant stainless-steel rocket lifts off from a coastal launch tower at blue hour: huge billowing exhaust clouds, a blinding flame, steel catch-arms of the tower swinging away, camera tilting up with the rocket. Anime background art style, no people, no text."
+  },
+  "takes": [
+   {
+    "job": "se02_launch-c151b048dd",
+    "state": "done",
+    "ts": 1790373329.5212398,
+    "file": "/tmp/work/sd/prod/se02_launch__c151b048dd.mp4"
+   }
+  ]
+ },
+ "se03_crowd_lights": {
+  "spec": {
+   "id": "se03_crowd_lights",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 1,
+   "prompt": "Seen from behind, a huge crowd on a grassy hillside in San Francisco at night holds thousands of glowing phone lights up toward the stars, the lights waving slowly in unison like a K-pop concert light-stick ocean, city and fog below. Anime background art style, no text."
+  },
+  "takes": [
+   {
+    "job": "se03_crowd_lights-698eb06939",
+    "state": "done",
+    "ts": 1790373330.581848,
+    "file": "/tmp/work/sd/prod/se03_crowd_lights__698eb06939.mp4"
+   }
+  ]
+ },
+ "se04_other_city": {
+  "spec": {
+   "id": "se04_other_city",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 1,
+   "prompt": "Aerial flyover at golden hour of an alien terraced city of stacked white ring-shaped buildings with mint lights on cliffs with waterfalls; a luminous space-elevator tether rises from the city into a magenta sky past a giant planetary ring; a huge coral sun on the horizon. No people or creatures. Anime background art."
+  },
+  "takes": [
+   {
+    "job": "se04_other_city-8137c69546",
+    "state": "error",
+    "ts": 1790373331.062627,
+    "error": "{\"state\": \"error\", \"via\": \"webhook\", \"payload\": {\"id\": \"ba914dc666e212d07c48dde36345b35f0fe406cd3375763c42d35e4978b67530\", \"state\": \"Failed\", \"result\": null, \"error\": \"Model execution failed (User Input Error): {\\\"error\\\":{\\\"code\\\":\\\"InvalidParameter\\\",\\\"message\\\":\\\"Error while downloading image, error: expected the aspect ratio to be between 0.39 and 2.50, but received image with aspect ratio: 2.78 instead Request id: 021790373331607ceb2efb7fea58c55155fc9fb92515dcd951257\\\",\\\"param\\\":\\\"image_url\\\",\\\"type\\\":\\\"BadRequest\\\"}}\", \"keySource\": null, \"provider\": \"bytedance\", \"model\": \"bytedance/seedance-2.5\", \"usage\": null}, \"t1\": 1790373332785}"
+   },
+   {
+    "job": "se04_other_city-037eb2cd40",
+    "state": "done",
+    "ts": 1790374620.8061953,
+    "file": "/tmp/work/sd/prod/se04_other_city__037eb2cd40.mp4"
+   }
+  ]
+ },
+ "se05_petal_field": {
+  "spec": {
+   "id": "se05_petal_field",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 1,
+   "prompt": "At night on an alien plain, hundreds of flower-like white radio dishes with six petals open their petals in a wave and all turn toward the same point in the starry sky; thin mint light lines connect them. No people or creatures. Anime background art."
+  },
+  "takes": [
+   {
+    "job": "se05_petal_field-5143ea1c1e",
+    "state": "done",
+    "ts": 1790373331.4150949,
+    "file": "/tmp/work/sd/prod/se05_petal_field__5143ea1c1e.mp4"
+   }
+  ]
+ },
+ "se08_cliff_dish": {
+  "spec": {
+   "id": "se08_cliff_dish",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "At night on the edge of a high cliff above an endless sea of violet clouds, a single giant flower-shaped white radio dish with six petals slowly opens and turns toward one faint star in the upper right of the sky; thin mint light lines run from its base down the cliff; the Milky Way glows behind. Slow push-in."
+  },
+  "takes": [
+   {
+    "job": "se08_cliff_dish-92a53544f3",
+    "state": "done",
+    "ts": 1790469027.6500115,
+    "via": "cron",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__92a53544f3.mp4"
+   },
+   {
+    "job": "se08_cliff_dish-490a672d82",
+    "state": "done",
+    "ts": 1790469282.949076,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__490a672d82.mp4"
+   },
+   {
+    "job": "se08_cliff_dish-c696ce0051",
+    "state": "done",
+    "ts": 1790469283.473262,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__c696ce0051.mp4"
+   }
+  ]
+ },
+ "se06_moons_sea": {
+  "spec": {
+   "id": "se06_moons_sea",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Night on an alien world, seen from a dark rocky shore: a vast pale planetary ring arcs diagonally across a starry violet sky, two moons, one large and one small, hang above a calm sea, and the lights of a distant terraced cliff city glimmer mint along the coast and reflect in the water. Gentle waves roll in. The camera slowly tilts up from the sea to the moons."
+  },
+  "takes": [
+   {
+    "job": "se06_moons_sea-8321aeff0a",
+    "state": "done",
+    "ts": 1790469280.9967875,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se06_moons_sea__8321aeff0a.mp4"
+   },
+   {
+    "job": "se06_moons_sea-0cac334f2a",
+    "state": "done",
+    "ts": 1790469281.5248861,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se06_moons_sea__0cac334f2a.mp4"
+   }
+  ]
+ },
+ "se07_elevator": {
+  "spec": {
+   "id": "se07_elevator",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Low-angle shot at dusk: a colossal white space-elevator tether rises from a terraced city of stacked white ring-shaped buildings on sea cliffs; the camera tilts up along the tether as glowing mint climber pods race upward through thin pink clouds, and the magenta sky darkens into stars crossed by a giant planetary ring."
+  },
+  "takes": [
+   {
+    "job": "se07_elevator-a2174d9ef8",
+    "state": "done",
+    "ts": 1790469281.9745994,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se07_elevator__a2174d9ef8.mp4"
+   },
+   {
+    "job": "se07_elevator-56927ca51f",
+    "state": "done",
+    "ts": 1790469282.4549575,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se07_elevator__56927ca51f.mp4"
+   }
+  ]
+ },
+ "se09_night_city": {
+  "spec": {
+   "id": "se09_night_city",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 4,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Deep night on an alien world under a dark indigo sky full of stars: an aerial flyover of a city of stacked white ring-shaped terraces on sea cliffs; thousands of mint-green window lights pulse on and off in waves across the terraces like a heartbeat, glowing waterfalls pour into a dark bay that mirrors the lights, and a pale planetary ring arcs across the stars. No sunset, no daylight."
+  },
+  "takes": [
+   {
+    "job": "se09_night_city-b1f26872b6",
+    "state": "done",
+    "ts": 1790469283.9619007,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__b1f26872b6.mp4"
+   },
+   {
+    "job": "se09_night_city-9b284769cb",
+    "state": "done",
+    "ts": 1790469284.429433,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__9b284769cb.mp4"
+   },
+   {
+    "job": "se09_night_city-ff0c2e46ca",
+    "state": "done",
+    "ts": 1790469846.788012,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__ff0c2e46ca.mp4"
+   },
+   {
+    "job": "se09_night_city-70409cd165",
+    "state": "done",
+    "ts": 1790469847.1463695,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__70409cd165.mp4"
+   }
+  ]
+ },
+ "se10_tower_beam": {
+  "spec": {
+   "id": "se10_tower_beam",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Wide shot at night: far across an endless sea of violet clouds lit by starlight, a slender white signal tower, centred in frame, with a halo ring of mint lights near its top fires a thin vertical beam of mint light straight up into the starry sky; the beam pulses in a slow rhythm and the clouds glow where it passes. The camera slowly pushes in."
+  },
+  "takes": [
+   {
+    "job": "se10_tower_beam-dd7dad3559",
+    "state": "done",
+    "ts": 1790469284.9082026,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se10_tower_beam__dd7dad3559.mp4"
+   },
+   {
+    "job": "se10_tower_beam-7ab900a4f5",
+    "state": "done",
+    "ts": 1790469285.291517,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se10_tower_beam__7ab900a4f5.mp4"
+   }
+  ]
+ }
+}

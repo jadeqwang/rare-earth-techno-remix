@@ -1,0 +1,147 @@
+{
+ "sd01": {
+  "file": "sd01_tower_back__e03e289da5.mp4",
+  "start": 0.0,
+  "lag": 0.0
+ },
+ "sd02": {
+  "file": "sd02_cu_yearning__c8b3647c99.mp4",
+  "start": 5.2,
+  "lag": -0.041667
+ },
+ "sd03": {
+  "file": "sd03_mcu_listen__17fad81acf.mp4",
+  "start": 10.4,
+  "lag": -0.25
+ },
+ "sd04": {
+  "file": "sd04_wide_pullback__3dd548770f_lettering.mp4",
+  "start": 12.7,
+  "lag": 0.0
+ },
+ "sd05": {
+  "file": "sd05_console_caught__ba8af2ae02_lettering.mp4",
+  "start": 21.5,
+  "lag": -0.291667
+ },
+ "sd06": {
+  "file": "sd06_blink__a30f474b95_sync.mp4",
+  "start": 25.0,
+  "lag": 0.333333
+ },
+ "sd07": {
+  "file": "sd07_transit__9681e0518b_sync.mp4",
+  "start": 30.0,
+  "lag": 0.0
+ },
+ "sd08": {
+  "file": "sd08_alone__bed9967237.mp4",
+  "start": 35.5,
+  "lag": 0.0
+ },
+ "sd09": {
+  "file": "sd09_keep_looking__c6c9c8b95f.mp4",
+  "start": 61.4,
+  "lag": -0.083333
+ },
+ "sd10": {
+  "file": "sd10_vision__1368eb119a_sync.mp4",
+  "start": 71.0,
+  "lag": 0.0
+ },
+ "sd11": {
+  "file": "sd11_care__03ce0c9203_sync.mp4",
+  "start": 75.0,
+  "lag": 0.125
+ },
+ "sd12": {
+  "file": "sd12_search_listen__58e3680064.mp4",
+  "start": 81.0,
+  "lag": -0.208333
+ },
+ "sd13": {
+  "file": "sd13_caught_reply__935323d481_lettering_sync.mp4",
+  "start": 93.3,
+  "lag": -0.333333
+ },
+ "sd14": {
+  "file": "sd14_blink_dance__bd2b906427.mp4",
+  "start": 97.2,
+  "lag": -0.083333
+ },
+ "sd15": {
+  "file": "sd15_own_ecu__3eb552a647_sync.mp4",
+  "start": 102.8,
+  "lag": -0.083333
+ },
+ "sd16": {
+  "file": "sd16_alone_beam__c43ef1f6ef_sync.mp4",
+  "start": 107.5,
+  "lag": 0.0
+ },
+ "sd17": {
+  "file": "sd17_dance_a__e8980134c1.mp4",
+  "start": 112.0,
+  "lag": 0.0
+ },
+ "sd18": {
+  "file": "sd18_dance_b__1c9ae224b0.mp4",
+  "start": 118.0,
+  "lag": 0.0
+ },
+ "se01": {
+  "file": "se01_fog_tower__da6181cace.mp4",
+  "start": 0.0,
+  "lag": 0
+ },
+ "se02": {
+  "file": "se02_launch__c151b048dd.mp4",
+  "start": 55.45,
+  "lag": 0
+ },
+ "se03": {
+  "file": "se03_crowd_lights__698eb06939.mp4",
+  "start": 67.17,
+  "lag": 0
+ },
+ "se04": {
+  "file": "se04_other_city__037eb2cd40.mp4",
+  "start": 47.55,
+  "lag": 0
+ },
+ "se05": {
+  "file": "se05_petal_field__5143ea1c1e.mp4",
+  "start": 49.36,
+  "lag": 0
+ },
+ "se06": {
+  "file": "se06_moons_sea__8321aeff0a.mp4",
+  "start": 74.76,
+  "lag": 0
+ },
+ "se07": {
+  "file": "se07_elevator__a2174d9ef8.mp4",
+  "start": 78.11,
+  "lag": 0
+ },
+ "se08": {
+  "file": "se08_cliff_dish__c696ce0051.mp4",
+  "start": 89.87,
+  "lag": 0
+ },
+ "se10": {
+  "file": "se10_tower_beam__7ab900a4f5.mp4",
+  "start": 107.79,
+  "lag": 0
+ },
+ "se09": {
+  "file": "se09_night_city__ff0c2e46ca.mp4",
+  "start": 115.265,
+  "lag": 0
+ },
+ "se08b": {
+  "file": "se08_cliff_dish__490a672d82.mp4",
+  "start": 79.0,
+  "lag": 0
+ }
+}
