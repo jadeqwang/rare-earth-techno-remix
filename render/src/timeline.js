@@ -213,7 +213,7 @@ export function buildTimeline(A) {
     } });
 
   add({ id: 'theircity', t0: 47.55, t1: 49.36, scene: 'otherworld', p: { mode: 'print', view: 'city' }, look: PRINT });
-  add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se05', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint }), look: PRINT,
+  add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se08', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint, start: 49.36 - 0.6, rect: [1, 0, -1, 1] }), look: PRINT,
     type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, latinColor: P }) });
   add({ id: 'theirtower', t0: 51.16, t1: 52.96, scene: 'otherworld', p: { mode: 'print', view: 'tower' }, look: PRINT });
 
@@ -295,7 +295,8 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.keyword(t, 'VISION', W(15, 4), { size: 330, y: 1000, color: YELLOW }) });
 
   // ================================================================ DROP 2a / V4 (call and response)
-  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11r', { mode: 'light', rect: [0.17, 0, 1, 1], bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
+  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11r', { mode: 'light', rect: [-0.262, -0.790, 1.886, 1.886],   // the re-shoot is framed wider: pushed in to the old close-up
+ bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
     type: (ty, t) => ty.stack(t, [16], { x: 70, y: 300, size: 168, lineH: 172, maxW: 700, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
 
   // Echo's shots from here on are each their own plate, so no view of the other world plays twice
