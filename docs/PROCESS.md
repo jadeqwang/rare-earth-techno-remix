@@ -400,6 +400,16 @@ opened by LivePortrait in *blink* (0:25.75) is small and pale enough inside that
 replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps its profile mouths. The storyboard's
 1:16.8 tile is rendered again, since that drawing's mouth changed (the other tiles are unchanged).
 
+**Notes on the lip-sync cut, acted on.**
+* *of a star* (0:27.7): the last two drawings of *blink* opened wide, an "ah" that read as "star" before the word. "of a"
+  is a small "uh"; the sheet now caps those spans (`small`) and they get small mouths from the same take.
+* *my own* (0:34.7): the voice breaks from "my" into "own" at 34.66 s, not at 34.85 s where the phones had it, so the
+  round "o" came about four frames late. "own" now starts there and asks for a rounded mouth (`round`).
+* *our planet waits* (1:07): se03 drew only a faint teal ring on the back of her jacket, and the ink redraw lost it in the
+  jacket's night shading, so the jacket didn't match the opening shot's. `pipeline/plate_fixes/fix_backdot.py` paints the
+  sheet's solid pale-blue dot over the ring, tracked by hand as the camera pulls back, with her hair left in front
+  (`se03_..._dot.mp4`).
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),

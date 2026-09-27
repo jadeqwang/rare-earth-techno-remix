@@ -216,11 +216,22 @@ def target(name, t_on):
             if s[0] <= t < s[1]: v = s[2]; break
         lv.append(v)
     v = float(np.mean(lv))
+    target.flag = None
+    for s in spans:                    # 'small' / 'round' spans in force for most of the drawing
+        if len(s) > 4 and s[4] in ('small', 'round') and s[0] <= t_on + LEAD + 1 / FPS < s[1]: target.flag = s[4]
     for s in spans:                    # a lip closure shows on the drawing whose time holds the closure's middle
         if len(s) > 4 and s[4] == 'hard':
             mid = (s[0] + s[1]) / 2
             if t_on + LEAD - 1 / FPS <= mid < t_on + LEAD + 1 / FPS: v = min(v, s[2])
     return v
+
+
+def shaped(flag, o, w):
+    """A 'small' span caps the opening (an uh, not an ah); a 'round' span wants a rounded mouth, narrow for the face
+    (w = mouth width / eye distance, against this take's roundest open mouths, Plate.wround)."""
+    if flag == 'small': return o is None or o <= 0.75
+    if flag == 'round': return w is None or w <= shaped.wround
+    return True
 
 
 def fits(want, o):
@@ -283,6 +294,10 @@ class Plate:
         r = gap_d[self.lo:self.hi]
         self.wide = float(np.clip(np.nanpercentile(r, 95), 0.08, 0.6)) if np.isfinite(r).any() else 0.3
         self.open = gap_d / self.wide
+        wd = np.array([g[2] / t[2] if g is not None else np.nan for g, t in zip(self.geo, self.tr)])
+        self.wd = wd
+        op = (self.open > 0.3) & np.isfinite(wd)
+        self.wround = float(1.2 * np.percentile(wd[op], 5)) if op.any() else 1.0
         self.crop_scale = spec.get('crop', 1.5)
         # how crisply this take draws its mouths (a smudge from the generator is well below it)
         self.crisp = float(np.median([sharpness(self.frames[j], self.mouth_at(j), self.tr[j][2])
@@ -323,7 +338,7 @@ def choose_donors(P, run):
     INF, NONE = 1e9, 7.0
     oj = P.open[C]
     unary = []
-    for e, want in run:
+    for e, want, flag in run:
         if want <= 0.05:
             ok, co = oj <= 0.08, 0.2 * (oj / 0.08) ** 2
         elif want <= 0.2:
@@ -334,6 +349,8 @@ def choose_donors(P, run):
             ok, co = np.abs(oj - want) <= max(0.15, 0.35 * want), ((oj - want) / 0.15) ** 2
         # the borrowed face is moved into this frame's head pose; a pose too far off and LivePortrait's warp mangles
         # the mouth, so the donor must be turned and tilted within 10 degrees of this frame and at the same scale
+        if flag == 'small': ok = ok & (oj <= 0.75)
+        if flag == 'round': ok = ok & (P.wd[C] <= P.wround)
         dp = np.array([P.pose_diff(e, j) for j in C])
         ok = ok & (dp <= 10.0) & (np.abs(np.log(P.tr[C, 2] / P.tr[e, 2])) <= 0.12)
         ct = ((C - e) / 18.0) ** 2
@@ -549,19 +566,23 @@ def run(key, preview=None):
     log = {'wide': P.wide, 'shots': {}}
     for name, win, start, lag in spec['shots']:
         units = [(e, t) for e, t in display_units(win, start, lag, P.n) if P.lo <= e < P.hi]
-        wants = [target(name, t) for _, t in units]
+        wants, flags = [], []
+        for _, t in units: wants.append(target(name, t)); flags.append(target.flag)
+        shaped.wround = P.wround
         opens = [None if P.geo[e] is None else float(P.open[e]) for e, _ in units]
-        good = [fits(w, o) for w, o in zip(wants, opens)]
+        good = [fits(w, o) and shaped(fl, o, None if P.geo[e] is None else P.wd[e])
+                for (e, _), w, o, fl in zip(units, wants, opens, flags)]
         donors = [None] * len(units)
         k = 0
         while k < len(units):                                  # runs of consecutive wrong drawings
             if good[k]: k += 1; continue
             k1 = k
             while k1 < len(units) and not good[k1]: k1 += 1
-            for i, dn in zip(range(k, k1), choose_donors(P, [(units[i][0], wants[i]) for i in range(k, k1)])): donors[i] = dn
+            for i, dn in zip(range(k, k1), choose_donors(P, [(units[i][0], wants[i], flags[i]) for i in range(k, k1)])):
+                donors[i] = dn
             k = k1
         rows = []
-        for (e, t), want, o, ok, dn in zip(units, wants, opens, good, donors):
+        for (e, t), want, fl, o, ok, dn in zip(units, wants, flags, opens, good, donors):
             row = {'frame': e, 't': round(t, 3), 'want': round(want, 2), 'open': None if o is None else round(o, 2),
                    'kept': bool(ok)}
             if not ok:
@@ -580,7 +601,8 @@ def run(key, preview=None):
                     clean = clean and skin_kept(P.frames[e], img, P.mouth_at(e), P.tr[e][2]) \
                         and inked(P.frames[e], img, P.mouth_at(e), P.tr[e][2]) \
                         and sharpness(img, P.mouth_at(e), P.tr[e][2]) >= 0.8 * P.crisp
-                    if clean and fits(want, got):
+                    g3 = geometry(img, *P.mouth_at(e), 2.2 * P.tr[e][2])
+                    if clean and fits(want, got) and shaped(fl, got, None if g3 is None else g3[2] / P.tr[e][2]):
                         done = (img, got, how)
                         break
                 if done:

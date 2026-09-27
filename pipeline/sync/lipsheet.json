@@ -1,5 +1,5 @@
 {
- "_about": "Exposure sheet for DOT's mouth: the vocal read syllable by syllable from the stem's spectrogram and envelope (pipeline/sync/lipsheet.py draws the views), with PocketSphinx phone alignments as a first guess. Each window lists contiguous [t0, t1, open, label] spans in song seconds; open is how far the mouth is open (0 shut, 1 as wide as she sings). 'hard' spans are lip closures (m, b, p, v) that must show on at least one drawing even when shorter than a drawing.",
+ "_about": "Exposure sheet for DOT's mouth: the vocal read syllable by syllable from the stem's spectrogram and envelope (pipeline/sync/lipsheet.py draws the views), with PocketSphinx phone alignments as a first guess. Each window lists contiguous [t0, t1, open, label] spans in song seconds; open is how far the mouth is open (0 shut, 1 as wide as she sings). 'hard' spans are lip closures (m, b, p, v) that must show on at least one drawing even when shorter than a drawing. 'small' spans cap how wide the mouth may open (an uh, not an ah); 'round' spans ask for a rounded mouth (the o of own).",
  "windows": {
   "yearning": [
    [5.60, 5.72, 0.40, "you're"], [5.72, 6.00, 0.50, "yearn"], [6.00, 6.10, 0.30, "-ing"], [6.10, 6.28, 0.25, "to"],
@@ -20,13 +20,13 @@
   "blink": [
    [25.20, 25.34, 0.00, "rest"], [25.34, 25.56, 0.35, "the"], [25.56, 25.72, 0.00, "b", "hard"], [25.72, 25.97, 0.40, "bea-"],
    [25.97, 26.00, 0.15, "t"], [26.00, 26.25, 0.35, "-ting"], [26.25, 26.30, 0.00, "b", "hard"], [26.30, 26.82, 0.40, "blin-"],
-   [26.82, 26.85, 0.15, "k"], [26.85, 27.55, 0.35, "-king"], [27.55, 27.60, 0.20, ""], [27.60, 27.75, 0.70, "of"],
-   [27.75, 27.78, 0.10, "v"], [27.78, 27.90, 0.60, "a"]
+   [26.82, 26.85, 0.15, "k"], [26.85, 27.55, 0.35, "-king"], [27.55, 27.60, 0.20, ""], [27.60, 27.75, 0.40, "of: a small uh, not the ah of star", "small"],
+   [27.75, 27.78, 0.10, "v"], [27.78, 27.90, 0.35, "a", "small"]
   ],
   "transit_eye": [
    [30.90, 31.15, 0.20, "is, n"], [31.15, 31.60, 0.80, "not"], [31.60, 31.95, 0.00, "t, rest"], [31.95, 32.07, 0.20, "th"],
    [32.07, 32.55, 0.70, "that"], [32.55, 32.98, 0.00, "t, rest"], [32.98, 33.45, 0.80, "far"], [33.45, 33.72, 0.00, "f", "hard"],
-   [33.72, 33.93, 0.55, "fro-"], [33.93, 34.22, 0.00, "m m", "hard"], [34.22, 34.85, 0.80, "my"], [34.85, 35.85, 0.60, "own"],
+   [33.72, 33.93, 0.55, "fro-"], [33.93, 34.22, 0.00, "m m", "hard"], [34.22, 34.60, 0.80, "my"], [34.60, 34.66, 0.30, "break"], [34.66, 35.85, 0.60, "own: rounded from its onset, where the voice breaks after my", "round"],
    [35.85, 35.98, 0.30, "n"]
   ],
   "alone": [
