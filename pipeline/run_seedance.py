@@ -1,6 +1,7 @@
 """Submit / collect / score Seedance 2.5 base clips.
 
   python3 run_seedance.py submit [shot_id ...]   # submit missing takes (all shots if none given)
+      --cron   queue on the relay's cron runner instead of a webhook run (needs no hook secret)
   python3 run_seedance.py collect                # download finished clips, score lip sync
   python3 run_seedance.py status
 """
@@ -64,7 +65,7 @@ def cut_audio(kind, t0, dur):
 
 
 def build_input(s):
-    inp = {"prompt": s["prompt"] + STYLE, "duration": s["dur"], "resolution": "720p", "aspect_ratio": "16:9",
+    inp = {"prompt": s["prompt"] + s.get("style", STYLE), "duration": s["dur"], "resolution": "720p", "aspect_ratio": "16:9",
            "fps": 24, "generate_audio": False, "camera_fixed": False, "watermark": False, "output_format": "mp4",
            "use_virtual_avatar": False}
     if s["refs"]:
@@ -74,7 +75,8 @@ def build_input(s):
     return inp
 
 
-def submit(ids, extra=0):
+def submit(ids, extra=0, cron=False):
+    queued = 0
     for s in SHOTS:
         if ids and s["id"] not in ids:
             continue
@@ -87,7 +89,11 @@ def submit(ids, extra=0):
             need = max(0, s["takes"] - len(live)) + extra
             save(m)
         for k in range(need):
-            jid = gen.submit("bytedance/seedance-2.5", build_input(s), tag=s["id"])
+            if cron:  # two runs per cron minute
+                jid = gen.submit_cron("bytedance/seedance-2.5", build_input(s), tag=s["id"], delay_min=2 + queued // 2)
+                queued += 1
+            else:
+                jid = gen.submit("bytedance/seedance-2.5", build_input(s), tag=s["id"])
             with locked():
                 m = load()
                 m[s["id"]]["takes"].append({"job": jid, "state": "submitted", "ts": time.time(), "hair": HAIR})
@@ -149,7 +155,8 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "submit":
         submit([a for a in sys.argv[2:] if not a.startswith("--")],
-               extra=int(next((a.split("=")[1] for a in sys.argv[2:] if a.startswith("--extra=")), 0)))
+               extra=int(next((a.split("=")[1] for a in sys.argv[2:] if a.startswith("--extra=")), 0)),
+               cron="--cron" in sys.argv)
     elif cmd == "collect":
         collect()
     else:

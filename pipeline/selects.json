@@ -113,5 +113,35 @@
   "file": "se05_petal_field__5143ea1c1e.mp4",
   "start": 49.36,
   "lag": 0
+ },
+ "se06": {
+  "file": "se06_moons_sea__8321aeff0a.mp4",
+  "start": 74.76,
+  "lag": 0
+ },
+ "se07": {
+  "file": "se07_elevator__a2174d9ef8.mp4",
+  "start": 78.11,
+  "lag": 0
+ },
+ "se08": {
+  "file": "se08_cliff_dish__c696ce0051.mp4",
+  "start": 89.87,
+  "lag": 0
+ },
+ "se10": {
+  "file": "se10_tower_beam__7ab900a4f5.mp4",
+  "start": 107.79,
+  "lag": 0
+ },
+ "se09": {
+  "file": "se09_night_city__ff0c2e46ca.mp4",
+  "start": 115.265,
+  "lag": 0
+ },
+ "se08b": {
+  "file": "se08_cliff_dish__490a672d82.mp4",
+  "start": 79.0,
+  "lag": 0
  }
 }

@@ -1527,5 +1527,166 @@
     "file": "/tmp/work/sd/prod/se05_petal_field__5143ea1c1e.mp4"
    }
   ]
+ },
+ "se08_cliff_dish": {
+  "spec": {
+   "id": "se08_cliff_dish",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "At night on the edge of a high cliff above an endless sea of violet clouds, a single giant flower-shaped white radio dish with six petals slowly opens and turns toward one faint star in the upper right of the sky; thin mint light lines run from its base down the cliff; the Milky Way glows behind. Slow push-in."
+  },
+  "takes": [
+   {
+    "job": "se08_cliff_dish-92a53544f3",
+    "state": "done",
+    "ts": 1790469027.6500115,
+    "via": "cron",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__92a53544f3.mp4"
+   },
+   {
+    "job": "se08_cliff_dish-490a672d82",
+    "state": "done",
+    "ts": 1790469282.949076,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__490a672d82.mp4"
+   },
+   {
+    "job": "se08_cliff_dish-c696ce0051",
+    "state": "done",
+    "ts": 1790469283.473262,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se08_cliff_dish__c696ce0051.mp4"
+   }
+  ]
+ },
+ "se06_moons_sea": {
+  "spec": {
+   "id": "se06_moons_sea",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Night on an alien world, seen from a dark rocky shore: a vast pale planetary ring arcs diagonally across a starry violet sky, two moons, one large and one small, hang above a calm sea, and the lights of a distant terraced cliff city glimmer mint along the coast and reflect in the water. Gentle waves roll in. The camera slowly tilts up from the sea to the moons."
+  },
+  "takes": [
+   {
+    "job": "se06_moons_sea-8321aeff0a",
+    "state": "done",
+    "ts": 1790469280.9967875,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se06_moons_sea__8321aeff0a.mp4"
+   },
+   {
+    "job": "se06_moons_sea-0cac334f2a",
+    "state": "done",
+    "ts": 1790469281.5248861,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se06_moons_sea__0cac334f2a.mp4"
+   }
+  ]
+ },
+ "se07_elevator": {
+  "spec": {
+   "id": "se07_elevator",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Low-angle shot at dusk: a colossal white space-elevator tether rises from a terraced city of stacked white ring-shaped buildings on sea cliffs; the camera tilts up along the tether as glowing mint climber pods race upward through thin pink clouds, and the magenta sky darkens into stars crossed by a giant planetary ring."
+  },
+  "takes": [
+   {
+    "job": "se07_elevator-a2174d9ef8",
+    "state": "done",
+    "ts": 1790469281.9745994,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se07_elevator__a2174d9ef8.mp4"
+   },
+   {
+    "job": "se07_elevator-56927ca51f",
+    "state": "done",
+    "ts": 1790469282.4549575,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se07_elevator__56927ca51f.mp4"
+   }
+  ]
+ },
+ "se09_night_city": {
+  "spec": {
+   "id": "se09_night_city",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 4,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Deep night on an alien world under a dark indigo sky full of stars: an aerial flyover of a city of stacked white ring-shaped terraces on sea cliffs; thousands of mint-green window lights pulse on and off in waves across the terraces like a heartbeat, glowing waterfalls pour into a dark bay that mirrors the lights, and a pale planetary ring arcs across the stars. No sunset, no daylight."
+  },
+  "takes": [
+   {
+    "job": "se09_night_city-b1f26872b6",
+    "state": "done",
+    "ts": 1790469283.9619007,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__b1f26872b6.mp4"
+   },
+   {
+    "job": "se09_night_city-9b284769cb",
+    "state": "done",
+    "ts": 1790469284.429433,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__9b284769cb.mp4"
+   },
+   {
+    "job": "se09_night_city-ff0c2e46ca",
+    "state": "done",
+    "ts": 1790469846.788012,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__ff0c2e46ca.mp4"
+   },
+   {
+    "job": "se09_night_city-70409cd165",
+    "state": "done",
+    "ts": 1790469847.1463695,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se09_night_city__70409cd165.mp4"
+   }
+  ]
+ },
+ "se10_tower_beam": {
+  "spec": {
+   "id": "se10_tower_beam",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 2,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Wide shot at night: far across an endless sea of violet clouds lit by starlight, a slender white signal tower, centred in frame, with a halo ring of mint lights near its top fires a thin vertical beam of mint light straight up into the starry sky; the beam pulses in a slow rhythm and the clouds glow where it passes. The camera slowly pushes in."
+  },
+  "takes": [
+   {
+    "job": "se10_tower_beam-dd7dad3559",
+    "state": "done",
+    "ts": 1790469284.9082026,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se10_tower_beam__dd7dad3559.mp4"
+   },
+   {
+    "job": "se10_tower_beam-7ab900a4f5",
+    "state": "done",
+    "ts": 1790469285.291517,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se10_tower_beam__7ab900a4f5.mp4"
+   }
+  ]
  }
 }

@@ -4,8 +4,10 @@ A music video for **"Rare Earth"** (DDR / techno version), a song about hoping t
 life, written in 2011 for a SETI event.
 
 **▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09). DOT has the
-v3 hairstyle: centre part, long curtain bangs, long layers. The first cut, with a hime cut, is in the
-git history at commit `8dedea7`.
+v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world
+**Echo**, ends on its beacon rather than an impossible reply, and gives every shot of Echo its own
+footage (`docs/PROCESS.md` §3c). The first cut, with a hime cut, is in the git history at commit
+`8dedea7`.
 
 ![Twelve frames from the video](docs/storyboard.jpg)
 
@@ -19,14 +21,20 @@ halftone and neon light.
 
 Two lonely worlds, each singing into the dark, find out the other one was listening the whole
 time, and the song itself is the signal. Verses 1–2 are Earth asking. The build reveals
-**ETZ-1715 b**, a fictional world in the Earth Transit Zone that could have watched *our* planet
-transit the Sun. Verse 3 is the Great Filter: the Drake equation's **L**, weapons, wars, the blank,
-and *keep up funding*. Verses 4–5 repeat as call-and-response between the two worlds. The final drop
-is contact: the galaxy lights up with a web of civilizations, and the reply decodes as **STILL HERE.**
+**Echo**, a fictional world 217 light-years away in the Earth Transit Zone, the part of the sky from
+which *our* planet can be seen crossing the Sun. Verse 3 is the Great Filter: the Drake equation's
+**L**, weapons, wars, the blank, and *keep up funding*. Verses 4–5 repeat as call-and-response between
+the two worlds. The final drop is contact: the galaxy lights up with a web of civilizations, and
+Echo's beacon, sent in 1809, decodes as **STILL HERE.**
+
+Echo is too far away to have heard us: our radio has only travelled about 100 light-years. It could
+have seen Earth transit the Sun, so the message is their beacon, not a reply. The transmission Earth
+sends in the video (2026) reaches Echo in 2243.
 
 Earth gets at least as much screen time as the other world. The other world is only ever seen
-zoomed out, as cities, a listening field, a signal tower, a satellite train and a space elevator,
-never its people. The full treatment is in [`docs/TREATMENT.md`](docs/TREATMENT.md) and
+zoomed out, as cities by day and night, a listening field, a lone dish on a cliff, a sea under two
+moons, a signal tower and its beam, a space elevator, and its night side from orbit, never its people.
+No plate of it plays twice. The full treatment is in [`docs/TREATMENT.md`](docs/TREATMENT.md) and
 [`docs/PROCESS.md`](docs/PROCESS.md).
 
 ## How it was made
@@ -34,18 +42,20 @@ never its people. The full treatment is in [`docs/TREATMENT.md`](docs/TREATMENT.
 | Stage | Where | What |
 |---|---|---|
 | Song analysis | `pipeline/lyrics_align.py`, `pipeline/audio_map.py` | vocal stem (MDX-Net Kim_Vocal_2) → Whisper large-v3-turbo → word timings aligned to the canonical lyrics and snapped to vocal onsets; beat grid (the tempo accelerates 129.7 → 135 BPM), kick/snare onsets, per-frame features → `render/data/audio.json` |
-| Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and ETZ-1715 b world sheets (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine) |
+| Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and Echo world sheets (the Echo sheet predates the rename and is still titled ETZ-1715 b) (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine) |
 | Base performances | `pipeline/seedance_shots.py`, `pipeline/run_seedance.py` | 23 shots × multiple takes on Seedance 2.5 (720p), each passed the cut song audio as a lip-sync reference and the character sheet as an image reference |
 | Lip-sync verification | `pipeline/sync/` | anime face / mouth tracking → mouth-openness curve, cross-correlated with the vocal envelope over exactly the window each shot uses; per-take lag measured and corrected (`clipTime = t − start + lag`); visual word strips for manual checks |
 | Rotoscope guides | `pipeline/roto_extract.py`, `pipeline/extract_selects.py` | XDoG line art, bilateral tone, green-screen matte with despill, colour classes; the selected takes are archived in `pipeline/base_clips/` |
 | Renderer | `render/` | three.js r186 + canvas 2D, deterministic `renderAt(t)`; scenes in `render/src/scenes/`, the edit in `render/src/timeline.js` |
-| Sound design | `pipeline/sound_design.py` | receiver static, star pings, an ElevenLabs v3 radio voice ("Still listening.") in the intro, a signal dropout at the blank, and the reply ("Still here.") after the last note. The song itself is untouched |
+| Sound design | `pipeline/sound_design.py` | receiver static, star pings, an ElevenLabs v3 radio voice ("Still listening.") in the intro, a signal dropout at the blank, and Echo's beacon ("Still here.") after the last note. The song itself is untouched |
 
 Generation ran through Cloudflare's unified model catalog (`pipeline/gen.py`) with a small relay
 Worker (`pipeline/relay/`) that receives async webhooks and mirrors results into KV. Every request is
-logged in `pipeline/ledger.jsonl`. Total generation spend was roughly $115. Seedance accounts for
-about $110: 103 runs, 478 s of 720p video, including the full re-shoot for DOT's new hairstyle (v3).
-The rest is about 19 image runs plus small change for voice, transcription and one video review.
+logged in `pipeline/ledger.jsonl`. Total generation spend was roughly $147. Seedance accounts for
+about $142: 103 runs, 478 s of 720p video up to and including the full re-shoot for DOT's new
+hairstyle (v3), then about $17 of lip-sync re-rolls and about $15 for Echo's new plates (13 runs, 65 s;
+see `docs/PROCESS.md` §3c). The rest is about 19 image runs plus small change for voice, transcription
+and one video review.
 
 ## Render it yourself
 

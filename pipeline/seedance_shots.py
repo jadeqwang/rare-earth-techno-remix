@@ -26,6 +26,16 @@ ROOM = "/tmp/work/refs/env_control_room.jpg"
 CITY = "/tmp/work/refs/env_other_city.jpg"
 PETALS = "/tmp/work/refs/env_petal_field.jpg"
 OTOWER = "/tmp/work/refs/env_other_tower.jpg"
+# pass 3 refs: panels cropped from design/world_etz1715b_sheet.jpg (PIL boxes): hero vista (4, 120, 644, 480),
+# petal field (956, 110, 1534, 480), other tower (610, 575, 1010, 915), sky study (1020, 570, 1534, 925) with its
+# AURIN / VEL / SOL labels inpainted. Reference images must be between 0.39:1 and 2.5:1.
+VISTA = "/tmp/work/refs/env_hero_vista.jpg"
+SKY = "/tmp/work/refs/env_sky_study.jpg"
+
+# environment plates get their own style line (the DOT line above used to be appended to them too)
+ENV_STYLE = (" Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes,"
+             " violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles,"
+             " no logos.")
 
 SHOTS = [
     # ---------------- cold open + verse 1 (print, Earth, night, tower above the fog)
@@ -123,4 +133,29 @@ SHOTS = [
          prompt="At night on an alien plain, hundreds of flower-like white radio dishes with six petals open their petals in a"
                 " wave and all turn toward the same point in the starry sky; thin mint light lines connect them. No people or"
                 " creatures. Anime background art."),
+    # ---------------- Echo, pass 3: new views of the other world, so no plate of it plays twice
+    dict(id="se06_moons_sea", t0=0.0, dur=5, audio=None, bg="context", refs=[SKY, VISTA], takes=2, style=ENV_STYLE,
+         prompt="Night on an alien world, seen from a dark rocky shore: a vast pale planetary ring arcs diagonally across a"
+                " starry violet sky, two moons, one large and one small, hang above a calm sea, and the lights of a distant"
+                " terraced cliff city glimmer mint along the coast and reflect in the water. Gentle waves roll in. The camera"
+                " slowly tilts up from the sea to the moons."),
+    dict(id="se07_elevator", t0=0.0, dur=5, audio=None, bg="context", refs=[VISTA, OTOWER], takes=2, style=ENV_STYLE,
+         prompt="Low-angle shot at dusk: a colossal white space-elevator tether rises from a terraced city of stacked white"
+                " ring-shaped buildings on sea cliffs; the camera tilts up along the tether as glowing mint climber pods race"
+                " upward through thin pink clouds, and the magenta sky darkens into stars crossed by a giant planetary ring."),
+    dict(id="se08_cliff_dish", t0=0.0, dur=5, audio=None, bg="context", refs=[PETALS, OTOWER], takes=2, style=ENV_STYLE,
+         prompt="At night on the edge of a high cliff above an endless sea of violet clouds, a single giant flower-shaped"
+                " white radio dish with six petals slowly opens and turns toward one faint star in the upper right of the"
+                " sky; thin mint light lines run from its base down the cliff; the Milky Way glows behind. Slow push-in."),
+    # first two takes used the dusk vista as reference and came back as dusk copies of it; takes 3-4 are text-only
+    dict(id="se09_night_city", t0=0.0, dur=5, audio=None, bg="context", refs=[], takes=4, style=ENV_STYLE,
+         prompt="Deep night on an alien world under a dark indigo sky full of stars: an aerial flyover of a city of stacked"
+                " white ring-shaped terraces on sea cliffs; thousands of mint-green window lights pulse on and off in waves"
+                " across the terraces like a heartbeat, glowing waterfalls pour into a dark bay that mirrors the lights, and"
+                " a pale planetary ring arcs across the stars. No sunset, no daylight."),
+    dict(id="se10_tower_beam", t0=0.0, dur=5, audio=None, bg="context", refs=[OTOWER], takes=2, style=ENV_STYLE,
+         prompt="Wide shot at night: far across an endless sea of violet clouds lit by starlight, a slender white signal"
+                " tower, centred in frame, with a halo ring of mint lights near its top fires a thin vertical beam of mint"
+                " light straight up into the starry sky; the beam pulses in a slow rhythm and the clouds glow where it"
+                " passes. The camera slowly pushes in."),
 ]

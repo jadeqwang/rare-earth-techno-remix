@@ -25,7 +25,7 @@ export async function loadFonts() {
   }));
 }
 
-// ---------- alien script (ETZ glyphs): each Latin letter maps to a deterministic dial glyph
+// ---------- alien script (Echo glyphs): each Latin letter maps to a deterministic dial glyph
 export function drawGlyph(ctx, ch, x, y, size, col, lw = 0.08) {
   const code = ch.toUpperCase().charCodeAt(0);
   if (ch === ' ') return;
@@ -213,7 +213,7 @@ export class TypeLayer {
     }
   }
 
-  // DECODE: text appears as ETZ glyphs, scrambles, resolves to Latin letters
+  // DECODE: text appears as Echo glyphs, scrambles, resolves to Latin letters
   decode(t, text, t0, o = {}) {
     const c = this.ctx;
     const size = o.size ?? 90;
@@ -288,11 +288,14 @@ export class TypeLayer {
   hud(str, x, y, o = {}) {
     const c = this.ctx;
     this.font(o.family ?? 'JetBrainsMono', o.size ?? 20, o.weight ?? 500);
+    const w = c.measureText(str).width, sz = o.size ?? 20;
+    const x0 = o.align === 'right' ? x - w : o.align === 'center' ? x - w / 2 : x;
+    if (o.plate && str) {            // optional ink backing, for HUD lines over busy light-mode frames
+      c.globalAlpha = 1; c.fillStyle = o.plate; c.fillRect(x0 - 10, y - sz * 1.02, w + 20, sz * 1.42);
+    }
     c.globalAlpha = o.alpha ?? 0.9;
     c.fillStyle = o.color ?? css(INK.paper);
-    if (o.align === 'right') c.fillText(str, x - c.measureText(str).width, y);
-    else if (o.align === 'center') c.fillText(str, x - c.measureText(str).width / 2, y);
-    else c.fillText(str, x, y);
+    c.fillText(str, x0, y);
     c.globalAlpha = 1;
   }
 

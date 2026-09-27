@@ -19,14 +19,21 @@ as call-and-response between the worlds. The final drop is contact, and then the
 show the galaxy lit up with connections: *how could we be alone.*
 
 "Are you still there?" is not just longing — it is astrophysics. Light takes centuries between stars;
-by the time a reply arrives the sender may be gone. That is why the Drake **L** matters, and why
+by the time a signal arrives the sender may be gone. That is why the Drake **L** matters, and why
 "keep on looking, keep the faith, keep up funding" is the moral center of the song (the Allen Telescope
 Array really was put into hibernation for lack of funds in 2011, the year this song was written).
 
 "A planet's transit is not that far from my own": we find exoplanets by the dip in starlight when they
-cross their star. 1,715 nearby stars sit in the *Earth Transit Zone* and could have watched **our**
-transit (Kaltenegger & Faherty, Nature 2021). The other world here is fictional — **ETZ-1715 b**, named
-after that count — a world that saw us the same way we saw it.
+cross their star. From 1,715 stars within 326 light-years, Earth could have been seen crossing the Sun at
+some point in the last 5,000 years; 319 more will get that view in the next 5,000, and only about 75 are
+close enough for our radio to have reached them (Kaltenegger & Faherty, Nature 2021). The other world here
+is fictional — **Echo** — a world in that *Earth Transit Zone* that saw us the same way we saw it. (It was
+first called "ETZ-1715 b", which read like a real catalogue name. It isn't one; 1,715 is the paper's count.)
+
+**The timing is honest.** Echo is 217 light-years away, about twice as far as our radio has reached, so it
+cannot have heard us yet. The last message is their **beacon**: sent in 1809, after they saw our transit, and
+arriving now. The transmission Earth sends in the journey sequence (2026) reaches them in 2243. The contact
+beams meeting halfway are a picture of two signals in flight, not a live two-way link.
 
 ## Characters and worlds
 
@@ -42,9 +49,11 @@ twinkling star), **TRANSIT** (index finger crosses in front of her eye), **ANTEN
 array in a high desert valley, a 3 a.m. control room with waterfall spectrograms, a launch tower,
 the Voyager pale-blue-dot sunbeam, the night side of Earth.
 
-**ETZ-1715 b** — never its inhabitants, only its scale: a ringed super-Earth under a coral sun,
-magenta sky, terraced ring-cities over waterfalls, a space elevator, a listening field of petal dishes
-linked by mint light, orbital rings, a signal tower above violet cloud. Zoomed out, always.
+**Echo** — never its inhabitants, only its scale: a ringed super-Earth under a coral sun, magenta sky,
+terraced ring-cities over waterfalls (by day, and at night pulsing with light), a space elevator, a listening
+field of petal dishes linked by mint light, a lone dish on a cliff above the clouds, a sea under two moons,
+orbital rings, a signal tower above violet cloud and its beam, and its night side from orbit with the cities
+linked like a constellation. Zoomed out, always, and no view of it plays twice.
 
 ## Visual language — SIGNAL PRINT
 
@@ -64,7 +73,7 @@ halftone shading, slight plate misregistration and paper grain. When the signal 
 | Ink | `#0B0B14` | line, night |
 | Paper | `#F3EFE6` | stock, highlights |
 
-Earth shots use Klein + Orange + Pale Blue. ETZ-1715 b uses Fluo Pink + Mint + Ink. Contact is Yellow on black.
+Earth shots use Klein + Orange + Pale Blue. Echo uses Fluo Pink + Mint + Ink. Contact is Yellow on black.
 
 **Rotoscope method.** Seedance 2.5 generates the performances and organic physics (hair, cloth, fog,
 exhaust, crowds). Those clips are never shown. The JS renderer reads them as guides — edges, tone
@@ -78,10 +87,10 @@ Planets, dish arrays, the space elevator, signals, UI and all typography are pro
   left two-thirds of frame, DOT on the right third.
 * **Verse 2**: key words big (PALE BLUE DOT, SIGNAL, STAR, TRANSIT, ALONE), the rest as elegant subtitles.
 * **Verse 3**: brutalist — monospace terminal lines, headline slams, a censor bar at the blank.
-* **Verse 4–5**: the same lyrics arrive first as ETZ glyphs and *decode* into English — the song was received.
+* **Verse 4–5**: the same lyrics arrive first as Echo glyphs and *decode* into English — the song was received.
 * **Title card** "RARE EARTH / 稀有地球 / Уникальная Земля" drops on the first drop, anime-OP style. Both
   translations mean Earth the planet, as in the Rare Earth hypothesis, not rare-earth metals (稀土 /
-  редкоземельные). The Russian is the hypothesis's established name («гипотеза уникальной Земли»). The ETZ-1715 b chapter card reads 第二地球 / Вторая Земля, "a second Earth".
+  редкоземельные). The Russian is the hypothesis's established name («гипотеза уникальной Земли»). The Echo chapter card reads 第二地球 / Вторая Земля, "a second Earth".
 * UI: `RX 1420.40575 MHz`, SNR, drift, latency — the hydrogen line SETI listens on.
 
 ## Motion rules
@@ -99,14 +108,14 @@ Planets, dish arrays, the space elevator, signals, UI and all typography are pro
 | Cold open | 0:00–0:03 | Earth | print |
 | V1 asking | 0:03–0:18 | Earth | print, huge type |
 | V2 the signal | 0:18–0:40 | Earth | print |
-| Build: the other world | 0:40–0:54 | ETZ-1715 b | print → glow |
+| Build: the other world | 0:40–0:54 | Echo | print → glow |
 | Drop 1 / V3: the filter, keep looking | 0:54–1:15 | both | light + brutalist |
 | Drop 2a / V4: call and response | 1:15–1:30 | both, alternating | light |
 | Drop 2b / V5: arrival | 1:30–1:52 | both, mirrored | light + print |
 | Final drop: contact | 1:52–2:03 | both → galaxy | pure light |
 | Outro | 2:03–2:08 | two dots | print |
 
-Earth ≈ 50%, ETZ-1715 b ≈ 30%, the space between (signal, galaxy) ≈ 20%.
+Earth ≈ 50%, Echo ≈ 30%, the space between (signal, galaxy) ≈ 20%.
 
 ## Zeitgeist anchors (why this lands in 2026)
 

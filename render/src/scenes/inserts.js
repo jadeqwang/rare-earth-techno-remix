@@ -98,7 +98,8 @@ export const brutal = {
     }
     // margin notes
     font(c, 'JetBrainsMono', 20, 500); c.fillStyle = css(INK.ink, 0.75);
-    c.fillText('BACK ONLINE · DEC 2011 · crowdfunded by thousands of strangers', 140, 1000);
+    // SETIStars: $226K from 2,650 donors by 27 Aug 2011; the Air Force paid for debris tracking (SETI Institute, Space.com)
+    c.fillText('BACK ONLINE · DEC 2011 · $200K+ from 2,000+ public donors, plus an Air Force deal to track space debris', 140, 1000);
     c.fillText('▌▌▌ ▌ ▌▌ ▌▌▌▌ ▌ ▌▌▌ ▌▌ ▌', 1500, 1000);
     K(ctx).end({ halftone: 0.15 });
   },
@@ -120,7 +121,7 @@ export const journey = {
       setEarth(ctx, { mode: 'light', center: [lerp(420, -200, easeInOutCubic(range(k, 0, 0.3))), 560], radius: lerp(260, 90, range(k, 0, 0.3)), lat: 20, lon: -110 + lt * 8, sun: [0.8, 0.3, 0.5] });
       e.passOver(em, e.rtScene);
     }
-    // ETZ-1715 b arrives at the end
+    // Echo arrives at the end
     if (k > 0.72) {
       const pm = SCENES.planet;
       const sub = { ...shot, p: { mode: 'light', noSky: true, center: [lerp(2300, 1300, easeOutCubic(range(k, 0.72, 1))), 540], radius: lerp(60, 230, range(k, 0.72, 1)), zoomRate: 0 } };
@@ -182,10 +183,16 @@ export const clash = {
       c.restore();
     }
     c.globalCompositeOperation = 'source-over';
-    font(c, 'JetBrainsMono', 26, 600); c.fillStyle = css(INK.paper, 0.9);
-    c.fillText('SOL III', 90, 1000);
-    const lab = 'ETZ-1715 b'; c.fillText(lab, 1830 - c.measureText(lab).width, 1000);
-    const mid = 'SIGNAL LOCK  ·  BOTH WAYS'; c.fillStyle = css(INK.yellow, 0.95); c.fillText(mid, 960 - c.measureText(mid).width / 2, 1000);
+    font(c, 'JetBrainsMono', 26, 600);
+    // not a two-way link: their beacon left Echo in 1809 and lands now; ours, sent this year, lands in 2243
+    const tag = (s, x, col) => {
+      const w = c.measureText(s).width, x0 = x === 'right' ? 1830 - w : x === 'center' ? 960 - w / 2 : x;
+      c.fillStyle = css(INK.ink, 0.78); c.fillRect(x0 - 10, 973, w + 20, 37);
+      c.fillStyle = col; c.fillText(s, x0, 1000);
+    };
+    tag('SOL III  ·  OURS ARRIVES 2243', 90, css(INK.paper, 0.9));
+    tag('THEIRS SENT 1809  ·  ECHO', 'right', css(INK.paper, 0.9));
+    tag('SIGNAL LOCK', 'center', css(INK.yellow, 0.95));
     K(ctx).end({ over: true });
   },
 };
@@ -234,7 +241,7 @@ export const endcard = {
     // the thin line between them
     c.strokeStyle = css(INK.ink, 0.7); c.lineWidth = 2;
     c.beginPath(); c.moveTo(x1, y); c.lineTo(lerp(x1, x2, link), y); c.stroke();
-    // their reply crosses the line and lands on Sol exactly when "Still here." is heard (sound design, 128.02 s)
+    // their beacon crosses the line and lands on Sol exactly when "Still here." is heard (sound design, 128.02 s)
     const arrive = 128.02;
     const blink = t > arrive && t < arrive + 0.35 ? 1.9 : 1;
     c.fillStyle = css(INK.pale); c.beginPath(); c.arc(x1, y, 16 * k * blink, 0, 7); c.fill();
@@ -244,9 +251,9 @@ export const endcard = {
       c.strokeStyle = css(INK.pale, ra); c.lineWidth = 3; c.beginPath(); c.arc(x1, y, rr, 0, 7); c.stroke();
     }
     font(c, 'JetBrainsMono', 20, 600); c.fillStyle = css(INK.ink, 0.8);
-    c.fillText('SOL III', x1 - 40, y + 60); c.fillText('ETZ-1715 b', x2 - 60, y + 60);
+    c.fillText('SOL III', x1 - 40, y + 60); c.fillText('ECHO', x2 - c.measureText('ECHO').width / 2, y + 60);
     if (t > arrive + 0.1) { c.fillStyle = css(INK.orange, smooth(range(t, arrive + 0.1, arrive + 0.4))); c.fillText('RX  STILL HERE.', x1 - 40, y + 92); }
-    // the reply in flight: one bright pulse crossing from their world to ours
+    // the beacon in flight: one bright pulse crossing from their world to ours
     const ph = range(t, 126.3, arrive);
     if (ph > 0 && ph < 1) {
       const px = lerp(x2, x1, easeInOutCubic(ph));
