@@ -630,6 +630,7 @@ def run(key, preview=None):
             if fl not in ('hold', 'roundhold'): first = None; continue
             if first is None:
                 first = e
+                hold_src = e
                 if fl == 'roundhold' and not row.get('fits', True):
                     # the roundest open mouth in the take, borrowed for the whole span
                     cand = [j for j in range(P.lo, P.hi) if P.usable(j) and P.open[j] > 0.3 and j != e]
@@ -638,10 +639,17 @@ def run(key, preview=None):
                     out[e] = img
                     if e + 1 < P.n: out[e + 1] = img
                     row.update({'how': f'from {j} (roundest)', 'fits': True})
+                    hold_src = j
+                elif row.get('how', '').startswith('from '):
+                    hold_src = int(row['how'].split()[1].rstrip(','))
                 continue
-            out[e] = out[first]
-            if e + 1 < P.n: out[e + 1] = out[first]
-            row['how'] = f'held {first}'
+            # the mouth is held, the body keeps moving: the held mouth is cloned onto each drawing's own frame
+            src = hold_src
+            img, got, how = make(P, e, src, row['want']) if src != e else (P.frames[e], None, '')
+            if how == 'no registration': img = out[first]
+            out[e] = img
+            if e + 1 < P.n: out[e + 1] = img
+            row['how'] = f'mouth held from {src}'
         log['shots'][name] = rows
         changed = [r for r in rows if not r['kept']]
         print(f'  {name}: {len(rows)} drawings, {len(changed)} redrawn ({sum(r["how"] != "own lips" for r in changed)} '
