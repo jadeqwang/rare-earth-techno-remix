@@ -8,7 +8,7 @@ campaign in 2011.
 v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world
 **Echo**, ends on its beacon rather than an impossible reply, and gives every shot of Echo its own
 footage (`docs/PROCESS.md` §3c). The release pass (§3d) sets the character sheet's lettering on DOT's
-jacket (RARE EARTH) and sleeve patch (1420 MHz), re-times her mouth to the vocal in the seven shots
+jacket (RARE EARTH) and sleeve patch (1420 MHz), re-times her mouth to the vocal in the eight shots
 where it drifted, shows a nuclear exchange on *or self-destruct* with that whole line kept on screen,
 and credits the songwriters on the end card. The first cut, with a hime cut, is in the git history at
 commit `8dedea7`.

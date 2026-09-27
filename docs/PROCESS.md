@@ -250,8 +250,8 @@ The corrected takes are the `*_lettering.mp4` files in `pipeline/base_clips/`.
 **Lip sync.** The earlier passes (§3) corrected each take with one lag. That fits one stretch of a shot and
 misses the next: in *transit_eye* "not that" was in sync and "far from my own" was not, because the take's
 mouth ran on its own clock (it opened in the rest after "far" and shut on "from", about 0.3 s late). Seven
-shots were flagged. Here the mouth is re-timed separately from the body, the way cel animation times mouths
-(`pipeline/sync/remouth.py`):
+places were flagged, in eight shots. Here the mouth is re-timed separately from the body, the way cel
+animation times mouths (`pipeline/sync/remouth.py`):
 1. The mouth is tracked (the anime face cascade, or for the extreme close-ups the lower face registered frame
    to frame from a box placed by hand, then centred on the drawn mouth) and its openness measured.
 2. The target is the vocal stem: log RMS times the pYIN voicing probability, so sung vowels open the mouth and
