@@ -41,27 +41,44 @@ def main():
     xs = np.nonzero(probe.max(0) > 0.5)[0]
     # set heavier than the pull-back's: here the jacket is small in frame, and the ink redraw would break thin strokes up
     layer = set_lines([(BACK_TEXT, f_, 1.0, 0.0, (10.7 - (xs.max() - xs.min()) / 256) / (len(BACK_TEXT) - 1))], half=8,
-                      bold=0.07)
+                      bold=0.015)
     out = []
     for i, f in enumerate(frames):
         cx, cy, r = (np.interp(i, k[:, 0], k[:, c]) for c in (1, 2, 3))
         hsv = cv2.cvtColor(f, cv2.COLOR_BGR2HSV).astype(np.float32)
+        # the take's ring sits low and off centre: paint it out, and place the dot as in the pull-back, centred on the
+        # back between the jacket's edges and higher up, with RARE EARTH under it
+        V0, S0 = hsv[..., 2] / 255, hsv[..., 1] / 255
+        hair0 = (V0 < 0.30) | ((S0 > 0.45) & (V0 > 0.5))
+        ann0 = np.zeros(f.shape[:2], np.uint8)
+        cv2.circle(ann0, (int(cx), int(cy)), int(r), 1, -1)
+        cv2.circle(ann0, (int(cx), int(cy)), int(r * 0.72), 0, -1)
+        sel0 = (ann0 > 0) & ~hair0 & (S0 > 0.2)
+        ring_hsv = np.median(hsv[sel0], 0) if sel0.sum() > 5 else np.array([102, 177, 101], np.float32)
+        old = np.zeros(f.shape[:2], np.uint8)
+        cv2.circle(old, (int(cx), int(cy)), int(r * 1.25) + 3, 1, -1)
+        old[hair0] = 0
+        f = cv2.inpaint(f, old, 5, cv2.INPAINT_TELEA)
+        hsv = cv2.cvtColor(f, cv2.COLOR_BGR2HSV).astype(np.float32)
+        row = hsv[int(cy)]
+        jk = (row[:, 2] > 0.38 * 255) & (row[:, 1] < 0.4 * 255)
+        l = int(cx)
+        while l > 0 and (jk[l - 1] or hair0[int(cy), l - 1]): l -= 1
+        rr = int(cx)
+        while rr < f.shape[1] - 1 and (jk[rr + 1] or hair0[int(cy), rr + 1]): rr += 1
+        cx = 0.5 * (l + rr)
+        cy = cy - 0.25 * r
         disc = np.zeros(f.shape[:2], np.float32)
         cv2.circle(disc, (int(round(cx * 4)), int(round(cy * 4))), int(round(r * 4)), 1, -1, cv2.LINE_AA, shift=2)
         disc = cv2.GaussianBlur(disc, (0, 0), 0.8)
         # everything in the disc but the hair (dark, or its saturated blue highlight) becomes the dot, the drawn ring
         # included; the dot's lightness is the jacket's around it, so it sits in the plate's light
         V, S = hsv[..., 2] / 255, hsv[..., 1] / 255
-        hair = (V < 0.30) | ((S > 0.45) & (V > 0.5))
+        hair = hair0
         keep = cv2.GaussianBlur((~hair).astype(np.float32), (0, 0), 0.7)
         a = disc * keep
         # the colour of the ring the take drew there: the dot's blue as it looks in this shot's night light (a lighter
         # fill reads as lit by a light of its own); the plate's soft shading is kept across it
-        ann = np.zeros(f.shape[:2], np.uint8)
-        cv2.circle(ann, (int(cx), int(cy)), int(r), 1, -1)
-        cv2.circle(ann, (int(cx), int(cy)), int(r * 0.72), 0, -1)
-        sel = (ann > 0) & ~hair & (S > 0.2)
-        ring_hsv = np.median(hsv[sel], 0) if sel.sum() > 5 else np.array([95, 0.45 * 255, 0.55 * 255])
         shade = cv2.GaussianBlur(hsv[..., 2], (0, 0), max(2.0, r * 0.6)) / 255
         dot = hsv.copy()
         dot[..., 0] = ring_hsv[0]
@@ -73,13 +90,9 @@ def main():
         dot[..., 2] = dot[..., 2] * (1 - 0.55 * np.clip(rim, 0, 1))
         dot = cv2.cvtColor(dot.astype(np.uint8), cv2.COLOR_HSV2BGR).astype(np.float32)
         g = np.clip(f * (1 - a[..., None]) + dot * a[..., None], 0, 255).astype(np.uint8)
-        v = hsv[:, int(cx) - 3:int(cx) + 4, 2].mean(1)
-        hem = int(cy + r) + 2
-        while hem < f.shape[0] - 1 and v[hem] > 70: hem += 1
-        gap = hem - (cy + r)
-        cap = min(0.30 * r, 0.60 * gap)
+        cap = 0.2 * r
         if cap >= 2.5:
-            ty = cy + r + 0.5 * gap
+            ty = cy + r + 1.3 * cap
             alpha, bx = warp_layer(layer, cap * np.eye(2), np.array([cx, ty]), g.shape, soften=0.5)
             if alpha is not None:
                 jacket = g[int(ty) - 2:int(ty) + 3, int(cx - 6 * cap):int(cx + 6 * cap)].reshape(-1, 3).astype(float)

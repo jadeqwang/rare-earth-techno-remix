@@ -218,7 +218,7 @@ def target(name, t_on):
     v = float(np.mean(lv))
     target.flag = None
     for s in spans:                    # 'small' / 'round' spans in force for most of the drawing
-        if len(s) > 4 and s[4] in ('small', 'round') and s[0] <= t_on + LEAD + 1 / FPS < s[1]: target.flag = s[4]
+        if len(s) > 4 and s[4] in ('small', 'round', 'hold', 'roundhold') and s[0] <= t_on + LEAD + 1 / FPS < s[1]: target.flag = s[4]
     for s in spans:                    # a lip closure shows on the drawing whose time holds the closure's middle
         if len(s) > 4 and s[4] == 'hard':
             mid = (s[0] + s[1]) / 2
@@ -230,7 +230,7 @@ def shaped(flag, o, w):
     """A 'small' span caps the opening (an uh, not an ah); a 'round' span wants a rounded mouth, narrow for the face
     (w = mouth width / eye distance, against this take's roundest open mouths, Plate.wround)."""
     if flag == 'small': return o is None or o <= 0.6
-    if flag == 'round': return w is None or w <= shaped.wround
+    if flag in ('round', 'roundhold'): return w is None or w <= shaped.wround
     return True
 
 
@@ -350,7 +350,7 @@ def choose_donors(P, run):
         # the borrowed face is moved into this frame's head pose; a pose too far off and LivePortrait's warp mangles
         # the mouth, so the donor must be turned and tilted within 10 degrees of this frame and at the same scale
         if flag == 'small': ok = ok & (oj <= 0.6)
-        if flag == 'round': ok = ok & (P.wd[C] <= P.wround)
+        if flag in ('round', 'roundhold'): ok = ok & (P.wd[C] <= P.wround)
         dp = np.array([P.pose_diff(e, j) for j in C])
         ok = ok & (dp <= 10.0) & (np.abs(np.log(P.tr[C, 2] / P.tr[e, 2])) <= 0.12)
         ct = ((C - e) / 18.0) ** 2
@@ -624,6 +624,24 @@ def run(key, preview=None):
                 else:
                     row.update({'how': 'no clean fix, kept', 'fits': False})
             rows.append(row)
+        # 'hold' spans: one drawing's mouth for the whole span, no flapping (the first drawing in it, as fixed)
+        first = None
+        for (e, _), fl, row in zip(units, flags, rows):
+            if fl not in ('hold', 'roundhold'): first = None; continue
+            if first is None:
+                first = e
+                if fl == 'roundhold' and not row.get('fits', True):
+                    # the roundest open mouth in the take, borrowed for the whole span
+                    cand = [j for j in range(P.lo, P.hi) if P.usable(j) and P.open[j] > 0.3 and j != e]
+                    j = min(cand, key=lambda j: P.wd[j])
+                    img = make(P, e, j, 0.55)[0]
+                    out[e] = img
+                    if e + 1 < P.n: out[e + 1] = img
+                    row.update({'how': f'from {j} (roundest)', 'fits': True})
+                continue
+            out[e] = out[first]
+            if e + 1 < P.n: out[e + 1] = out[first]
+            row['how'] = f'held {first}'
         log['shots'][name] = rows
         changed = [r for r in rows if not r['kept']]
         print(f'  {name}: {len(rows)} drawings, {len(changed)} redrawn ({sum(r["how"] != "own lips" for r in changed)} '
