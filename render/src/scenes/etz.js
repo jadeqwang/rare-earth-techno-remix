@@ -1,4 +1,4 @@
-// ETZ-1715 b — the other world. Ringed planet from space, and their skies/towers from the surface.
+// Echo — the other world (fictional; it sits in the Earth Transit Zone). Ringed planet from space, and their skies/towers from the surface.
 import * as THREE from 'three';
 import { INK, clamp, smooth, range } from '../util.js';
 import { skyMaterial, setSky } from './sky.js';
@@ -10,8 +10,27 @@ function mkPlanet(engine) {
   planetMat = engine.shader(/* glsl */`
     uniform vec2 res; uniform float S; uniform float time; uniform float kick; uniform float mode; uniform float blink; uniform float infra;
     uniform vec2 center; uniform float radius; uniform float spin; uniform float tilt; uniform vec3 sunDir;
-    uniform vec3 inkA; uniform vec3 inkB; uniform vec3 inkC; uniform vec3 paperC; uniform float cell;
+    uniform vec3 inkA; uniform vec3 inkB; uniform vec3 inkC; uniform vec3 paperC; uniform float cell; uniform float cityMode;
     const float PI = 3.14159265;
+    float seg(vec2 p, vec2 a, vec2 b){ vec2 ab = b - a; float h = clamp(dot(p - a, ab) / dot(ab, ab), 0., 1.);
+      return smoothstep(.028, .0, length(p - a - ab * h)); }
+    // close views: cities as a constellation (one city per lon/lat cell on land, linked to its neighbours)
+    float cityNet(vec2 g){
+      vec2 gp = g * 9.; vec2 gi = floor(gp);
+      vec2 P[9]; float O[9];
+      for (int j = 0; j < 3; j++) for (int i = 0; i < 3; i++) {
+        vec2 c = gi + vec2(float(i) - 1., float(j) - 1.);
+        vec2 pc = c + .15 + .7 * hash22(c + 3.1);
+        vec2 ll = pc / 9.;
+        float land = smoothstep(.48, .56, fbm(vec2(ll.x * 1.6, ll.y * 3.) * 1.3 + 3.));
+        O[j * 3 + i] = step(.5, land) * step(.3, hash12(c + 11.7));
+        P[j * 3 + i] = pc;
+      }
+      float v = 0.;
+      for (int k = 0; k < 9; k++) { float d = length(gp - P[k]); v += O[k] * (smoothstep(.09, .0, d) * 1.4 + exp(-d * 9.) * .35); }
+      for (int j = 0; j < 3; j++) for (int i = 0; i < 2; i++) { int a = j * 3 + i; v += O[a] * O[a + 1] * seg(gp, P[a], P[a + 1]) * .55; }
+      for (int j = 0; j < 2; j++) for (int i = 0; i < 3; i++) { int a = j * 3 + i; v += O[a] * O[a + 3] * seg(gp, P[a], P[a + 3]) * .55; }
+      return v; }
     vec3 rotY(vec3 v, float a){ float c=cos(a), s=sin(a); return vec3(c*v.x + s*v.z, v.y, -s*v.x + c*v.z); }
     vec3 rotX(vec3 v, float a){ float c=cos(a), s=sin(a); return vec3(v.x, c*v.y - s*v.z, s*v.y + c*v.z); }
     float hexLines(vec2 p){ // distance to a hex lattice's edges
@@ -47,7 +66,11 @@ function mkPlanet(engine) {
         float land = smoothstep(.48, .56, fbm(uvp * 1.3 + 3.));
         float day = smoothstep(-.1, .25, dot(n, normalize(sunDir)));
         float limb = pow(1. - zs, 2.5);
-        float lattice = smoothstep(.06, .0, hexLines(vec2(lon, lat) * 9.)) * land;
+        float lattice = cityMode > .5 ? cityNet(vec2(lon, lat)) : smoothstep(.06, .0, hexLines(vec2(lon, lat) * 9.)) * land;
+        if (cityMode > .5) {   // towns: a finer scatter of small lights on land, some in clusters around the cities
+          vec2 tp = vec2(lon, lat) * 31.; vec2 ti = floor(tp); vec2 to = ti + .2 + .6 * hash22(ti + 5.3);
+          lattice += land * step(.45, hash12(ti + 2.9)) * (smoothstep(.12, .0, length(tp - to)) * .8 + exp(-length(tp - to) * 6.) * .15);
+        }
         float cityGlow = lattice * (1. - day) * (.6 + .4 * fbm3(uvp * 6.));
         float bl = blink > 0. ? (.25 + 1.3 * kick) : 1.;
         if (mode < .5) {
@@ -118,7 +141,7 @@ function mkPlanet(engine) {
     mode: { value: 0 }, blink: { value: 0 }, center: { value: new THREE.Vector2(960, 540) }, radius: { value: 300 },
     spin: { value: 0 }, tilt: { value: 1.25 }, sunDir: { value: new THREE.Vector3(-0.8, 0.3, 0.5) },
     inkA: { value: new THREE.Color(...INK.violet) }, inkB: { value: new THREE.Color(...INK.pink) }, inkC: { value: new THREE.Color(...INK.mint) },
-    paperC: { value: new THREE.Color(...INK.paper) }, cell: { value: 5 },
+    paperC: { value: new THREE.Color(...INK.paper) }, cell: { value: 5 }, cityMode: { value: 0 },
   });
   planetMat.transparent = true;
 }
@@ -236,6 +259,8 @@ export const planet = {
     u.spin.value = (p.spin0 ?? 0) + lt * 0.12;
     u.tilt.value = p.tilt ?? 0.32;
     u.infra.value = p.infra ?? 1;
+    u.sunDir.value.set(...(p.sun ?? [-0.8, 0.3, 0.5]));
+    u.cityMode.value = p.cities === 'net' ? 1 : 0;
     u.paperC.value.setRGB(...(light ? [0, 0, 0] : INK.paper));
     e.passOver(planetMat, e.rtScene);
   },

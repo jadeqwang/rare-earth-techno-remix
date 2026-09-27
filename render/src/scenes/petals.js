@@ -1,4 +1,4 @@
-// THE LISTENING FIELD on ETZ-1715 b: petal dishes that bloom and turn in unison, linked by mint light.
+// THE LISTENING FIELD on Echo: petal dishes that bloom and turn in unison, linked by mint light.
 import * as THREE from 'three';
 import { Toon3D, gbufMaterial } from '../toon3d.js';
 import { skyMaterial, setSky } from './sky.js';

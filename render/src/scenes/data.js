@@ -261,7 +261,7 @@ export const mutual = {
     const merge = smooth(range(k, 0.6, 0.85));
     const R = 190, pr = 44, cy = 430;
     const sides = [
-      { cx: lerp(500, 960, merge), col: 'rgba(255,140,110,1)', planet: css(INK.pink), rgb: '255,72,176', label: 'ETZ-1715 b  ·  SEEN FROM EARTH', ph0: 0.0 },
+      { cx: lerp(500, 960, merge), col: 'rgba(255,140,110,1)', planet: css(INK.pink), rgb: '255,72,176', label: 'ECHO  ·  SEEN FROM EARTH', ph0: 0.0 },
       { cx: lerp(1420, 960, merge), col: 'rgba(255,225,140,1)', planet: css(INK.pale), rgb: '156,203,255', glyphs: 'EARTH SEEN FROM HOME', ph0: 0.05 },
     ];
     // the line of sight between the two systems

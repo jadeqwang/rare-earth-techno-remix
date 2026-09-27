@@ -142,6 +142,89 @@ Some new takes also frame DOT differently, and type was moved to match:
 * *far from my own* moved onto her hair;
 * the listen plate is pushed in so her cupped hand clears the lyric.
 
+## 3c. Pass 3: Echo (fact check and new views of the other world)
+
+A fact check before release, with an eye to what people will screenshot, plus a note from a viewer
+that the other world kept showing the same shots.
+
+**The name.** The other world was called "ETZ-1715 b". That reads like a real catalogue designation,
+and it isn't one: 1,715 is the number of stars counted by Kaltenegger & Faherty (Nature, 2021). It is
+now **Echo**. The science stays on screen as a caption during the warp: *1,715 stars within 326 ly could
+have seen Earth cross the Sun in the last 5,000 years*, with the citation.
+
+**The timing.** Echo is 217 light-years away. Our radio has only travelled about 100 light-years (in
+the same paper, 75 of the stars are close enough for it to have reached them), so Echo cannot have heard
+us, and a "reply" with a 434-year round trip could not reach DOT in her lifetime. The last message is
+now Echo's **beacon**, sent in 1809 after they saw our transit and landing now:
+* the HUD under *STILL HERE.* reads `BEACON · ORIGIN ECHO · SENT 1809 · 217 YEARS IN FLIGHT`;
+* the contact shot no longer claims `SIGNAL LOCK · BOTH WAYS`. It reads `SOL III · OURS ARRIVES 2243`,
+  `SIGNAL LOCK`, `THEIRS SENT 1809 · ECHO`, consistent with the journey counter (launched 2026, arrives
+  2243).
+
+Also corrected: Voyager 1 was 40.47 AU (6,055 million km) from Earth when it took the Pale Blue Dot, so
+the HUD reads 6.1 × 10⁹ km, not 6.4. And the Allen Telescope Array did not come back on crowdfunding alone:
+SETIStars raised over $200K from more than 2,000 donors, and the US Air Force paid to use the array for
+tracking space debris. The margin note in the funding window now says both.
+
+**No view of Echo plays twice.** Before this pass the planet-from-space shot played four times, and the
+se04 city, the se05 listening field and the signal tower twice each. Five new environment plates were
+generated (Seedance 2.5, 720p, 5 s, no audio), with the panels of the world sheet as references and an
+environment style line instead of the DOT one that the first plates had appended by mistake:
+
+| shot | time | was | now |
+|---|---|---|---|
+| yearning2 | 77.66–79.61 | se04 city again | se06 take 8321aeff0a, 2.9–4.9 s: tilt from the sea to the ring and two moons |
+| lifeoutthere | 79.61–81.00 | planet from space | se07 take a2174d9ef8, 1.5–2.9 s: up the space elevator, climbers rising past the ring |
+| dot2 | 90.47–93.59 | se05 field again | se08 take c696ce0051, mirrored: a lone petal dish on a cliff turns toward the Sun marker |
+| blinkecho | 98.80–99.76 | planet from space | procedural: the night side from low orbit, cities linked like a constellation |
+| alone2 (right) | 107.79–112.02 | the tower again | se10 take 7ab900a4f5: the tower far across the clouds fires its beam up |
+| echoblink | 116.47–117.35 | planet from space | se09 take ff0c2e46ca, 1.2–2.1 s: a canyon city at night, its terraces lighting up in a wave |
+| science (right) | 72.54–74.00 | petal field, low angle | the same procedural field from high above |
+| searching2 (right) | 81.00–82.20 | petal field, low angle | se08 take 490a672d82, 2.0–3.2 s: the cliff dish opening, pushed in |
+
+The split screens had shown the same low-angle petal field three times; the dance break keeps it (both
+worlds dancing is the point there), the other two now differ. The procedural petal field stays as the
+other world's counterpart to Earth's dish array, with a different camera and choreography each time.
+
+The night side reuses the planet shader with a new composition (the same framing as Earth's blinking
+night side just before it) and a new city layer for close views: one city per lon/lat cell on land,
+linked to its neighbours, plus a finer scatter of towns (`cityNet` in `render/src/scenes/etz.js`).
+
+Generation went through the relay's cron queue (`run_seedance.py submit --cron`), which needs no webhook
+secret: the Worker runs the job itself and mirrors the video into KV. Thirteen runs, 65 s of video, about
+$15. The first two se09 takes used the dusk vista as reference and came back as dusk copies of it, so
+se09 was re-rolled text-only. The released soundtrack is unchanged: its AAC stream is copied into the new
+encode rather than re-encoded.
+
+**The design sheets** had the same kind of errors, invented by the image models, and were corrected too
+(`pipeline/sheet_fixes/fix_sheets.py` reads each sheet as generated from git and rewrites it). Labels are
+painted out and set again in matching lettering, or rebuilt from the sheet's own glyphs where the font can't be
+matched; the artwork is untouched except for the array panels:
+* Earth sheet: "THE ARRAY · OWENS VALLEY, CA" showed big centre-fed dishes. The panel is now the Allen
+  Telescope Array at Hat Creek (42 offset-Gregorian 6.1 m dishes under Lassen Peak; GPT Image 2.5, prompt in
+  `pipeline/prompts/world_earth_ata_v1.txt`, source in `design/sources/`). The same picture replaces panel 2
+  of the alternate sheet, whose caption now names it. "LAUNCH · VANDENBERG, CA" is now Starbase, TX, where
+  Starship and its chopstick tower launch (Vandenberg flies Falcon 9). The alternate sheet was titled
+  "Celestial Harmony".
+* Echo sheet (`design/world_echo_sheet.jpg`, formerly `world_etz1715b_sheet.jpg`): titled ECHO; the star is an
+  orange dwarf 217 ly away, not "KX-209 (coral giant)"; the bright star in the sky study is no longer labelled
+  Sol, which from 217 ly is about magnitude 8.9 and invisible to the naked eye.
+* DOT sheets (v3 and v2): the 1420 MHz patch is drawn on her left sleeve, not the right, and the Yagi in the
+  detail box has 4 elements, not 5.
+* Style boards: dates are 2026, not 2024; the readout's target is Echo, not a random real Kepler star
+  (KIC 6923187); 6EQUJ5 is a signal, not a target; "a response" is "a signal"; the coordinates were Tokyo
+  Tower's and are now the Allen Telescope Array's; the title-card specimens are Chinese and Russian, set in the
+  fonts the video uses. On the flat board: two hex codes (#1F2BD1, #9CCBFF), the light-mode caption, a
+  "monspace" typo and the printout's gibberish lines.
+* Style boards, sample frames: the Earth and light-mode samples were drawn before revision v3 and showed
+  DOT with the old hime cut. They are now frames from the finished video, which is v3 throughout (the poster
+  at 0:03.08 and the neon close-up at 1:17.54). All 18 DOT takes in the edit are v3 (the `hair` tag in
+  `pipeline/seedance_manifest.json`); the only sheets that still show the old cut are the archived earlier
+  revisions, `design/dot_character_sheet_v2_hime.jpg` and `design/dot_character_sheet_alt.jpg`.
+
+Three image runs made the array panel (two GPT Image 2.5, one Nano Banana Pro). Nano Banana drew ordinary
+centre-fed dishes; the first GPT take has the ATA's offset feeds.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),

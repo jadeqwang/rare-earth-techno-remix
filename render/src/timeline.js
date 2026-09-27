@@ -6,7 +6,7 @@ import { SELECT } from './selects.js';
 const P = css(INK.paper), PALE = css(INK.pale), ORANGE = css(INK.orange), MINT = css(INK.mint),
   PINK = css(INK.pink), YELLOW = css(INK.yellow), KLEIN = css(INK.klein), INKC = css(INK.ink);
 
-// Earth print look / ETZ print look / light look
+// Earth print look / Echo print look / light look
 const PRINT = { paper: 1, grain: 0.06, vignette: 0.25 };
 const LIGHT = { bloom: 0.9, grain: 0.05, vignette: 0.35, bloomThreshold: 0.5 };
 const LIGHT3D = { bloom: 0.55, grain: 0.05, vignette: 0.35, bloomThreshold: 0.72 };
@@ -121,7 +121,7 @@ export function buildTimeline(A) {
     type: (ty, t) => {
       ty.stack(t, [5], { x: 110, y: 330, size: 92, lineH: 100, maxW: 620, accent: PALE, filter: (w) => w.t < W(5, 5) - 0.05, fromScale: 1.25 });
       ty.keyword(t, 'PALE BLUE DOT', W(5, 5), { size: 150, y: 240, color: PALE, stretch: 'expanded' });
-      ty.hud('VOYAGER 1  ·  14 FEB 1990  ·  6.4 × 10⁹ km', 90, 1010, { alpha: 0.7 });
+      ty.hud('VOYAGER 1  ·  14 FEB 1990  ·  6.1 × 10⁹ km', 90, 1010, { alpha: 0.7 });            // 40.47 AU from Earth
       const c = ty.ctx, a = range(t, 18.3, 18.8) * (1 - range(t, 21.5, 21.89));
       if (a > 0) {
         c.globalAlpha = a; c.strokeStyle = PALE; c.lineWidth = 2.5;
@@ -178,7 +178,8 @@ export function buildTimeline(A) {
     type: (ty, t) => {
       const c = ty.ctx;
       ty.font('NotoSerifDisplay', 210, 900, 'extra-condensed');
-      const s1 = 'ETZ-1715 b'; const w1 = c.measureText(s1).width;
+      // Echo is fictional. Its HUD cites the real science behind it: the Earth Transit Zone (Kaltenegger & Faherty, Nature 2021)
+      const s1 = 'ECHO'; const w1 = c.measureText(s1).width;
       ty.plateText(s1, 960 - w1 / 2, 560, P, css(INK.pink, 0.9), [7, 6]);
       // "second Earth", the usual phrase for an Earth-like exoplanet in both languages
       const zh = '第二地球', ru = 'Вторая Земля';
@@ -198,12 +199,15 @@ export function buildTimeline(A) {
       const ly = Math.floor(217 * easeInOutCubic(range(t, 40.3, 43.5)));
       ty.hud(`DISTANCE  ${ly} LY`, 90, 1000, { size: 30 });
       ty.hud(`ONE-WAY LATENCY  ${ly} YEARS`, 1830, 1000, { size: 30, align: 'right' });
-      ty.decode(t, 'ETZ-1715 b', 42.3, { size: 120, y: 560 });
+      ty.decode(t, 'ECHO', 42.3, { size: 120, y: 560 });
+      const cap = 'EARTH TRANSIT ZONE  ·  1,715 STARS WITHIN 326 LY COULD HAVE SEEN EARTH CROSS THE SUN IN THE LAST 5,000 YEARS';
+      ty.hud(cap.slice(0, Math.floor(clamp((t - 40.9) / 1.2) * cap.length)), 90, 70, { size: 22, plate: css(INK.ink, 0.96) });
+      if (t > 42.1) ty.hud('KALTENEGGER & FAHERTY, NATURE 2021', 90, 106, { size: 18, alpha: 0.8 * smooth(range(t, 42.1, 42.5)), plate: css(INK.ink, 0.96 * smooth(range(t, 42.1, 42.5))) });
     } });
 
   add({ id: 'planet', t0: 43.94, t1: 47.55, scene: 'planet', p: (t, lt) => ({ mode: 'print', radius: 200, zoomRate: 0.32, spin0: 1.2 }), look: PRINT,
     type: (ty, t) => {
-      ty.hud('ETZ-1715 b   ·   SUPER-EARTH   ·   1.7 R⊕   ·   RINGED', 90, 70);
+      ty.hud('ECHO   ·   SUPER-EARTH   ·   1.7 R⊕   ·   RINGED', 90, 70);
       ty.hud('INHABITED', 1830, 70, { align: 'right', color: css(INK.pink) });
       ty.glyphLine('WE ARE LISTENING', 90, 1010, 30, css(INK.pink));
     } });
@@ -268,7 +272,7 @@ export function buildTimeline(A) {
   add({ id: 'vision', t0: 71.14, t1: W(15, 1), scene: 'roto', p: R('sd10', { mode: 'light', bg: { scene: 'galaxy', p: { mode: 'light', view: 'bg' } } }), look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'OUR', W(15, 0), { size: 200, y: 330, x: 420, color: P }) });
   add({ id: 'science', t0: W(15, 1), t1: W(15, 4) - 0.27, scene: 'split',
-    p: { left: { scene: 'array', p: { mode: 'light', choreo: 'snap', cam: 'hero' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'snap', cam: 'low' } } },
+    p: { left: { scene: 'array', p: { mode: 'light', choreo: 'snap', cam: 'hero' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'snap', cam: 'high' } } },
     look: LIGHT3D, type: (ty, t) => { ty.keyword(t, 'SCIENCE', W(15, 1), { size: 230, y: 560, color: P }); ty.keyword(t, 'HAS A', W(15, 2), { size: 90, y: 700, color: YELLOW }); } });
   add({ id: 'vision2', t0: W(15, 4) - 0.27, t1: 75.36, scene: 'roto', p: R('sd10', { mode: 'light', lag: 3 / 24, bg: burstBG({ c1: INK.yellow, c2: INK.mint }) }),
     look: (t) => ({ ...LIGHT, flash: pulse(t - W(15, 4), 0.07) * 0.7 }),
@@ -278,12 +282,18 @@ export function buildTimeline(A) {
   add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11', { mode: 'light', rect: [0.17, 0, 1, 1], bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
     type: (ty, t) => ty.stack(t, [16], { x: 70, y: 300, size: 168, lineH: 172, maxW: 700, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
 
-  add({ id: 'yearning2', t0: 77.66, t1: W(17, 5), scene: 'otherworld', p: { mode: 'light', view: 'vista' }, look: LIGHT,
-    type: (ty, t) => ty.decode(t, 'YOU\u2019RE YEARNING TO SEE', W(17, 0), { size: 84, y: 190 }) });
-  add({ id: 'lifeoutthere', t0: W(17, 5), t1: 81.00, scene: 'planet', p: { mode: 'light', blink: 1, radius: 260, zoomRate: 0.25, spin0: 2.4 }, look: LIGHT,
+  // Echo's shots from here on are each their own plate, so no view of the other world plays twice
+  const ECHO_LIGHT = { mode: 'light', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint, glow: INK.pink, glow2: INK.mint,
+    paper: [0.02, 0.01, 0.04], cell: 6, envFill: 0.9 };
+  // their sky: the camera tilts from the sea up to the ring and the two moons
+  add({ id: 'yearning2', t0: 77.66, t1: W(17, 5), scene: 'roto', p: R('se06', ECHO_LIGHT), look: LIGHT,
+    type: (ty, t) => ty.decode(t, 'YOU\u2019RE YEARNING TO SEE', W(17, 0), { size: 84, y: 880 }) });
+  // up their space elevator: mint climbers rising through the clouds past the ring
+  add({ id: 'lifeoutthere', t0: W(17, 5), t1: 81.00, scene: 'roto', p: R('se07', ECHO_LIGHT), look: LIGHT,
     type: (ty, t) => ty.decode(t, 'THE LIFE OUT THERE', W(17, 5), { size: 120, y: 980, dur: 0.6 }) });
 
-  add({ id: 'searching2', t0: 81.00, t1: 82.20, scene: 'split', p: { left: { scene: 'array', p: { mode: 'light', choreo: 'sweep' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'sweep' } } },
+  // their side of "searching": the lone cliff dish opening (the same dish locks onto our Sun at 90.47)
+  add({ id: 'searching2', t0: 81.00, t1: 82.20, scene: 'split', p: { left: { scene: 'array', p: { mode: 'light', choreo: 'sweep' } }, right: { scene: 'roto', p: R('se08b', ECHO_LIGHT) } },
     look: LIGHT3D, type: (ty, t) => ty.keyword(t, 'SEARCHING FOR ME', W(18, 0), { size: 130, y: 1000, color: P }) });
 
   add({ id: 'listen2', t0: 82.20, t1: 84.60, scene: 'roto', p: R('sd12', { mode: 'light', rect: [-0.15, 0, 1, 1], bg: burstBG({ c1: INK.pale, c2: INK.mint, center: [672, 620] }) }), look: LIGHT,
@@ -297,10 +307,11 @@ export function buildTimeline(A) {
     } });
 
   // ================================================================ DROP 2b / V5 (arrival)
-  // the signal arrives: their listening field at night, and in their sky our Sun is the pale dot — same annotation, other side
+  // their side: a lone dish on a cliff above the clouds turns to one faint star, and that star is our Sun — the
+  // pale-blue-dot annotation again, from the other side. The plate is mirrored (negative rect width) so the dish faces it.
   add({ id: 'dot2', t0: 90.47, t1: 93.59, scene: 'roto',
-    p: (t) => { const z = 1 + 0.07 * smooth(range(t, 90.47, 93.59)); return R('se05', { mode: 'light', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint,
-      glow: INK.pink, glow2: INK.mint, envFill: 0.8, start: 90.47 - 0.4, rect: [0.5 - z / 2, 0.5 - z / 2, z, z] }); },
+    p: (t) => { const z = 1 + 0.07 * smooth(range(t, 90.47, 93.59)); return R('se08', { ...ECHO_LIGHT, envFill: 0.8,
+      rect: [0.5 + z / 2, 0.5 - z / 2, -z, z] }); },
     look: LIGHT,
     type: (ty, t) => {
       const c = ty.ctx, sx = 1510, sy = 250;
@@ -318,7 +329,7 @@ export function buildTimeline(A) {
         c.globalAlpha = 1;
       }
       ty.decode(t, 'LIVED MY LIFE ON A', W(21, 0), { size: 70, x: 90, align: 'left', y: 170 });
-      ty.decode(t, 'PALE BLUE DOT', W(21, 5), { size: 140, x: 90, align: 'left', y: 320, latinColor: PALE });
+      ty.decode(t, 'PALE BLUE DOT', W(21, 5), { size: 120, x: 90, align: 'left', y: 310, latinColor: PALE });   // clears the SOL label
     } });
 
   add({ id: 'reply', t0: 93.59, t1: W(22, 2), scene: 'waterfall', p: { mode: 'light', signalAt: 93.62 }, look: LIGHT,
@@ -329,7 +340,9 @@ export function buildTimeline(A) {
 
   add({ id: 'blinkearth', t0: 97.45, t1: 98.80, scene: 'earth', p: { mode: 'light', blink: 1, view: 'night' }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'BEATING', W(23, 1), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
-  add({ id: 'blinketz', t0: 98.80, t1: 99.76, scene: 'planet', p: { mode: 'light', blink: 1 }, look: LIGHT,
+  // Echo's night side from low orbit, the same framing as Earth's just before: two worlds blinking at each other
+  add({ id: 'blinkecho', t0: 98.80, t1: 99.76, scene: 'planet',
+    p: { mode: 'light', blink: 1, center: [960, 1060], radius: 900, zoomRate: 0.02, spin0: 0.6, sun: [-1.0, 0.15, -0.45], tilt: 0.5, cities: 'net' }, look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'BLINKING', W(23, 2), { size: 200, y: 950, color: P, kickAmt: 0.15 }) });
   add({ id: 'blinkdance', t0: 99.76, t1: 100.75, scene: 'roto', p: R('sd14', { mode: 'light', rect: [0.1, 0, 0.8, 0.8], bg: burstBG({ c1: INK.yellow, c2: INK.pink, center: [960, 560] }) }), look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'OF A STAR', W(23, 3), { size: 150, y: 190, color: YELLOW, maxW: 1500 }) });
@@ -341,7 +354,8 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.stack(t, [24], { x: 1450, y: 740, size: 80, lineH: 92, maxW: 450, accent: PALE, fromScale: 1.2, filter: (w) => w.t >= 104.3 }) });
 
   add({ id: 'alone2', t0: 107.79, t1: 112.02, scene: 'split',
-    p: { left: { scene: 'roto', p: R('sd16', { mode: 'light' }) }, right: { scene: 'otherworld', p: { mode: 'light', view: 'tower' } } },
+    // a column of light comes down to DOT; on Echo their tower sends one up
+    p: { left: { scene: 'roto', p: R('sd16', { mode: 'light' }) }, right: { scene: 'roto', p: R('se10', ECHO_LIGHT) } },
     look: (t) => ({ ...LIGHT, flash: range(t, 111.3, 112.02) * 0.9 }),
     type: (ty, t) => {
       ty.keyword(t, 'HOW COULD WE BE', W(25, 0), { size: 84, x: 480, y: 925, color: P, stretch: 'normal', maxW: 840 });
@@ -362,18 +376,20 @@ export function buildTimeline(A) {
   add({ id: 'dance2', t0: B2(4), t1: B2(6), scene: 'roto', p: R('sd17', { mode: 'light', bg: burstBG({ c1: INK.mint, c2: INK.yellow }) }), look: LIGHT });
   add({ id: 'lightsticks', t0: B2(6), t1: B2(8), scene: 'earth', p: { mode: 'light', blink: 2, view: 'night', blinkT0: B2(6) }, look: LIGHT });
   add({ id: 'dance3', t0: B2(8), t1: B2(10), scene: 'roto', p: R('sd17', { mode: 'light', bg: galaxyBG }), look: LIGHT });
-  add({ id: 'etzblink', t0: B2(10), t1: B2(12), scene: 'planet', p: { mode: 'light', blink: 1, radius: 330 }, look: LIGHT });
+  // their city at night, every terrace lighting up in a wave: Earth's light-stick ocean, from their side
+  add({ id: 'echoblink', t0: B2(10), t1: B2(12), scene: 'roto', p: R('se09', { ...ECHO_LIGHT, glow: INK.mint, glow2: INK.pink, envFill: 1.5, lineGain: 1.6 }),
+    look: (t) => ({ ...LIGHT, flash: A.kick(t, 0.12) * 0.12 }) });
   add({ id: 'galaxyweb', t0: B2(12), t1: 120.90, scene: 'galaxy', p: { mode: 'light', view: 'web', t0: B2(12), t1: 120.90 }, look: LIGHT,
     type: (ty, t) => { ty.hud('CONTACT GRAPH  ·  ' + Math.floor(1 + 640 * Math.min(1, Math.max(0, (t - 117.6) / 3.0))) + ' CIVILIZATIONS', 90, 1010, { size: 26, color: YELLOW }); } });
   add({ id: 'stillhere', t0: 120.90, t1: 123.40, scene: 'roto', p: R('sd18', { mode: 'light', bg: galaxyBG, rect: [0.25, 0, 0.88, 0.88] }),
     look: LIGHT, type: (ty, t) => {
       ty.decode(t, 'STILL', 121.0, { size: 220, x: 80, align: 'left', y: 470, dur: 1.0, latinColor: YELLOW });
       ty.decode(t, 'HERE.', 121.2, { size: 220, x: 80, align: 'left', y: 700, dur: 1.0, latinColor: YELLOW });
-      ty.hud('REPLY  ·  ORIGIN ETZ-1715 b  ·  ROUND TRIP 434 YEARS', 86, 800, { size: 24, color: MINT, alpha: smooth(range(t, 121.9, 122.3)) });
+      ty.hud('BEACON  ·  ORIGIN ECHO  ·  SENT 1809  ·  217 YEARS IN FLIGHT', 86, 800, { size: 24, color: MINT, alpha: smooth(range(t, 121.9, 122.3)) });
     } });
 
   // ================================================================ OUTRO
-  // the song ends at 127.96; the card holds for the reply ("Still here." in the sound design) and fades out
+  // the song ends at 127.96; the card holds for their beacon ("Still here." in the sound design) and fades out
   add({ id: 'end', t0: 123.40, t1: 129.7, scene: 'endcard', p: {}, look: (t) => ({ paper: 1, grain: 0.05, fade: 1 - range(t, 129.0, 129.6) }) });
 
   // sanity: contiguous, non-overlapping
