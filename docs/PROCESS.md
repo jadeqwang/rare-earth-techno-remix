@@ -308,6 +308,10 @@ go out, and the Drake equation's **L** follows (`render/src/scenes/war.js`). The
 **End card.** The credit is two lines: *written by Jade Q Wang and Charlie van Norman (Robot Ninja
 Apocalypse) for the SETI crowdfunding campaign in 2011*, then *video drawn in javascript · keep looking*.
 
+**Delivery.** The whole film was rendered again at 1080p and reviewed as contact sheets (every 0.5 s, every
+0.25 s through the changed shots) and full-size crops of each fix. The picture was encoded as in §8; the
+soundtrack is the previous release's AAC stream, copied, and its packets are identical.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),
