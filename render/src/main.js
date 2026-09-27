@@ -44,7 +44,7 @@ async function renderAt(t) {
     ctx.t = t; ctx.lt = lt; ctx.shot = shot;
     await scene.draw(ctx, shot, t, lt);
     type.begin();
-    if (shot.type) shot.type(type, t, lt, shot, ctx);
+    if (shot.type && !qs.has('notype')) shot.type(type, t, lt, shot, ctx);
     const look = typeof shot.look === 'function' ? shot.look(t, lt, ctx) : (shot.look || {});
     const g = state.globalPost ? state.globalPost(t, shot) : {};
     const post = { ...look };
