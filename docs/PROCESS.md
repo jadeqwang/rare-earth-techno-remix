@@ -410,6 +410,10 @@ replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps i
   solid dot over the ring, tracked by hand as the camera pulls back, with her hair left in front (`se03_..._dot.mp4`). Its
   colour is the drawn ring's own blue, the sheet's pale blue as it looks in that night light; a lighter fill looked lit
   by a light of its own.
+* *Our science* (1:11): the take's mouth was open before "Our" (a tone up at 71.28 s); the drawings before it are now shut.
+  (The QA ink check compares a borrowed mouth's line with the donor's, not with the open mouth it replaces.)
+* *do you still* (1:15.9): "do" ends at 75.84 s and "you" starts at 76.03 s, not at the phones' 75.99/76.02 with no
+  breath between. The mouth now shuts in the breath and opens on "you" instead of a drawing later.
 
 ## 4. Rotoscope guides
 

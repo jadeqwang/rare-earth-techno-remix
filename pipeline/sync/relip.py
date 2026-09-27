@@ -463,11 +463,11 @@ def skin_kept(orig, img, mc, d):
     return float(np.percentile(diff[ring > 0], 98)) < 24
 
 
-def inked(orig, img, mc, d):
-    """QA: the new mouth is drawn in line as dark as the take draws its mouths (a smudge from the generator isn't)."""
+def inked(orig, img, mc, d, mc_new=None):
+    """QA: the new mouth is drawn in line as dark as the mouth it comes from (a smudge from the generator isn't)."""
     fw = 2.2 * d
     mo, _ = find_mouth(orig, mc[0], mc[1], fw)
-    mn, _ = find_mouth(img, mc[0], mc[1], fw)
+    mn, _ = find_mouth(img, *(mc_new or mc), fw)
     if not mn.any(): return True                  # a mouth closed to nothing is judged by the other checks
     Lo = cv2.cvtColor(orig, cv2.COLOR_BGR2LAB)[..., 0].astype(np.float32)
     Ln = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)[..., 0].astype(np.float32)
@@ -598,8 +598,11 @@ def run(key, preview=None):
                     else:
                         g2 = geometry(img, *P.mouth_at(e), 2.2 * P.tr[e][2])
                         clean = g2 is not None and (P.geo[e] is None or 0.7 <= g2[2] / P.geo[e][2] <= 1.4)
+                    # the line should be as dark as the mouth it copies (the donor's), or the frame's own when re-posed
+                    ref = P.frames[cand] if cand >= 0 else P.frames[e]
+                    rmc = P.mouth_at(cand) if cand >= 0 else P.mouth_at(e)
                     clean = clean and skin_kept(P.frames[e], img, P.mouth_at(e), P.tr[e][2]) \
-                        and inked(P.frames[e], img, P.mouth_at(e), P.tr[e][2]) \
+                        and inked(ref, img, rmc, P.tr[e][2], P.mouth_at(e)) \
                         and sharpness(img, P.mouth_at(e), P.tr[e][2]) >= 0.8 * P.crisp
                     g3 = geometry(img, *P.mouth_at(e), 2.2 * P.tr[e][2])
                     if clean and fits(want, got) and shaped(fl, got, None if g3 is None else g3[2] / P.tr[e][2]):
