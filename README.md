@@ -42,7 +42,7 @@ No plate of it plays twice. The full treatment is in [`docs/TREATMENT.md`](docs/
 | Stage | Where | What |
 |---|---|---|
 | Song analysis | `pipeline/lyrics_align.py`, `pipeline/audio_map.py` | vocal stem (MDX-Net Kim_Vocal_2) → Whisper large-v3-turbo → word timings aligned to the canonical lyrics and snapped to vocal onsets; beat grid (the tempo accelerates 129.7 → 135 BPM), kick/snare onsets, per-frame features → `render/data/audio.json` |
-| Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and Echo world sheets (the Echo sheet predates the rename and is still titled ETZ-1715 b) (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine) |
+| Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and Echo world sheets (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine); their labels were fact-checked and corrected in pass 3 (`pipeline/sheet_fixes/`) |
 | Base performances | `pipeline/seedance_shots.py`, `pipeline/run_seedance.py` | 23 shots × multiple takes on Seedance 2.5 (720p), each passed the cut song audio as a lip-sync reference and the character sheet as an image reference |
 | Lip-sync verification | `pipeline/sync/` | anime face / mouth tracking → mouth-openness curve, cross-correlated with the vocal envelope over exactly the window each shot uses; per-take lag measured and corrected (`clipTime = t − start + lag`); visual word strips for manual checks |
 | Rotoscope guides | `pipeline/roto_extract.py`, `pipeline/extract_selects.py` | XDoG line art, bilateral tone, green-screen matte with despill, colour classes; the selected takes are archived in `pipeline/base_clips/` |

@@ -26,7 +26,8 @@ ROOM = "/tmp/work/refs/env_control_room.jpg"
 CITY = "/tmp/work/refs/env_other_city.jpg"
 PETALS = "/tmp/work/refs/env_petal_field.jpg"
 OTOWER = "/tmp/work/refs/env_other_tower.jpg"
-# pass 3 refs: panels cropped from design/world_etz1715b_sheet.jpg (PIL boxes): hero vista (4, 120, 644, 480),
+# pass 3 refs: panels cropped from the Echo world sheet as generated (git show 74a292a:design/world_etz1715b_sheet.jpg;
+# now design/world_echo_sheet.jpg) (PIL boxes): hero vista (4, 120, 644, 480),
 # petal field (956, 110, 1534, 480), other tower (610, 575, 1010, 915), sky study (1020, 570, 1534, 925) with its
 # AURIN / VEL / SOL labels inpainted. Reference images must be between 0.39:1 and 2.5:1.
 VISTA = "/tmp/work/refs/env_hero_vista.jpg"

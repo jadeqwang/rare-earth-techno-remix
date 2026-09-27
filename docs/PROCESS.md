@@ -196,6 +196,30 @@ $15. The first two se09 takes used the dusk vista as reference and came back as 
 se09 was re-rolled text-only. The released soundtrack is unchanged: its AAC stream is copied into the new
 encode rather than re-encoded.
 
+**The design sheets** had the same kind of errors, invented by the image models, and were corrected too
+(`pipeline/sheet_fixes/fix_sheets.py` reads each sheet as generated from git and rewrites it). Labels are
+painted out and set again in matching lettering, or rebuilt from the sheet's own glyphs where the font can't be
+matched; the artwork is untouched except for the array panels:
+* Earth sheet: "THE ARRAY · OWENS VALLEY, CA" showed big centre-fed dishes. The panel is now the Allen
+  Telescope Array at Hat Creek (42 offset-Gregorian 6.1 m dishes under Lassen Peak; GPT Image 2.5, prompt in
+  `pipeline/prompts/world_earth_ata_v1.txt`, source in `design/sources/`). The same picture replaces panel 2
+  of the alternate sheet, whose caption now names it. "LAUNCH · VANDENBERG, CA" is now Starbase, TX, where
+  Starship and its chopstick tower launch (Vandenberg flies Falcon 9). The alternate sheet was titled
+  "Celestial Harmony".
+* Echo sheet (`design/world_echo_sheet.jpg`, formerly `world_etz1715b_sheet.jpg`): titled ECHO; the star is an
+  orange dwarf 217 ly away, not "KX-209 (coral giant)"; the bright star in the sky study is no longer labelled
+  Sol, which from 217 ly is about magnitude 8.9 and invisible to the naked eye.
+* DOT sheets (v3 and v2): the 1420 MHz patch is drawn on her left sleeve, not the right, and the Yagi in the
+  detail box has 4 elements, not 5.
+* Style boards: dates are 2026, not 2024; the readout's target is Echo, not a random real Kepler star
+  (KIC 6923187); 6EQUJ5 is a signal, not a target; "a response" is "a signal"; the coordinates were Tokyo
+  Tower's and are now the Allen Telescope Array's; the title-card specimens are Chinese and Russian, set in the
+  fonts the video uses. On the flat board: two hex codes (#1F2BD1, #9CCBFF), the light-mode caption, a
+  "monspace" typo and the printout's gibberish lines.
+
+Three image runs made the array panel (two GPT Image 2.5, one Nano Banana Pro). Nano Banana drew ordinary
+centre-fed dishes; the first GPT take has the ATA's offset feeds.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),
