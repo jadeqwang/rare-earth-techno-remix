@@ -15,22 +15,22 @@
   "lag": -0.25
  },
  "sd04": {
-  "file": "sd04_wide_pullback__3dd548770f.mp4",
+  "file": "sd04_wide_pullback__3dd548770f_lettering.mp4",
   "start": 12.7,
   "lag": 0.0
  },
  "sd05": {
-  "file": "sd05_console_caught__ba8af2ae02.mp4",
+  "file": "sd05_console_caught__ba8af2ae02_lettering.mp4",
   "start": 21.5,
   "lag": -0.291667
  },
  "sd06": {
-  "file": "sd06_blink__a30f474b95.mp4",
+  "file": "sd06_blink__a30f474b95_sync.mp4",
   "start": 25.0,
   "lag": 0.333333
  },
  "sd07": {
-  "file": "sd07_transit__9681e0518b.mp4",
+  "file": "sd07_transit__9681e0518b_sync.mp4",
   "start": 30.0,
   "lag": 0.0
  },
@@ -45,12 +45,12 @@
   "lag": -0.083333
  },
  "sd10": {
-  "file": "sd10_vision__1368eb119a.mp4",
+  "file": "sd10_vision__1368eb119a_sync.mp4",
   "start": 71.0,
   "lag": 0.0
  },
  "sd11": {
-  "file": "sd11_care__03ce0c9203.mp4",
+  "file": "sd11_care__03ce0c9203_sync.mp4",
   "start": 75.0,
   "lag": 0.125
  },
@@ -60,7 +60,7 @@
   "lag": -0.208333
  },
  "sd13": {
-  "file": "sd13_caught_reply__935323d481.mp4",
+  "file": "sd13_caught_reply__935323d481_lettering_sync.mp4",
   "start": 93.3,
   "lag": -0.333333
  },
@@ -70,12 +70,12 @@
   "lag": -0.083333
  },
  "sd15": {
-  "file": "sd15_own_ecu__3eb552a647.mp4",
+  "file": "sd15_own_ecu__3eb552a647_sync.mp4",
   "start": 102.8,
   "lag": -0.083333
  },
  "sd16": {
-  "file": "sd16_alone_beam__c43ef1f6ef.mp4",
+  "file": "sd16_alone_beam__c43ef1f6ef_sync.mp4",
   "start": 107.5,
   "lag": 0.0
  },

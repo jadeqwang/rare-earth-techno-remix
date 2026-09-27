@@ -167,6 +167,45 @@ export class TypeLayer {
     c.globalAlpha = 1;
   }
 
+  // LINE: a whole lyric line on screen at once, each word lighting up as it is sung (the word being sung takes its
+  // accent colour). For a line that is hard to follow a word at a time.
+  line(t, li, o = {}) {
+    const c = this.ctx;
+    const L = this.a.line(li), words = L.words;
+    const texts = o.words ?? words.map((w) => w.w.toUpperCase().replace(/[,.]/g, ''));
+    const size = o.size ?? 60;
+    this.font(o.family ?? 'Archivo', size, o.weight ?? 800, o.stretch ?? 'expanded');
+    const gap = c.measureText(' ').width * 1.3;
+    const ws = texts.map((s) => c.measureText(s).width);
+    const tw = ws.reduce((a, b) => a + b, 0) + gap * (ws.length - 1);
+    const fit = Math.min(1, (o.maxW ?? 1700) / tw);
+    const x0 = 960 - tw * fit / 2, y = o.y ?? 1015;
+    const a = (o.alpha ?? 1) * clamp((t - (o.tIn ?? L.t - 0.3)) / 0.1);
+    if (a <= 0) return;
+    c.save();
+    c.globalAlpha = a;
+    // an ink band behind it, so the line reads over launch plumes and fireballs
+    if (o.plate !== false) {
+      c.fillStyle = o.plate ?? css(INK.ink, 0.72);
+      c.fillRect(x0 - 28, y - size * fit * 1.02, tw * fit + 56, size * fit * 1.42);
+    }
+    c.translate(x0, y); c.scale(fit, fit);
+    let x = 0;
+    for (let i = 0; i < texts.length; i++) {
+      const w = words[i];
+      const sung = t >= w.t;
+      const singing = sung && (i + 1 < words.length ? t < words[i + 1].t : t < L.end + 0.3);
+      const pop = sung ? 1 + 0.1 * Math.exp(-(t - w.t) / 0.06) : 1;
+      c.save();
+      c.translate(x, -size * 0.36); c.scale(pop, pop);          // grows from its left edge, into its own space
+      c.fillStyle = !sung ? (o.dim ?? css(INK.paper, 0.34)) : singing ? (o.accents?.[i] ?? o.accent ?? css(INK.yellow)) : (o.color ?? css(INK.paper));
+      c.fillText(texts[i], 0, size * 0.36);
+      c.restore();
+      x += ws[i] + gap;
+    }
+    c.restore();
+  }
+
   // KEYWORD: a single huge word, stretched and pulsed on the beat
   keyword(t, word, t0, o = {}) {
     const c = this.ctx;

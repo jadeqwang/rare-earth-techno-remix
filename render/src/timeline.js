@@ -217,6 +217,10 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, latinColor: P }) });
   add({ id: 'theirtower', t0: 51.16, t1: 52.96, scene: 'otherworld', p: { mode: 'print', view: 'tower' }, look: PRINT });
 
+  // "Before they launch or self-destruct": the whole line stays on screen from its first word to its last (the "or" is
+  // easy to miss by ear), each word lighting up as it is sung; it runs under the flips, the title, the launch and the war
+  const LINE10 = (ty, t) => ty.line(t, 10, { y: 1022, size: 56, accents: [PALE, PALE, YELLOW, YELLOW, css(INK.red)] });
+
   // one-beat alternation into the drop
   const bt = A.beats.filter((b) => b > 52.9 && b < 54.8);
   const flip = ['array', 'petals', 'array', 'petals'];
@@ -224,20 +228,32 @@ export function buildTimeline(A) {
     const sc = flip[i % flip.length];
     add({ id: `flip${i}`, t0: i === 0 ? 52.96 : bt[i], t1: i === bt.length - 2 ? 54.76 : bt[i + 1], scene: sc,
       p: { mode: 'light', choreo: 'snap', cam: i % 2 ? 'high' : 'low' },
-      look: (t) => ({ ...LIGHT3D, flash: pulse(t - bt[i], 0.04) * 0.6 }) });
+      look: (t) => ({ ...LIGHT3D, flash: pulse(t - bt[i], 0.04) * 0.6 }),
+      type: (ty, t) => LINE10(ty, t) });
   }
 
   // ================================================================ DROP 1 / V3 (the filter, keep looking)
   add({ id: 'title', t0: 54.76, t1: 55.45, scene: 'galaxy', p: { mode: 'light', view: 'title' },
     look: (t) => ({ ...LIGHT, invert: t < 54.84 ? 1 : 0, flash: pulse(t - 54.76, 0.06) * 0.5 }),
-    type: (ty, t) => { ty.title(t, 54.76, { t1: 55.45 }); ty.subtitle(t, 10, { y: 1010, size: 40 }); } });
+    type: (ty, t) => { ty.title(t, 54.76, { t1: 55.45 }); LINE10(ty, t); } });
 
-  add({ id: 'launch', t0: 55.45, t1: 56.87, scene: 'roto', p: R('se02', { mode: 'light', glow: INK.yellow, glow2: INK.orange, envFill: 1.1 }), look: LIGHT,
-    type: (ty, t) => ty.keyword(t, 'LAUNCH', W(10, 2), { size: 280, y: 980, color: P }) });
+  add({ id: 'launch', t0: 55.45, t1: W(10, 3), scene: 'roto', p: R('se02', { mode: 'light', glow: INK.yellow, glow2: INK.orange, envFill: 1.1 }), look: LIGHT,
+    type: (ty, t) => { ty.keyword(t, 'LAUNCH', W(10, 2), { size: 260, y: 330, color: P }); LINE10(ty, t); } });
 
-  add({ id: 'selfdestruct', t0: 56.87, t1: 57.59, scene: 'earth', p: { mode: 'light', red: 1 },
-    look: (t) => ({ ...LIGHT, ca: 6, shakeX: Math.sin(t * 90) * 6, shakeY: Math.cos(t * 77) * 4 }),
-    type: (ty, t) => ty.keyword(t, 'SELF-DESTRUCT', W(10, 4), { size: 200, y: 600, maxW: 1700, color: P, plate: css(INK.red, 0.95), kickAmt: 0.2 }) });
+  // "or": the same launch with a different payload. Missile tracks over the pole, the warheads landing on "self-destruct"
+  // (scenes/war.js), the lights going out, and on to the Drake equation's L
+  add({ id: 'war', t0: W(10, 3), t1: 57.59, scene: 'war', p: { t0: W(10, 3), tImpact: W(10, 4) },
+    look: (t) => {
+      const k = t >= W(10, 4) ? Math.exp(-(t - W(10, 4)) / 0.35) : 0;       // the first warheads land on "self-destruct"
+      return { ...LIGHT, flash: t >= W(10, 4) ? Math.exp(-(t - W(10, 4)) / 0.07) * 0.5 : 0, ca: 6 * k,
+        shakeX: Math.sin(t * 90) * 7 * k, shakeY: Math.cos(t * 77) * 5 * k };
+    },
+    // the big words sit over the far side of the pole, clear of the cities the warheads land on
+    type: (ty, t) => {
+      ty.keyword(t, 'OR', W(10, 3), { size: 260, y: 250, color: YELLOW, t1: W(10, 4) - 0.16 });
+      ty.keyword(t, 'SELF-DESTRUCT', W(10, 4), { size: 170, y: 245, maxW: 1600, color: P, plate: css(INK.red, 0.95), kickAmt: 0.2 });
+      LINE10(ty, t);
+    } });
 
   add({ id: 'drake', t0: 57.59, t1: 61.03, scene: 'drake', p: {}, look: { paper: 0.9, grain: 0.07 },
     type: (ty, t) => {

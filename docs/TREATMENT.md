@@ -1,6 +1,7 @@
 # RARE EARTH — music video treatment
 
-*Song: "Rare Earth" (Pale Blue Dot), DDR/techno version. Lyrics written in 2011 for a SETI event.
+*Song: "Rare Earth" (Pale Blue Dot), DDR/techno version, written by Jade Q Wang and Charlie van Norman
+(Robot Ninja Apocalypse) for the SETI crowdfunding campaign in 2011.
 Runtime 2:08. Tempo accelerates 129.7 → 135 BPM (tracked, not constant).*
 
 ## One line
@@ -14,7 +15,8 @@ The lyrics are addressed from Earth to someone out there, but they read both way
 *"You're yearning to see the life out there / Searching for me."* The other side is searching too.
 The video makes that literal. Verses 1–2 are Earth asking. The build reveals a second world doing
 exactly the same thing. Verse 3 is the Great Filter — the Drake equation's last term, **L**, the
-lifetime of a civilization ("before they launch or self-destruct"). Verses 4–5 repeat verses 1–2
+lifetime of a civilization ("before they launch or self-destruct": the rocket that could carry it to the
+stars, or a nuclear exchange over the pole, the same launch with a different payload). Verses 4–5 repeat verses 1–2
 as call-and-response between the worlds. The final drop is contact, and then the camera pulls back to
 show the galaxy lit up with connections: *how could we be alone.*
 
@@ -86,7 +88,9 @@ Planets, dish arrays, the space elevator, signals, UI and all typography are pro
 * **Lyrics huge at the start** (the hook): heavy extended grotesk, word-by-word on the sung syllable,
   left two-thirds of frame, DOT on the right third.
 * **Verse 2**: key words big (PALE BLUE DOT, SIGNAL, STAR, TRANSIT, ALONE), the rest as elegant subtitles.
-* **Verse 3**: brutalist — monospace terminal lines, headline slams, a censor bar at the blank.
+* **Verse 3**: brutalist — monospace terminal lines, headline slams, a censor bar at the blank. *Before they
+  launch or self-destruct* stays on screen whole under its headline slams (LAUNCH, OR, SELF-DESTRUCT), each word
+  lighting up as it is sung, because the "or" is easy to miss by ear.
 * **Verse 4–5**: the same lyrics arrive first as Echo glyphs and *decode* into English — the song was received.
 * **Title card** "RARE EARTH / 稀有地球 / Уникальная Земля" drops on the first drop, anime-OP style. Both
   translations mean Earth the planet, as in the Rare Earth hypothesis, not rare-earth metals (稀土 /
