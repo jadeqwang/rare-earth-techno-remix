@@ -271,8 +271,10 @@ export const endcard = {
     font(c, 'NotoSansSC', 36, 900); c.fillStyle = css(INK.klein, a2); c.fillText(zh, x0, 832);
     font(c, 'Unbounded', 26, 800); c.fillStyle = css(INK.pink, a2); c.fillText(ru, x0 + wz + 40, 830);
     font(c, 'JetBrainsMono', 20, 500); c.fillStyle = css(INK.ink, 0.75 * smooth(range(lt, 1.4, 2.2)));
-    const cr = 'written in 2011 for a SETI event   ·   video drawn in javascript   ·   keep looking';
-    c.fillText(cr, 960 - c.measureText(cr).width / 2, 900);
+    const cr1 = 'written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI crowdfunding campaign in 2011';
+    const cr2 = 'video drawn in javascript   ·   keep looking';
+    c.fillText(cr1, 960 - c.measureText(cr1).width / 2, 900);
+    c.fillText(cr2, 960 - c.measureText(cr2).width / 2, 936);
     K(ctx).end({ halftone: 0.1 });
   },
 };

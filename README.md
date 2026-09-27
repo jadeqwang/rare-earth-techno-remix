@@ -1,13 +1,17 @@
 # RARE EARTH — music video
 
 A music video for **"Rare Earth"** (DDR / techno version), a song about hoping to find intelligent
-life, written in 2011 for a SETI event.
+life, written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI crowdfunding
+campaign in 2011.
 
 **▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09). DOT has the
 v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world
 **Echo**, ends on its beacon rather than an impossible reply, and gives every shot of Echo its own
-footage (`docs/PROCESS.md` §3c). The first cut, with a hime cut, is in the git history at commit
-`8dedea7`.
+footage (`docs/PROCESS.md` §3c). The release pass (§3d) sets the character sheet's lettering on DOT's
+jacket (RARE EARTH) and sleeve patch (1420 MHz), re-times her mouth to the vocal in the eight shots
+where it drifted, shows a nuclear exchange on *or self-destruct* with that whole line kept on screen,
+and credits the songwriters on the end card. The first cut, with a hime cut, is in the git history at
+commit `8dedea7`.
 
 ![Twelve frames from the video](docs/storyboard.jpg)
 
@@ -22,8 +26,9 @@ halftone and neon light.
 Two lonely worlds, each singing into the dark, find out the other one was listening the whole
 time, and the song itself is the signal. Verses 1–2 are Earth asking. The build reveals
 **Echo**, a fictional world 217 light-years away in the Earth Transit Zone, the part of the sky from
-which *our* planet can be seen crossing the Sun. Verse 3 is the Great Filter: the Drake equation's
-**L**, weapons, wars, the blank, and *keep up funding*. Verses 4–5 repeat as call-and-response between
+which *our* planet can be seen crossing the Sun. Verse 3 is the Great Filter: the launch that could
+carry us to the stars *or* a nuclear exchange over the pole, the Drake equation's **L**, weapons, wars,
+the blank, and *keep up funding*. Verses 4–5 repeat as call-and-response between
 the two worlds. The final drop is contact: the galaxy lights up with a web of civilizations, and
 Echo's beacon, sent in 1809, decodes as **STILL HERE.**
 
@@ -44,7 +49,8 @@ No plate of it plays twice. The full treatment is in [`docs/TREATMENT.md`](docs/
 | Song analysis | `pipeline/lyrics_align.py`, `pipeline/audio_map.py` | vocal stem (MDX-Net Kim_Vocal_2) → Whisper large-v3-turbo → word timings aligned to the canonical lyrics and snapped to vocal onsets; beat grid (the tempo accelerates 129.7 → 135 BPM), kick/snare onsets, per-frame features → `render/data/audio.json` |
 | Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and Echo world sheets (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine); their labels were fact-checked and corrected in pass 3 (`pipeline/sheet_fixes/`) |
 | Base performances | `pipeline/seedance_shots.py`, `pipeline/run_seedance.py` | 23 shots × multiple takes on Seedance 2.5 (720p), each passed the cut song audio as a lip-sync reference and the character sheet as an image reference |
-| Lip-sync verification | `pipeline/sync/` | anime face / mouth tracking → mouth-openness curve, cross-correlated with the vocal envelope over exactly the window each shot uses; per-take lag measured and corrected (`clipTime = t − start + lag`); visual word strips for manual checks |
+| Lip-sync verification | `pipeline/sync/` | anime face / mouth tracking → mouth-openness curve, cross-correlated with the vocal envelope over exactly the window each shot uses; per-take lag measured and corrected (`clipTime = t − start + lag`); visual word strips for manual checks. Where one lag can't fit a take, the mouth is re-timed on its own: each drawing gets the mouth from the same take that matches the vocal stem, registered onto the face (`remouth.py`) |
+| Plate fixes | `pipeline/plate_fixes/` | the lettering the takes invented ("PACE EARTH", "D20 IHz") is painted out and the sheet's RARE EARTH and 1420 MHz set in its place, tracked through every frame (the patch's ring fitted as an ellipse) |
 | Rotoscope guides | `pipeline/roto_extract.py`, `pipeline/extract_selects.py` | XDoG line art, bilateral tone, green-screen matte with despill, colour classes; the selected takes are archived in `pipeline/base_clips/` |
 | Renderer | `render/` | three.js r186 + canvas 2D, deterministic `renderAt(t)`; scenes in `render/src/scenes/`, the edit in `render/src/timeline.js` |
 | Sound design | `pipeline/sound_design.py` | receiver static, star pings, an ElevenLabs v3 radio voice ("Still listening.") in the intro, a signal dropout at the blank, and Echo's beacon ("Still here.") after the last note. The song itself is untouched |
@@ -61,7 +67,10 @@ and one video review.
 
 ```bash
 cd render && npm install
-# guides for the selected takes (writes /tmp/work/guides, ~1.3 GB):
+# the corrected takes are archived in pipeline/base_clips/; to rebuild them from the takes as generated:
+#   python3 ../pipeline/plate_fixes/fix_lettering.py   # lettering on the jacket and the sleeve patch
+#   python3 ../pipeline/sync/remouth.py                # mouths re-timed (needs the vocal stem, /tmp/work/vocals.wav)
+# guides for the selected takes (writes /tmp/work/guides, ~1.5 GB):
 python3 ../pipeline/extract_selects.py
 # sound-design mix (needs the Cloudflare account used by pipeline/gen.py for the voices):
 python3 ../pipeline/sound_design.py
@@ -79,7 +88,8 @@ SwiftShader, so no GPU is needed.
 
 ## Credits
 
-* Song: "Rare Earth", written in 2011 for a SETI event (`audio/Rare_Earth_DDR.mp3`).
+* Song: "Rare Earth", written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI
+  crowdfunding campaign in 2011 (`audio/Rare_Earth_DDR.mp3`).
 * Fonts: Archivo, Noto Serif Display, Noto Sans SC (subset to the title characters), JetBrains Mono,
   Anton, Big Shoulders Display, Instrument Serif, Space Mono, Unbounded, VT323. All SIL Open Font
   License; the licence texts are in `render/assets/fonts/`.

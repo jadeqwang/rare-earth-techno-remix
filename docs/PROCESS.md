@@ -11,7 +11,8 @@ short version and how to run things.
 * **Lyrics.** Whisper large-v3-turbo on Workers AI transcribes the vocal stem. `pipeline/lyrics_align.py`
   aligns the transcript to the canonical lyrics with difflib and snaps each word to the nearest vocal
   onset. Word starts within a line must be strictly increasing, at least 70 ms apart. The blank
-  "( )" in verse 3 is kept as a timed gap, and "Keep" after it is pinned by hand to 61.86 s.
+  "( )" in verse 3 is kept as a timed gap, and "Keep" after it is pinned by hand to 61.86 s. "Our" (verse 3,
+  line 15) is pinned to 71.28 s, where the note changes, not 71.14 s (§3d).
 * **Tempo.** The track accelerates from 129.7 to 135 BPM. The beat grid is a degree-4 polynomial fit to
   tracked beats, not a constant BPM, so beat-quantised cuts stay on the beat through the final drop.
 * **Features.** Kick and snare onsets and per-frame (24 fps) energy go into `render/data/audio.json`.
@@ -224,6 +225,92 @@ matched; the artwork is untouched except for the array panels:
 
 Three image runs made the array panel (two GPT Image 2.5, one Nano Banana Pro). Nano Banana drew ordinary
 centre-fed dishes; the first GPT take has the ATA's offset feeds.
+
+## 3d. Pass 4: release notes (lettering, lip sync, the Great Filter, credits)
+
+The songwriter's notes before release, all acted on. No new generation was needed.
+
+**Lettering.** The takes had invented their own lettering where the character sheet has DOT's: "PACE EARTH"
+on the back of her jacket in the pull-back (sd04, 0:13), and "D20 IHz" or "TA20 DIIz" on her sleeve patch in
+the pull-back, *caught* (sd05, 0:24) and *caught2* (sd13, 1:37). `pipeline/plate_fixes/fix_lettering.py`
+corrects the takes themselves, before the guides are extracted, so the renderer redraws the new lettering as
+ink like everything else in the plate:
+* The patch is tracked by fitting an ellipse to its dark ring in every frame (`ringtrack.py`: dark on the
+  ring, light just inside it and, where hair isn't in the way, just outside it; a weak smoothness prior). The
+  rotation of its contents is registered against a reference frame. The old letters are inpainted and
+  1420 / MHz is set in Archivo, mapped through the ellipse, so it foreshortens and turns with the patch.
+* On the back, the pale-blue dot is fitted as a circle in every frame and the old line measured under it.
+  RARE EARTH is set at the old line's length and angle until the camera has pulled back too far for it to
+  read (frame 34 of 121); the patch on the far sleeve follows the dot once it is too small to fit.
+* Under the beam in sd13 the plate washes the letters out to mid-grey, and the renderer's line art broke
+  their thin strokes up. There the lettering is set heavier and in the ring's ink.
+
+The corrected takes are the `*_lettering.mp4` files in `pipeline/base_clips/`.
+
+**Lip sync.** The earlier passes (§3) corrected each take with one lag. That fits one stretch of a shot and
+misses the next: in *transit_eye* "not that" was in sync and "far from my own" was not, because the take's
+mouth ran on its own clock (it opened in the rest after "far" and shut on "from", about 0.3 s late). Seven
+places were flagged, in eight shots. Here the mouth is re-timed separately from the body, the way cel
+animation times mouths (`pipeline/sync/remouth.py`):
+1. The mouth is tracked (the anime face cascade, or for the extreme close-ups the lower face registered frame
+   to frame from a box placed by hand, then centred on the drawn mouth) and its openness measured.
+2. The target is the vocal stem: log RMS times the pYIN voicing probability, so sung vowels open the mouth and
+   rests, stops and unvoiced consonants close it.
+3. For every drawing the renderer shows (on twos, at the shot's lag), a mouth is chosen from the same take by
+   dynamic programming: open about as much as the target asks, moving forward the way the take moves, from a
+   nearby frame so the head pose matches, lit like the body frame, and not from under a shadow or a hand.
+4. That mouth is registered onto the body frame's face (ECC, affine, with the mouths masked out) and blended
+   in. The mask covers every mouth pixel of both drawings (non-skin shapes that reach into the mouth box,
+   holes filled) and their hull, extends down over the lower lip's shading, and is feathered in skin. The
+   transplant takes on the body frame's low-frequency shading (the beam, a shadow). A QA count of the old
+   mouth's pixels left in each result is logged; the one drawing it flags (sd13 frame 54) is the new mouth's
+   own lip line.
+
+219 of the 263 drawings in these shots got a new mouth: *blink* (sd06, 0:26, "of a star"), *transit_eye*
+(sd07, 0:31–0:36), *vision* and *vision2* (sd10, 1:11–1:15), *care2* (sd11, 1:15–1:17), *caught2* (sd13,
+1:35), *own* (sd15, 1:44–1:48) and *alone2* (sd16, 1:49), where the take shut her mouth twice during the
+held "alone". sd16 turns from behind into profile, and in profile the lips meet the sky and can't be told apart
+by colour, so there a fixed ellipse around the mouth is transplanted instead, from mouth positions placed by
+hand. The re-timed takes are the `*_sync.mp4` files; sd13's is built on its lettering fix.
+
+Correlation of mouth openness with the vocal target, per drawing as played. This is the metric the chooser
+optimises, so it shows the choice worked rather than proving sync on its own; every shot was also checked by
+eye, as mouth strips against the words and as rendered frames.
+
+| shot | drawings | r before | r after |
+|---|---|---|---|
+| blink | 31 | +0.10 | +0.78 |
+| transit_eye | 61 | +0.19 | +0.91 |
+| vision | 18 | +0.45 | +0.98 |
+| vision2 | 17 | +0.19 | +0.87 |
+| care2 | 29 | +0.34 | +0.86 |
+| caught2 | 35 | +0.22 | +0.53 |
+| own | 42 | +0.30 | +0.91 |
+| alone2 | 30 | −0.18 | +0.37 |
+
+caught2 gains least: its first second is under the beam's moving shadow, and no mouth is taken from under it.
+alone2 is limited by the profile: few mouth drawings to choose from, and a mouth that must stay close to the
+body frame's head angle.
+
+*Vision* opened on the end of "transmission". Its last syllable runs on D4 to 71.27 s and "Our" starts a tone
+up, 0.14 s after the onset `audio.json` had for it. "Our" is pinned at 71.28 s, so OUR lands on the word, and
+the mouth is held nearly shut on the voiced /ən/ before it (the stem alone would have opened it).
+
+**Before they launch or self-destruct.** The line was hard to follow a word at a time, and its "or" is easy
+to miss by ear. The whole line now stays on screen from its first word to its last (54.2–57.6 s), each word
+lighting up as it is sung (`TypeLayer.line`). The rocket keeps "launch"; on "or" the same launch carries a
+different payload. The cut goes to the night side of Earth over the pole, where missile tracks rise between the
+silo fields of the Great Plains and central Russia and from submarines at sea, drawn like an early-warning
+display. On "self-destruct" the warheads land on the cities of both sides, the globe burns red, its lights
+go out, and the Drake equation's **L** follows (`render/src/scenes/war.js`). The HUD's countdown starts at
+30:00, about an ICBM's flight time.
+
+**End card.** The credit is two lines: *written by Jade Q Wang and Charlie van Norman (Robot Ninja
+Apocalypse) for the SETI crowdfunding campaign in 2011*, then *video drawn in javascript · keep looking*.
+
+**Delivery.** The whole film was rendered again at 1080p and reviewed as contact sheets (every 0.5 s, every
+0.25 s through the changed shots) and full-size crops of each fix. The picture was encoded as in §8; the
+soundtrack is the previous release's AAC stream, copied, and its packets are identical.
 
 ## 4. Rotoscope guides
 
