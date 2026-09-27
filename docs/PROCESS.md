@@ -216,6 +216,11 @@ matched; the artwork is untouched except for the array panels:
   Tower's and are now the Allen Telescope Array's; the title-card specimens are Chinese and Russian, set in the
   fonts the video uses. On the flat board: two hex codes (#1F2BD1, #9CCBFF), the light-mode caption, a
   "monspace" typo and the printout's gibberish lines.
+* Style boards, sample frames: the Earth and light-mode samples were drawn before revision v3 and showed
+  DOT with the old hime cut. They are now frames from the finished video, which is v3 throughout (the poster
+  at 0:03.08 and the neon close-up at 1:17.54). All 18 DOT takes in the edit are v3 (the `hair` tag in
+  `pipeline/seedance_manifest.json`); the only sheets that still show the old cut are the archived earlier
+  revisions, `design/dot_character_sheet_v2_hime.jpg` and `design/dot_character_sheet_alt.jpg`.
 
 Three image runs made the array panel (two GPT Image 2.5, one Nano Banana Pro). Nano Banana drew ordinary
 centre-fed dishes; the first GPT take has the ATA's offset feeds.

@@ -13,6 +13,7 @@ import os
 import subprocess
 import sys
 
+import cv2
 import numpy as np
 from PIL import Image
 
@@ -34,6 +35,32 @@ def original(name):
 def save(im, name):
     im.save(os.path.join(ROOT, 'design', name), quality=93, optimize=True)
     print('wrote design/' + name)
+
+
+def video_frames(indices):
+    """Frames of the released video (out/rare_earth_1080p.mp4), decoded in order so the indices are exact."""
+    cap = cv2.VideoCapture(os.path.join(ROOT, 'out', 'rare_earth_1080p.mp4'))
+    out, n = {}, 0
+    while len(out) < len(indices):
+        ok, fr = cap.read()
+        if not ok:
+            raise RuntimeError('video ended before frame %d' % max(indices))
+        if n in indices:
+            out[n] = Image.fromarray(cv2.cvtColor(fr, cv2.COLOR_BGR2RGB))
+        n += 1
+    return out
+
+
+# The style boards' sample frames of DOT were drawn before her v3 hairstyle and show the old hime cut (blunt
+# fringe). They are replaced by frames from the finished video, which is all v3: the poster at 0:03.08 (on the
+# tower, Yagi raised to the star, fog below; title gone, first lyric not yet in) and the light-mode close-up at
+# 1:17.54 (singing, mint lines, the yellow glow ring; cropped clear of the lyric on the left).
+EARTH_FRAME, LIGHT_FRAME = 74, 1861
+
+
+def frame_into(im, frame, crop, box):
+    x0, y0, x1, y1 = box
+    im.paste(frame.crop(crop).resize((x1 - x0, y1 - y0), Image.LANCZOS), (x0, y0))
 
 
 def tracking_for(s, target, fontname, cap, **ax):
@@ -140,8 +167,10 @@ def dot_sheet(name):
     save(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)), name)
 
 
-def style_board():
+def style_board(frames):
     im = original('style_board_signal_print.jpg')
+    frame_into(im, frames[EARTH_FRAME], (280, 100, 1633, 1080), (12, 317, 382, 585))     # 01 EARTH
+    frame_into(im, frames[LIGHT_FRAME], (720, 60, 1920, 933), (772, 317, 1143, 587))     # 03 LIGHT MODE
 
     def mono(x, y, s, pitch, color, wght=420, cap=None):
         # JetBrains Mono advances 0.6 em, capitals 0.73 em; a taller original passes cap and keeps its pitch
@@ -178,9 +207,11 @@ def style_board():
     save(im, 'style_board_signal_print.jpg')
 
 
-def style_board_flat():
+def style_board_flat(frames):
     orig = original('style_board_signal_print_flat.jpg')
     im = orig.copy()
+    frame_into(im, frames[EARTH_FRAME], (60, 100, 1843, 1080), (103, 561, 858, 976))     # a) EARTH, inside the outline
+    frame_into(im, frames[LIGHT_FRAME], (720, 150, 1920, 787), (103, 1044, 858, 1445))   # c) LIGHT MODE
 
     def paper(dst_box, src_xy):
         x0, y0, x1, y1 = dst_box
@@ -225,5 +256,6 @@ if __name__ == '__main__':
     earth_sheet_alt(ata)
     dot_sheet('dot_character_sheet.jpg')
     dot_sheet('dot_character_sheet_v2_hime.jpg')
-    style_board()
-    style_board_flat()
+    frames = video_frames({EARTH_FRAME, LIGHT_FRAME})
+    style_board(frames)
+    style_board_flat(frames)
