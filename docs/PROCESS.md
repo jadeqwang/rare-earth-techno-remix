@@ -416,6 +416,12 @@ replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps i
   (The QA ink check compares a borrowed mouth's line with the donor's, not with the open mouth it replaces.)
 * *do you still* (1:15.9): "do" ends at 75.84 s and "you" starts at 76.03 s, not at the phones' 75.99/76.02 with no
   breath between. The mouth now shuts in the breath and opens on "you" instead of a drawing later.
+* *Our* (1:11) again: the take sang all of "our" in half a second and shut by 71.9 s, while the held E4 fades to 72.15 s,
+  so the mouth finished before the voice did. The sheet now holds "-r" open to 72.12 s.
+* *vision* (1:14): the take held a wide "ah" through "vi-"; the sheet marks it `small` (an "ih", teeth near together)
+  from the release of the "v", and it gets that mouth from the same take.
+* *you* (1:16): the drawing that comes on just before the voice (75.96 s) is now a rounded "oo" (`round`), held through
+  the vowel, instead of the take's open mouth with "you" arriving a drawing later.
 
 ## 4. Rotoscope guides
 

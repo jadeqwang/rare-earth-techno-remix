@@ -229,7 +229,7 @@ def target(name, t_on):
 def shaped(flag, o, w):
     """A 'small' span caps the opening (an uh, not an ah); a 'round' span wants a rounded mouth, narrow for the face
     (w = mouth width / eye distance, against this take's roundest open mouths, Plate.wround)."""
-    if flag == 'small': return o is None or o <= 0.75
+    if flag == 'small': return o is None or o <= 0.6
     if flag == 'round': return w is None or w <= shaped.wround
     return True
 
@@ -349,7 +349,7 @@ def choose_donors(P, run):
             ok, co = np.abs(oj - want) <= max(0.15, 0.35 * want), ((oj - want) / 0.15) ** 2
         # the borrowed face is moved into this frame's head pose; a pose too far off and LivePortrait's warp mangles
         # the mouth, so the donor must be turned and tilted within 10 degrees of this frame and at the same scale
-        if flag == 'small': ok = ok & (oj <= 0.75)
+        if flag == 'small': ok = ok & (oj <= 0.6)
         if flag == 'round': ok = ok & (P.wd[C] <= P.wround)
         dp = np.array([P.pose_diff(e, j) for j in C])
         ok = ok & (dp <= 10.0) & (np.abs(np.log(P.tr[C, 2] / P.tr[e, 2])) <= 0.12)
