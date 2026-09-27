@@ -80,6 +80,43 @@ at zero lag):
   (r = −0.70 at zero lag). A few corrections run a plate past its end; for sd13, the cut to the next shot
   moved 0.3 s earlier rather than freezing the last drawings.
 
+### Lip-sync pass 2: scoring what is actually played
+
+A later audit checked sync end to end:
+
+* **Audio.** The soundtrack of the final MP4, the source MP3 and the vocal stem cross-correlate at
+  exactly 0 ms, so any error has to come from the footage.
+* **Twos.** DOT is drawn on twos: a drawing is held for two frames. That makes the displayed plate up to
+  one frame late and quantises the lag. Lags tuned on single frames turned out to cost real sync once
+  held. For example, "of a star" scored 0.45 as played against 0.70 on ones.
+  `render/src/timeline.js` now uses lags tuned *as played*, on twos, per shot. The scorer lives in the
+  session tools, and `lag_curve.py` is the per-clip version. vision2 overrides its clip's lag, because
+  the same take peaks three frames later in that window.
+* **Frame rounding.** Lags are exact multiples of 1/24 s. The renderer's frame lookup now tolerates
+  1e-3 of a frame, because a lag stored as −0.291667 had landed one frame away from −7/24 whenever a
+  plate started exactly on a frame.
+* **Re-rolls.** The three weakest shots were re-rolled, four new takes each, and each shot now uses its
+  best take:
+  * caught2: 935323d481, r = 0.57 / 0.56, up from 0.24 / 0.04. This take is framed wider, so the
+    plate is pushed in 1.35×.
+  * own: 3eb552a647, colour r = 0.63.
+  * caught: ba8af2ae02, face 0.22 / colour 0.59, the only lag where both metrics are positive.
+
+As played now (face r / colour r; "—" = metric not usable for that framing):
+
+| shot | r | shot | r |
+|---|---|---|---|
+| yearning | 0.73 / — | vision2 | 0.39 / 0.33 |
+| listen | 0.73 / — | care2 | 0.30 / 0.41 |
+| caught | 0.22 / 0.59 | listen2 | 0.67 / 0.54 |
+| blink | 0.51 / 0.42 | caught2 | 0.57 / 0.56 |
+| transit_eye | — / 0.53 | blinkdance | 0.87 / 0.85 |
+| keep_yagi | 0.79 / — | own | — / 0.63 |
+| vision | 0.47 / 0.40 | | |
+
+alone (DOT tiny in frame until the held "alone") and alone2 (seen from behind) can't be measured.
+The table in §3 records the first v3 pass.
+
 ## 3b. Character revision v3 (new hairstyle)
 
 After v1 was delivered, the songwriter asked for DOT to get a different hairstyle, from a reference

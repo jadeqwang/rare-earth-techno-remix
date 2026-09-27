@@ -7,12 +7,12 @@
  "sd02": {
   "file": "sd02_cu_yearning__c8b3647c99.mp4",
   "start": 5.2,
-  "lag": -0.083
+  "lag": -0.041667
  },
  "sd03": {
   "file": "sd03_mcu_listen__17fad81acf.mp4",
   "start": 10.4,
-  "lag": -0.292
+  "lag": -0.25
  },
  "sd04": {
   "file": "sd04_wide_pullback__3dd548770f.mp4",
@@ -20,14 +20,14 @@
   "lag": 0.0
  },
  "sd05": {
-  "file": "sd05_console_caught__ab5341ea87.mp4",
+  "file": "sd05_console_caught__ba8af2ae02.mp4",
   "start": 21.5,
-  "lag": 0.0
+  "lag": -0.291667
  },
  "sd06": {
   "file": "sd06_blink__a30f474b95.mp4",
   "start": 25.0,
-  "lag": 0.292
+  "lag": 0.333333
  },
  "sd07": {
   "file": "sd07_transit__9681e0518b.mp4",
@@ -42,12 +42,12 @@
  "sd09": {
   "file": "sd09_keep_looking__c6c9c8b95f.mp4",
   "start": 61.4,
-  "lag": -0.083
+  "lag": -0.083333
  },
  "sd10": {
   "file": "sd10_vision__1368eb119a.mp4",
   "start": 71.0,
-  "lag": 0.042
+  "lag": 0.0
  },
  "sd11": {
   "file": "sd11_care__03ce0c9203.mp4",
@@ -57,22 +57,22 @@
  "sd12": {
   "file": "sd12_search_listen__58e3680064.mp4",
   "start": 81.0,
-  "lag": -0.25
+  "lag": -0.208333
  },
  "sd13": {
-  "file": "sd13_caught_reply__d1fa06cb74.mp4",
+  "file": "sd13_caught_reply__935323d481.mp4",
   "start": 93.3,
-  "lag": 0.208
+  "lag": -0.333333
  },
  "sd14": {
   "file": "sd14_blink_dance__bd2b906427.mp4",
   "start": 97.2,
-  "lag": -0.146
+  "lag": -0.083333
  },
  "sd15": {
-  "file": "sd15_own_ecu__afca32f85b.mp4",
+  "file": "sd15_own_ecu__3eb552a647.mp4",
   "start": 102.8,
-  "lag": -0.125
+  "lag": -0.083333
  },
  "sd16": {
   "file": "sd16_alone_beam__c43ef1f6ef.mp4",

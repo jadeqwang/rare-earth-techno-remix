@@ -6,11 +6,11 @@ export const SELECT = {
  },
  "sd02": {
   "start": 5.2,
-  "lag": -0.083
+  "lag": -0.041667
  },
  "sd03": {
   "start": 10.4,
-  "lag": -0.292
+  "lag": -0.25
  },
  "sd04": {
   "start": 12.7,
@@ -18,11 +18,11 @@ export const SELECT = {
  },
  "sd05": {
   "start": 21.5,
-  "lag": 0.0
+  "lag": -0.291667
  },
  "sd06": {
   "start": 25.0,
-  "lag": 0.292
+  "lag": 0.333333
  },
  "sd07": {
   "start": 30.0,
@@ -34,11 +34,11 @@ export const SELECT = {
  },
  "sd09": {
   "start": 61.4,
-  "lag": -0.083
+  "lag": -0.083333
  },
  "sd10": {
   "start": 71.0,
-  "lag": 0.042
+  "lag": 0.0
  },
  "sd11": {
   "start": 75.0,
@@ -46,19 +46,19 @@ export const SELECT = {
  },
  "sd12": {
   "start": 81.0,
-  "lag": -0.25
+  "lag": -0.208333
  },
  "sd13": {
   "start": 93.3,
-  "lag": 0.208
+  "lag": -0.333333
  },
  "sd14": {
   "start": 97.2,
-  "lag": -0.146
+  "lag": -0.083333
  },
  "sd15": {
   "start": 102.8,
-  "lag": -0.125
+  "lag": -0.083333
  },
  "sd16": {
   "start": 107.5,

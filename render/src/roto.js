@@ -46,7 +46,7 @@ export async function clipMeta(name) {
 
 // Frame selection: drawings on twos (12 fps) by default; `offset` = seconds into the clip at local time 0.
 export function frameIndex(meta, clipTime, twos = true) {
-  let f = Math.floor(clipTime * meta.fps + 1e-6);
+  let f = Math.floor(clipTime * meta.fps + 1e-3);   // lags are stored rounded to 6 decimals; 1e-3 frame keeps them on the intended frame
   if (twos) f -= f % 2;
   return Math.max(0, Math.min(meta.frames - 1, f));
 }
