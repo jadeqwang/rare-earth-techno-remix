@@ -614,6 +614,13 @@ def run(key, preview=None):
                     if e + 1 < P.n: out[e + 1] = img    # odd frames are not shown on twos; keep them consistent anyway
                     row.update({'got': None if got is None else round(got, 2), 'how': how, 'fits': True,
                                 'remnant': remnant(P.frames[e], img, P.mouth_at(e), P.tr[e][2])})
+                elif rows and rows[-1].get('fits') is not False and fits(want, rows[-1].get('got', rows[-1]['open'])):
+                    # no clean mouth for this drawing, but the one before says the same: hold that drawing, as cel
+                    # animation holds a pose
+                    prev = rows[-1]['frame']
+                    out[e] = out[prev]
+                    if e + 1 < P.n: out[e + 1] = out[prev]
+                    row.update({'how': f'held {prev}', 'fits': True, 'got': rows[-1].get('got', rows[-1]['open'])})
                 else:
                     row.update({'how': 'no clean fix, kept', 'fits': False})
             rows.append(row)
