@@ -54,6 +54,7 @@ td small { display: block; color: var(--muted); font-size: 12px; }
   .page { padding: 0; gap: 14px; max-width: none; }
   .chip { height: 0.9in; }
   .sw, .cols > section { break-inside: avoid; }
+  .actual-size { break-before: page; break-inside: avoid; padding-top: 0.25in; }
 }
 </style>
 
@@ -113,7 +114,7 @@ td small { display: block; color: var(--muted); font-size: 12px; }
     </section>
   </div>
 
-  <section>
+  <section class="actual-size">
     <h2>Actual size (print at 100%, check the 1 in square)</h2>
     <div class="actual">
       <figure><div class="inch"></div><figcaption>1 in</figcaption></figure>
