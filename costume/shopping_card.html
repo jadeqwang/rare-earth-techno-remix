@@ -1,0 +1,124 @@
+<title>DOT Jacket Shopping Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one letter page, swatch strip on top, then shopping list beside sizes. Single light look, built to print. */
+:root {
+  --paper: #fbfaf8;
+  --ink: #272729;
+  --muted: #6b6a70;
+  --rule: #d9d6d2;
+  --blue: #94BEE4;
+  --orange: #EF8953;
+  --patch-white: #E7E4E2;
+  --jacket-white: #EBE7E3;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.45; margin: 0; }
+.page { max-width: 8.5in; margin: 0 auto; padding-block: 28px 40px; padding-inline: 16px; display: grid; gap: 22px; }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
+h1 { font-family: var(--display); font-variation-settings: "wdth" 112; font-weight: 720; letter-spacing: 0.18em; font-size: 26px; margin: 0; text-wrap: balance; }
+h1 .dot { display: inline-block; width: 0.62em; height: 0.62em; border-radius: 50%; background: var(--blue); margin-left: 0.25em; vertical-align: 0.05em; }
+header p { margin: 0; color: var(--muted); font-size: 13px; }
+h2 { font-family: var(--display); font-weight: 800; font-variation-settings: "wdth" 96; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 8px; color: var(--muted); }
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.sw { border: 1px solid var(--rule); background: #fff; display: grid; grid-template-rows: auto auto; min-width: 0; }
+.chip { height: 1.1in; border-bottom: 1px solid var(--rule); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sw .meta { padding: 8px 10px 10px; display: grid; gap: 2px; }
+.sw .name { font-weight: 700; font-size: 14px; }
+.sw .hex { font-family: var(--mono); font-weight: 600; font-size: 16px; letter-spacing: 0.02em; }
+.sw .use { color: var(--muted); font-size: 12.5px; }
+.cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; }
+.cols > * { min-width: 0; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px 6px 0; border-bottom: 1px solid var(--rule); }
+th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.qty { font-weight: 700; white-space: nowrap; }
+td small { display: block; color: var(--muted); font-size: 12px; }
+.box { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--ink); margin-right: 6px; vertical-align: -1px; }
+.note { font-size: 12.5px; color: var(--muted); border-left: 3px solid var(--orange); padding: 4px 0 4px 10px; margin: 0; }
+.actual { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.actual figure { margin: 0; display: grid; justify-items: center; gap: 4px; font-size: 11.5px; color: var(--muted); }
+.circle2 { width: 2in; height: 2in; max-width: 100%; border-radius: 50%; background: var(--blue); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.stripe2 { width: 2.6in; max-width: 100%; height: 2in; background: var(--orange); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.inch { width: 1in; height: 1in; border: 1px solid var(--ink); }
+.wrap { overflow-x: auto; }
+@media (max-width: 640px) { .cols { grid-template-columns: 1fr; } h1 { font-size: 21px; } }
+@media print {
+  @page { size: letter; margin: 0.4in; }
+  body { background: #fff; font-size: 12.5px; }
+  .page { padding: 0; gap: 14px; max-width: none; }
+  .chip { height: 0.9in; }
+  .sw, .cols > section { break-inside: avoid; }
+}
+</style>
+
+<div class="page">
+  <header>
+    <h1>RARE EARTH<span class="dot" aria-hidden="true"></span></h1>
+    <p>DOT jacket · fabric &amp; notions run · M + XL Members Only cropped racer</p>
+  </header>
+
+  <section>
+    <h2>Colours to match</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:var(--blue)"></div><div class="meta"><span class="name">Pale blue</span><span class="hex">#94BEE4</span><span class="use">Back dot + chest dot</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--orange)"></div><div class="meta"><span class="name">Signal orange</span><span class="hex">#EF8953</span><span class="use">Chest + sleeve stripes</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink)"></div><div class="meta"><span class="name">Ink black</span><span class="hex">#272729</span><span class="use">Patch ring, 1420 MHz, RARE EARTH</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--patch-white)"></div><div class="meta"><span class="name">Patch white</span><span class="hex">#E7E4E2</span><span class="use">Patch field (jacket body ≈ #EBE7E3)</span></div></div>
+    </div>
+  </section>
+
+  <p class="note">Laser toner shifts colour, especially pale blue. Use the printed chips as a rough guide and the hex codes on your phone screen as the target. Match under daylight or the store's whitest light, and hold candidates against the jacket itself.</p>
+
+  <div class="cols">
+    <section>
+      <h2>Buy (covers both jackets)</h2>
+      <div class="wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Qty</th></tr></thead>
+        <tbody>
+          <tr><td><span class="box"></span>Orange ribbon, 2 in wide<small>4 stripes per jacket: one across each front panel, one around each upper arm. Includes ~15% for turn-unders, plus spare.</small></td><td class="qty">4 yd</td></tr>
+          <tr><td><span class="box"></span><em>or</em> orange fabric, 44 in wide<small>Cut 3 in strips (½ in turn-under each side).</small></td><td class="qty">½ yd</td></tr>
+          <tr><td><span class="box"></span>Pale blue twill, ideally poly-cotton like the jacket (65/35)<small>Two 7¾ in back dots + two 2 in chest dots. Minimum is ¼ yd; the extra covers a spare back dot and a test swatch.</small></td><td class="qty">½ yd</td></tr>
+          <tr><td><span class="box"></span>Fusible web (paper-backed, e.g. HeatnBond Lite)<small>If you fuse the dots instead of turning edges under.</small></td><td class="qty">½ yd × 17 in</td></tr>
+          <tr><td><span class="box"></span>Thread to match: pale blue, orange, white</td><td class="qty">1 spool each</td></tr>
+          <tr><td><span class="box"></span>Black heat-transfer vinyl (matte)<small>RARE EARTH line is 7½ in long; the patch is 4 in. One 12 × 12 in sheet covers both jackets with retries.</small></td><td class="qty">1 sheet</td></tr>
+          <tr><td><span class="box"></span>White twill or canvas for the 4 in sleeve patches<small>Unless you order embroidered patches from the artwork files.</small></td><td class="qty">¼ yd</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Finished sizes (same on M and XL)</h2>
+      <div class="wrap">
+      <table>
+        <tbody>
+          <tr><td>Back dot</td><td class="qty">7¾ in · 19.7 cm</td></tr>
+          <tr><td>RARE EARTH<small>Archivo, weight 720, width 112, spaced caps</small></td><td class="qty">⅝–¾ in caps · 7½ in line</td></tr>
+          <tr><td>Gap, dot to lettering</td><td class="qty">1 in</td></tr>
+          <tr><td>Chest dot<small>wearer's left; centre 3⅝ in from zip</small></td><td class="qty">2 in · 5.1 cm</td></tr>
+          <tr><td>Sleeve patch<small>left upper arm; centre 4¾ in below shoulder seam</small></td><td class="qty">4 in · ¼ in ring</td></tr>
+          <tr><td>Stripe width</td><td class="qty">2 in · 5.1 cm</td></tr>
+          <tr><td>Back dot top, below collar seam</td><td class="qty">M 2⅛ in · XL 2½ in</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note" style="margin-top:10px">Before you go: measure around each jacket's upper arm. The ribbon estimate assumes about 15 in (M) and 17 in (XL).</p>
+    </section>
+  </div>
+
+  <section>
+    <h2>Actual size (print at 100%, check the 1 in square)</h2>
+    <div class="actual">
+      <figure><div class="inch"></div><figcaption>1 in</figcaption></figure>
+      <figure><div class="circle2"></div><figcaption>Chest dot, 2 in</figcaption></figure>
+      <figure><div class="stripe2"></div><figcaption>Stripe, 2 in wide</figcaption></figure>
+    </div>
+  </section>
+</div>
