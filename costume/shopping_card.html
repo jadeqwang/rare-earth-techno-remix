@@ -19,7 +19,7 @@
 }
 * { box-sizing: border-box; }
 body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.45; margin: 0; }
-.page { max-width: 8.5in; margin: 0 auto; padding-block: 28px 40px; padding-inline: 16px; display: grid; gap: 22px; }
+.page { max-width: 8.5in; margin: 0 auto; padding-block: 28px 3in; padding-inline: 16px; display: grid; gap: 22px; }
 header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
 h1 { font-family: var(--display); font-variation-settings: "wdth" 112; font-weight: 720; letter-spacing: 0.18em; font-size: 26px; margin: 0; text-wrap: balance; }
 h1 .dot { display: inline-block; width: 0.62em; height: 0.62em; border-radius: 50%; background: var(--blue); margin-left: 0.25em; vertical-align: 0.05em; }
@@ -57,7 +57,7 @@ td small { display: block; color: var(--muted); font-size: 12px; }
   /* grid items ignore page breaks in Chrome, so print the page as plain blocks */
   .page { display: block; }
   .page > * + * { margin-top: 14px; }
-  .actual-size { break-before: page; page-break-before: always; break-inside: avoid; margin-top: 1.75in !important; }
+  .actual-size { break-before: page; page-break-before: always; break-inside: avoid; margin-top: 0.6in !important; }
 }
 </style>
 
