@@ -54,7 +54,10 @@ td small { display: block; color: var(--muted); font-size: 12px; }
   .page { padding: 0; gap: 14px; max-width: none; }
   .chip { height: 0.9in; }
   .sw, .cols > section { break-inside: avoid; }
-  .actual-size { break-before: page; break-inside: avoid; padding-top: 0.25in; }
+  /* grid items ignore page breaks in Chrome, so print the page as plain blocks */
+  .page { display: block; }
+  .page > * + * { margin-top: 14px; }
+  .actual-size { break-before: page; page-break-before: always; break-inside: avoid; margin-top: 1.75in !important; }
 }
 </style>
 
