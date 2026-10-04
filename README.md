@@ -10,7 +10,9 @@ v3 hairstyle: centre part, long curtain bangs, long layers. This cut also rename
 footage (`docs/PROCESS.md` §3c). The release pass (§3d) sets the character sheet's lettering on DOT's
 jacket (RARE EARTH) and sleeve patch (1420 MHz), re-times her mouth to the vocal in the eight shots
 where it drifted, shows a nuclear exchange on *or self-destruct* with that whole line kept on screen,
-and credits the songwriters on the end card. The first cut, with a hime cut, is in the git history at
+and credits the songwriters on the end card. Pass 5 (§3e) rebuilds the build into drop 1: Echo's signal tower is a new
+rotoscoped plate that charges on the snare roll, and the flips that follow have Earth's array and Echo's field answer
+each other into the title. The 4K thumbnail is [`out/thumbnail_4k.jpg`](out/thumbnail_4k.jpg). The first cut, with a hime cut, is in the git history at
 commit `8dedea7`.
 
 ![Twelve frames from the video](docs/storyboard.jpg)
@@ -76,6 +78,8 @@ python3 ../pipeline/extract_selects.py
 python3 ../pipeline/sound_design.py
 # one still, or the whole film (3 browser processes; ~1 s per 1080p frame each on CPU)
 node tools/render.mjs --stills 1.0,54.8 --w 1920 --h 1080 --outdir /tmp/work/stills
+# the 4K thumbnail (a frame of the film with the title card's lettering in place of its own type)
+node tools/thumbnail.mjs --t 24.5 --w 3840 --h 2160 --out ../out/thumbnail_4k.png
 node tools/render.mjs --from 0 --to 129.6 --fps 24 --w 1920 --h 1080 --jobs 3 \
   --audio /tmp/work/sfx/Rare_Earth_DDR_sfx.wav --out ../out/rare_earth_1080p.mp4
 # live preview in a browser, with the song:
