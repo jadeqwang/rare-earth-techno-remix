@@ -115,5 +115,9 @@ export const SELECT = {
  "se08b": {
   "start": 79.0,
   "lag": 0
+ },
+ "se11": {
+  "start": 48.26,
+  "lag": 0
  }
 };

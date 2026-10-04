@@ -109,6 +109,17 @@ function pose(d, t, p, A) {
     }
     return [az, el];
   }
+  // 'converse' (the flips into drop 1): Earth's array and Echo's field take turns, one beat each, aiming toward each
+  // other across the cut (p.aim: +1 / -1) and rising one step per beat to meet at the same point (step 4) on the title.
+  // Each shot starts where the other world left off, dips in anticipation, then snaps on the offbeat (p.tSnap).
+  if (mode === 'converse') {
+    const k = p.step ?? 0, EL = [0.1, 0.28, 0.46, 0.64, 0.8];   // kept low: seen from below, a dish near the zenith reads as an umbrella
+    const delay = clamp(Math.hypot(d.x, d.z) / 140) * 0.1;
+    const ph = clamp((t - p.tSnap - delay) / 0.22), e = easeOutBack(ph, 2.0);
+    const antic = smooth(clamp((t - p.t0) / (p.tSnap - p.t0))) * (1 - ph);
+    const AZ = (n) => p.aim * (0.75 - 0.15 * n);
+    return [lerp(AZ(k), AZ(k + 1), e) - p.aim * 0.05 * antic, lerp(EL[k], EL[k + 1], e) - 0.08 * antic];
+  }
   if (mode === 'snapup') {
     // pointed at the ground, then a wave snaps every dish up to the zenith: KEEP ON LOOKING
     const delay = (Math.hypot(d.x, d.z + 40) / 110) * 0.45;
@@ -147,6 +158,11 @@ export const array = {
     } else if (cam === 'high') {
       camera.position.set(40 - lt * 3, 36, 30);
       camera.lookAt(0, 0, -50);
+    } else if (cam === 'converse') {
+      // the low angle, pushed in a little further on each of its beats
+      const push = p.push ?? 0;
+      camera.position.set(-5 + lt * 1.6 + push * 1.5, 1.7, 5 - lt * 3 - push * 4);
+      camera.lookAt(7, 12, -55);
     } else if (cam === 'hero') {
       const a = lt * 0.12;
       camera.position.set(Math.sin(a) * 30, 5 + lt * 0.8, 20 + Math.cos(a) * 6);

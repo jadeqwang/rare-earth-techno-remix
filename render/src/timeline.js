@@ -215,19 +215,40 @@ export function buildTimeline(A) {
   add({ id: 'theircity', t0: 47.55, t1: 49.36, scene: 'otherworld', p: { mode: 'print', view: 'city' }, look: PRINT });
   add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se05', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint }), look: PRINT,
     type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, latinColor: P }) });
-  add({ id: 'theirtower', t0: 51.16, t1: 52.96, scene: 'otherworld', p: { mode: 'print', view: 'tower' }, look: PRINT });
+  // the bass has dropped out; the tower charges on the snare roll (se11: the camera cranes up it, pulses of light climb it,
+  // its halo ring flares and the tip starts to glow). The cut comes on the brink: it fires at 1:47 (se10)
+  const TW0 = 51.16, TW1 = 52.96;
+  const twSn = A.snares.filter(([ts]) => ts >= TW0 - 0.05 && ts < TW1);
+  const twCharge = (t) => 0.06 + 0.94 * twSn.reduce((a, [ts]) => a + smooth(range(t, ts, ts + 0.035)), 0) / twSn.length;
+  add({ id: 'theirtower', t0: TW0, t1: TW1, scene: 'roto', p: R('se11', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint }),
+    look: PRINT,
+    type: (ty, t) => {
+      const ch = twCharge(t), n = Math.round(ch * 20);
+      const plate = css(INK.ink, 0.85);    // the plate's sky is light: back the HUD with ink
+      ty.hud('ECHO   ·   SIGNAL TOWER', 90, 70, { plate });
+      ty.hud(`CHARGE ${String(Math.round(ch * 100)).padStart(3, ' ')}%`, 1830, 70, { align: 'right', color: n >= 20 ? MINT : PINK, plate });
+      const c = ty.ctx;
+      c.fillStyle = plate; c.fillRect(1830 - 20 * 14 - 6, 84, 20 * 14 + 2, 14);
+      for (let i = 0; i < 20; i++) {
+        c.fillStyle = i < n ? MINT : css(INK.paper, 0.25);
+        c.fillRect(1830 - (20 - i) * 14, 88, 10, 6);
+      }
+      ty.glyphLine('ARE YOU THERE', 90, 1010, 30, PINK);
+    } });
 
   // "Before they launch or self-destruct": the whole line stays on screen from its first word to its last (the "or" is
   // easy to miss by ear), each word lighting up as it is sung; it runs under the flips, the title, the launch and the war
   const LINE10 = (ty, t) => ty.line(t, 10, { y: 1022, size: 56, accents: [PALE, PALE, YELLOW, YELLOW, css(INK.red)] });
 
-  // one-beat alternation into the drop
+  // one-beat alternation into the drop: Earth's array and Echo's field answer each other (choreo 'converse')
   const bt = A.beats.filter((b) => b > 52.9 && b < 54.8);
   const flip = ['array', 'petals', 'array', 'petals'];
   for (let i = 0; i < bt.length - 1; i++) {
     const sc = flip[i % flip.length];
-    add({ id: `flip${i}`, t0: i === 0 ? 52.96 : bt[i], t1: i === bt.length - 2 ? 54.76 : bt[i + 1], scene: sc,
-      p: { mode: 'light', choreo: 'snap', cam: i % 2 ? 'high' : 'low' },
+    const f0 = i === 0 ? 52.96 : bt[i], f1 = i === bt.length - 2 ? 54.76 : bt[i + 1];
+    add({ id: `flip${i}`, t0: f0, t1: f1, scene: sc,
+      p: { mode: 'light', choreo: 'converse', step: i, t0: f0, tSnap: f0 + 0.4 * (f1 - f0), aim: sc === 'array' ? 1 : -1,
+        push: i >> 1, cam: sc === 'array' ? 'converse' : 'mirror' },
       look: (t) => ({ ...LIGHT3D, flash: pulse(t - bt[i], 0.04) * 0.6 }),
       type: (ty, t) => LINE10(ty, t) });
   }

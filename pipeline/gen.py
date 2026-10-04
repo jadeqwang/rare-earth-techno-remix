@@ -33,6 +33,9 @@ LEDGER = os.environ.get("GEN_LEDGER", os.path.join(os.path.dirname(os.path.abspa
 
 def _req(method, url, data=None, headers=None, timeout=60, raw=False):
     headers = dict(headers or {})
+    # outside the original sandbox (which injected credentials), pass an API token for the account in CLOUDFLARE_API_TOKEN
+    if url.startswith("https://api.cloudflare.com/") and os.environ.get("CLOUDFLARE_API_TOKEN"):
+        headers.setdefault("Authorization", f"Bearer {os.environ['CLOUDFLARE_API_TOKEN']}")
     body = None
     if data is not None:
         if isinstance(data, (bytes, bytearray)):

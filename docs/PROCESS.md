@@ -312,6 +312,27 @@ Apocalypse) for the SETI crowdfunding campaign in 2011*, then *video drawn in ja
 0.25 s through the changed shots) and full-size crops of each fix. The picture was encoded as in §8; the
 soundtrack is the previous release's AAC stream, copied, and its packets are identical.
 
+## 3e. Pass 5: the build into drop 1 (0:51–0:55)
+
+A note that the stretch at 0:51 was abstract and less engaging than the rest. Under it the kick and bass drop out
+(47.5–52.5 s) and an eighth-note snare roll builds into the drop.
+
+**The tower (0:51.16–0:52.96).** It was the one flat procedural shot of Echo, between two rotoscoped plates, locked off,
+and its only motion (the ring lights) was keyed to kicks, of which there are none here. It is now a new plate, se11
+(Seedance 2.5, take bce14cb91c, 2.9–4.7 s; references: the world sheet's tower and a frame of se10 so the design
+carries over): low and close, the camera cranes up the tower as pulses of light climb it, the halo ring flares on the
+51.79 snare and the tip starts to glow. It charges and does not fire: the beam is saved for se10 at 1:47; the other two
+takes started firing one. Over it, `ECHO · SIGNAL TOWER` and a charge readout that steps on each snare to 100% at the
+cut, and *are you there* in Echo's glyphs, carried over from the field shot. Three runs, about $3.50. `gen.py` now
+also takes an API token from `CLOUDFLARE_API_TOKEN` when it runs outside the original sandbox.
+
+**The flips (0:52.96–0:54.76).** One beat each, Earth's array and Echo's field. Each snap finished in the first eighth
+of a second, under the cut and its flash, so the rest of every beat was a still; the targets were random and Echo's
+high camera made its petal dishes read as wireframe cones. With choreography `converse` (`array.js`, `petals.js`) the
+two worlds take turns: Earth's dishes aim screen right and Echo's screen left, so each cut reads as one looking at the
+other; each shot starts where the other world left off, dips, and snaps on the offbeat, one step higher, so they rise
+together into the title; Echo blooms as it rises, seen from above the heads; both cameras push in on the last two beats.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),

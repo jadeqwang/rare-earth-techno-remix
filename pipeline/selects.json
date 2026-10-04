@@ -143,5 +143,10 @@
   "file": "se08_cliff_dish__490a672d82.mp4",
   "start": 79.0,
   "lag": 0
+ },
+ "se11": {
+  "file": "se11_tower_charge__bce14cb91c.mp4",
+  "start": 48.26,
+  "lag": 0
  }
 }
