@@ -1,0 +1,92 @@
+[
+ {
+  "spot": "blink",
+  "take": "sd06",
+  "t0": 25.3,
+  "job": "reshoot-blink-81c6c0c69b"
+ },
+ {
+  "spot": "blink",
+  "take": "sd06",
+  "t0": 25.3,
+  "job": "reshoot-blink-03ec9b2387"
+ },
+ {
+  "spot": "blink",
+  "take": "sd06",
+  "t0": 25.3,
+  "job": "reshoot-blink-e2a7669413"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-7be3350001"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-4ef97e4b98"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-61c98a3dee"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-ce0b9c5954"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-f5d23965c8"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-e4ed23ed3d"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-3dd86b005b"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-53a8c6c6d9"
+ },
+ {
+  "spot": "vision",
+  "take": "sd10",
+  "t0": 71.14,
+  "job": "reshoot-vision-cafc222b43"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-154693b717"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-68bcf9023c"
+ },
+ {
+  "spot": "care2",
+  "take": "sd11",
+  "t0": 75.36,
+  "job": "reshoot-care2-7e268b3f1c"
+ }
+]

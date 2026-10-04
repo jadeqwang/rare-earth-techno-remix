@@ -286,7 +286,7 @@ export const mutual = {
       else { font(c, 'JetBrainsMono', 26, 600); c.fillStyle = s.planet; c.fillText(s.label, s.cx - c.measureText(s.label).width / 2, 692); }
       // honest light curve (flux = 1 - covered area / disc area, depth drawn x6 so the dip reads) in a small panel
       if (merge < 1) {
-        const x0 = s.cx - 250, w = 500, y0 = 730, h = 110;
+        const x0 = s.cx - R - pr - 30, w = 2 * (R + pr + 30), y0 = 730, h = 110;   // as wide as the transit path above
         c.globalAlpha = alpha * Math.pow(1 - merge, 3);
         c.strokeStyle = `rgba(${s.rgb},0.35)`; c.lineWidth = 1.5; c.strokeRect(x0, y0, w, h);
         c.strokeStyle = `rgba(${s.rgb},0.95)`; c.lineWidth = 4; c.beginPath();

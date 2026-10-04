@@ -8,12 +8,12 @@ campaign in 2011.
 v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world
 **Echo**, ends on its beacon rather than an impossible reply, and gives every shot of Echo its own
 footage (`docs/PROCESS.md` §3c). The release pass (§3d) sets the character sheet's lettering on DOT's
-jacket (RARE EARTH) and sleeve patch (1420 MHz), re-times her mouth to the vocal in the eight shots
-where it drifted, shows a nuclear exchange on *or self-destruct* with that whole line kept on screen,
-and credits the songwriters on the end card. Pass 5 (§3e) rebuilds the build into drop 1: Echo's signal tower is a new
-rotoscoped plate that charges on the snare roll, and the flips that follow have Earth's array and Echo's field answer
-each other into the title. The 4K thumbnail is [`out/thumbnail_4k.jpg`](out/thumbnail_4k.jpg). The first cut, with a hime cut, is in the git history at
-commit `8dedea7`.
+jacket (RARE EARTH) and sleeve patch (1420 MHz), shows a nuclear exchange on *or self-destruct* with that
+whole line kept on screen, and credits the songwriters on the end card. The lip-sync pass (§3e) checked
+every drawing of her face against the vocal, syllable by syllable, and replaced the mouth in the 90 of
+355 where it was wrong: open through rests, late onto words, shut on held vowels, closures missed. Pass 6 (§3f) rebuilds the build into drop 1: Echo's signal tower is a new rotoscoped plate that charges on the
+snare roll, and the flips that follow have Earth's array and Echo's field answer each other into the title. The 4K
+thumbnail is [`out/thumbnail_4k.jpg`](out/thumbnail_4k.jpg). The first cut, with a hime cut, is in the git history at commit `8dedea7`.
 
 ![Twelve frames from the video](docs/storyboard.jpg)
 
@@ -51,7 +51,7 @@ No plate of it plays twice. The full treatment is in [`docs/TREATMENT.md`](docs/
 | Song analysis | `pipeline/lyrics_align.py`, `pipeline/audio_map.py` | vocal stem (MDX-Net Kim_Vocal_2) → Whisper large-v3-turbo → word timings aligned to the canonical lyrics and snapped to vocal onsets; beat grid (the tempo accelerates 129.7 → 135 BPM), kick/snare onsets, per-frame features → `render/data/audio.json` |
 | Design | `design/`, `pipeline/prompts/` | style board (SIGNAL PRINT), DOT character sheets, Earth and Echo world sheets (GPT Image 2.5, Nano Banana Pro, Seedream 5 Pro, FLUX.2 max, Grok Imagine); their labels were fact-checked and corrected in pass 3 (`pipeline/sheet_fixes/`) |
 | Base performances | `pipeline/seedance_shots.py`, `pipeline/run_seedance.py` | 23 shots × multiple takes on Seedance 2.5 (720p), each passed the cut song audio as a lip-sync reference and the character sheet as an image reference |
-| Lip-sync verification | `pipeline/sync/` | anime face / mouth tracking → mouth-openness curve, cross-correlated with the vocal envelope over exactly the window each shot uses; per-take lag measured and corrected (`clipTime = t − start + lag`); visual word strips for manual checks. Where one lag can't fit a take, the mouth is re-timed on its own: each drawing gets the mouth from the same take that matches the vocal stem, registered onto the face (`remouth.py`) |
+| Lip sync | `pipeline/sync/` | per-take lag measured against the vocal envelope over exactly the window each shot uses (`clipTime = t − start + lag`). Then every drawing is checked against an exposure sheet read syllable by syllable off the stem's spectrogram (`lipsheet.json`); where the mouth is wrong, a right one is borrowed from another frame of the same take, registered onto the face and cloned in, with LivePortrait for head pose and the odd redraw (`relip.py`); `lipcheck.py` measures the result as played |
 | Plate fixes | `pipeline/plate_fixes/` | the lettering the takes invented ("PACE EARTH", "D20 IHz") is painted out and the sheet's RARE EARTH and 1420 MHz set in its place, tracked through every frame (the patch's ring fitted as an ellipse) |
 | Rotoscope guides | `pipeline/roto_extract.py`, `pipeline/extract_selects.py` | XDoG line art, bilateral tone, green-screen matte with despill, colour classes; the selected takes are archived in `pipeline/base_clips/` |
 | Renderer | `render/` | three.js r186 + canvas 2D, deterministic `renderAt(t)`; scenes in `render/src/scenes/`, the edit in `render/src/timeline.js` |
@@ -71,7 +71,8 @@ and one video review.
 cd render && npm install
 # the corrected takes are archived in pipeline/base_clips/; to rebuild them from the takes as generated:
 #   python3 ../pipeline/plate_fixes/fix_lettering.py   # lettering on the jacket and the sleeve patch
-#   python3 ../pipeline/sync/remouth.py                # mouths re-timed (needs the vocal stem, /tmp/work/vocals.wav)
+#   python3 ../pipeline/sync/remouth.py sd16           # alone2's mouths re-timed (needs the vocal stem, /tmp/work/vocals.wav)
+#   python3 ../pipeline/sync/relip.py                  # every other singing shot's mouths checked against lipsheet.json
 # guides for the selected takes (writes /tmp/work/guides, ~1.5 GB):
 python3 ../pipeline/extract_selects.py
 # sound-design mix (needs the Cloudflare account used by pipeline/gen.py for the voices):
@@ -86,7 +87,8 @@ node tools/render.mjs --from 0 --to 129.6 --fps 24 --w 1920 --h 1080 --jobs 3 \
 npm run serve   # then open http://127.0.0.1:8800/index.html?play=1&fit=1 and click
 ```
 
-Python needs `numpy scipy soundfile librosa opencv-python-headless<5 pillow audio-separator`.
+Python needs `numpy scipy soundfile librosa opencv-python-headless<5 pillow audio-separator onnxruntime`
+(`relip.py` downloads LivePortrait's ONNX models from GitHub on first use).
 Rendering uses the Chromium that Playwright finds (`CHROME=/path/to/chrome` to override) with
 SwiftShader, so no GPU is needed.
 

@@ -143,7 +143,7 @@ export function buildTimeline(A) {
 
   add({ id: 'wow', t0: 24.79, t1: 25.30, scene: 'wow', p: { circleAt: 24.85 }, look: { paper: 0.6, grain: 0.07 } });
 
-  add({ id: 'blink', t0: 25.30, t1: 27.82, scene: 'roto', p: R('sd06'), look: PRINT,
+  add({ id: 'blink', t0: 25.30, t1: 27.82, scene: 'roto', p: R('sd06r'), look: PRINT,
     type: (ty, t) => {
       ty.keyword(t, 'BEATING', W(7, 1), { size: 132, y: 1030, x: 480, maxW: 780, kickAmt: 0.12 });
       ty.keyword(t, 'BLINKING', W(7, 2), { size: 132, y: 1030, x: 1440, maxW: 780, kickAmt: 0.12 });
@@ -213,7 +213,7 @@ export function buildTimeline(A) {
     } });
 
   add({ id: 'theircity', t0: 47.55, t1: 49.36, scene: 'otherworld', p: { mode: 'print', view: 'city' }, look: PRINT });
-  add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se05', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint }), look: PRINT,
+  add({ id: 'theirfield', t0: 49.36, t1: 51.16, scene: 'roto', p: R('se08', { mode: 'print', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint, start: 49.36 - 0.6, rect: [1, 0, -1, 1] }), look: PRINT,
     type: (ty, t) => ty.decode(t, 'ARE YOU THERE?', 49.7, { size: 90, y: 200, latinColor: P }) });
   // the bass has dropped out; the tower charges on the snare roll (se11: the camera cranes up it, pulses of light climb it,
   // its halo ring flares and the tip starts to glow). The cut comes on the brink: it fires at 1:47 (se10)
@@ -306,7 +306,7 @@ export function buildTimeline(A) {
   add({ id: 'transmission', t0: 69.53, t1: 71.14, scene: 'waterfall', p: { mode: 'light', signalAt: 69.6 }, look: LIGHT,
     type: (ty, t) => ty.decode(t, 'FOR YOUR TRANSMISSION', W(14, 0), { size: 100, y: 560, dur: 0.6 }) });
 
-  add({ id: 'vision', t0: 71.14, t1: W(15, 1), scene: 'roto', p: R('sd10', { mode: 'light', bg: { scene: 'galaxy', p: { mode: 'light', view: 'bg' } } }), look: LIGHT,
+  add({ id: 'vision', t0: 71.14, t1: W(15, 1), scene: 'roto', p: R('sd10r', { mode: 'light', bg: { scene: 'galaxy', p: { mode: 'light', view: 'bg' } } }), look: LIGHT,
     type: (ty, t) => ty.keyword(t, 'OUR', W(15, 0), { size: 200, y: 330, x: 420, color: P }) });
   add({ id: 'science', t0: W(15, 1), t1: W(15, 4) - 0.27, scene: 'split',
     p: { left: { scene: 'array', p: { mode: 'light', choreo: 'snap', cam: 'hero' } }, right: { scene: 'petals', p: { mode: 'light', choreo: 'snap', cam: 'high' } } },
@@ -316,7 +316,8 @@ export function buildTimeline(A) {
     type: (ty, t) => ty.keyword(t, 'VISION', W(15, 4), { size: 330, y: 1000, color: YELLOW }) });
 
   // ================================================================ DROP 2a / V4 (call and response)
-  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11', { mode: 'light', rect: [0.17, 0, 1, 1], bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
+  add({ id: 'care2', t0: 75.36, t1: 77.66, scene: 'roto', p: R('sd11r', { mode: 'light', rect: [-0.262, -0.790, 1.886, 1.886],   // the re-shoot is framed wider: pushed in to the old close-up
+ bg: burstBG({ c1: INK.mint, c2: INK.yellow, center: [1286, 620] }) }), look: LIGHT,
     type: (ty, t) => ty.stack(t, [16], { x: 70, y: 300, size: 168, lineH: 172, maxW: 700, accent: YELLOW, plate: css(INK.mint, 0.8) }) });
 
   // Echo's shots from here on are each their own plate, so no view of the other world plays twice
@@ -347,8 +348,9 @@ export function buildTimeline(A) {
   // their side: a lone dish on a cliff above the clouds turns to one faint star, and that star is our Sun — the
   // pale-blue-dot annotation again, from the other side. The plate is mirrored (negative rect width) so the dish faces it.
   add({ id: 'dot2', t0: 90.47, t1: 93.59, scene: 'roto',
-    p: (t) => { const z = 1 + 0.07 * smooth(range(t, 90.47, 93.59)); return R('se08', { ...ECHO_LIGHT, envFill: 0.8,
-      rect: [0.5 + z / 2, 0.5 - z / 2, -z, z] }); },
+    // the whole field of petal dishes turning to our Sun (Kenton's note: more awe-inspiring than the lone cliff dish)
+    p: (t) => { const z = 1 + 0.07 * smooth(range(t, 90.47, 93.59)); return R('se05', { mode: 'light', inkA: INK.violet, inkB: INK.pink, inkC: INK.mint,
+      glow: INK.pink, glow2: INK.mint, envFill: 0.8, start: 90.47 - 0.4, rect: [0.5 - z / 2, 0.5 - z / 2, z, z] }); },
     look: LIGHT,
     type: (ty, t) => {
       const c = ty.ctx, sx = 1510, sy = 250;
@@ -414,7 +416,7 @@ export function buildTimeline(A) {
   add({ id: 'lightsticks', t0: B2(6), t1: B2(8), scene: 'earth', p: { mode: 'light', blink: 2, view: 'night', blinkT0: B2(6) }, look: LIGHT });
   add({ id: 'dance3', t0: B2(8), t1: B2(10), scene: 'roto', p: R('sd17', { mode: 'light', bg: galaxyBG }), look: LIGHT });
   // their city at night, every terrace lighting up in a wave: Earth's light-stick ocean, from their side
-  add({ id: 'echoblink', t0: B2(10), t1: B2(12), scene: 'roto', p: R('se09', { ...ECHO_LIGHT, glow: INK.mint, glow2: INK.pink, envFill: 1.5, lineGain: 1.6 }),
+  add({ id: 'echoblink', t0: B2(10), t1: B2(12), scene: 'roto', p: R('se09', { ...ECHO_LIGHT, envFill: 1.5, lineGain: 1.6 }),
     look: (t) => ({ ...LIGHT, flash: A.kick(t, 0.12) * 0.12 }) });
   add({ id: 'galaxyweb', t0: B2(12), t1: 120.90, scene: 'galaxy', p: { mode: 'light', view: 'web', t0: B2(12), t1: 120.90 }, look: LIGHT,
     type: (ty, t) => { ty.hud('CONTACT GRAPH  ·  ' + Math.floor(1 + 640 * Math.min(1, Math.max(0, (t - 117.6) / 3.0))) + ' CIVILIZATIONS', 90, 1010, { size: 26, color: YELLOW }); } });

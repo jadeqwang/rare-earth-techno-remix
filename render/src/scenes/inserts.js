@@ -190,7 +190,7 @@ export const clash = {
       c.fillStyle = css(INK.ink, 0.78); c.fillRect(x0 - 10, 973, w + 20, 37);
       c.fillStyle = col; c.fillText(s, x0, 1000);
     };
-    tag('SOL III  ·  OURS ARRIVES 2243', 90, css(INK.paper, 0.9));
+    tag('EARTH  ·  OURS ARRIVES 2243', 90, css(INK.paper, 0.9));
     tag('THEIRS SENT 1809  ·  ECHO', 'right', css(INK.paper, 0.9));
     tag('SIGNAL LOCK', 'center', css(INK.yellow, 0.95));
     K(ctx).end({ over: true });
@@ -251,7 +251,7 @@ export const endcard = {
       c.strokeStyle = css(INK.pale, ra); c.lineWidth = 3; c.beginPath(); c.arc(x1, y, rr, 0, 7); c.stroke();
     }
     font(c, 'JetBrainsMono', 20, 600); c.fillStyle = css(INK.ink, 0.8);
-    c.fillText('SOL III', x1 - 40, y + 60); c.fillText('ECHO', x2 - c.measureText('ECHO').width / 2, y + 60);
+    c.fillText('EARTH', x1 - 40, y + 60); c.fillText('ECHO', x2 - c.measureText('ECHO').width / 2, y + 60);
     if (t > arrive + 0.1) { c.fillStyle = css(INK.orange, smooth(range(t, arrive + 0.1, arrive + 0.4))); c.fillText('RX  STILL HERE.', x1 - 40, y + 92); }
     // the beacon in flight: one bright pulse crossing from their world to ours
     const ph = range(t, 126.3, arrive);
