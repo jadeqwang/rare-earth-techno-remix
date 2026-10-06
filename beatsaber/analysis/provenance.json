@@ -1,0 +1,68 @@
+{
+  "source": "audio/Rare_Earth_DDR.mp3",
+  "source_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+  "audio_conversion": "Original MP3 decoded to Ogg Vorbis q6, 44100 Hz; no trim, padding, or tempo change",
+  "duration_s": 127.96,
+  "musical_beat_zero_s": 0.0611,
+  "encoded_beat_phase": 0.13151097718516333,
+  "initial_bpm": 129.143349118,
+  "bpm_events_per_chart": 71,
+  "sections": [
+    {
+      "id": "open",
+      "t": 0.0,
+      "end": 3.1,
+      "label": "cold open"
+    },
+    {
+      "id": "v1",
+      "t": 3.1,
+      "end": 17.9,
+      "label": "verse 1 (earth, asking)"
+    },
+    {
+      "id": "v2",
+      "t": 17.9,
+      "end": 39.95,
+      "label": "verse 2 (earth, the signal)"
+    },
+    {
+      "id": "build",
+      "t": 39.95,
+      "end": 54.4,
+      "label": "build (the other world)"
+    },
+    {
+      "id": "v3",
+      "t": 54.4,
+      "end": 75.3,
+      "label": "drop 1 / verse 3 (the filter, keep looking)"
+    },
+    {
+      "id": "v4",
+      "t": 75.3,
+      "end": 89.9,
+      "label": "drop 2a / verse 4 (call and response)"
+    },
+    {
+      "id": "v5",
+      "t": 89.9,
+      "end": 111.9,
+      "label": "drop 2b / verse 5 (arrival)"
+    },
+    {
+      "id": "final",
+      "t": 111.9,
+      "end": 123.4,
+      "label": "final drop (contact)"
+    },
+    {
+      "id": "outro",
+      "t": 123.4,
+      "end": 127.96,
+      "label": "outro"
+    }
+  ],
+  "physical_playtest": false,
+  "game_engine_load_test": false
+}

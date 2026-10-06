@@ -1,4 +1,4 @@
-# RARE EARTH — music video and DDR steps
+# RARE EARTH — music video, DDR steps, and Beat Saber
 
 A music video for **"Rare Earth"** (DDR / techno version), a song about hoping to find intelligent
 life, written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI crowdfunding
@@ -30,6 +30,31 @@ replace its song folder and reload the song cache.
 
 Meters use the classic DDR scale and remain provisional until pad playtesting.
 See the [installation details, chart descriptions, and validation](ddr/README.md).
+
+## Play Rare Earth in Beat Saber
+
+**[Download the Beat Saber map pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/beatsaber/Rare_Earth_Beat_Saber_Pack.zip)**
+
+Three Standard, two-saber charts using **the same 2:08 track as the DDR pack**,
+with alternating swings, accents at the drops, and synchronized lighting.
+The original recording is converted to Ogg Vorbis for Beat Saber without
+trimming or changing its tempo. All charts follow its gradual acceleration
+from 129 to 136 BPM.
+
+| Difficulty | Blocks | Average notes/sec |
+|---|---:|---:|
+| Normal | 228 | 1.78 |
+| Hard | 357 | 2.79 |
+| Expert | 497 | 3.88 |
+
+**[Watch the full-length Beat Saber preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/beatsaber/preview/Rare_Earth_Beat_Saber_preview.mp4)** — all three charts side by side, with the packaged audio.
+This is an autoplay visualization of the exported maps.
+
+For PC VR, extract the ZIP into a song folder inside
+`Beat Saber_Data/CustomLevels/`. Standalone Quest requires an existing
+custom-song setup. See the [installation instructions and validation](beatsaber/README.md).
+Timing, audio alignment, and swing-direction checks passed; the maps remain
+a first draft pending an in-game load test and VR playtest.
 
 ## Music video
 

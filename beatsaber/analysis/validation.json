@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "source_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+  "charts": {
+    "Normal": {
+      "blocks": 228,
+      "average_nps": 1.782,
+      "peak_blocks_in_one_second": 4,
+      "double_hits": 5,
+      "min_same_hand_gap_s": 0.442275,
+      "min_direction_change_degrees": 180.0,
+      "first_hit_s": 3.7745,
+      "last_hit_s": 126.2041,
+      "max_ddr_timing_difference_ms": 0.0,
+      "light_events": 681,
+      "bpm_events": 71
+    },
+    "Hard": {
+      "blocks": 357,
+      "average_nps": 2.79,
+      "peak_blocks_in_one_second": 6,
+      "double_hits": 10,
+      "min_same_hand_gap_s": 0.221313,
+      "min_direction_change_degrees": 135.0,
+      "first_hit_s": 3.7745,
+      "last_hit_s": 126.2041,
+      "max_ddr_timing_difference_ms": 0.0,
+      "light_events": 681,
+      "bpm_events": 71
+    },
+    "Expert": {
+      "blocks": 497,
+      "average_nps": 3.884,
+      "peak_blocks_in_one_second": 6,
+      "double_hits": 16,
+      "min_same_hand_gap_s": 0.221138,
+      "min_direction_change_degrees": 135.0,
+      "first_hit_s": 3.7745,
+      "last_hit_s": 126.2041,
+      "max_ddr_timing_difference_ms": 0.0,
+      "light_events": 681,
+      "bpm_events": 71
+    }
+  },
+  "audio": {
+    "source_decoded_duration_s": 127.96,
+    "output_decoded_duration_s": 127.96,
+    "windows": [
+      {
+        "center_s": 5,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "zero_lag_correlation": 0.996512
+      },
+      {
+        "center_s": 35,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "zero_lag_correlation": 0.997754
+      },
+      {
+        "center_s": 65,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "zero_lag_correlation": 0.998907
+      },
+      {
+        "center_s": 95,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "zero_lag_correlation": 0.998164
+      },
+      {
+        "center_s": 123,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "zero_lag_correlation": 0.998205
+      }
+    ]
+  },
+  "cover_size": [
+    512,
+    512
+  ],
+  "archive_files": 6,
+  "checks": [
+    "independent DDR timing integration",
+    "all note bounds and fields",
+    "strict hand separation",
+    "alternating swing directions",
+    "same-hand time spacing",
+    "no face notes or overlaps",
+    "audio alignment at five song positions",
+    "archive round-trip"
+  ],
+  "physical_playtest": false,
+  "game_engine_load_test": false,
+  "limitations": "Static format and flow checks plus decoded-audio checks; no VR gameplay test."
+}
