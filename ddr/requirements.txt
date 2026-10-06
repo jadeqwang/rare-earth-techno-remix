@@ -1,0 +1,7 @@
+numpy
+scipy
+soundfile
+imageio-ffmpeg
+pillow
+simfile
+setuptools<81
