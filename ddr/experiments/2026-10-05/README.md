@@ -5,9 +5,9 @@ doubles generated with the official GrooveAuthor generation library. The
 original song files, pack ZIP, source audio, and measured timing report are
 unchanged. This edition installs alongside the original as **Rare Earth Model Pack**.
 
-- **[Download the Model Edition step pack](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip)**
-- **[Watch singles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)**
-- **[Watch doubles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)**
+- **[Download the Model Edition step pack](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip)**
+- **[Watch singles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)**
+- **[Watch doubles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)**
 - **[Install and give pad-test feedback](PAD_REVIEW.md)**
 - **[Review discussion and pad-test feedback — PR #6](https://github.com/jadeqwang/rare-earth-techno-remix/pull/6)**
 - [Use the music video as the StepMania background](../../../README.md#use-the-music-video-as-the-stepmania-background)

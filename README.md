@@ -10,9 +10,9 @@ The **Model Edition** has eight new charts: four singles generated with ITGPT's
 trained models and four doubles generated with GrooveAuthor's footwork library.
 Physical pad testing and an in-game load check are pending.
 
-- **[Download the Model Edition step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip)**
-- **Watch:** [Model singles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)
-  · [Model doubles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)
+- **[Download the Model Edition step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip)**
+- **Watch:** [Model singles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)
+  · [Model doubles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)
 - **[Install and give pad-test feedback](ddr/experiments/2026-10-05/PAD_REVIEW.md)**
   · [Generation comparison and validation](ddr/experiments/2026-10-05/README.md)
 - **[Review discussion and pad-test feedback — PR #6](https://github.com/jadeqwang/rare-earth-techno-remix/pull/6)**
@@ -24,9 +24,9 @@ Extract the Model Edition ZIP into StepMania's `Songs` folder and select
 for comparison. The [pad review guide](ddr/experiments/2026-10-05/PAD_REVIEW.md)
 includes the provisional meters and passages to check.
 
-## Play Rare Earth in StepMania
+## Original DDR pack — comparison
 
-**[Download the DDR step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/Rare_Earth_DDR_Step_Pack.zip)**
+**[Download the original DDR step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/Rare_Earth_DDR_Step_Pack.zip)**
 
 Eight charts for **StepMania 3.9 and StepMania 5**: Beginner, Easy, Standard,
 and Heavy for both four-panel single and eight-panel double. The ZIP includes
@@ -39,8 +39,8 @@ the song, `.sm` and `.ssc` files, and artwork.
 | Standard | 6 | 7 |
 | Heavy | 9 | 10 |
 
-**Watch the steps:** [Single preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_single_preview.mp4)
-· [Double preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_double_preview.mp4).
+**Original steps for comparison:** [Original single preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_single_preview.mp4)
+· [Original double preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_double_preview.mp4).
 Each 60 fps preview shows all four levels. Tap arrows disappear when they reach the
 press point; holds remain until release.
 
