@@ -53,11 +53,14 @@ Full-length previews for [singles](https://github.com/jadeqwang/rare-earth-techn
 and [doubles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_double_preview.mp4) each show the four
 difficulty levels together. They render notes directly from the exported SSC
 against the audio and are autoplay visualizations, rather than game footage.
-Tap arrows disappear at their scheduled press time; hold arrows remain at the
-target until their release time, then disappear immediately.
+Moving arrows and stationary targets share the same sprite center. The
+60 fps previews remove taps on the first frame at or after their scheduled
+press time (less than 16.7 ms later); holds remain at the target until release.
 The [frame review](preview/hit-timing-review.png) and
 [encoded-video checks](analysis/preview-hit-check.json) verify the disappearance
-at tap and hold-release boundaries in both previews.
+at tap and hold-release boundaries in both previews. The checks also compare
+the encoded audio against the source near the start, middle, and end to
+detect an encoding delay or drift.
 
 The [validation report](analysis/validation.json) records successful strict
 parsing of both formats, matching chart data, complete hold pairs, timing

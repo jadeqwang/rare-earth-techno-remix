@@ -48,11 +48,12 @@
       "event": "tap hit",
       "time_s": 3.7744999999982003,
       "checked_video_frames": [
-        113,
-        114
+        226,
+        227
       ],
+      "disappearance_delay_ms": 8.833333,
       "red_arrow_pixels_before_and_after": [
-        316,
+        297,
         0
       ]
     },
@@ -61,11 +62,12 @@
       "event": "hold release",
       "time_s": 18.046475000015423,
       "checked_video_frames": [
-        541,
-        542
+        1082,
+        1083
       ],
+      "disappearance_delay_ms": 3.525,
       "red_arrow_pixels_before_and_after": [
-        286,
+        289,
         0
       ]
     },
@@ -74,12 +76,13 @@
       "event": "tap hit",
       "time_s": 3.7744999999982003,
       "checked_video_frames": [
-        113,
-        114
+        226,
+        227
       ],
+      "disappearance_delay_ms": 8.833333,
       "red_arrow_pixels_before_and_after": [
-        151,
-        0
+        150,
+        1
       ]
     },
     {
@@ -87,13 +90,170 @@
       "event": "hold release",
       "time_s": 18.046475000015423,
       "checked_video_frames": [
-        541,
-        542
+        1082,
+        1083
       ],
+      "disappearance_delay_ms": 3.525,
       "red_arrow_pixels_before_and_after": [
-        138,
+        118,
         0
       ]
+    }
+  ],
+  "frames_per_second": 60,
+  "maximum_frame_delay_ms": 16.666666666666668,
+  "arrow_alignment_checks": [
+    {
+      "mode": "single",
+      "column": 0,
+      "center_error_pixels": [
+        0.0,
+        -0.5
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "single",
+      "column": 1,
+      "center_error_pixels": [
+        -0.5,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "single",
+      "column": 2,
+      "center_error_pixels": [
+        0.5,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "single",
+      "column": 3,
+      "center_error_pixels": [
+        0.0,
+        0.5
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 0,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 1,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 2,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 3,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 4,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 5,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 6,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    },
+    {
+      "mode": "double",
+      "column": 7,
+      "center_error_pixels": [
+        0.0,
+        0.0
+      ],
+      "colored_pixels_outside_target": 0
+    }
+  ],
+  "encoded_audio_checks": [
+    {
+      "mode": "single",
+      "window_start_s": 5,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.9939784230687837
+    },
+    {
+      "mode": "single",
+      "window_start_s": 55,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.998727794042048
+    },
+    {
+      "mode": "single",
+      "window_start_s": 110,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.9967015207509985
+    },
+    {
+      "mode": "double",
+      "window_start_s": 5,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.9939784230687837
+    },
+    {
+      "mode": "double",
+      "window_start_s": 55,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.998727794042048
+    },
+    {
+      "mode": "double",
+      "window_start_s": 110,
+      "audio_lag_samples": 0,
+      "audio_lag_ms": 0.0,
+      "correlation": 0.9967015207509985
     }
   ],
   "full_video_decodes": "passed",

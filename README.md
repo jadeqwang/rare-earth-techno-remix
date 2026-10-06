@@ -21,7 +21,7 @@ the song, `.sm` and `.ssc` files, and artwork.
 
 **Watch the steps:** [Single preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_single_preview.mp4)
 · [Double preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_double_preview.mp4).
-Each preview shows all four levels. Tap arrows disappear when they reach the
+Each 60 fps preview shows all four levels. Tap arrows disappear when they reach the
 press point; holds remain until release.
 
 To install, extract the ZIP into StepMania's `Songs` folder, then reload songs
