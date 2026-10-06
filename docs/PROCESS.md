@@ -312,6 +312,154 @@ Apocalypse) for the SETI crowdfunding campaign in 2011*, then *video drawn in ja
 0.25 s through the changed shots) and full-size crops of each fix. The picture was encoded as in §8; the
 soundtrack is the previous release's AAC stream, copied, and its packets are identical.
 
+## 3e. Pass 5: lip sync, drawing by drawing
+
+Before launch, a note asked for the whole video to be checked for DOT's mouth moving out of time with the vocal, or
+the wrong way. The release was audited end to end: every drawing of all 20 shots of DOT, cropped from the released
+video at the mouth and laid out against the vocal stem's envelope, its spectrogram and forced-aligned phones, one cell
+per drawing as played (on twos, at each shot's lag). What was wrong:
+
+* **Open through rests and breaths**: after "there" in *yearning* (0:08.5), after "not" and "that" in *transit_eye*,
+  the breath before "science" in *vision* (1:12.1), after "care" in *care2* (1:17.5), after "caught" in *caught2*
+  (1:37.1), after "that" in *own* (1:44.3).
+* **Late or shut on the word**: "far" (0:33.0) and the whole held "own" (0:34.8–35.8, a closed smile) in
+  *transit_eye*; "my" in *own* (1:45.9, shut for 0.3 s); "Do", "you" and "care" in *care2* (clenched teeth); "I've"
+  in *caught* and *caught2*; "bea-" in *blink*; "star" in *blinkdance*; the first syllable of "there" in *listen*.
+* **Lip closures missed**: the "f" and "m" of "from my" in *transit_eye* and *own*, the "b"s of "beating blinking",
+  the "v" of "a vision", the "th" of "think".
+* **Two mouths at once**: in *transit_eye* at 0:35.5 the transplant of §3d had put an open mouth over the take's
+  closed smile and left the smile showing beside it. That pass replaced 219 of 263 drawings, the ones the take had got
+  right as well as the wrong ones.
+
+The instrumental final drop (*dance2*, *dance3*, *stillhere*) was checked too: her mouth stays shut there. *alone*
+(tiny in frame until the held "alone"), *alone2* (from behind, then an open "alone"), the poster and the pull-back
+(seen from behind) have nothing to fix.
+
+**Tools.** The Cloudflare catalog was searched for a lip-sync model (every schema in the unified catalog's 164 models,
+and Workers AI): none re-times a mouth in existing footage. The video models that take audio (Seedance 2.5 with
+reference audio, Gemini Omni, MiniMax H3, Pruna P-Video) generate the whole shot again: a new performance, without the
+lettering fixes, and no surer of sync than the takes (Seedance made them, and its sync is what drifted). The open
+lip-sync models (Wav2Lip, LatentSync, MuseTalk) are trained on photographed faces and draw the mouth region at low
+resolution (Wav2Lip at 96 px), and any generated mouth would be in a different hand from the take's. A mouth borrowed
+from another frame of the same take is already drawn in its hand, so that is what this pass uses; LivePortrait (its
+ONNX export, from facefusion's model assets on GitHub) reads the anime faces well enough to measure head pose and to
+make small edits.
+
+**Method** (`pipeline/sync/relip.py`), from the takes as generated, the lettering fixes kept:
+
+1. An exposure sheet (`pipeline/sync/lipsheet.json`) gives, for every sung syllable, how open the mouth should be,
+   read off spectrogram views of the stem with PocketSphinx's forced-aligned phones as a first guess. Lip closures (m,
+   b, p, v, f) are marked to show even when shorter than a drawing, and each drawing is timed a frame ahead of the
+   sound, as cel animation times mouths. The sheet lines up with the stem's envelope within 0.04 s in every shot but
+   *vision*, where the voiced n that ends "transmission" is held nearly shut on purpose (§3d).
+2. Every drawing's own mouth is found and measured: the gap between the lips for the face's size, against how wide
+   that take opens it when it sings out.
+3. A drawing is changed only if it reads as wrong: open through a rest or a closure, open wide on a consonant, shut
+   on a sung vowel. Anything in between is how the take chose to sing it.
+4. A wrong drawing gets a mouth from another frame of the same take, chosen by dynamic programming over each run of
+   wrong drawings: open as far as the sheet asks, from a head turned within 10° (LivePortrait's pose estimate) and at
+   the same scale, near in time and lit alike, moving forward as the take moves. The donor frame is registered onto
+   the face (ECC, affine, both mouths masked out) and its mouth cloned in (Poisson) over both mouths and a margin of
+   skin, so nothing of the old mouth is left; hands and hair are never taken in. Where registration can't follow the
+   head, LivePortrait draws the donor's face in this frame's pose; where no frame has the mouth needed, it opens or
+   closes the drawing's own lips.
+5. Every result is measured again and must say what the sheet asks, still look like the donor's mouth, leave the face
+   around it unchanged, and be drawn in dark, crisp line. If nothing passes, the drawing stays as the take drew it.
+
+90 of the 355 drawings in these shots were changed: 89 with a mouth from the same take, one redrawn by LivePortrait.
+Two had no clean fix and were left: the first drawing of *listen2* as her face turns into view on the held "me"
+(1:23.2), and one open drawing on the "k" of "think" in *caught2* (1:36.2), which needs no closed lips. Every change
+was checked by eye on QA sheets (before above, after below, from `relip.py --preview DIR`), the doubtful ones at full
+size, and all of them again as rendered in the release.
+
+As played, re-measured from the takes as written (`pipeline/sync/lipcheck.py`; *wrong* counts drawings that read as
+wrong, *r* is the correlation of openness with the sheet):
+
+| shot | drawings | changed | wrong before | wrong after | r before | r after |
+|---|---|---|---|---|---|---|
+| yearning | 39 | 7 | 7 | 0 | +0.45 | +0.82 |
+| listen | 23 | 1 | 1 | 0 | +0.76 | +0.86 |
+| caught | 20 | 3 | 3 | 2 | −0.04 | +0.45 |
+| blink | 31 | 5 | 6 | 2 | +0.09 | +0.59 |
+| transit_eye | 61 | 28 | 10 | 0 | +0.58 | +0.86 |
+| keep_yagi | 10 | 0 | 0 | 0 | — | — |
+| vision | 18 | 4 | 5 | 0 | +0.57 | +0.89 |
+| vision2 | 17 | 4 | 4 | 0 | −0.01 | +0.79 |
+| care2 | 29 | 10 | 12 | 0 | −0.03 | +0.82 |
+| listen2 | 17 | 0 | 1 | 1 | −0.06 | −0.06 |
+| caught2 | 35 | 13 | 11 | 1 | −0.17 | +0.57 |
+| blinkdance | 13 | 3 | 3 | 0 | +0.58 | +0.85 |
+| own | 42 | 12 | 5 | 0 | +0.64 | +0.92 |
+| **all** | **355** | **90** | **68** | **6** | | |
+
+The four left in *caught* and *blink* sit on the threshold: a small mouth on "I", teeth together a frame before
+"I've", and teeth together on the "-ng" that ends "blinking", which needs no open lips. *keep_yagi* shows her face
+only for the held "looking", and it was right. As rendered, two changes read less than in the takes: the "bea-"
+opened by LivePortrait in *blink* (0:25.75) is small and pale enough inside that the ink draws it as a line, and in
+*blinkdance* her face is small. The re-lipped takes are the `*_lips.mp4` files in `pipeline/base_clips/`; they
+replace the `*_sync.mp4` takes of §3d except for *alone2* (sd16), which keeps its profile mouths. The storyboard's
+1:16.8 tile is rendered again, since that drawing's mouth changed (the other tiles are unchanged).
+
+**Notes on the lip-sync cut, acted on.**
+* *of a star* (0:27.7): the last two drawings of *blink* opened wide, an "ah" that read as "star" before the word. "of a"
+  is a small "uh"; the sheet now caps those spans (`small`) and they get small mouths from the same take.
+* *my own* (0:34.7): the voice breaks from "my" into "own" at 34.66 s, not at 34.85 s where the phones had it, so the
+  round "o" came about four frames late. "own" now starts there and asks for a rounded mouth (`round`).
+* *our planet waits* (1:07): se03 drew only a faint teal ring on the back of her jacket, and the ink redraw lost it in the
+  jacket's night shading, so the jacket didn't match the opening shot's. `pipeline/plate_fixes/fix_backdot.py` paints a
+  solid dot over the ring, tracked by hand as the camera pulls back, with her hair left in front (`se03_..._dot.mp4`). Its
+  colour is the drawn ring's own blue, the sheet's pale blue as it looks in that night light; a lighter fill looked lit
+  by a light of its own.
+* *Our science* (1:11): the take's mouth was open before "Our". "Our" starts where the note rises from the D4 of
+  "-sion", about 71.31 s; the mouth is now shut until the drawing at 71.33 s, the last shut drawing held for two frames
+  where no clean closed mouth could be made (`relip.py` holds the previous drawing then, as cel animation does).
+  (The QA ink check compares a borrowed mouth's line with the donor's, not with the open mouth it replaces.)
+* *do you still* (1:15.9): "do" ends at 75.84 s and "you" starts at 76.03 s, not at the phones' 75.99/76.02 with no
+  breath between. The mouth now shuts in the breath and opens on "you" instead of a drawing later.
+* *Our* (1:11) again: the take sang all of "our" in half a second and shut by 71.9 s, while the held E4 fades to 72.15 s,
+  so the mouth finished before the voice did. The sheet now holds "-r" open to 72.12 s.
+* *vision* (1:14): the take held a wide "ah" through "vi-"; the sheet marks it `small` (an "ih", teeth near together)
+  from the release of the "v", and it gets that mouth from the same take.
+* *you* (1:16): the drawing that comes on just before the voice (75.96 s) is now a rounded "oo" (`round`), held through
+  the vowel, instead of the take's open mouth with "you" arriving a drawing later.
+* *Our* (1:11), properly this time: the vocal stem's formants show that 71.3–71.9 s is still "transmission", its "-sion"
+  rising from D4 to an open E4 and ending on a held "n" (low F1, 71.58–71.9 s); "Our" is the short, quiet syllable at
+  71.92–72.16 s, just before the "s" of "science" (Whisper, on the stem, also puts it at 72.0 s). The mouth now stays
+  small, then shut on the "n", and opens on "Our"; `render/data/audio.json` moves the word (and the OUR title) from
+  71.28 s to 71.92 s. The earlier pin to 71.28 s (§3d) was the note change inside "-sion".
+* *our planet waits* (1:08–1:09): RARE EARTH is set on the back under the dot, as on the sheet and in the pull-back, in
+  the gap above the crop top's hem, and heavier than in the pull-back so the ink redraw keeps it at this size
+  (`fix_backdot.py`).
+
+**Re-shoots for the last three spots.** Retiming the old takes' mouths kept coming close without landing at *blink*
+(0:25), *vision* (1:11) and *care2* (1:15). Those three shots were re-shot with Seedance 2.5 the way the alt-pop cut was
+made (`pipeline/reshoot.py`): image-to-video from the shot's own first drawing, with the vocal cut to begin exactly at the
+shot's first frame as the reference audio, so the new take needs no lag and no mouth retiming. 15 takes (about $14),
+scored against the vocal and checked by eye; the chosen takes are `pipeline/base_clips/reshoot/` (`sd06r`, `sd10r`,
+`sd11r` in `selects.json`). Also: *dot2* (1:31) is back to the field of petal dishes turning to our Sun (Kenton's note),
+and Echo's night city at 1:57 glows fuchsia, like every other Echo shot.
+
+## 3f. Pass 6: the build into drop 1 (0:51–0:55)
+
+A note that the stretch at 0:51 was abstract and less engaging than the rest. Under it the kick and bass drop out
+(47.5–52.5 s) and an eighth-note snare roll builds into the drop.
+
+**The tower (0:51.16–0:52.96).** It was the one flat procedural shot of Echo, between two rotoscoped plates, locked off,
+and its only motion (the ring lights) was keyed to kicks, of which there are none here. It is now a new plate, se11
+(Seedance 2.5, take bce14cb91c, 2.9–4.7 s; references: the world sheet's tower and a frame of se10 so the design
+carries over): low and close, the camera cranes up the tower as pulses of light climb it, the halo ring flares on the
+51.79 snare and the tip starts to glow. It charges and does not fire: the beam is saved for se10 at 1:47; the other two
+takes started firing one. Over it, `ECHO · SIGNAL TOWER` and a charge readout that steps on each snare to 100% at the
+cut, and *are you there* in Echo's glyphs, carried over from the shot before it (the lone cliff dish at 0:50). Three runs, about $3.50. `gen.py` now
+also takes an API token from `CLOUDFLARE_API_TOKEN` when it runs outside the original sandbox.
+
+**The flips (0:52.96–0:54.76).** One beat each, Earth's array and Echo's field. Each snap finished in the first eighth
+of a second, under the cut and its flash, so the rest of every beat was a still; the targets were random and Echo's
+high camera made its petal dishes read as wireframe cones. With choreography `converse` (`array.js`, `petals.js`) the
+two worlds take turns: Earth's dishes aim screen right and Echo's screen left, so each cut reads as one looking at the
+other; each shot starts where the other world left off, dips, and snaps on the offbeat, one step higher, so they rise
+together into the title; Echo blooms as it rises, seen from above the heads; both cameras push in on the last two beats.
+
 ## 4. Rotoscope guides
 
 `pipeline/roto_extract.py` turns each selected take into per-frame guide maps: XDoG line art (R),

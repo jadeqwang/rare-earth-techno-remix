@@ -5,12 +5,12 @@
   "lag": 0.0
  },
  "sd02": {
-  "file": "sd02_cu_yearning__c8b3647c99.mp4",
+  "file": "sd02_cu_yearning__c8b3647c99_lips.mp4",
   "start": 5.2,
   "lag": -0.041667
  },
  "sd03": {
-  "file": "sd03_mcu_listen__17fad81acf.mp4",
+  "file": "sd03_mcu_listen__17fad81acf_lips.mp4",
   "start": 10.4,
   "lag": -0.25
  },
@@ -20,17 +20,17 @@
   "lag": 0.0
  },
  "sd05": {
-  "file": "sd05_console_caught__ba8af2ae02_lettering.mp4",
+  "file": "sd05_console_caught__ba8af2ae02_lettering_lips.mp4",
   "start": 21.5,
   "lag": -0.291667
  },
  "sd06": {
-  "file": "sd06_blink__a30f474b95_sync.mp4",
+  "file": "sd06_blink__a30f474b95_lips.mp4",
   "start": 25.0,
   "lag": 0.333333
  },
  "sd07": {
-  "file": "sd07_transit__9681e0518b_sync.mp4",
+  "file": "sd07_transit__9681e0518b_lips.mp4",
   "start": 30.0,
   "lag": 0.0
  },
@@ -40,37 +40,37 @@
   "lag": 0.0
  },
  "sd09": {
-  "file": "sd09_keep_looking__c6c9c8b95f.mp4",
+  "file": "sd09_keep_looking__c6c9c8b95f_lips.mp4",
   "start": 61.4,
   "lag": -0.083333
  },
  "sd10": {
-  "file": "sd10_vision__1368eb119a_sync.mp4",
+  "file": "sd10_vision__1368eb119a_lips.mp4",
   "start": 71.0,
   "lag": 0.0
  },
  "sd11": {
-  "file": "sd11_care__03ce0c9203_sync.mp4",
+  "file": "sd11_care__03ce0c9203_lips.mp4",
   "start": 75.0,
   "lag": 0.125
  },
  "sd12": {
-  "file": "sd12_search_listen__58e3680064.mp4",
+  "file": "sd12_search_listen__58e3680064_lips.mp4",
   "start": 81.0,
   "lag": -0.208333
  },
  "sd13": {
-  "file": "sd13_caught_reply__935323d481_lettering_sync.mp4",
+  "file": "sd13_caught_reply__935323d481_lettering_lips.mp4",
   "start": 93.3,
   "lag": -0.333333
  },
  "sd14": {
-  "file": "sd14_blink_dance__bd2b906427.mp4",
+  "file": "sd14_blink_dance__bd2b906427_lips.mp4",
   "start": 97.2,
   "lag": -0.083333
  },
  "sd15": {
-  "file": "sd15_own_ecu__3eb552a647_sync.mp4",
+  "file": "sd15_own_ecu__3eb552a647_lips.mp4",
   "start": 102.8,
   "lag": -0.083333
  },
@@ -100,7 +100,7 @@
   "lag": 0
  },
  "se03": {
-  "file": "se03_crowd_lights__698eb06939.mp4",
+  "file": "se03_crowd_lights__698eb06939_dot.mp4",
   "start": 67.17,
   "lag": 0
  },
@@ -142,6 +142,26 @@
  "se08b": {
   "file": "se08_cliff_dish__490a672d82.mp4",
   "start": 79.0,
+  "lag": 0
+ },
+ "sd06r": {
+  "file": "reshoot/blink__03ec9b2387.mp4",
+  "start": 25.3,
+  "lag": 0.0
+ },
+ "sd10r": {
+  "file": "reshoot/vision__cafc222b43.mp4",
+  "start": 71.14,
+  "lag": 0.0
+ },
+ "sd11r": {
+  "file": "reshoot/care2__68bcf9023c.mp4",
+  "start": 75.36,
+  "lag": 0.0
+ },
+ "se11": {
+  "file": "se11_tower_charge__bce14cb91c.mp4",
+  "start": 48.26,
   "lag": 0
  }
 }

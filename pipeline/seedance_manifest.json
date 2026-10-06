@@ -1688,5 +1688,40 @@
     "file": "/tmp/work/sd/prod/se10_tower_beam__7ab900a4f5.mp4"
    }
   ]
+ },
+ "se11_tower_charge": {
+  "spec": {
+   "id": "se11_tower_charge",
+   "t0": 0.0,
+   "dur": 5,
+   "audio": null,
+   "bg": "context",
+   "takes": 3,
+   "style": " Premium anime background art (Makoto Shinkai skies), crisp confident lineart, clean cel-shaded shapes, violet, magenta-pink and mint palette. No people, no creatures, no characters, no text, no subtitles, no logos.",
+   "prompt": "Dusk on an alien world, low-angle close shot of a colossal slender white signal tower rising out of a sea of violet clouds, a halo ring of mint lights encircling it near the top. The camera cranes steadily up the side of the tower toward the ring. Pulses of mint light race up the seams of the tower one after another, faster and faster, and the halo ring flares brighter each time a pulse reaches it while its lights spin around the tower. A huge coral sun sits low on the horizon and a giant pale planetary ring arcs across the magenta sky. At the end the very tip of the tower glows white like a star."
+  },
+  "takes": [
+   {
+    "job": "se11_tower_charge-72f3608bdd",
+    "state": "done",
+    "ts": 1791128308.9606667,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se11_tower_charge__72f3608bdd.mp4"
+   },
+   {
+    "job": "se11_tower_charge-bce14cb91c",
+    "state": "done",
+    "ts": 1791128309.452411,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se11_tower_charge__bce14cb91c.mp4"
+   },
+   {
+    "job": "se11_tower_charge-d5ef8a4ba9",
+    "state": "done",
+    "ts": 1791128309.9349866,
+    "hair": "v3",
+    "file": "/tmp/work/sd/prod/se11_tower_charge__d5ef8a4ba9.mp4"
+   }
+  ]
  }
 }

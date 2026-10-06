@@ -65,6 +65,16 @@ function pose(d, t, p, A) {
     el = lerp(1.57, 1.1, open); az = 0.3 * Math.sin(d.seed * 6);
   } else if (mode === 'sweep') {
     open = 1; az = 0.5 * Math.sin(t * 0.5); el = 1.05 + 0.1 * Math.sin(t * 0.7);
+  } else if (mode === 'converse') {
+    // the counterpart of the array's 'converse' (scenes/array.js): same steps, aimed back the other way, blooming as it rises
+    const k = p.step ?? 0, EL = [0.35, 0.6, 0.85, 1.05, 1.25], OPEN = [0.5, 0.65, 0.8, 0.9, 0.95];   // past ~1 the petals splay flat
+    const delay = clamp(Math.hypot(d.x, d.z) / 110) * 0.1;
+    const ph = clamp((t - p.tSnap - delay) / 0.22), e = easeOutBack(ph, 2.0);
+    const antic = smooth(clamp((t - p.t0) / (p.tSnap - p.t0))) * (1 - ph);
+    const AZ = (n) => p.aim * (0.75 - 0.15 * n);
+    az = lerp(AZ(k), AZ(k + 1), e) - p.aim * 0.05 * antic;
+    el = lerp(EL[k], EL[k + 1], e) - 0.08 * antic;
+    open = lerp(OPEN[k], OPEN[k + 1], e) - 0.1 * antic;
   } else if (mode === 'snap' || mode === 'dance') {
     const tg = (n) => [(hash1(n * 2.3) - 0.5) * 1.4, 0.9 + hash1(n * 3.9) * 0.6];
     const delay = mode === 'dance' ? clamp((d.x + 60) / 120) * 0.35 : 0;
@@ -94,6 +104,11 @@ export const petals = {
     }
     const cam = p.cam || 'low';
     if (cam === 'low') { camera.position.set(-4 + lt * 1.4, 3.2, 12 - lt * 1.5); camera.lookAt(6, 7, -40); }
+    else if (cam === 'mirror') {
+      // the array's 'converse' angle mirrored (from the right, looking left), pushed in on each of its beats
+      const push = p.push ?? 0;
+      camera.position.set(4 - lt * 1.6 - push * 1.5, 8.5, 12 - lt * 3 - push * 4); camera.lookAt(-6, 2, -40);   // above the heads, into the cups
+    }
     else { camera.position.set(30 - lt * 2, 26, 22); camera.lookAt(0, 0, -30); }
     camera.aspect = 16 / 9; camera.updateProjectionMatrix();
     toon.draw(scene, camera, { mode: p.mode, fog: 0.75, inkA: INK.violet, accentC: INK.mint, glow: INK.pink, glow2: INK.mint,

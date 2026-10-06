@@ -21,7 +21,7 @@ async function openPage(browser) {
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') console.error('[page]', m.text()); });
   page.on('pageerror', (e) => console.error('[pageerror]', e.message));
-  await page.goto(`http://127.0.0.1:${PORT}/index.html?w=${W}&h=${H}`);
+  await page.goto(`http://127.0.0.1:${PORT}/index.html?w=${W}&h=${H}${args.notype ? '&notype=1' : ''}`);
   await page.waitForFunction(() => window.__ready !== undefined, null, { timeout: 60000 });
   await page.evaluate(() => window.__ready);
   return page;

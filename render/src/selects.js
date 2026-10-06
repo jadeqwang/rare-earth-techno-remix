@@ -115,5 +115,21 @@ export const SELECT = {
  "se08b": {
   "start": 79.0,
   "lag": 0
+ },
+ "sd06r": {
+  "start": 25.3,
+  "lag": 0.0
+ },
+ "sd10r": {
+  "start": 71.14,
+  "lag": 0.0
+ },
+ "sd11r": {
+  "start": 75.36,
+  "lag": 0.0
+ },
+ "se11": {
+  "start": 48.26,
+  "lag": 0
  }
 };

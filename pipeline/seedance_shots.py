@@ -26,6 +26,7 @@ ROOM = "/tmp/work/refs/env_control_room.jpg"
 CITY = "/tmp/work/refs/env_other_city.jpg"
 PETALS = "/tmp/work/refs/env_petal_field.jpg"
 OTOWER = "/tmp/work/refs/env_other_tower.jpg"
+SE10F = "/tmp/work/refs/se10_tower_frame.jpg"   # a frame of the se10 select at 2.5 s, so the tower's design carries over
 # pass 3 refs: panels cropped from the Echo world sheet as generated (git show 74a292a:design/world_etz1715b_sheet.jpg;
 # now design/world_echo_sheet.jpg) (PIL boxes): hero vista (4, 120, 644, 480),
 # petal field (956, 110, 1534, 480), other tower (610, 575, 1010, 915), sky study (1020, 570, 1534, 925) with its
@@ -159,4 +160,13 @@ SHOTS = [
                 " tower, centred in frame, with a halo ring of mint lights near its top fires a thin vertical beam of mint"
                 " light straight up into the starry sky; the beam pulses in a slow rhythm and the clouds glow where it"
                 " passes. The camera slowly pushes in."),
+    # ---------------- pass 5: the tower at 0:51 (the snare roll into drop 1) was the one flat procedural Echo shot.
+    # Close and low on the tower charging, not firing: the beam is saved for se10 at 1:47.
+    dict(id="se11_tower_charge", t0=0.0, dur=5, audio=None, bg="context", refs=[OTOWER, SE10F], takes=3, style=ENV_STYLE,
+         prompt="Dusk on an alien world, low-angle close shot of a colossal slender white signal tower rising out of a sea of"
+                " violet clouds, a halo ring of mint lights encircling it near the top. The camera cranes steadily up the side"
+                " of the tower toward the ring. Pulses of mint light race up the seams of the tower one after another, faster"
+                " and faster, and the halo ring flares brighter each time a pulse reaches it while its lights spin around the"
+                " tower. A huge coral sun sits low on the horizon and a giant pale planetary ring arcs across the magenta sky."
+                " At the end the very tip of the tower glows white like a star."),
 ]
