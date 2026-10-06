@@ -1,0 +1,224 @@
+{
+  "timing_preserved_exactly": true,
+  "bpm_segments": 71,
+  "charts": [
+    {
+      "type": "dance-double",
+      "difficulty": "Beginner",
+      "step_rows": 132,
+      "holds": 13,
+      "jumps": 0,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 1,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 40,
+        "NewArrow": 92
+      },
+      "official_orientations": {
+        "Normal": 132
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 1.597530146702587,
+      "full_pad_transitions": 7,
+      "full_pad_transition_beats": [
+        52.0,
+        90.0,
+        142.0,
+        184.0,
+        204.0,
+        253.0,
+        268.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/review/visualizations/2026-10-05 21-50-19/Rare Earth (Techno Remix).sm.Beginner.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Easy",
+      "step_rows": 226,
+      "holds": 8,
+      "jumps": 4,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 37,
+        "NewArrow": 193
+      },
+      "official_orientations": {
+        "Normal": 226
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 3.1831941080944652,
+      "full_pad_transitions": 9,
+      "full_pad_transition_beats": [
+        59.0,
+        84.0,
+        122.0,
+        160.0,
+        174.0,
+        184.0,
+        205.0,
+        232.0,
+        247.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/review/visualizations/2026-10-05 21-50-19/Rare Earth (Techno Remix).sm.Easy.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Medium",
+      "step_rows": 338,
+      "holds": 7,
+      "jumps": 10,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 79,
+        "NewArrow": 269
+      },
+      "official_orientations": {
+        "Normal": 338
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 6.395177490795722,
+      "full_pad_transitions": 7,
+      "full_pad_transition_beats": [
+        32.0,
+        105.0,
+        123.0,
+        216.0,
+        244.0,
+        264.0,
+        272.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/review/visualizations/2026-10-05 21-50-19/Rare Earth (Techno Remix).sm.Medium.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Hard",
+      "step_rows": 490,
+      "holds": 1,
+      "jumps": 15,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 81,
+        "NewArrow": 424
+      },
+      "official_orientations": {
+        "Normal": 490
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.23606797749979,
+      "max_foot_speed_panel_centers_per_second": 6.395177490795722,
+      "full_pad_transitions": 35,
+      "full_pad_transition_beats": [
+        12.5,
+        17.0,
+        23.0,
+        25.5,
+        29.0,
+        36.0,
+        42.0,
+        47.5,
+        67.0,
+        76.5,
+        87.0,
+        98.5,
+        106.0,
+        113.5,
+        117.0,
+        119.25,
+        130.5,
+        140.0,
+        142.25,
+        147.5,
+        158.0,
+        174.25,
+        188.5,
+        196.0,
+        201.5,
+        204.0,
+        206.25,
+        215.0,
+        230.5,
+        254.5,
+        258.0,
+        261.5,
+        269.0,
+        271.25,
+        278.0
+      ],
+      "sixteenth_burst_beats": 10,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/review/visualizations/2026-10-05 21-50-19/Rare Earth (Techno Remix).sm.Hard.footwork.json"
+    }
+  ]
+}

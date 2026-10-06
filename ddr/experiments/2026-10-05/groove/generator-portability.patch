@@ -1,0 +1,82 @@
+diff --git a/StepManiaChartGenerator/Program.cs b/StepManiaChartGenerator/Program.cs
+index 1bbbd17..ccde091 100644
+--- a/StepManiaChartGenerator/Program.cs
++++ b/StepManiaChartGenerator/Program.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.Diagnostics;
+ using System.Text.RegularExpressions;
+@@ -273,6 +273,35 @@ public class Program
+ 		Environment.Exit(bSuccess ? 0 : 1);
+ 	}
+ 
++    private static void WriteFootworkTelemetry(PerformedChart chart, string sourceName, string difficulty)
++    {
++        var nodes = new List<object>();
++        for (var node = chart.GetRootNode(); node != null; node = node.Next)
++        {
++            if (node is not StepPerformanceNode step) continue;
++            var feet = new List<object>();
++            for (var foot = 0; foot < NumFeet; foot++)
++            {
++                for (var portion = 0; portion < NumFootPortions; portion++)
++                {
++                    var state = step.GraphNodeInstance.Node.State[foot, portion];
++                    var link = step.GraphLinkInstance?.GraphLink.Links[foot, portion];
++                    feet.Add(new {
++                        foot, portion, lane = state.Arrow, state = state.State.ToString(),
++                        moving = link?.Valid ?? false,
++                        step = link?.Valid == true ? link.Value.Step.ToString() : null,
++                        action = link?.Valid == true ? link.Value.Action.ToString() : null
++                    });
++                }
++            }
++            nodes.Add(new { row = node.Position, time = node.Time,
++                orientation = step.GraphNodeInstance.Node.Orientation.ToString(), feet });
++        }
++        var path = System.IO.Path.Combine(VisualizationDir, sourceName + "." + difficulty + ".footwork.json");
++        File.WriteAllText(path, System.Text.Json.JsonSerializer.Serialize(nodes,
++            new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
++    }
++
+ 	/// <summary>
+ 	/// Determines the application version from the executing assembly.
+ 	/// Sets Version and FormattedVersionString.
+@@ -860,6 +889,11 @@ public class Program
+ 					continue;
+ 				}
+ 
++                // Export the official selected foot path for independent auditing.
++                // This records results only and does not influence chart generation.
++                if (Config.Instance.OutputVisualizations)
++                    WriteFootworkTelemetry(performedChart, songArgs.FileInfo.Name, chart.DifficultyType);
++
+ 				// At this point we have succeeded, so add the chart index to remove if appropriate.
+ 				if (currentChart != null)
+ 					chartsIndicesToRemove.Add(currentChartIndex);
+diff --git a/StepManiaChartGenerator/StepManiaChartGenerator.csproj b/StepManiaChartGenerator/StepManiaChartGenerator.csproj
+index c721fdb..5dda53f 100644
+--- a/StepManiaChartGenerator/StepManiaChartGenerator.csproj
++++ b/StepManiaChartGenerator/StepManiaChartGenerator.csproj
+@@ -1,6 +1,6 @@
+-﻿<Project Sdk="Microsoft.NET.Sdk">
++<Project Sdk="Microsoft.NET.Sdk">
+ 	<PropertyGroup>
+-		<TargetFramework>net7.0</TargetFramework>
++		<TargetFramework>net10.0</TargetFramework>
+ 		<OutputType>Exe</OutputType>
+ 		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+ 		<AssemblyTitle>StepManiaChartGenerator</AssemblyTitle>
+@@ -71,9 +71,5 @@
+ 		<RemoveDir Directories="$(ProjectDir)$(BaseIntermediateOutputPath)" />
+ 	</Target>
+ 	<ItemGroup>
+-		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+-		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+-		<PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" />
+-		<PackageReference Include="System.Text.Json" Version="7.0.3" />
+ 	</ItemGroup>
+ </Project>
+\ No newline at end of file

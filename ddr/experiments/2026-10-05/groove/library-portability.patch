@@ -1,0 +1,26 @@
+diff --git a/StepManiaLibrary/StepManiaLibrary.csproj b/StepManiaLibrary/StepManiaLibrary.csproj
+index 07d680f..5d05c2a 100644
+--- a/StepManiaLibrary/StepManiaLibrary.csproj
++++ b/StepManiaLibrary/StepManiaLibrary.csproj
+@@ -1,6 +1,6 @@
+-﻿<Project Sdk="Microsoft.NET.Sdk">
++<Project Sdk="Microsoft.NET.Sdk">
+ 	<PropertyGroup>
+-		<TargetFramework>net7.0</TargetFramework>
++		<TargetFramework>net10.0</TargetFramework>
+ 		<OutputType>Library</OutputType>
+ 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+ 		<AssemblyTitle>StepManiaLibrary</AssemblyTitle>
+@@ -88,11 +88,5 @@
+ 		<ProjectReference Include="..\Fumen\Fumen\Fumen.csproj" />
+ 	</ItemGroup>
+ 	<ItemGroup>
+-		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+-		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+-		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+-		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+-		<PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" />
+-		<PackageReference Include="System.Text.Json" Version="7.0.3" />
+ 	</ItemGroup>
+ </Project>
+\ No newline at end of file

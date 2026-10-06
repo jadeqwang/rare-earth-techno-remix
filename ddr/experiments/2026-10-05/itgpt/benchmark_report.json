@@ -1,0 +1,26 @@
+[
+  {
+    "threads": 2,
+    "length": 128,
+    "seconds": 2.1054641611408442,
+    "symbols_generated": 128
+  },
+  {
+    "threads": 2,
+    "length": 320,
+    "seconds": 9.245132870972157,
+    "symbols_generated": 320
+  },
+  {
+    "threads": 4,
+    "length": 128,
+    "seconds": 1.6364188049919903,
+    "symbols_generated": 128
+  },
+  {
+    "threads": 4,
+    "length": 320,
+    "seconds": 7.319445771863684,
+    "symbols_generated": 320
+  }
+]

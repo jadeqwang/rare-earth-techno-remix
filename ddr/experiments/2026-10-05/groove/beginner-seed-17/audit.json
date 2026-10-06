@@ -1,0 +1,50 @@
+{
+  "timing_preserved_exactly": true,
+  "bpm_segments": 71,
+  "charts": [
+    {
+      "type": "dance-double",
+      "difficulty": "Beginner",
+      "step_rows": 123,
+      "holds": 2,
+      "jumps": 2,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 67,
+        "NewArrow": 58
+      },
+      "official_orientations": {
+        "Normal": 123
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 1.4142135623730951,
+      "max_foot_speed_panel_centers_per_second": 1.6003321968705675,
+      "full_pad_transitions": 4,
+      "full_pad_transition_beats": [
+        80.0,
+        148.0,
+        213.0,
+        259.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/beginner-seed-17/review/visualizations/2026-10-05 21-50-18/beginner-seed-17.sm.Beginner.footwork.json"
+    }
+  ]
+}

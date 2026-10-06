@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Beginner Single",
+    "type": "dance-single",
+    "difficulty": "Beginner",
+    "meter": 3,
+    "step_rows": 113,
+    "jumps": 0,
+    "holds": 10,
+    "source_candidate": "beginner-seed-43",
+    "seed": 43,
+    "conditioned_difficulty": 3,
+    "model_repairs": [],
+    "credit": "ITGPT paper models"
+  },
+  {
+    "name": "Easy Single",
+    "type": "dance-single",
+    "difficulty": "Easy",
+    "meter": 4,
+    "step_rows": 175,
+    "jumps": 2,
+    "holds": 42,
+    "source_candidate": "easy-seed-29",
+    "seed": 29,
+    "conditioned_difficulty": 4,
+    "model_repairs": [
+      {
+        "tick": 13628,
+        "column": 2,
+        "from_note": "0",
+        "to_note": "3",
+        "reason": "close model hold before audio endpoint"
+      }
+    ],
+    "credit": "ITGPT paper models"
+  },
+  {
+    "name": "Standard Single",
+    "type": "dance-single",
+    "difficulty": "Medium",
+    "meter": 6,
+    "step_rows": 245,
+    "jumps": 12,
+    "holds": 9,
+    "source_candidate": "standard-seed-29",
+    "seed": 29,
+    "conditioned_difficulty": 6,
+    "model_repairs": [],
+    "credit": "ITGPT paper models"
+  },
+  {
+    "name": "Heavy Single",
+    "type": "dance-single",
+    "difficulty": "Hard",
+    "meter": 9,
+    "step_rows": 419,
+    "jumps": 1,
+    "holds": 0,
+    "source_candidate": "heavy-seed-43",
+    "seed": 43,
+    "conditioned_difficulty": 9,
+    "model_repairs": [],
+    "credit": "ITGPT paper models"
+  },
+  {
+    "name": "Beginner Double",
+    "type": "dance-double",
+    "difficulty": "Beginner",
+    "meter": 3,
+    "step_rows": 113,
+    "jumps": 0,
+    "holds": 10,
+    "source_candidate": "beginner-seed-43",
+    "seed": 43,
+    "conditioned_difficulty": 3,
+    "model_repairs": [],
+    "credit": "ITGPT rhythms + GrooveAuthor footwork"
+  },
+  {
+    "name": "Easy Double",
+    "type": "dance-double",
+    "difficulty": "Easy",
+    "meter": 5,
+    "step_rows": 175,
+    "jumps": 2,
+    "holds": 42,
+    "source_candidate": "easy-seed-29",
+    "seed": 29,
+    "conditioned_difficulty": 4,
+    "model_repairs": [
+      {
+        "tick": 13628,
+        "column": 2,
+        "from_note": "0",
+        "to_note": "3",
+        "reason": "close model hold before audio endpoint"
+      }
+    ],
+    "credit": "ITGPT rhythms + GrooveAuthor footwork"
+  },
+  {
+    "name": "Standard Double",
+    "type": "dance-double",
+    "difficulty": "Medium",
+    "meter": 7,
+    "step_rows": 245,
+    "jumps": 12,
+    "holds": 9,
+    "source_candidate": "standard-seed-29",
+    "seed": 29,
+    "conditioned_difficulty": 6,
+    "model_repairs": [],
+    "credit": "ITGPT rhythms + GrooveAuthor footwork"
+  },
+  {
+    "name": "Heavy Double",
+    "type": "dance-double",
+    "difficulty": "Hard",
+    "meter": 10,
+    "step_rows": 419,
+    "jumps": 1,
+    "holds": 0,
+    "source_candidate": "heavy-seed-43",
+    "seed": 43,
+    "conditioned_difficulty": 9,
+    "model_repairs": [],
+    "credit": "ITGPT rhythms + GrooveAuthor footwork"
+  }
+]

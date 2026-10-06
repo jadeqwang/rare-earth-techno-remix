@@ -1,0 +1,126 @@
+{
+  "LoggerConfig": {
+    "LogLevel": "Info",
+    "LogToFile": true,
+    "LogDirectory": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/logs",
+    "LogFlushIntervalSeconds": 0,
+    "LogBufferSizeBytes": 10240,
+    "LogToConsole": true
+  },
+  "InputDirectory": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/input",
+  "InputNameRegex": ".*\\.(sm|ssc)$",
+  "InputChartType": "dance-single",
+  "DifficultyRegex": ".",
+  "OutputDirectory": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/output",
+  "OutputChartType": "dance-double",
+  "OverwriteBehavior": "Always",
+  "NonChartFileCopyBehavior": "DoNotCopy",
+  "OutputVisualizations": true,
+  "VisualizationsDirectory": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations",
+  "ConcurrentSongCount": 1,
+  "RegexTimeoutSeconds": 20.0,
+  "WarnOnDroppedSteps": true,
+  "CloseAutomaticallyWhenComplete": true,
+  "DefaultExpressedChartConfig": "NoBrackets",
+  "DefaultPerformedChartConfig": "ClassicLow",
+  "ExpressedChartConfigRules": [],
+  "PerformedChartConfigRules": [
+    {
+      "FileRegex": ".",
+      "DifficultyRegex": "^(Medium|Standard)$",
+      "Config": "ClassicMedium"
+    },
+    {
+      "FileRegex": ".",
+      "DifficultyRegex": "^(Hard|Heavy|Challenge|Expert)$",
+      "Config": "ClassicHeavy"
+    }
+  ],
+  "ExpressedChartConfigs": {
+    "NoBrackets": {
+      "DefaultBracketParsingMethod": "NoBrackets",
+      "BracketParsingDetermination": "UseDefaultMethod"
+    }
+  },
+  "PerformedChartConfigs": {
+    "ClassicLow": {
+      "ArrowWeights": {
+        "dance-single": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "dance-double": [
+          6,
+          12,
+          10,
+          22,
+          22,
+          12,
+          10,
+          6
+        ]
+      },
+      "StepTightening": {
+        "LateralMinPanelDistance": 0.166667,
+        "LongitudinalMinPanelDistance": -0.125,
+        "DistanceTighteningEnabled": true,
+        "DistanceMin": 1.0,
+        "DistanceMax": 1.8,
+        "SpeedTighteningEnabled": true,
+        "SpeedMinTimeSeconds": 0.22,
+        "SpeedMaxTimeSeconds": 0.45,
+        "SpeedTighteningMinDistance": 0.0,
+        "StretchTighteningEnabled": true,
+        "StretchDistanceMin": 1.6,
+        "StretchDistanceMax": 2.333333
+      },
+      "LateralTightening": {
+        "Enabled": true,
+        "RelativeNPS": 1.35,
+        "AbsoluteNPS": 5.5,
+        "Speed": 1.8
+      },
+      "Facing": {
+        "MaxInwardPercentage": 0.0,
+        "InwardPercentageCutoff": 0.5,
+        "MaxOutwardPercentage": 0.0,
+        "OutwardPercentageCutoff": 0.5
+      },
+      "Transitions": {
+        "Enabled": true,
+        "StepsPerTransitionMin": 8,
+        "StepsPerTransitionMax": 24,
+        "MinimumPadWidth": 5,
+        "TransitionCutoffPercentage": 0.5
+      }
+    },
+    "ClassicMedium": {
+      "StepTightening": {
+        "DistanceMin": 1.2,
+        "DistanceMax": 2.0
+      },
+      "Transitions": {
+        "StepsPerTransitionMin": 12,
+        "StepsPerTransitionMax": 40
+      }
+    },
+    "ClassicHeavy": {
+      "StepTightening": {
+        "DistanceMin": 1.4,
+        "DistanceMax": 2.333333,
+        "SpeedMinTimeSeconds": 0.22,
+        "SpeedMaxTimeSeconds": 0.4
+      },
+      "Facing": {
+        "MaxInwardPercentage": 0.05,
+        "MaxOutwardPercentage": 0.05
+      },
+      "Transitions": {
+        "StepsPerTransitionMin": 16,
+        "StepsPerTransitionMax": 56
+      }
+    }
+  }
+}

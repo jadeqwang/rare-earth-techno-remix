@@ -1,0 +1,70 @@
+{
+  "experiment_date": "2026-10-05",
+  "upstream_source": {
+    "name": "ITGPT",
+    "author": "Miguel O'Malley",
+    "repository": "https://github.com/miguelomalley/ITGPT",
+    "origin_fetch_url": "https://github.com/miguelomalley/ITGPT",
+    "git_commit": "81de0bfebe02d7aba722ddcb3b417e3a94b89d7c",
+    "commit_url": "https://github.com/miguelomalley/ITGPT/commit/81de0bfebe02d7aba722ddcb3b417e3a94b89d7c",
+    "clone_command": "git clone --depth 1 https://github.com/miguelomalley/ITGPT /tmp/rare-earth-itgpt",
+    "durable_archive": "official-source.tar.gz",
+    "archive_sha256": "655e8634c742635ff7e3cf8e9d205b1a08e1879ee3744514af7acab56d9e638e",
+    "archive_contents": "Unmodified git-tracked files from the pinned commit, including upstream LICENSE.md and registry. No .git directory, environment, downloaded checkpoint or download cache is included.",
+    "archive_command": "git archive --format=tar.gz --prefix=source/ --output=official-source.tar.gz 81de0bfebe02d7aba722ddcb3b417e3a94b89d7c",
+    "license": "MIT",
+    "license_copy": "UPSTREAM_LICENSE.md"
+  },
+  "paper": {
+    "title": "ITGPT: A Transformer Based Architecture for the Generation of Dance Dance Revolution and In the Groove Charts",
+    "url": "https://arxiv.org/abs/2607.14148"
+  },
+  "pretrained_models": {
+    "repository": "https://huggingface.co/miguelomalley/ITGPT",
+    "revision": "246ead2665282658b25e05c9363ea5c3e244d9c8",
+    "selection": "Official paper checkpoints, not stamina checkpoints",
+    "models": [
+      {
+        "filename": "onset_paper.pt",
+        "download_url": "https://huggingface.co/miguelomalley/ITGPT/resolve/246ead2665282658b25e05c9363ea5c3e244d9c8/onset_paper.pt",
+        "sha256": "fa47f78d02e7ce72bc2e627382bfc7a30ef6ded6c94862c19d4a7b87a4f200fe",
+        "runtime_path": "/tmp/rare-earth-itgpt/trained_models/onset_paper.pt"
+      },
+      {
+        "filename": "sym_paper.pt",
+        "download_url": "https://huggingface.co/miguelomalley/ITGPT/resolve/246ead2665282658b25e05c9363ea5c3e244d9c8/sym_paper.pt",
+        "sha256": "fcb63e505994dde1079d967ca5d031f18f2bd8b06ab3e325443fb73d75f44450",
+        "runtime_path": "/tmp/rare-earth-itgpt/trained_models/sym_paper.pt"
+      }
+    ],
+    "bundled_in_source_archive": false
+  },
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.14.1+cpu",
+    "uv": "0.12.7",
+    "python_executable": "/tmp/rare-earth-itgpt/.venv/bin/python",
+    "device": "cpu",
+    "dependency_lock": "requirements-lock.txt",
+    "dependency_lock_sha256": "23ed1dcab191df155e5f6b439c4d070686fdfbbd087c8fbbb85e13e37a98ac4f",
+    "cpu_wheel_index": "https://download.pytorch.org/whl/cpu",
+    "default_package_index": "https://pypi.org/simple"
+  },
+  "local_compatibility_changes": [
+    {
+      "file": "load_models.py",
+      "change": "Allow only official OnsetConfig and ModelConfig dataclasses under checkpoint __main__ aliases using the weights-only PyTorch loader."
+    },
+    {
+      "file": "load_models.py",
+      "change": "Restore audio_enc.layer_norm to official original LayerNorm when the paper checkpoint contains its learned bias; load all state tensors strictly.",
+      "source_of_architecture_difference": "https://github.com/miguelomalley/ITGPT/commit/a4ab71fc7a029b2b6c7d33ed128c5d12d719d24d"
+    }
+  ],
+  "recreation_script": "setup.sh",
+  "validation": {
+    "strict_weights_only_model_load": "setup_report.json",
+    "cpu_symbolic_benchmark": "benchmark_report.json",
+    "recreation_script": "Syntax, source archive manifest and package-lock consistency checked; fresh install was not run."
+  }
+}

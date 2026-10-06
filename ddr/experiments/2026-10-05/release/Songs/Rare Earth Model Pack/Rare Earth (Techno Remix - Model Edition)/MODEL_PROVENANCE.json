@@ -1,0 +1,228 @@
+{
+  "edition": "Rare Earth Techno Remix - Model Edition",
+  "original_pack_unchanged": true,
+  "source_audio_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+  "timing_sha256": "cd10659a5e6c2cbdb090eddee320accb4422ad18f14b1452f7df3cf94eabcfe2",
+  "timing_method": "Original measured grid, all 71 BPM segments and offset copied exactly",
+  "model_repository": "https://github.com/miguelomalley/ITGPT",
+  "model_checkpoints": "https://huggingface.co/miguelomalley/ITGPT/tree/main",
+  "model_setup": {
+    "repo": "/tmp/rare-earth-itgpt",
+    "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+    "torch": "2.14.1+cpu",
+    "cuda_available": false,
+    "threads": 4,
+    "onset_config": {
+      "n_channels": 3,
+      "nframes": 32,
+      "nfreq": 80,
+      "cnn_hidden": 32,
+      "d_model": 256,
+      "n_heads": 8,
+      "n_enc_layers": 4,
+      "n_dec_layers": 4,
+      "out_dim": 48,
+      "max_beats": 2000,
+      "n_difficulties": 100,
+      "n_bpm_buckets": 37,
+      "dropout": 0.1,
+      "min_difficulty": 1.0,
+      "max_difficulty": 50.0,
+      "min_bpm": 40.0,
+      "max_bpm": 400.0
+    },
+    "symbol_config": {
+      "d_model": 256,
+      "n_heads": 8,
+      "n_self_pre": 4,
+      "n_self_audio_pre": 2,
+      "n_self_post": 4,
+      "n_cross": 2,
+      "dropout": 0.1,
+      "max_len": 2048,
+      "num_classes": 256,
+      "aux_dim": 2,
+      "VQ_dim": 256,
+      "VQ_codes": 512,
+      "conv_dim": 32,
+      "pred_steps": 4,
+      "conv_layers": 1,
+      "conv_heads": 4,
+      "tok_dropout": 0.2
+    },
+    "onset_parameters": 13885632,
+    "symbol_parameters": 12485857,
+    "strict_state_dict_load": true,
+    "weights_only": true,
+    "symbol_encoder_norm": "LayerNorm",
+    "load_seconds": 0.3208276289515197,
+    "smoke": {
+      "onset_input_shape": [
+        1,
+        64,
+        32,
+        80,
+        3
+      ],
+      "onset_output_shape": [
+        64,
+        48
+      ],
+      "onset_nonzero": 64,
+      "symbol_output_shape": [
+        8
+      ],
+      "symbol_tokens": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "finite_valid_outputs": true,
+      "seconds": 0.12166010704822838
+    }
+  },
+  "checkpoints": {
+    "onset_checkpoint_sha256": "fa47f78d02e7ce72bc2e627382bfc7a30ef6ded6c94862c19d4a7b87a4f200fe",
+    "symbolic_checkpoint_sha256": "fcb63e505994dde1079d967ca5d031f18f2bd8b06ab3e325443fb73d75f44450"
+  },
+  "selection": "Three symbolic seeds per difficulty; selected by independent timing, hold, footwork and repetition audit",
+  "doubles_generator": "Official PerryAsleep StepManiaChartGenerator / StepManiaLibrary",
+  "doubles_config": "groove/selected-model-doubles/config.json (archived in experiment)",
+  "difficulty_scale": "Provisional classic DDR scale; physical pad playtest pending",
+  "limitations": "Model-generated drafts with software audit and autoplay previews. No physical pad playtest; no verified game-engine launch.",
+  "charts": [
+    {
+      "name": "Beginner Single",
+      "type": "dance-single",
+      "difficulty": "Beginner",
+      "meter": 3,
+      "step_rows": 113,
+      "jumps": 0,
+      "holds": 10,
+      "source_candidate": "beginner-seed-43",
+      "seed": 43,
+      "conditioned_difficulty": 3,
+      "model_repairs": [],
+      "credit": "ITGPT paper models"
+    },
+    {
+      "name": "Easy Single",
+      "type": "dance-single",
+      "difficulty": "Easy",
+      "meter": 4,
+      "step_rows": 175,
+      "jumps": 2,
+      "holds": 42,
+      "source_candidate": "easy-seed-29",
+      "seed": 29,
+      "conditioned_difficulty": 4,
+      "model_repairs": [
+        {
+          "tick": 13628,
+          "column": 2,
+          "from_note": "0",
+          "to_note": "3",
+          "reason": "close model hold before audio endpoint"
+        }
+      ],
+      "credit": "ITGPT paper models"
+    },
+    {
+      "name": "Standard Single",
+      "type": "dance-single",
+      "difficulty": "Medium",
+      "meter": 6,
+      "step_rows": 245,
+      "jumps": 12,
+      "holds": 9,
+      "source_candidate": "standard-seed-29",
+      "seed": 29,
+      "conditioned_difficulty": 6,
+      "model_repairs": [],
+      "credit": "ITGPT paper models"
+    },
+    {
+      "name": "Heavy Single",
+      "type": "dance-single",
+      "difficulty": "Hard",
+      "meter": 9,
+      "step_rows": 419,
+      "jumps": 1,
+      "holds": 0,
+      "source_candidate": "heavy-seed-43",
+      "seed": 43,
+      "conditioned_difficulty": 9,
+      "model_repairs": [],
+      "credit": "ITGPT paper models"
+    },
+    {
+      "name": "Beginner Double",
+      "type": "dance-double",
+      "difficulty": "Beginner",
+      "meter": 3,
+      "step_rows": 113,
+      "jumps": 0,
+      "holds": 10,
+      "source_candidate": "beginner-seed-43",
+      "seed": 43,
+      "conditioned_difficulty": 3,
+      "model_repairs": [],
+      "credit": "ITGPT rhythms + GrooveAuthor footwork"
+    },
+    {
+      "name": "Easy Double",
+      "type": "dance-double",
+      "difficulty": "Easy",
+      "meter": 5,
+      "step_rows": 175,
+      "jumps": 2,
+      "holds": 42,
+      "source_candidate": "easy-seed-29",
+      "seed": 29,
+      "conditioned_difficulty": 4,
+      "model_repairs": [
+        {
+          "tick": 13628,
+          "column": 2,
+          "from_note": "0",
+          "to_note": "3",
+          "reason": "close model hold before audio endpoint"
+        }
+      ],
+      "credit": "ITGPT rhythms + GrooveAuthor footwork"
+    },
+    {
+      "name": "Standard Double",
+      "type": "dance-double",
+      "difficulty": "Medium",
+      "meter": 7,
+      "step_rows": 245,
+      "jumps": 12,
+      "holds": 9,
+      "source_candidate": "standard-seed-29",
+      "seed": 29,
+      "conditioned_difficulty": 6,
+      "model_repairs": [],
+      "credit": "ITGPT rhythms + GrooveAuthor footwork"
+    },
+    {
+      "name": "Heavy Double",
+      "type": "dance-double",
+      "difficulty": "Hard",
+      "meter": 10,
+      "step_rows": 419,
+      "jumps": 1,
+      "holds": 0,
+      "source_candidate": "heavy-seed-43",
+      "seed": 43,
+      "conditioned_difficulty": 9,
+      "model_repairs": [],
+      "credit": "ITGPT rhythms + GrooveAuthor footwork"
+    }
+  ]
+}

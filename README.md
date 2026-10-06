@@ -4,6 +4,25 @@ A music video for **"Rare Earth"** (DDR / techno version), a song about hoping t
 life, written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI crowdfunding
 campaign in 2011.
 
+## DDR review for Kenton
+
+The **Model Edition** has eight new charts: four singles generated with ITGPT's
+trained models and four doubles generated with GrooveAuthor's footwork library.
+Physical pad testing and an in-game load check are pending.
+
+- **[Download the Model Edition step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip)**
+- **Watch:** [Model singles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)
+  · [Model doubles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)
+- **[Install and give pad-test feedback](ddr/experiments/2026-10-05/PAD_REVIEW.md)**
+  · [Generation comparison and validation](ddr/experiments/2026-10-05/README.md)
+- **[Download the music video](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/out/rare_earth_1080p.mp4)**
+  · [Use it as the StepMania background](#use-the-music-video-as-the-stepmania-background)
+
+Extract the Model Edition ZIP into StepMania's `Songs` folder and select
+**Rare Earth Model Pack**. The original **Rare Earth Pack** below remains available
+for comparison. The [pad review guide](ddr/experiments/2026-10-05/PAD_REVIEW.md)
+includes the provisional meters and passages to check.
+
 ## Play Rare Earth in StepMania
 
 **[Download the DDR step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/Rare_Earth_DDR_Step_Pack.zip)**
@@ -30,6 +49,45 @@ replace its song folder and reload the song cache.
 
 Meters use the classic DDR scale and remain provisional until pad playtesting.
 See the [installation details, chart descriptions, and validation](ddr/README.md).
+
+### Use the music video as the StepMania background
+
+These instructions apply to either DDR edition in **StepMania 5**. The video is
+an optional separate download (about 92 MB).
+
+1. [Download `rare_earth_1080p.mp4`](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/out/rare_earth_1080p.mp4)
+   and copy it into the installed song folder, beside the MP3 and chart files:
+   `Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/`
+   for the Model Edition, or
+   `Songs/Rare Earth Pack/Rare Earth (Techno Remix)/` for the original.
+2. Open the song's `.ssc` and `.sm` files in a plain-text editor. Add this block
+   to the shared header, before the first `#NOTEDATA:` or `#NOTES:` tag. If there
+   is already a `#BGCHANGES:` block, replace it rather than adding a second one.
+
+   ```text
+   #BGCHANGES:
+   -0.131511=rare_earth_1080p.mp4=1.000=0=0=0,
+   99999=-nosongbg-=1.000=0=0=0;
+   ```
+
+3. Keep `#MUSIC:Rare_Earth_DDR.mp3;` and `#BACKGROUND:background.jpg;` unchanged.
+   The MP3 supplies gameplay audio; the picture remains the selection background.
+4. Save both files, reload songs or restart StepMania, and enable song backgrounds.
+   Turn off **Static Background** and **Random Background Only**, if your theme
+   exposes those options, and set background brightness above zero.
+
+The negative start beat is calculated from this pack's `-0.0611` offset and
+initial `129.143349118` BPM to align video time zero with MP3 time zero. The
+engine's beat rounding can leave a few milliseconds of difference. Keep
+the video playback rate at `1.000` through the tempo changes. This timing line
+follows StepMania's [BGCHANGES format](https://github.com/stepmania/stepmania/wiki/sm#bgchanges)
+and [background timing implementation](https://github.com/stepmania/stepmania/blob/5_1-new/src/Background.cpp);
+video playback and sync still need an in-game check on Kenton's machine.
+
+If the video stays black or fails to load, check the filename and background
+options first. A build that cannot decode this MP4 may need a converted video.
+For StepMania 3.9, use a video format supported by that installation and change
+the filename in the block accordingly; these MP4 instructions target StepMania 5.
 
 ## Play Rare Earth in Beat Saber
 

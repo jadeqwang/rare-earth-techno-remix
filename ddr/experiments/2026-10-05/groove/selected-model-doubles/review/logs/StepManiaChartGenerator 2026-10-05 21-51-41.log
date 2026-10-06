@@ -1,0 +1,23 @@
+﻿2026-10-05 21:51:41.557 [INFO] [Main] Initializing directory for outputting visualizations: /home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations/2026-10-05 21-51-41.
+2026-10-05 21:51:41.559 [INFO] [Main] Loading PadData from dance-single.json.
+2026-10-05 21:51:41.563 [INFO] [Main] Loading PadData from dance-double.json.
+2026-10-05 21:51:41.565 [INFO] [Main] Finished loading dance-single PadData.
+2026-10-05 21:51:41.565 [INFO] [Main] Finished loading dance-double PadData.
+2026-10-05 21:51:41.565 [INFO] [Main] Loading StepGraphs.
+2026-10-05 21:51:41.566 [INFO] [Main] Loading StepGraph from dance-single.fsg.
+2026-10-05 21:51:41.566 [INFO] [Main] Loading StepGraph from dance-double.fsg.
+2026-10-05 21:51:41.589 [INFO] [Main] Finished loading dance-single StepGraph.
+2026-10-05 21:51:41.746 [INFO] [Main] Finished loading dance-double StepGraph.
+2026-10-05 21:51:41.790 [INFO] [Main] Finished creating StepGraphs.
+2026-10-05 21:51:41.791 [INFO] [Main] Searching for songs in "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/input"...
+2026-10-05 21:51:41.797 [INFO] [Main] Found 1 songs to process.
+2026-10-05 21:51:41.797 [INFO] [Main] [/model-singles.sm] Loading Song.
+2026-10-05 21:51:41.855 [INFO] [Main] [/model-singles.sm "Rare Earth"] Processing Song.
+2026-10-05 21:51:41.918 [INFO] [Main] [/model-singles.sm "Rare Earth" dance-double Beginner] Generated new dance-double Beginner Chart from dance-single Beginner Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicLow".
+2026-10-05 21:51:41.973 [INFO] [Main] [/model-singles.sm "Rare Earth" dance-double Easy] Generated new dance-double Easy Chart from dance-single Easy Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicLow".
+2026-10-05 21:51:42.024 [INFO] [Main] [/model-singles.sm "Rare Earth" dance-double Medium] Generated new dance-double Medium Chart from dance-single Medium Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicMedium".
+2026-10-05 21:51:42.088 [INFO] [Main] [/model-singles.sm "Rare Earth" dance-double Hard] Generated new dance-double Hard Chart from dance-single Hard Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicHeavy".
+2026-10-05 21:51:42.089 [INFO] [Main] [/model-singles.sm "Rare Earth"] Generated 4 new dance-double Charts (replaced 0).
+2026-10-05 21:51:42.111 [INFO] [Main] Progress: 1/1 songs (100.00%). 0.26/0.26 MB (100.00%).
+2026-10-05 21:51:42.212 [INFO] [Main] Processed 1 songs and created 4 charts in 00:00:00.4149732.
+2026-10-05 21:51:42.212 [INFO] [Main] Done.

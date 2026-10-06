@@ -1,0 +1,23 @@
+﻿2026-10-05 21:48:00.702 [INFO] [Main] Initializing directory for outputting visualizations: /home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/review/visualizations/2026-10-05 21-48-00.
+2026-10-05 21:48:00.704 [INFO] [Main] Loading PadData from dance-single.json.
+2026-10-05 21:48:00.707 [INFO] [Main] Loading PadData from dance-double.json.
+2026-10-05 21:48:00.709 [INFO] [Main] Finished loading dance-single PadData.
+2026-10-05 21:48:00.709 [INFO] [Main] Finished loading dance-double PadData.
+2026-10-05 21:48:00.709 [INFO] [Main] Loading StepGraphs.
+2026-10-05 21:48:00.710 [INFO] [Main] Loading StepGraph from dance-single.fsg.
+2026-10-05 21:48:00.710 [INFO] [Main] Loading StepGraph from dance-double.fsg.
+2026-10-05 21:48:00.737 [INFO] [Main] Finished loading dance-single StepGraph.
+2026-10-05 21:48:00.883 [INFO] [Main] Finished loading dance-double StepGraph.
+2026-10-05 21:48:00.929 [INFO] [Main] Finished creating StepGraphs.
+2026-10-05 21:48:00.931 [INFO] [Main] Searching for songs in "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/baseline-proof/input"...
+2026-10-05 21:48:00.937 [INFO] [Main] Found 1 songs to process.
+2026-10-05 21:48:00.938 [INFO] [Main] [/Rare Earth (Techno Remix).sm] Loading Song.
+2026-10-05 21:48:00.983 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth"] Processing Song.
+2026-10-05 21:48:01.047 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth" dance-double Beginner] Generated new dance-double Beginner Chart from dance-single Beginner Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicLow".
+2026-10-05 21:48:01.126 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth" dance-double Easy] Generated new dance-double Easy Chart from dance-single Easy Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicLow".
+2026-10-05 21:48:01.195 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth" dance-double Medium] Generated new dance-double Medium Chart from dance-single Medium Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicMedium".
+2026-10-05 21:48:01.282 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth" dance-double Hard] Generated new dance-double Hard Chart from dance-single Hard Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicHeavy".
+2026-10-05 21:48:01.284 [INFO] [Main] [/Rare Earth (Techno Remix).sm "Rare Earth"] Generated 4 new dance-double Charts (replaced 4).
+2026-10-05 21:48:01.351 [INFO] [Main] Progress: 1/1 songs (100.00%). 0.06/0.06 MB (100.00%).
+2026-10-05 21:48:01.452 [INFO] [Main] Processed 1 songs and created 4 charts in 00:00:00.5147703.
+2026-10-05 21:48:01.452 [INFO] [Main] Done.

@@ -1,0 +1,42 @@
+{
+  "audio/Rare_Earth_DDR.mp3": {
+    "sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+    "bytes": 2907868
+  },
+  "ddr/Rare_Earth_DDR_Step_Pack.zip": {
+    "sha256": "525602a7298aa7be92a96d9e71f0b6d4f095724138dc78feb21d22de1331854e",
+    "bytes": 3402530
+  },
+  "ddr/analysis/timing.json": {
+    "sha256": "cd10659a5e6c2cbdb090eddee320accb4422ad18f14b1452f7df3cf94eabcfe2",
+    "bytes": 42664
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/banner.png": {
+    "sha256": "87510922885ec166f6528675f13e4641e462674facd89a0250ff444e2bb9f23d",
+    "bytes": 8061
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/README.txt": {
+    "sha256": "6f72b39b3374234f43302f11c18673ff77b5e4f2f1dd94ddbb6236552ee35d3c",
+    "bytes": 3711
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/Rare Earth (Techno Remix).sm": {
+    "sha256": "ebb0e587f8f137da3e57e239d5a22787c5f2c7632d39b053ebdd50f7e7fc1c64",
+    "bytes": 66830
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/Rare Earth (Techno Remix).ssc": {
+    "sha256": "2d2ad94727f47e00dbea6a5acc4f78a0451f54ce724301ab3e954b8cf04c1cde",
+    "bytes": 67862
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/Rare_Earth_DDR.mp3": {
+    "sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+    "bytes": 2907868
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/jacket.png": {
+    "sha256": "9cb5a63d2058f6c7691ead5fa413f1ed54b01325f213344d3d9781f8098bc927",
+    "bytes": 13301
+  },
+  "ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/background.jpg": {
+    "sha256": "9a1b6cc9aefa5dcd9ebe90be87477490ad1c5cab6dd597a092fab45110cda0c6",
+    "bytes": 474821
+  }
+}
