@@ -9,6 +9,7 @@ unchanged. This edition installs alongside the original as **Rare Earth Model Pa
 - **[Watch singles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)**
 - **[Watch doubles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)**
 - **[Install and give pad-test feedback](PAD_REVIEW.md)**
+- **[Review discussion and pad-test feedback — PR #6](https://github.com/jadeqwang/rare-earth-techno-remix/pull/6)**
 - [Use the music video as the StepMania background](../../../README.md#use-the-music-video-as-the-stepmania-background)
 - [Independent chart validation](release/validation.json)
 - [Preview timing/audio validation](release/preview-validation.json)

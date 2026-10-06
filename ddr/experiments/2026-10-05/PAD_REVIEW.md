@@ -41,7 +41,7 @@ will help decide which charts to keep or revise.
 
 ## Send review notes
 
-Leave feedback on this branch's [GitHub pull request](https://github.com/jadeqwang/rare-earth-techno-remix/pulls),
+Leave feedback on [GitHub pull request #6](https://github.com/jadeqwang/rare-earth-techno-remix/pull/6),
 or share notes with Jade. For each issue, include the edition, mode, difficulty,
 song timestamp or beat, what feels awkward, and the change you suggest.
 Also include the StepMania version/theme, pad setup, playback rate, use of a bar,

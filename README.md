@@ -15,6 +15,7 @@ Physical pad testing and an in-game load check are pending.
   · [Model doubles preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/codex/ddr-model-edition-review/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4)
 - **[Install and give pad-test feedback](ddr/experiments/2026-10-05/PAD_REVIEW.md)**
   · [Generation comparison and validation](ddr/experiments/2026-10-05/README.md)
+- **[Review discussion and pad-test feedback — PR #6](https://github.com/jadeqwang/rare-earth-techno-remix/pull/6)**
 - **[Download the music video](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/out/rare_earth_1080p.mp4)**
   · [Use it as the StepMania background](#use-the-music-video-as-the-stepmania-background)
 
