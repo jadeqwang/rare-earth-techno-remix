@@ -1,5 +1,12 @@
 # Rare Earth — DDR steps
 
+**For Kenton's new chart review:** [Download the Model Edition (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/Rare_Earth_Model_Edition_Step_Pack.zip),
+watch the [singles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_single_preview.mp4)
+and [doubles](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/experiments/2026-10-05/release/preview/Rare_Earth_Model_Edition_double_preview.mp4),
+and follow the [pad review guide](experiments/2026-10-05/PAD_REVIEW.md).
+The [music-video background instructions](../README.md#use-the-music-video-as-the-stepmania-background)
+apply to both editions. The original pack is described below.
+
 Eight complete charts for the original `audio/Rare_Earth_DDR.mp3`: **Beginner,
 Easy, Standard, and Heavy**, each for four-panel single and eight-panel double.
 The source recording is included unchanged; it runs 2:07.960 and

@@ -1,0 +1,40 @@
+{
+  "generator": "StepManiaChartGenerator 2.0.3",
+  "source_urls": {
+    "StepManiaChartGenerator": "https://github.com/PerryAsleep/StepManiaChartGenerator",
+    "StepManiaLibrary": "https://github.com/PerryAsleep/StepManiaLibrary",
+    "Fumen": "https://github.com/PerryAsleep/Fumen"
+  },
+  "source_commits": {
+    "StepManiaChartGenerator": "d623ba935cafd036e8c002efe81a66011d8e78d3",
+    "StepManiaLibrary": "c8fda2df9b3855ff16b1dff5b0a96d4c8940a8fc",
+    "Fumen": "fbbebdd2289a10a79365f62a6ea818c50a646cc3"
+  },
+  "sdk": {
+    "version": "10.0.100",
+    "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-linux-x64.tar.gz",
+    "sha512": "f78dbac30c9af2230d67ff5c224de3a5dbf63f8a78d1c206594dedb80e6909d2cc8a9d865d5105c72c2fd2aa266fc0c6c77dedac60408cbccf272b116bd11b07",
+    "hash_verified_against_microsoft_release_metadata": true,
+    "metadata_url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/10.0/releases.json"
+  },
+  "adaptations": [
+    "Target all three projects at .NET 10 and use bundled framework assemblies instead of old package references.",
+    "Add Windows device path prefix only on Windows.",
+    "Export selected official footwork graph nodes to JSON for auditing; no generation decisions changed.",
+    "Verify timing equivalence and restore exact global OFFSET/BPMS source strings after official serialization."
+  ],
+  "decision_algorithm": "Official ExpressedChart and PerformedChart path search; no replacement footwork generator.",
+  "licenses": {
+    "StepManiaChartGenerator": "MIT",
+    "StepManiaLibrary": "MIT",
+    "Fumen": "MIT"
+  },
+  "artifact_sha256": {
+    "selected-model-doubles/input/model-singles.sm": "3a715145fff4b3315f7ab7cc6063074c739a840b58317f1d33c6f7427d1739bd",
+    "selected-model-doubles/output/model-singles.sm": "5326c93f8065112fa0c53b490dcc6862e4e88b96941e01adbd0224b792a9b63d",
+    "selected-model-doubles/config.json": "f81a415a81d8a16f5ee10f6649d804a2b0d52fceb4d0c83be737c4b0e1ff22a9",
+    "generator-portability.patch": "61f3733706792d70205e48af20a7e2d77d818f556c4e7e80fb5f947be7802f51",
+    "library-portability.patch": "3f4213ffc5f552c56d77d52e81ae1d0af75bff499f1b72d8ab55595a402f58bd",
+    "fumen-portability.patch": "500979a965b12307b9a890eb9d5b187a213ce1cfc31b42ad1b123f2480e81b74"
+  }
+}

@@ -1,0 +1,6280 @@
+[
+  {
+    "row": 0,
+    "time": 0,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 384,
+    "time": 3.7133999999982,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 480,
+    "time": 4.639200000001112,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 576,
+    "time": 5.565000000004023,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 672,
+    "time": 6.489250000007211,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 768,
+    "time": 7.4135000000104,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 864,
+    "time": 8.336150000008127,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 960,
+    "time": 9.258800000005854,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1056,
+    "time": 10.179950000008295,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1152,
+    "time": 11.101100000010735,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1248,
+    "time": 12.020850000012876,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1344,
+    "time": 12.940600000015015,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1440,
+    "time": 13.859000000014476,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1536,
+    "time": 14.777400000013937,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1632,
+    "time": 15.694500000014937,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1728,
+    "time": 16.611600000015937,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1872,
+    "time": 17.98537500001542,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 1920,
+    "time": 18.44330000001525,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2016,
+    "time": 19.357950000015837,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2112,
+    "time": 20.272600000016425,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2208,
+    "time": 21.186150000016962,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2304,
+    "time": 22.0997000000175,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2400,
+    "time": 23.01215000001534,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2496,
+    "time": 23.924600000013175,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2592,
+    "time": 24.836000000010323,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2688,
+    "time": 25.74740000000747,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2784,
+    "time": 26.657800000004823,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2880,
+    "time": 27.56820000000218,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 2976,
+    "time": 28.477650000003337,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3072,
+    "time": 29.387100000004494,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3168,
+    "time": 30.29570000000447,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3264,
+    "time": 31.204300000004444,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3360,
+    "time": 32.112000000006454,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3456,
+    "time": 33.01970000000846,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3552,
+    "time": 33.926600000010765,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3648,
+    "time": 34.833500000013075,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3744,
+    "time": 35.73965000001351,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3840,
+    "time": 36.64580000001395,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Held",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 3984,
+    "time": 38.003900000015,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4032,
+    "time": 38.45660000001536,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4224,
+    "time": 40.26600000000938,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4296,
+    "time": 40.94403750000817,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4320,
+    "time": 41.17005000000776,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4416,
+    "time": 42.074100000006155,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Held",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4488,
+    "time": 42.75168750000446,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4512,
+    "time": 42.977550000003895,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4608,
+    "time": 43.881000000001634,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Held",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4752,
+    "time": 45.23527499999718,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4800,
+    "time": 45.686699999995696,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Held",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4944,
+    "time": 47.040074999997685,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 4992,
+    "time": 47.491199999998344,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5088,
+    "time": 48.3929499999982,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5184,
+    "time": 49.29469999999805,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5280,
+    "time": 50.19594999999849,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5376,
+    "time": 51.097199999998935,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5472,
+    "time": 51.99794999999703,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5568,
+    "time": 52.89869999999513,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5616,
+    "time": 53.34884999999434,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5664,
+    "time": 53.798999999993555,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5712,
+    "time": 54.249149999992774,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5760,
+    "time": 54.699299999991986,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5856,
+    "time": 55.59919999999483,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 5952,
+    "time": 56.499099999997675,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6048,
+    "time": 57.398549999994316,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6144,
+    "time": 58.29799999999096,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6240,
+    "time": 59.1970999999941,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6336,
+    "time": 60.096199999997246,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6528,
+    "time": 61.893599999992354,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6624,
+    "time": 62.791949999992624,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6720,
+    "time": 63.69029999999289,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6816,
+    "time": 64.58829999999486,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 6912,
+    "time": 65.48629999999685,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7008,
+    "time": 66.38394999999572,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7104,
+    "time": 67.28159999999461,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7200,
+    "time": 68.17894999999284,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7296,
+    "time": 69.07629999999108,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7368,
+    "time": 69.74908749998882,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7392,
+    "time": 69.97334999998806,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7488,
+    "time": 70.87039999998504,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7584,
+    "time": 71.76714999998688,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7680,
+    "time": 72.66389999998873,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7824,
+    "time": 74.00857499998826,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 7872,
+    "time": 74.4567999999881,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8064,
+    "time": 76.24919999998293,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8160,
+    "time": 77.14509999998425,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8256,
+    "time": 78.04099999998556,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8352,
+    "time": 78.93659999998602,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8448,
+    "time": 79.83219999998647,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8544,
+    "time": 80.7274999999893,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8640,
+    "time": 81.62279999999215,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8736,
+    "time": 82.51784999999226,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8832,
+    "time": 83.41289999999238,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 8928,
+    "time": 84.30764999999563,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9024,
+    "time": 85.2023999999989,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9120,
+    "time": 86.09689999999846,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9216,
+    "time": 86.991399999998,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9312,
+    "time": 87.8855499999951,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9408,
+    "time": 88.7796999999922,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9552,
+    "time": 90.12054999999022,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9600,
+    "time": 90.56749999998955,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9696,
+    "time": 91.46104999998755,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9792,
+    "time": 92.35459999998555,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9888,
+    "time": 93.24784999998819,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 9984,
+    "time": 94.14109999999083,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10080,
+    "time": 95.03399999998845,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10176,
+    "time": 95.92689999998608,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10272,
+    "time": 96.81944999998495,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10368,
+    "time": 97.71199999998383,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10464,
+    "time": 98.60414999998451,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10560,
+    "time": 99.49629999998521,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10656,
+    "time": 100.38809999998381,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10752,
+    "time": 101.27989999998239,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10848,
+    "time": 102.17129999998463,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 10944,
+    "time": 103.06269999998686,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11040,
+    "time": 103.95369999998775,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11136,
+    "time": 104.84469999998865,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Held",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11208,
+    "time": 105.51261249998967,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11232,
+    "time": 105.73524999999,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11328,
+    "time": 106.62579999999137,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11424,
+    "time": 107.51584999998822,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11520,
+    "time": 108.40589999998507,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11664,
+    "time": 109.74022499998159,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11712,
+    "time": 110.18499999998043,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 11904,
+    "time": 111.9630999999825,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12000,
+    "time": 112.85164999998214,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12096,
+    "time": 113.74019999998178,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12144,
+    "time": 114.18414999998073,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12192,
+    "time": 114.6280999999797,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12240,
+    "time": 115.07204999997865,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12288,
+    "time": 115.5159999999776,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 6,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12384,
+    "time": 116.40329999997435,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 7,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12480,
+    "time": 117.2905999999711,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12576,
+    "time": 118.17729999997235,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 5,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12672,
+    "time": 119.06399999997359,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12768,
+    "time": 119.94999999997299,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 4,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12864,
+    "time": 120.83599999997237,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12912,
+    "time": 121.27862499997383,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 12960,
+    "time": 121.72124999997527,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13008,
+    "time": 122.16387499997673,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13056,
+    "time": 122.60649999997818,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13152,
+    "time": 123.49104999997957,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13248,
+    "time": 124.37559999998096,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13320,
+    "time": 125.0383749999803,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13344,
+    "time": 125.25929999998009,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Tap"
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 2,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13440,
+    "time": 126.1429999999792,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Held",
+        "moving": true,
+        "step": "NewArrow",
+        "action": "Hold"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  },
+  {
+    "row": 13584,
+    "time": 127.46854999997787,
+    "orientation": "Normal",
+    "feet": [
+      {
+        "foot": 0,
+        "portion": 0,
+        "lane": 0,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 0,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      },
+      {
+        "foot": 1,
+        "portion": 0,
+        "lane": 3,
+        "state": "Resting",
+        "moving": true,
+        "step": "SameArrow",
+        "action": "Release"
+      },
+      {
+        "foot": 1,
+        "portion": 1,
+        "lane": -1,
+        "state": "Resting",
+        "moving": false,
+        "step": null,
+        "action": null
+      }
+    ]
+  }
+]

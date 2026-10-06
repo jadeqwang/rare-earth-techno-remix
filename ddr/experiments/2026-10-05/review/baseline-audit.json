@@ -1,0 +1,4201 @@
+{
+  "source_audio": "/home/jade/Documents/rare-earth-techno-remix/audio/Rare_Earth_DDR.mp3",
+  "source_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+  "duration_s": 127.96,
+  "reference_bpm_range": [
+    129.143,
+    135.793
+  ],
+  "baseline": {
+    "path": "/home/jade/Documents/rare-earth-techno-remix/ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/Rare Earth (Techno Remix).ssc",
+    "file_sha256": "2d2ad94727f47e00dbea6a5acc4f78a0451f54ce724301ab3e954b8cf04c1cde",
+    "music_path": "/home/jade/Documents/rare-earth-techno-remix/ddr/Songs/Rare Earth Pack/Rare Earth (Techno Remix)/Rare_Earth_DDR.mp3",
+    "music_exists": true,
+    "music_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+    "music_matches_source": true,
+    "charts": [
+      {
+        "name": "Beginner Single",
+        "type": "dance-single",
+        "difficulty": "Beginner",
+        "meter": 3,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 132,
+        "arrow_presses": 132,
+        "jumps": 0,
+        "holds": 13,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 13,
+        "hold_pairs": [
+          [
+            36.0,
+            39.0,
+            2
+          ],
+          [
+            80.0,
+            83.0,
+            2
+          ],
+          [
+            88.0,
+            89.5,
+            3
+          ],
+          [
+            92.0,
+            93.5,
+            3
+          ],
+          [
+            96.0,
+            99.0,
+            3
+          ],
+          [
+            100.0,
+            103.0,
+            0
+          ],
+          [
+            152.0,
+            153.5,
+            1
+          ],
+          [
+            160.0,
+            163.0,
+            1
+          ],
+          [
+            196.0,
+            199.0,
+            0
+          ],
+          [
+            232.0,
+            233.5,
+            3
+          ],
+          [
+            240.0,
+            243.0,
+            1
+          ],
+          [
+            276.0,
+            277.5,
+            1
+          ],
+          [
+            280.0,
+            283.0,
+            2
+          ]
+        ],
+        "max_simultaneous_panel_demand": 1,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "column_press_counts": {
+          "0": 38,
+          "1": 27,
+          "2": 33,
+          "3": 34
+        },
+        "normalized_column_entropy": 0.99477,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.52965,
+        "average_note_rows_per_song_second": 1.0316,
+        "peak_2s_note_rows_per_second": 2.5,
+        "fractional_beat_positions": [
+          0.0
+        ],
+        "minimum_interrow_gap_s": 0.442625000001442,
+        "longest_interrow_rest_s": 1.8316999999993122,
+        "interrow_gap_p10_s": 0.8836999999991235,
+        "interrow_gap_median_s": 0.8976499999988903,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 3,
+          "unique_arrow_measure_templates": 18,
+          "most_common_rhythm_measure_fraction": 0.78261,
+          "most_common_arrow_measure_fraction": 0.15942,
+          "max_consecutive_identical_rhythm_measures": 10,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 42,
+          "four_row_arrow_ngram_diversity": 0.32558,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 54
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ]
+              ],
+              "measures": 12
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 3
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 15,
+            "rows_per_second": 1.0135,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 22,
+            "rows_per_second": 0.9977,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 16,
+            "rows_per_second": 1.1073,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 21,
+            "rows_per_second": 1.0048,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 15,
+            "rows_per_second": 1.0274,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 22,
+            "rows_per_second": 1.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 17,
+            "rows_per_second": 1.4783,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 4,
+            "rows_per_second": 0.8772,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 0,
+          "rapid_aba_examples": []
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 139.8234,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 1.5975,
+            "peak_speed_examples": [
+              {
+                "beat": 270.0,
+                "time_s": 121.78235,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 271.0,
+                "time_s": 122.224975,
+                "foot": 0,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 255.0,
+                "time_s": 115.13315,
+                "foot": 0,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 1,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 119.0,
+                "time_s": 54.31025,
+                "foot": 0,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 120.0,
+                "time_s": 54.7604,
+                "foot": 1,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 280.0,
+                "time_s": 126.2041,
+                "foot": 1,
+                "panel_units_per_second": 1.1316
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 139.8234,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 1.5975,
+            "peak_speed_examples": [
+              {
+                "beat": 270.0,
+                "time_s": 121.78235,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 271.0,
+                "time_s": 122.224975,
+                "foot": 0,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 255.0,
+                "time_s": 115.13315,
+                "foot": 0,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 1,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 119.0,
+                "time_s": 54.31025,
+                "foot": 0,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 120.0,
+                "time_s": 54.7604,
+                "foot": 1,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 280.0,
+                "time_s": 126.2041,
+                "foot": 1,
+                "panel_units_per_second": 1.1316
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 1.05416,
+          "median_near_note_novelty": 1.01258,
+          "notes_near_strong_onset_fraction": 0.78788,
+          "strong_onset_coverage_fraction": 0.25935,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Easy Single",
+        "type": "dance-single",
+        "difficulty": "Easy",
+        "meter": 4,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 226,
+        "arrow_presses": 230,
+        "jumps": 4,
+        "holds": 8,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 8,
+        "hold_pairs": [
+          [
+            36.0,
+            38.5,
+            1
+          ],
+          [
+            80.0,
+            82.5,
+            2
+          ],
+          [
+            88.0,
+            90.5,
+            2
+          ],
+          [
+            92.0,
+            93.5,
+            3
+          ],
+          [
+            160.0,
+            162.5,
+            1
+          ],
+          [
+            240.0,
+            242.5,
+            0
+          ],
+          [
+            276.0,
+            277.5,
+            0
+          ],
+          [
+            280.0,
+            281.5,
+            1
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "column_press_counts": {
+          "0": 60,
+          "1": 59,
+          "2": 59,
+          "3": 52
+        },
+        "normalized_column_entropy": 0.99886,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 1.7662,
+        "peak_2s_note_rows_per_second": 2.5,
+        "fractional_beat_positions": [
+          0.0
+        ],
+        "minimum_interrow_gap_s": 0.4422750000006914,
+        "longest_interrow_rest_s": 1.3737749999994833,
+        "interrow_gap_p10_s": 0.4445250000005103,
+        "interrow_gap_median_s": 0.4495500000015724,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 8,
+          "unique_arrow_measure_templates": 58,
+          "most_common_rhythm_measure_fraction": 0.4058,
+          "most_common_arrow_measure_fraction": 0.04348,
+          "max_consecutive_identical_rhythm_measures": 3,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 65,
+          "four_row_arrow_ngram_diversity": 0.29148,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 28
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 14
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 7
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 5
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 22,
+            "rows_per_second": 1.4865,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 37,
+            "rows_per_second": 1.678,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 26,
+            "rows_per_second": 1.7993,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 39,
+            "rows_per_second": 1.866,
+            "jumps": 1,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 30,
+            "rows_per_second": 2.0548,
+            "jumps": 1,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 43,
+            "rows_per_second": 1.9545,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 24,
+            "rows_per_second": 2.087,
+            "jumps": 2,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 5,
+            "rows_per_second": 1.0965,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 0,
+          "rapid_aba_examples": []
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 286.7595,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 3.1832,
+            "peak_speed_examples": [
+              {
+                "beat": 249.0,
+                "time_s": 112.468475,
+                "foot": 0,
+                "panel_units_per_second": 3.1832
+              },
+              {
+                "beat": 248.0,
+                "time_s": 112.0242,
+                "foot": 1,
+                "panel_units_per_second": 3.1814
+              },
+              {
+                "beat": 169.0,
+                "time_s": 76.75825,
+                "foot": 0,
+                "panel_units_per_second": 3.1571
+              },
+              {
+                "beat": 121.0,
+                "time_s": 55.21035,
+                "foot": 0,
+                "panel_units_per_second": 3.143
+              },
+              {
+                "beat": 253.0,
+                "time_s": 114.24525,
+                "foot": 0,
+                "panel_units_per_second": 2.2517
+              },
+              {
+                "beat": 247.0,
+                "time_s": 111.579675,
+                "foot": 1,
+                "panel_units_per_second": 2.2496
+              },
+              {
+                "beat": 233.0,
+                "time_s": 105.351075,
+                "foot": 1,
+                "panel_units_per_second": 2.2452
+              },
+              {
+                "beat": 230.0,
+                "time_s": 104.0148,
+                "foot": 0,
+                "panel_units_per_second": 2.2447
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 286.7595,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 3.1832,
+            "peak_speed_examples": [
+              {
+                "beat": 249.0,
+                "time_s": 112.468475,
+                "foot": 0,
+                "panel_units_per_second": 3.1832
+              },
+              {
+                "beat": 248.0,
+                "time_s": 112.0242,
+                "foot": 1,
+                "panel_units_per_second": 3.1814
+              },
+              {
+                "beat": 169.0,
+                "time_s": 76.75825,
+                "foot": 0,
+                "panel_units_per_second": 3.1571
+              },
+              {
+                "beat": 121.0,
+                "time_s": 55.21035,
+                "foot": 0,
+                "panel_units_per_second": 3.143
+              },
+              {
+                "beat": 253.0,
+                "time_s": 114.24525,
+                "foot": 0,
+                "panel_units_per_second": 2.2517
+              },
+              {
+                "beat": 247.0,
+                "time_s": 111.579675,
+                "foot": 1,
+                "panel_units_per_second": 2.2496
+              },
+              {
+                "beat": 233.0,
+                "time_s": 105.351075,
+                "foot": 1,
+                "panel_units_per_second": 2.2452
+              },
+              {
+                "beat": 230.0,
+                "time_s": 104.0148,
+                "foot": 0,
+                "panel_units_per_second": 2.2447
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 1.02285,
+          "median_near_note_novelty": 0.98706,
+          "notes_near_strong_onset_fraction": 0.75664,
+          "strong_onset_coverage_fraction": 0.42643,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Standard Single",
+        "type": "dance-single",
+        "difficulty": "Medium",
+        "meter": 6,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 338,
+        "arrow_presses": 348,
+        "jumps": 10,
+        "holds": 7,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 7,
+        "hold_pairs": [
+          [
+            36.0,
+            38.5,
+            0
+          ],
+          [
+            80.0,
+            82.5,
+            1
+          ],
+          [
+            88.0,
+            90.5,
+            0
+          ],
+          [
+            92.0,
+            93.5,
+            1
+          ],
+          [
+            160.0,
+            162.5,
+            3
+          ],
+          [
+            240.0,
+            242.5,
+            3
+          ],
+          [
+            276.0,
+            277.5,
+            2
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "column_press_counts": {
+          "0": 92,
+          "1": 81,
+          "2": 89,
+          "3": 86
+        },
+        "normalized_column_entropy": 0.99921,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 2.6415,
+        "peak_2s_note_rows_per_second": 5.0,
+        "fractional_beat_positions": [
+          0.0,
+          0.5
+        ],
+        "minimum_interrow_gap_s": 0.2211375000003386,
+        "longest_interrow_rest_s": 1.3737749999994833,
+        "interrow_gap_p10_s": 0.22213749999990284,
+        "interrow_gap_median_s": 0.44184999999956176,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 16,
+          "unique_arrow_measure_templates": 64,
+          "most_common_rhythm_measure_fraction": 0.11594,
+          "most_common_arrow_measure_fraction": 0.04348,
+          "max_consecutive_identical_rhythm_measures": 2,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 94,
+          "four_row_arrow_ngram_diversity": 0.2806,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 8
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  2
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 6
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 35,
+            "rows_per_second": 2.3649,
+            "jumps": 0,
+            "offbeat_rows": 6
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 55,
+            "rows_per_second": 2.4943,
+            "jumps": 0,
+            "offbeat_rows": 8
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 34,
+            "rows_per_second": 2.3529,
+            "jumps": 0,
+            "offbeat_rows": 6
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 56,
+            "rows_per_second": 2.6794,
+            "jumps": 2,
+            "offbeat_rows": 15
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 47,
+            "rows_per_second": 3.2192,
+            "jumps": 2,
+            "offbeat_rows": 14
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 60,
+            "rows_per_second": 2.7273,
+            "jumps": 2,
+            "offbeat_rows": 16
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 45,
+            "rows_per_second": 3.913,
+            "jumps": 4,
+            "offbeat_rows": 19
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 6,
+            "rows_per_second": 1.3158,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 19,
+          "rapid_aba_examples": [
+            {
+              "beat": 15.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.462125
+            },
+            {
+              "beat": 34.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.45855
+            },
+            {
+              "beat": 47.0,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.456775
+            },
+            {
+              "beat": 63.0,
+              "columns": [
+                2,
+                0,
+                2
+              ],
+              "duration_s": 0.454725
+            },
+            {
+              "beat": 79.0,
+              "columns": [
+                1,
+                3,
+                1
+              ],
+              "duration_s": 0.453075
+            },
+            {
+              "beat": 106.5,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.450875
+            },
+            {
+              "beat": 118.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.45015
+            },
+            {
+              "beat": 147.5,
+              "columns": [
+                2,
+                3,
+                2
+              ],
+              "duration_s": 0.44875
+            },
+            {
+              "beat": 171.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.44795
+            },
+            {
+              "beat": 172.5,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.4478
+            },
+            {
+              "beat": 179.5,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.447588
+            },
+            {
+              "beat": 211.5,
+              "columns": [
+                1,
+                3,
+                1
+              ],
+              "duration_s": 0.446362
+            },
+            {
+              "beat": 218.5,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.446075
+            },
+            {
+              "beat": 221.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.4459
+            },
+            {
+              "beat": 225.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.4457
+            },
+            {
+              "beat": 228.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.4455
+            },
+            {
+              "beat": 230.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.4455
+            },
+            {
+              "beat": 265.0,
+              "columns": [
+                1,
+                2,
+                1
+              ],
+              "duration_s": 0.443
+            },
+            {
+              "beat": 265.5,
+              "columns": [
+                2,
+                1,
+                2
+              ],
+              "duration_s": 0.443
+            }
+          ]
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 402.4407,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 6.3952,
+            "peak_speed_examples": [
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 264.0,
+                "time_s": 119.1251,
+                "foot": 0,
+                "panel_units_per_second": 6.3797
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 0,
+                "panel_units_per_second": 6.371
+              },
+              {
+                "beat": 228.5,
+                "time_s": 103.34655,
+                "foot": 0,
+                "panel_units_per_second": 4.4883
+              },
+              {
+                "beat": 221.5,
+                "time_s": 100.22625,
+                "foot": 0,
+                "panel_units_per_second": 4.4853
+              },
+              {
+                "beat": 220.0,
+                "time_s": 99.5574,
+                "foot": 1,
+                "panel_units_per_second": 4.4836
+              },
+              {
+                "beat": 204.5,
+                "time_s": 92.639012,
+                "foot": 0,
+                "panel_units_per_second": 4.4773
+              },
+              {
+                "beat": 203.0,
+                "time_s": 91.968925,
+                "foot": 1,
+                "panel_units_per_second": 4.4765
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 402.4407,
+            "chosen_assignment_crossed_stance_rows": 33,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 6.3952,
+            "peak_speed_examples": [
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 264.0,
+                "time_s": 119.1251,
+                "foot": 1,
+                "panel_units_per_second": 6.3797
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 1,
+                "panel_units_per_second": 6.371
+              },
+              {
+                "beat": 228.5,
+                "time_s": 103.34655,
+                "foot": 0,
+                "panel_units_per_second": 4.4883
+              },
+              {
+                "beat": 221.5,
+                "time_s": 100.22625,
+                "foot": 0,
+                "panel_units_per_second": 4.4853
+              },
+              {
+                "beat": 220.0,
+                "time_s": 99.5574,
+                "foot": 1,
+                "panel_units_per_second": 4.4836
+              },
+              {
+                "beat": 204.5,
+                "time_s": 92.639012,
+                "foot": 1,
+                "panel_units_per_second": 4.4773
+              },
+              {
+                "beat": 203.0,
+                "time_s": 91.968925,
+                "foot": 0,
+                "panel_units_per_second": 4.4765
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 0.9724,
+          "median_near_note_novelty": 0.93753,
+          "notes_near_strong_onset_fraction": 0.66864,
+          "strong_onset_coverage_fraction": 0.56359,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Heavy Single",
+        "type": "dance-single",
+        "difficulty": "Hard",
+        "meter": 9,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 490,
+        "arrow_presses": 505,
+        "jumps": 15,
+        "holds": 1,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 1,
+        "hold_pairs": [
+          [
+            88.0,
+            89.5,
+            3
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "column_press_counts": {
+          "0": 132,
+          "1": 124,
+          "2": 128,
+          "3": 121
+        },
+        "normalized_column_entropy": 0.99961,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 3.8293,
+        "peak_2s_note_rows_per_second": 6.0,
+        "fractional_beat_positions": [
+          0.0,
+          0.25,
+          0.5,
+          0.75
+        ],
+        "minimum_interrow_gap_s": 0.1106562500003605,
+        "longest_interrow_rest_s": 0.9040499999983851,
+        "interrow_gap_p10_s": 0.22149999999984687,
+        "interrow_gap_median_s": 0.22458750000006944,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 18,
+          "unique_arrow_measure_templates": 68,
+          "most_common_rhythm_measure_fraction": 0.17391,
+          "most_common_arrow_measure_fraction": 0.02899,
+          "max_consecutive_identical_rhythm_measures": 2,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 84,
+          "four_row_arrow_ngram_diversity": 0.17248,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 12
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  2
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 10
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.25,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  2.75,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 5
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 51,
+            "rows_per_second": 3.4459,
+            "jumps": 0,
+            "offbeat_rows": 20
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 80,
+            "rows_per_second": 3.6281,
+            "jumps": 2,
+            "offbeat_rows": 31
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 53,
+            "rows_per_second": 3.6678,
+            "jumps": 1,
+            "offbeat_rows": 22
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 85,
+            "rows_per_second": 4.067,
+            "jumps": 3,
+            "offbeat_rows": 40
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 67,
+            "rows_per_second": 4.589,
+            "jumps": 2,
+            "offbeat_rows": 34
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 89,
+            "rows_per_second": 4.0455,
+            "jumps": 3,
+            "offbeat_rows": 41
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 57,
+            "rows_per_second": 4.9565,
+            "jumps": 4,
+            "offbeat_rows": 31
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 8,
+            "rows_per_second": 1.7544,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 44,
+          "rapid_aba_examples": [
+            {
+              "beat": 25.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.459875
+            },
+            {
+              "beat": 26.5,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.459875
+            },
+            {
+              "beat": 31.0,
+              "columns": [
+                3,
+                0,
+                3
+              ],
+              "duration_s": 0.4592
+            },
+            {
+              "beat": 31.5,
+              "columns": [
+                0,
+                3,
+                0
+              ],
+              "duration_s": 0.458875
+            },
+            {
+              "beat": 42.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.457325
+            },
+            {
+              "beat": 43.5,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.45705
+            },
+            {
+              "beat": 47.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.456775
+            },
+            {
+              "beat": 48.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.456225
+            },
+            {
+              "beat": 50.0,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.456225
+            },
+            {
+              "beat": 51.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.456225
+            },
+            {
+              "beat": 53.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.4557
+            },
+            {
+              "beat": 55.0,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.4557
+            },
+            {
+              "beat": 56.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 57.5,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 59.0,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 60.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.454725
+            },
+            {
+              "beat": 101.0,
+              "columns": [
+                2,
+                3,
+                2
+              ],
+              "duration_s": 0.451125
+            },
+            {
+              "beat": 121.0,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.44995
+            },
+            {
+              "beat": 122.5,
+              "columns": [
+                0,
+                1,
+                0
+              ],
+              "duration_s": 0.44995
+            },
+            {
+              "beat": 123.5,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.449837
+            }
+          ]
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 628.0874,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 8.9706,
+            "peak_speed_examples": [
+              {
+                "beat": 222.5,
+                "time_s": 100.67215,
+                "foot": 1,
+                "panel_units_per_second": 8.9706
+              },
+              {
+                "beat": 174.5,
+                "time_s": 79.2216,
+                "foot": 1,
+                "panel_units_per_second": 8.9326
+              },
+              {
+                "beat": 127.0,
+                "time_s": 57.909375,
+                "foot": 1,
+                "panel_units_per_second": 8.8943
+              },
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 271.5,
+                "time_s": 122.446287,
+                "foot": 1,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 271.75,
+                "time_s": 122.556944,
+                "foot": 0,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 264.5,
+                "time_s": 119.3466,
+                "foot": 0,
+                "panel_units_per_second": 6.3847
+              },
+              {
+                "beat": 263.5,
+                "time_s": 118.903425,
+                "foot": 1,
+                "panel_units_per_second": 6.3797
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 628.0874,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 8.9706,
+            "peak_speed_examples": [
+              {
+                "beat": 222.5,
+                "time_s": 100.67215,
+                "foot": 1,
+                "panel_units_per_second": 8.9706
+              },
+              {
+                "beat": 174.5,
+                "time_s": 79.2216,
+                "foot": 1,
+                "panel_units_per_second": 8.9326
+              },
+              {
+                "beat": 127.0,
+                "time_s": 57.909375,
+                "foot": 1,
+                "panel_units_per_second": 8.8943
+              },
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 271.5,
+                "time_s": 122.446287,
+                "foot": 1,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 271.75,
+                "time_s": 122.556944,
+                "foot": 0,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 264.5,
+                "time_s": 119.3466,
+                "foot": 0,
+                "panel_units_per_second": 6.3847
+              },
+              {
+                "beat": 263.5,
+                "time_s": 118.903425,
+                "foot": 1,
+                "panel_units_per_second": 6.3797
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 0.92303,
+          "median_near_note_novelty": 0.89043,
+          "notes_near_strong_onset_fraction": 0.58776,
+          "strong_onset_coverage_fraction": 0.7182,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Beginner Double",
+        "type": "dance-double",
+        "difficulty": "Beginner",
+        "meter": 3,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 132,
+        "arrow_presses": 132,
+        "jumps": 0,
+        "holds": 13,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 13,
+        "hold_pairs": [
+          [
+            36.0,
+            39.0,
+            6
+          ],
+          [
+            80.0,
+            83.0,
+            3
+          ],
+          [
+            88.0,
+            89.5,
+            4
+          ],
+          [
+            92.0,
+            93.5,
+            5
+          ],
+          [
+            96.0,
+            99.0,
+            7
+          ],
+          [
+            100.0,
+            103.0,
+            4
+          ],
+          [
+            152.0,
+            153.5,
+            3
+          ],
+          [
+            160.0,
+            163.0,
+            5
+          ],
+          [
+            196.0,
+            199.0,
+            0
+          ],
+          [
+            232.0,
+            233.5,
+            7
+          ],
+          [
+            240.0,
+            243.0,
+            5
+          ],
+          [
+            276.0,
+            277.5,
+            1
+          ],
+          [
+            280.0,
+            283.0,
+            4
+          ]
+        ],
+        "max_simultaneous_panel_demand": 1,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "column_press_counts": {
+          "0": 12,
+          "1": 16,
+          "2": 15,
+          "3": 26,
+          "4": 26,
+          "5": 17,
+          "6": 11,
+          "7": 9
+        },
+        "normalized_column_entropy": 0.96905,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.52965,
+        "average_note_rows_per_song_second": 1.0316,
+        "peak_2s_note_rows_per_second": 2.5,
+        "fractional_beat_positions": [
+          0.0
+        ],
+        "minimum_interrow_gap_s": 0.442625000001442,
+        "longest_interrow_rest_s": 1.8316999999993122,
+        "interrow_gap_p10_s": 0.8836999999991235,
+        "interrow_gap_median_s": 0.8976499999988903,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 3,
+          "unique_arrow_measure_templates": 35,
+          "most_common_rhythm_measure_fraction": 0.78261,
+          "most_common_arrow_measure_fraction": 0.08696,
+          "max_consecutive_identical_rhythm_measures": 10,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 75,
+          "four_row_arrow_ngram_diversity": 0.5814,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 54
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ]
+              ],
+              "measures": 12
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 3
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 15,
+            "rows_per_second": 1.0135,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 22,
+            "rows_per_second": 0.9977,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 16,
+            "rows_per_second": 1.1073,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 21,
+            "rows_per_second": 1.0048,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 15,
+            "rows_per_second": 1.0274,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 22,
+            "rows_per_second": 1.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 17,
+            "rows_per_second": 1.4783,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 4,
+            "rows_per_second": 0.8772,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 0,
+          "rapid_aba_examples": []
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 154.2529,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 1.5975,
+            "peak_speed_examples": [
+              {
+                "beat": 270.0,
+                "time_s": 121.78235,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 271.0,
+                "time_s": 122.224975,
+                "foot": 0,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 255.0,
+                "time_s": 115.13315,
+                "foot": 0,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 1,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 118.0,
+                "time_s": 53.8601,
+                "foot": 1,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 119.0,
+                "time_s": 54.31025,
+                "foot": 0,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 280.0,
+                "time_s": 126.2041,
+                "foot": 1,
+                "panel_units_per_second": 1.2652
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 154.2529,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 1.5975,
+            "peak_speed_examples": [
+              {
+                "beat": 270.0,
+                "time_s": 121.78235,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 271.0,
+                "time_s": 122.224975,
+                "foot": 0,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 1,
+                "panel_units_per_second": 1.5975
+              },
+              {
+                "beat": 255.0,
+                "time_s": 115.13315,
+                "foot": 0,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 1,
+                "panel_units_per_second": 1.5928
+              },
+              {
+                "beat": 118.0,
+                "time_s": 53.8601,
+                "foot": 1,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 119.0,
+                "time_s": 54.31025,
+                "foot": 0,
+                "panel_units_per_second": 1.5708
+              },
+              {
+                "beat": 280.0,
+                "time_s": 126.2041,
+                "foot": 1,
+                "panel_units_per_second": 1.2652
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 1.05416,
+          "median_near_note_novelty": 1.01258,
+          "notes_near_strong_onset_fraction": 0.78788,
+          "strong_onset_coverage_fraction": 0.25935,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Easy Double",
+        "type": "dance-double",
+        "difficulty": "Easy",
+        "meter": 5,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 226,
+        "arrow_presses": 230,
+        "jumps": 4,
+        "holds": 8,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 8,
+        "hold_pairs": [
+          [
+            36.0,
+            38.5,
+            3
+          ],
+          [
+            80.0,
+            82.5,
+            2
+          ],
+          [
+            88.0,
+            90.5,
+            6
+          ],
+          [
+            92.0,
+            93.5,
+            7
+          ],
+          [
+            160.0,
+            162.5,
+            3
+          ],
+          [
+            240.0,
+            242.5,
+            3
+          ],
+          [
+            276.0,
+            277.5,
+            4
+          ],
+          [
+            280.0,
+            281.5,
+            5
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "column_press_counts": {
+          "0": 13,
+          "1": 31,
+          "2": 27,
+          "3": 45,
+          "4": 49,
+          "5": 28,
+          "6": 24,
+          "7": 13
+        },
+        "normalized_column_entropy": 0.95564,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 1.7662,
+        "peak_2s_note_rows_per_second": 2.5,
+        "fractional_beat_positions": [
+          0.0
+        ],
+        "minimum_interrow_gap_s": 0.4422750000006914,
+        "longest_interrow_rest_s": 1.3737749999994833,
+        "interrow_gap_p10_s": 0.4445250000005103,
+        "interrow_gap_median_s": 0.4495500000015724,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 8,
+          "unique_arrow_measure_templates": 64,
+          "most_common_rhythm_measure_fraction": 0.4058,
+          "most_common_arrow_measure_fraction": 0.02899,
+          "max_consecutive_identical_rhythm_measures": 3,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 122,
+          "four_row_arrow_ngram_diversity": 0.54709,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 28
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 14
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 7
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 5
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 22,
+            "rows_per_second": 1.4865,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 37,
+            "rows_per_second": 1.678,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 26,
+            "rows_per_second": 1.7993,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 39,
+            "rows_per_second": 1.866,
+            "jumps": 1,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 30,
+            "rows_per_second": 2.0548,
+            "jumps": 1,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 43,
+            "rows_per_second": 1.9545,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 24,
+            "rows_per_second": 2.087,
+            "jumps": 2,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 5,
+            "rows_per_second": 1.0965,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 0,
+          "rapid_aba_examples": []
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 279.9013,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 3.1814,
+            "peak_speed_examples": [
+              {
+                "beat": 248.0,
+                "time_s": 112.0242,
+                "foot": 1,
+                "panel_units_per_second": 3.1814
+              },
+              {
+                "beat": 169.0,
+                "time_s": 76.75825,
+                "foot": 0,
+                "panel_units_per_second": 3.1571
+              },
+              {
+                "beat": 168.0,
+                "time_s": 76.3103,
+                "foot": 1,
+                "panel_units_per_second": 3.156
+              },
+              {
+                "beat": 121.0,
+                "time_s": 55.21035,
+                "foot": 0,
+                "panel_units_per_second": 3.143
+              },
+              {
+                "beat": 261.0,
+                "time_s": 117.79505,
+                "foot": 1,
+                "panel_units_per_second": 2.5209
+              },
+              {
+                "beat": 47.0,
+                "time_s": 21.704025,
+                "foot": 1,
+                "panel_units_per_second": 2.4477
+              },
+              {
+                "beat": 254.0,
+                "time_s": 114.6892,
+                "foot": 1,
+                "panel_units_per_second": 2.2525
+              },
+              {
+                "beat": 252.0,
+                "time_s": 113.8013,
+                "foot": 1,
+                "panel_units_per_second": 2.2509
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 279.9013,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 3.1814,
+            "peak_speed_examples": [
+              {
+                "beat": 248.0,
+                "time_s": 112.0242,
+                "foot": 1,
+                "panel_units_per_second": 3.1814
+              },
+              {
+                "beat": 169.0,
+                "time_s": 76.75825,
+                "foot": 0,
+                "panel_units_per_second": 3.1571
+              },
+              {
+                "beat": 168.0,
+                "time_s": 76.3103,
+                "foot": 1,
+                "panel_units_per_second": 3.156
+              },
+              {
+                "beat": 121.0,
+                "time_s": 55.21035,
+                "foot": 0,
+                "panel_units_per_second": 3.143
+              },
+              {
+                "beat": 261.0,
+                "time_s": 117.79505,
+                "foot": 1,
+                "panel_units_per_second": 2.5209
+              },
+              {
+                "beat": 47.0,
+                "time_s": 21.704025,
+                "foot": 1,
+                "panel_units_per_second": 2.4477
+              },
+              {
+                "beat": 254.0,
+                "time_s": 114.6892,
+                "foot": 1,
+                "panel_units_per_second": 2.2525
+              },
+              {
+                "beat": 252.0,
+                "time_s": 113.8013,
+                "foot": 1,
+                "panel_units_per_second": 2.2509
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 1.02285,
+          "median_near_note_novelty": 0.98706,
+          "notes_near_strong_onset_fraction": 0.75664,
+          "strong_onset_coverage_fraction": 0.42643,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Standard Double",
+        "type": "dance-double",
+        "difficulty": "Medium",
+        "meter": 7,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 278,
+        "arrow_presses": 284,
+        "jumps": 6,
+        "holds": 7,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 7,
+        "hold_pairs": [
+          [
+            36.0,
+            38.5,
+            1
+          ],
+          [
+            80.0,
+            82.5,
+            0
+          ],
+          [
+            88.0,
+            90.5,
+            6
+          ],
+          [
+            92.0,
+            93.5,
+            4
+          ],
+          [
+            160.0,
+            162.5,
+            6
+          ],
+          [
+            240.0,
+            242.5,
+            3
+          ],
+          [
+            276.0,
+            277.5,
+            6
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "column_press_counts": {
+          "0": 23,
+          "1": 38,
+          "2": 30,
+          "3": 62,
+          "4": 54,
+          "5": 31,
+          "6": 28,
+          "7": 18
+        },
+        "normalized_column_entropy": 0.96325,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 2.1726,
+        "peak_2s_note_rows_per_second": 4.0,
+        "fractional_beat_positions": [
+          0.0,
+          0.5
+        ],
+        "minimum_interrow_gap_s": 0.2211375000003386,
+        "longest_interrow_rest_s": 1.3737749999994833,
+        "interrow_gap_p10_s": 0.22350000000019463,
+        "interrow_gap_median_s": 0.4480999999987034,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 12,
+          "unique_arrow_measure_templates": 64,
+          "most_common_rhythm_measure_fraction": 0.36232,
+          "most_common_arrow_measure_fraction": 0.02899,
+          "max_consecutive_identical_rhythm_measures": 3,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 128,
+          "four_row_arrow_ngram_diversity": 0.46545,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 25
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 12
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 5
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 5
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 30,
+            "rows_per_second": 2.027,
+            "jumps": 0,
+            "offbeat_rows": 2
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 48,
+            "rows_per_second": 2.1769,
+            "jumps": 0,
+            "offbeat_rows": 3
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 29,
+            "rows_per_second": 2.0069,
+            "jumps": 0,
+            "offbeat_rows": 1
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 45,
+            "rows_per_second": 2.1531,
+            "jumps": 1,
+            "offbeat_rows": 4
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 36,
+            "rows_per_second": 2.4658,
+            "jumps": 1,
+            "offbeat_rows": 3
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 48,
+            "rows_per_second": 2.1818,
+            "jumps": 1,
+            "offbeat_rows": 4
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 36,
+            "rows_per_second": 3.1304,
+            "jumps": 3,
+            "offbeat_rows": 10
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 6,
+            "rows_per_second": 1.3158,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 9,
+          "rapid_aba_examples": [
+            {
+              "beat": 175.0,
+              "columns": [
+                3,
+                4,
+                3
+              ],
+              "duration_s": 0.4478
+            },
+            {
+              "beat": 191.0,
+              "columns": [
+                3,
+                6,
+                3
+              ],
+              "duration_s": 0.44725
+            },
+            {
+              "beat": 214.0,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.446275
+            },
+            {
+              "beat": 230.0,
+              "columns": [
+                0,
+                2,
+                0
+              ],
+              "duration_s": 0.4455
+            },
+            {
+              "beat": 250.5,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.444275
+            },
+            {
+              "beat": 251.5,
+              "columns": [
+                4,
+                6,
+                4
+              ],
+              "duration_s": 0.444112
+            },
+            {
+              "beat": 258.5,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.44365
+            },
+            {
+              "beat": 259.0,
+              "columns": [
+                2,
+                3,
+                2
+              ],
+              "duration_s": 0.44365
+            },
+            {
+              "beat": 260.0,
+              "columns": [
+                2,
+                1,
+                2
+              ],
+              "duration_s": 0.44335
+            }
+          ]
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 335.8556,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 6.3952,
+            "peak_speed_examples": [
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 259.0,
+                "time_s": 116.90805,
+                "foot": 0,
+                "panel_units_per_second": 4.5081
+              },
+              {
+                "beat": 253.0,
+                "time_s": 114.24525,
+                "foot": 1,
+                "panel_units_per_second": 4.505
+              },
+              {
+                "beat": 251.0,
+                "time_s": 113.357025,
+                "foot": 1,
+                "panel_units_per_second": 4.5017
+              },
+              {
+                "beat": 252.0,
+                "time_s": 113.8013,
+                "foot": 1,
+                "panel_units_per_second": 4.5017
+              },
+              {
+                "beat": 144.0,
+                "time_s": 65.5474,
+                "foot": 0,
+                "panel_units_per_second": 4.4543
+              },
+              {
+                "beat": 209.0,
+                "time_s": 94.64865,
+                "foot": 1,
+                "panel_units_per_second": 3.3386
+              },
+              {
+                "beat": 269.0,
+                "time_s": 121.339725,
+                "foot": 1,
+                "panel_units_per_second": 3.1951
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 335.6774,
+            "chosen_assignment_crossed_stance_rows": 99,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 6.3952,
+            "peak_speed_examples": [
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 259.0,
+                "time_s": 116.90805,
+                "foot": 1,
+                "panel_units_per_second": 4.5081
+              },
+              {
+                "beat": 253.0,
+                "time_s": 114.24525,
+                "foot": 0,
+                "panel_units_per_second": 4.505
+              },
+              {
+                "beat": 251.0,
+                "time_s": 113.357025,
+                "foot": 0,
+                "panel_units_per_second": 4.5017
+              },
+              {
+                "beat": 252.0,
+                "time_s": 113.8013,
+                "foot": 0,
+                "panel_units_per_second": 4.5017
+              },
+              {
+                "beat": 144.0,
+                "time_s": 65.5474,
+                "foot": 0,
+                "panel_units_per_second": 4.4543
+              },
+              {
+                "beat": 209.0,
+                "time_s": 94.64865,
+                "foot": 0,
+                "panel_units_per_second": 3.3386
+              },
+              {
+                "beat": 269.0,
+                "time_s": 121.339725,
+                "foot": 0,
+                "panel_units_per_second": 3.1951
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 1.0014,
+          "median_near_note_novelty": 0.96258,
+          "notes_near_strong_onset_fraction": 0.73381,
+          "strong_onset_coverage_fraction": 0.50873,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      },
+      {
+        "name": "Heavy Double",
+        "type": "dance-double",
+        "difficulty": "Hard",
+        "meter": 10,
+        "errors": [],
+        "warnings": [],
+        "timing_max_reference_error_ms": 3e-08,
+        "bpm_segment_count": 71,
+        "bpm_map_matches_reference": true,
+        "offset_matches_reference": true,
+        "extra_timing_events": {
+          "stops": 0,
+          "delays": 0,
+          "warps": 0
+        },
+        "step_rows": 490,
+        "arrow_presses": 505,
+        "jumps": 15,
+        "holds": 1,
+        "rolls": 0,
+        "mines": 0,
+        "complete_hold_pairs": 1,
+        "hold_pairs": [
+          [
+            88.0,
+            89.5,
+            6
+          ]
+        ],
+        "max_simultaneous_panel_demand": 2,
+        "used_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "column_press_counts": {
+          "0": 44,
+          "1": 65,
+          "2": 61,
+          "3": 91,
+          "4": 98,
+          "5": 55,
+          "6": 53,
+          "7": 38
+        },
+        "normalized_column_entropy": 0.97696,
+        "first_note_s": 3.7745,
+        "last_note_or_tail_s": 127.0878,
+        "average_note_rows_per_song_second": 3.8293,
+        "peak_2s_note_rows_per_second": 6.0,
+        "fractional_beat_positions": [
+          0.0,
+          0.25,
+          0.5,
+          0.75
+        ],
+        "minimum_interrow_gap_s": 0.1106562500003605,
+        "longest_interrow_rest_s": 0.9040499999983851,
+        "interrow_gap_p10_s": 0.22149999999984687,
+        "interrow_gap_median_s": 0.22458750000006944,
+        "repetition": {
+          "nonempty_measures": 69,
+          "unique_rhythmic_measure_templates": 18,
+          "unique_arrow_measure_templates": 68,
+          "most_common_rhythm_measure_fraction": 0.17391,
+          "most_common_arrow_measure_fraction": 0.02899,
+          "max_consecutive_identical_rhythm_measures": 2,
+          "unique_nonempty_four_measure_arrow_phrases": 18,
+          "four_measure_phrase_count": 18,
+          "unique_four_row_arrow_ngrams": 181,
+          "four_row_arrow_ngram_diversity": 0.37166,
+          "most_common_rhythm_templates": [
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 12
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  2
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 10
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  1.5,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  2.25,
+                  1
+                ],
+                [
+                  2.5,
+                  1
+                ],
+                [
+                  2.75,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 6
+            },
+            {
+              "rows": [
+                [
+                  0.0,
+                  1
+                ],
+                [
+                  0.5,
+                  1
+                ],
+                [
+                  1.0,
+                  1
+                ],
+                [
+                  2.0,
+                  1
+                ],
+                [
+                  3.0,
+                  1
+                ],
+                [
+                  3.5,
+                  1
+                ]
+              ],
+              "measures": 5
+            }
+          ]
+        },
+        "section_density": [
+          {
+            "id": "open",
+            "label": "cold open",
+            "start_s": 0.0,
+            "end_s": 3.1,
+            "step_rows": 0,
+            "rows_per_second": 0.0,
+            "jumps": 0,
+            "offbeat_rows": 0
+          },
+          {
+            "id": "v1",
+            "label": "verse 1 (earth, asking)",
+            "start_s": 3.1,
+            "end_s": 17.9,
+            "step_rows": 51,
+            "rows_per_second": 3.4459,
+            "jumps": 0,
+            "offbeat_rows": 20
+          },
+          {
+            "id": "v2",
+            "label": "verse 2 (earth, the signal)",
+            "start_s": 17.9,
+            "end_s": 39.95,
+            "step_rows": 80,
+            "rows_per_second": 3.6281,
+            "jumps": 2,
+            "offbeat_rows": 31
+          },
+          {
+            "id": "build",
+            "label": "build (the other world)",
+            "start_s": 39.95,
+            "end_s": 54.4,
+            "step_rows": 53,
+            "rows_per_second": 3.6678,
+            "jumps": 1,
+            "offbeat_rows": 22
+          },
+          {
+            "id": "v3",
+            "label": "drop 1 / verse 3 (the filter, keep looking)",
+            "start_s": 54.4,
+            "end_s": 75.3,
+            "step_rows": 85,
+            "rows_per_second": 4.067,
+            "jumps": 3,
+            "offbeat_rows": 40
+          },
+          {
+            "id": "v4",
+            "label": "drop 2a / verse 4 (call and response)",
+            "start_s": 75.3,
+            "end_s": 89.9,
+            "step_rows": 67,
+            "rows_per_second": 4.589,
+            "jumps": 2,
+            "offbeat_rows": 34
+          },
+          {
+            "id": "v5",
+            "label": "drop 2b / verse 5 (arrival)",
+            "start_s": 89.9,
+            "end_s": 111.9,
+            "step_rows": 89,
+            "rows_per_second": 4.0455,
+            "jumps": 3,
+            "offbeat_rows": 41
+          },
+          {
+            "id": "final",
+            "label": "final drop (contact)",
+            "start_s": 111.9,
+            "end_s": 123.4,
+            "step_rows": 57,
+            "rows_per_second": 4.9565,
+            "jumps": 4,
+            "offbeat_rows": 31
+          },
+          {
+            "id": "outro",
+            "label": "outro",
+            "start_s": 123.4,
+            "end_s": 127.96,
+            "step_rows": 8,
+            "rows_per_second": 1.7544,
+            "jumps": 0,
+            "offbeat_rows": 0
+          }
+        ],
+        "suspicious_patterns": {
+          "rapid_repeated_panel_count": 0,
+          "rapid_repeated_panel_examples": [],
+          "rapid_aba_count": 72,
+          "rapid_aba_examples": [
+            {
+              "beat": 25.0,
+              "columns": [
+                7,
+                6,
+                7
+              ],
+              "duration_s": 0.459875
+            },
+            {
+              "beat": 26.5,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.459875
+            },
+            {
+              "beat": 31.5,
+              "columns": [
+                3,
+                4,
+                3
+              ],
+              "duration_s": 0.458875
+            },
+            {
+              "beat": 32.0,
+              "columns": [
+                4,
+                3,
+                4
+              ],
+              "duration_s": 0.45855
+            },
+            {
+              "beat": 34.5,
+              "columns": [
+                3,
+                2,
+                3
+              ],
+              "duration_s": 0.45855
+            },
+            {
+              "beat": 42.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.457325
+            },
+            {
+              "beat": 51.0,
+              "columns": [
+                4,
+                6,
+                4
+              ],
+              "duration_s": 0.456225
+            },
+            {
+              "beat": 53.0,
+              "columns": [
+                7,
+                6,
+                7
+              ],
+              "duration_s": 0.4557
+            },
+            {
+              "beat": 55.0,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.4557
+            },
+            {
+              "beat": 56.0,
+              "columns": [
+                4,
+                6,
+                4
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 57.5,
+              "columns": [
+                7,
+                6,
+                7
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 59.0,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.4552
+            },
+            {
+              "beat": 60.0,
+              "columns": [
+                4,
+                6,
+                4
+              ],
+              "duration_s": 0.454725
+            },
+            {
+              "beat": 66.5,
+              "columns": [
+                1,
+                3,
+                1
+              ],
+              "duration_s": 0.4543
+            },
+            {
+              "beat": 67.0,
+              "columns": [
+                3,
+                1,
+                3
+              ],
+              "duration_s": 0.4543
+            },
+            {
+              "beat": 74.5,
+              "columns": [
+                1,
+                2,
+                1
+              ],
+              "duration_s": 0.45345
+            },
+            {
+              "beat": 79.0,
+              "columns": [
+                4,
+                1,
+                4
+              ],
+              "duration_s": 0.453075
+            },
+            {
+              "beat": 84.0,
+              "columns": [
+                5,
+                4,
+                5
+              ],
+              "duration_s": 0.45235
+            },
+            {
+              "beat": 84.5,
+              "columns": [
+                4,
+                5,
+                4
+              ],
+              "duration_s": 0.45235
+            },
+            {
+              "beat": 86.5,
+              "columns": [
+                5,
+                7,
+                5
+              ],
+              "duration_s": 0.45235
+            }
+          ]
+        },
+        "foot_assignment": {
+          "forward_only": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 580.3514,
+            "chosen_assignment_crossed_stance_rows": 0,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 18.074,
+            "peak_speed_examples": [
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 0,
+                "panel_units_per_second": 18.074
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 0,
+                "panel_units_per_second": 9.01
+              },
+              {
+                "beat": 222.5,
+                "time_s": 100.67215,
+                "foot": 1,
+                "panel_units_per_second": 8.9706
+              },
+              {
+                "beat": 174.5,
+                "time_s": 79.2216,
+                "foot": 1,
+                "panel_units_per_second": 8.9326
+              },
+              {
+                "beat": 127.0,
+                "time_s": 57.909375,
+                "foot": 1,
+                "panel_units_per_second": 8.8943
+              },
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 271.5,
+                "time_s": 122.446287,
+                "foot": 1,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 271.75,
+                "time_s": 122.556944,
+                "foot": 0,
+                "panel_units_per_second": 6.3901
+              }
+            ]
+          },
+          "crossovers_allowed": {
+            "feasible": true,
+            "minimum_consecutive_same_foot_singletons": 0,
+            "chosen_assignment_travel_panel_units": 579.9951,
+            "chosen_assignment_crossed_stance_rows": 26,
+            "chosen_assignment_rapid_same_foot_singletons": 0,
+            "rapid_same_foot_examples": [],
+            "chosen_assignment_peak_speed_panel_units_per_s": 18.074,
+            "peak_speed_examples": [
+              {
+                "beat": 272.0,
+                "time_s": 122.6676,
+                "foot": 0,
+                "panel_units_per_second": 18.074
+              },
+              {
+                "beat": 256.0,
+                "time_s": 115.5771,
+                "foot": 0,
+                "panel_units_per_second": 10.0735
+              },
+              {
+                "beat": 222.5,
+                "time_s": 100.67215,
+                "foot": 0,
+                "panel_units_per_second": 8.9706
+              },
+              {
+                "beat": 174.5,
+                "time_s": 79.2216,
+                "foot": 1,
+                "panel_units_per_second": 8.9326
+              },
+              {
+                "beat": 127.0,
+                "time_s": 57.909375,
+                "foot": 1,
+                "panel_units_per_second": 8.8943
+              },
+              {
+                "beat": 272.5,
+                "time_s": 122.888737,
+                "foot": 0,
+                "panel_units_per_second": 6.3952
+              },
+              {
+                "beat": 271.5,
+                "time_s": 122.446287,
+                "foot": 1,
+                "panel_units_per_second": 6.3901
+              },
+              {
+                "beat": 271.75,
+                "time_s": 122.556944,
+                "foot": 0,
+                "panel_units_per_second": 6.3901
+              }
+            ]
+          }
+        },
+        "onset_proxy": {
+          "mean_near_note_novelty": 0.92303,
+          "median_near_note_novelty": 0.89043,
+          "notes_near_strong_onset_fraction": 0.58776,
+          "strong_onset_coverage_fraction": 0.7182,
+          "strong_onset_count": 401
+        },
+        "status": "passed"
+      }
+    ],
+    "errors": [],
+    "progression": [
+      {
+        "type": "dance-single",
+        "names": [
+          "Beginner Single",
+          "Easy Single",
+          "Standard Single",
+          "Heavy Single"
+        ],
+        "meters": [
+          3,
+          4,
+          6,
+          9
+        ],
+        "rows": [
+          132,
+          226,
+          338,
+          490
+        ],
+        "peaks_2s": [
+          2.5,
+          2.5,
+          5.0,
+          6.0
+        ],
+        "meters_strictly_increase": true,
+        "rows_strictly_increase": true,
+        "peaks_do_not_decrease": true
+      },
+      {
+        "type": "dance-double",
+        "names": [
+          "Beginner Double",
+          "Easy Double",
+          "Standard Double",
+          "Heavy Double"
+        ],
+        "meters": [
+          3,
+          5,
+          7,
+          10
+        ],
+        "rows": [
+          132,
+          226,
+          278,
+          490
+        ],
+        "peaks_2s": [
+          2.5,
+          2.5,
+          4.0,
+          6.0
+        ],
+        "meters_strictly_increase": true,
+        "rows_strictly_increase": true,
+        "peaks_do_not_decrease": true
+      }
+    ],
+    "status": "passed"
+  },
+  "candidates": [],
+  "equivalent_export_checks": [],
+  "foot_model_assumptions": {
+    "feet": 2,
+    "brackets": false,
+    "held_panels_lock_assigned_foot": true,
+    "maximum_stance_span_panel_units": 2.25,
+    "maximum_double_movement_per_press_panel_units": 2.83,
+    "idle_foot_reposition_between_events": false,
+    "all_valid_initial_stances_allowed": true,
+    "objective": "Minimize consecutive same-foot singleton presses, then total travel. Reported speed is for that path; it is not a lower bound.",
+    "forward_only_constraint": "Left foot x <= right foot x. Equal-x up/down swaps and body facing are not modeled.",
+    "limitations": "No brackets, airborne reposition, heel/toe detail, facing/twists, mine avoidance, human fatigue, or actual pad playtest. A failed geometric search flags review; it does not prove a chart impossible."
+  },
+  "onset_proxy_method": "Centered 1024-sample FFT; 10 ms hop; positive log spectral flux in 30\u2013250 Hz and 250\u20134000 Hz bands; peaks above full-song 95th percentile, 70 ms separation; 50 ms matching tolerance. Coarse proxy; no stem analysis or musical judgment.",
+  "selection_guidance": "Reject changed audio/timing, broken holds, and >2 active panel demands first. Inspect conservative footwork failures and rapid repeats. Compare onset proxy, rests and section density within each difficulty, then repetition/diversity. Classic meters remain provisional until pad playtest."
+}

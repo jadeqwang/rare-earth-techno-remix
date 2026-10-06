@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<head>
+	<style>
+body {
+  font-family: Arial;
+  background: #1e1e1e;
+  color: #dcdcdc;
+  border: none;
+  padding: none;
+  margin: 0px;
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
+}
+p {
+	margin-block-start: 0.0em;
+	margin-block-end: 0.0em;
+	border: none;
+	text-align: center;
+}
+.left {
+	-webkit-transform:rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.up {
+	-webkit-transform:rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.right {
+	-webkit-transform:rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+.leftfoot {
+	content:url("src/l.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.rightfoot {
+	content:url("src/r.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.quarter {
+	content:url("src/1_4.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.eighth {
+	content:url("src/1_8.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.twelfth {
+	content:url("src/1_12.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.sixteenth {
+	content:url("src/1_16.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.twentyfourth {
+	content:url("src/1_24.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.thirtysecond {
+	content:url("src/1_32.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.fourtyeighth {
+	content:url("src/1_48.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.sixtyfourth {
+	content:url("src/1_64.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.holdcap {
+	content:url("src/hold_cap.png");
+	position:absolute;
+	width:128px;
+	height:64px;
+	border:none;
+}
+.rollcap {
+	content:url("src/roll_cap.png");
+	position:absolute;
+	width:128px;
+	height:64px;
+	border:none;
+}
+.mine {
+	content:url("src/mine.png");
+	position:absolute;
+	width:128px;
+	height:128px;
+	border:none;
+}
+.exp_text {
+	position:absolute;
+	height:20px;
+	border:none;
+	z-index:10
+}
+.m_mark {
+	position:absolute;
+	height:2px;
+	border:none;
+	background: #eaeaea;
+}
+.b_mark {
+	position:absolute;
+	height:1px;
+	border:none;
+	background: #d3d3d3;
+}
+#holdbody {
+	border: none;
+	position:absolute;
+	width:128px;
+	padding: none;
+	background: url("src/hold.png");
+	background-repeat: repeat;
+}
+#rollbody {
+	border: none;
+	position:absolute;
+	width:128px;
+	padding: none;
+	background: url("src/roll.png");
+	background-repeat: repeat;
+}
+	</style>
+</head>
+<html>
+	<body>
+		<div style="height: 164px; margin-block-start: 0.0em; margin-block-end: 0.0em;">
+			<img style="float: left; width: 418x; height: 164px; margin-block-start: 0.0em; margin-block-end: 0.0em;" src="../../../input/banner.png"/>
+			<h1 style="text-align: left; font-size: 50px; color:#ffffff; margin-block-start: 0.0em; margin-block-end: 0.0em;">Rare Earth<span style="color:#6b6b6b"> (Techno Remix)</span></h1>
+			<h3 style="text-align: left; font-size: 30px; color:#ffffff; margin-block-start: 0.0em; margin-block-end: 0.0em;">Robot Ninja Apocalypse</h3>
+		</div>
+		<div id="chartHeaders" style="z-index:10000000; border:none; margin-block-start: 0.0em; margin-block-end: 0.0em;">
+			<table style="border-collapse: collapse; background: #252526; width: 3281px;">
+				<tr>
+					<th colspan="8" style="table-layout: fixed; width: 711px; height: 19px; padding: 0px; border: 1px solid white">dance-single Beginner: Level 3, Beginner Single - ITGPT seed 43 (113 steps)</th>
+					<th colspan="4" style="table-layout: fixed; width: 831px; height: 19px; padding: 0px; border: 1px solid white">Source Expression [NoBrackets] (BracketParsingMethod: NoBrackets)</th>
+					<th colspan="12" style="table-layout: fixed; width: 1223x; height: 19px; padding: 0px; border: 1px solid white">dance-double Beginner: Level 3, [FG v2.0.3] Beginner Single - ITGPT seed 43 (113 steps)</th>
+					<th colspan="2" style="table-layout: fixed; width: 511px; height: 19px; padding: 0px; border: 1px solid white">Destination Expression</th>
+				</tr>
+				<tr>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Time</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">BPM</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Stop</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Meas</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">L (28%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">D (25%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">U (25%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">R (22%)</th>
+					<th style="table-layout: fixed; width: 255px; height: 19px; padding: 0px; border: 1px solid white">Mines</th>
+					<th style="table-layout: fixed; width: 63px; height: 19px; padding: 0px; border: 1px solid white">Cost</th>
+					<th style="table-layout: fixed; width: 255px; height: 19px; padding: 0px; border: 1px solid white">Left Foot</th>
+					<th style="table-layout: fixed; width: 255px; height: 19px; padding: 0px; border: 1px solid white">Right Foot</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Time</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">BPM</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Stop</th>
+					<th style="table-layout: fixed; width: 49px; height: 19px; padding: 0px; border: 1px solid white">Meas</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">L (18%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">D (12%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">U (13%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">R (20%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">L (12%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">D (10%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">U (9%)</th>
+					<th style="table-layout: fixed; width: 127px; height: 19px; padding: 0px; border: 1px solid white">R (6%)</th>
+					<th style="table-layout: fixed; width: 255px; height: 19px; padding: 0px; border: 1px solid white">Left Foot</th>
+					<th style="table-layout: fixed; width: 255px; height: 19px; padding: 0px; border: 1px solid white">Right Foot</th>
+				</tr>
+			</table>
+		</div>
+		<div style="position:absolute; top:204px;">
+			<p class="exp_text" style="top:54px; left:0px; width:50px;">4/4</p>
+			<p class="exp_text" style="top:54px; left:50px; width:50px;">129.143349118</p>
+			<p class="exp_text" style="top:1078px; left:50px; width:50px;">129.380053908</p>
+			<p class="exp_text" style="top:2102px; left:50px; width:50px;">129.617627997</p>
+			<p class="exp_text" style="top:3126px; left:50px; width:50px;">129.835001352</p>
+			<p class="exp_text" style="top:3126px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:3126px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:3072px; left:584px; z-index:3136;"/>
+			<img class="rightfoot" style="top:3072px; left:584px; z-index:3136;"/>
+			<p class="exp_text" style="top:4150px; left:50px; width:50px;">130.060152821</p>
+			<p class="exp_text" style="top:4150px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:4150px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:4096px; left:456px; z-index:4160;"/>
+			<img class="leftfoot" style="top:4096px; left:456px; z-index:4160;"/>
+			<p class="exp_text" style="top:5174px; left:50px; width:50px;">130.27194268</p>
+			<p class="exp_text" style="top:5686px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:5686px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:5632px; left:328px; z-index:5696;"/>
+			<img class="rightfoot" style="top:5632px; left:328px; z-index:5696;"/>
+			<p class="exp_text" style="top:6198px; left:50px; width:50px;">130.470236477</p>
+			<p class="exp_text" style="top:6198px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:6198px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:6144px; left:200px; z-index:6208;"/>
+			<img class="leftfoot" style="top:6144px; left:200px; z-index:6208;"/>
+			<p class="exp_text" style="top:6966px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:6966px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:6912px; left:328px; z-index:6976;"/>
+			<img class="rightfoot" style="top:6912px; left:328px; z-index:6976;"/>
+			<p class="exp_text" style="top:7222px; left:50px; width:50px;">130.662020906</p>
+			<p class="exp_text" style="top:7222px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:7222px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:7168px; left:200px; z-index:7232;"/>
+			<img class="leftfoot" style="top:7168px; left:200px; z-index:7232;"/>
+			<p class="exp_text" style="top:8246px; left:50px; width:50px;">130.847235852</p>
+			<p class="exp_text" style="top:8246px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:8246px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:8192px; left:584px; z-index:8256;"/>
+			<img class="rightfoot" style="top:8192px; left:584px; z-index:8256;"/>
+			<p class="exp_text" style="top:8758px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:8758px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:8704px; left:328px; z-index:8768;"/>
+			<img class="leftfoot" style="top:8704px; left:328px; z-index:8768;"/>
+			<p class="exp_text" style="top:9270px; left:50px; width:50px;">131.025823006</p>
+			<p class="exp_text" style="top:9270px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:9270px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:9216px; left:456px; z-index:9280;"/>
+			<img class="rightfoot" style="top:9216px; left:456px; z-index:9280;"/>
+			<p class="exp_text" style="top:10294px; left:50px; width:50px;">131.197725906</p>
+			<p class="exp_text" style="top:10294px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:10294px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:10240px; left:200px; z-index:10304;"/>
+			<img class="leftfoot" style="top:10240px; left:200px; z-index:10304;"/>
+			<p class="exp_text" style="top:11318px; left:50px; width:50px;">131.35570029</p>
+			<p class="exp_text" style="top:11318px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:11318px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:11264px; left:328px; z-index:11328;"/>
+			<img class="rightfoot" style="top:11264px; left:328px; z-index:11328;"/>
+			<p class="exp_text" style="top:12086px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:12086px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:12032px; left:456px; z-index:12096;"/>
+			<img class="leftfoot" style="top:12032px; left:456px; z-index:12096;"/>
+			<p class="exp_text" style="top:12342px; left:50px; width:50px;">131.514055565</p>
+			<p class="exp_text" style="top:12342px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:12342px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:12288px; left:584px; z-index:12352;"/>
+			<img class="rightfoot" style="top:12288px; left:584px; z-index:12352;"/>
+			<p class="exp_text" style="top:12598px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:12598px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:12544px; left:456px; z-index:12608;"/>
+			<img class="leftfoot" style="top:12544px; left:456px; z-index:12608;"/>
+			<p class="exp_text" style="top:13110px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:13110px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:13056px; left:584px; z-index:13120;"/>
+			<img class="rightfoot" style="top:13056px; left:584px; z-index:13120;"/>
+			<p class="exp_text" style="top:13366px; left:50px; width:50px;">131.665569454</p>
+			<p class="exp_text" style="top:13366px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:13366px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:13312px; left:200px; z-index:13376;"/>
+			<img class="leftfoot" style="top:13312px; left:200px; z-index:13376;"/>
+			<p class="exp_text" style="top:13622px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:13622px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:13568px; left:456px; z-index:13632;"/>
+			<img class="rightfoot" style="top:13568px; left:456px; z-index:13632;"/>
+			<p class="exp_text" style="top:13878px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:13878px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:13824px; left:200px; z-index:13888;"/>
+			<img class="leftfoot" style="top:13824px; left:200px; z-index:13888;"/>
+			<p class="exp_text" style="top:14134px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:14134px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:14080px; left:456px; z-index:14144;"/>
+			<img class="rightfoot" style="top:14080px; left:456px; z-index:14144;"/>
+			<p class="exp_text" style="top:14390px; left:50px; width:50px;">131.810193322</p>
+			<p class="exp_text" style="top:14390px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:14390px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:14336px; left:200px; z-index:14400;"/>
+			<img class="leftfoot" style="top:14336px; left:200px; z-index:14400;"/>
+			<p class="exp_text" style="top:15158px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:15158px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:15104px; left:584px; z-index:15168;"/>
+			<img class="rightfoot" style="top:15104px; left:584px; z-index:15168;"/>
+			<p class="exp_text" style="top:15414px; left:50px; width:50px;">131.947880587</p>
+			<p class="exp_text" style="top:15414px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:15414px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:15360px; left:328px; z-index:15424;"/>
+			<img class="leftfoot" style="top:15360px; left:328px; z-index:15424;"/>
+			<p class="exp_text" style="top:16438px; left:50px; width:50px;">132.071318512</p>
+			<div id="holdbody" style="top:15424px; left:328px; height:1024px; z-index:15423;"></div>
+			<img class="holdcap" style="top:16448px; left:328px; z-index:15423;"/>
+			<p class="exp_text" style="top:16694px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:16694px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:16640px; left:328px; z-index:16704;"/>
+			<img class="leftfoot" style="top:16640px; left:328px; z-index:16704;"/>
+			<p class="exp_text" style="top:17462px; left:50px; width:50px;">132.202269472</p>
+			<div id="holdbody" style="top:16704px; left:328px; height:768px; z-index:16703;"></div>
+			<img class="holdcap" style="top:17472px; left:328px; z-index:16703;"/>
+			<p class="exp_text" style="top:17718px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:17718px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:17664px; left:584px; z-index:17728;"/>
+			<img class="rightfoot" style="top:17664px; left:584px; z-index:17728;"/>
+			<p class="exp_text" style="top:18486px; left:50px; width:50px;">132.318888521</p>
+			<div id="holdbody" style="top:17728px; left:584px; height:768px; z-index:17727;"></div>
+			<img class="holdcap" style="top:18496px; left:584px; z-index:17727;"/>
+			<p class="exp_text" style="top:18998px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:18998px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:18944px; left:200px; z-index:19008;"/>
+			<img class="leftfoot" style="top:18944px; left:200px; z-index:19008;"/>
+			<p class="exp_text" style="top:19510px; left:50px; width:50px;">132.428405893</p>
+			<p class="exp_text" style="top:19510px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:19510px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:19456px; left:328px; z-index:19520;"/>
+			<img class="rightfoot" style="top:19456px; left:328px; z-index:19520;"/>
+			<p class="exp_text" style="top:20022px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:20022px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:19968px; left:200px; z-index:20032;"/>
+			<img class="leftfoot" style="top:19968px; left:200px; z-index:20032;"/>
+			<p class="exp_text" style="top:20534px; left:50px; width:50px;">132.538104705</p>
+			<p class="exp_text" style="top:20534px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:20534px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:20480px; left:456px; z-index:20544;"/>
+			<img class="rightfoot" style="top:20480px; left:456px; z-index:20544;"/>
+			<p class="exp_text" style="top:20790px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:20790px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:20736px; left:456px; z-index:20800;"/>
+			<img class="rightfoot" style="top:20736px; left:456px; z-index:20800;"/>
+			<p class="exp_text" style="top:21558px; left:50px; width:50px;">132.640654361</p>
+			<div id="holdbody" style="top:20800px; left:456px; height:768px; z-index:20799;"></div>
+			<img class="holdcap" style="top:21568px; left:456px; z-index:20799;"/>
+			<p class="exp_text" style="top:22582px; left:50px; width:50px;">132.736021238</p>
+			<p class="exp_text" style="top:22582px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:22582px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:22528px; left:200px; z-index:22592;"/>
+			<img class="leftfoot" style="top:22528px; left:200px; z-index:22592;"/>
+			<p class="exp_text" style="top:23094px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:23094px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:23040px; left:456px; z-index:23104;"/>
+			<img class="rightfoot" style="top:23040px; left:456px; z-index:23104;"/>
+			<p class="exp_text" style="top:23606px; left:50px; width:50px;">132.824174</p>
+			<p class="exp_text" style="top:23606px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:23606px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:23552px; left:328px; z-index:23616;"/>
+			<img class="leftfoot" style="top:23552px; left:328px; z-index:23616;"/>
+			<p class="exp_text" style="top:24630px; left:50px; width:50px;">132.912443928</p>
+			<p class="exp_text" style="top:24630px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:24630px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:24576px; left:584px; z-index:24640;"/>
+			<img class="rightfoot" style="top:24576px; left:584px; z-index:24640;"/>
+			<p class="exp_text" style="top:24886px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:24886px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:24832px; left:200px; z-index:24896;"/>
+			<img class="leftfoot" style="top:24832px; left:200px; z-index:24896;"/>
+			<p class="exp_text" style="top:25142px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:25142px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:25088px; left:456px; z-index:25152;"/>
+			<img class="rightfoot" style="top:25088px; left:456px; z-index:25152;"/>
+			<p class="exp_text" style="top:25654px; left:50px; width:50px;">133.000831255</p>
+			<p class="exp_text" style="top:25910px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:25910px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:25856px; left:200px; z-index:25920;"/>
+			<img class="leftfoot" style="top:25856px; left:200px; z-index:25920;"/>
+			<p class="exp_text" style="top:26166px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:26166px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:26112px; left:328px; z-index:26176;"/>
+			<img class="rightfoot" style="top:26112px; left:328px; z-index:26176;"/>
+			<p class="exp_text" style="top:26678px; left:50px; width:50px;">133.074577211</p>
+			<p class="exp_text" style="top:26678px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:26678px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:26624px; left:200px; z-index:26688;"/>
+			<img class="leftfoot" style="top:26624px; left:200px; z-index:26688;"/>
+			<p class="exp_text" style="top:26934px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:26934px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:26880px; left:584px; z-index:26944;"/>
+			<img class="rightfoot" style="top:26880px; left:584px; z-index:26944;"/>
+			<p class="exp_text" style="top:27190px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:27190px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:27136px; left:456px; z-index:27200;"/>
+			<img class="leftfoot" style="top:27136px; left:456px; z-index:27200;"/>
+			<p class="exp_text" style="top:27702px; left:50px; width:50px;">133.148404993</p>
+			<p class="exp_text" style="top:27702px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:27702px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:27648px; left:328px; z-index:27712;"/>
+			<img class="rightfoot" style="top:27648px; left:328px; z-index:27712;"/>
+			<p class="exp_text" style="top:28470px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:28470px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:28416px; left:200px; z-index:28480;"/>
+			<img class="leftfoot" style="top:28416px; left:200px; z-index:28480;"/>
+			<p class="exp_text" style="top:28726px; left:50px; width:50px;">133.222314738</p>
+			<p class="exp_text" style="top:28726px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:28726px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:28672px; left:456px; z-index:28736;"/>
+			<img class="rightfoot" style="top:28672px; left:456px; z-index:28736;"/>
+			<p class="exp_text" style="top:28982px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:28982px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:28928px; left:200px; z-index:28992;"/>
+			<img class="leftfoot" style="top:28928px; left:200px; z-index:28992;"/>
+			<p class="exp_text" style="top:29238px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:29238px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:29184px; left:456px; z-index:29248;"/>
+			<img class="rightfoot" style="top:29184px; left:456px; z-index:29248;"/>
+			<p class="exp_text" style="top:29494px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:29494px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:29440px; left:200px; z-index:29504;"/>
+			<img class="leftfoot" style="top:29440px; left:200px; z-index:29504;"/>
+			<p class="exp_text" style="top:29750px; left:50px; width:50px;">133.288903699</p>
+			<p class="exp_text" style="top:29750px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:29750px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:29696px; left:456px; z-index:29760;"/>
+			<img class="rightfoot" style="top:29696px; left:456px; z-index:29760;"/>
+			<p class="exp_text" style="top:30518px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:30518px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:30464px; left:200px; z-index:30528;"/>
+			<img class="leftfoot" style="top:30464px; left:200px; z-index:30528;"/>
+			<p class="exp_text" style="top:30774px; left:50px; width:50px;">133.348149794</p>
+			<p class="exp_text" style="top:30774px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:30774px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:30720px; left:584px; z-index:30784;"/>
+			<img class="rightfoot" style="top:30720px; left:584px; z-index:30784;"/>
+			<p class="exp_text" style="top:31798px; left:50px; width:50px;">133.41486464</p>
+			<p class="exp_text" style="top:32822px; left:50px; width:50px;">133.466800133</p>
+			<p class="exp_text" style="top:32822px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:32822px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:32768px; left:328px; z-index:32832;"/>
+			<img class="leftfoot" style="top:32768px; left:328px; z-index:32832;"/>
+			<p class="exp_text" style="top:33846px; left:50px; width:50px;">133.526204518</p>
+			<p class="exp_text" style="top:34870px; left:50px; width:50px;">133.578226749</p>
+			<p class="exp_text" style="top:35894px; left:50px; width:50px;">133.630289532</p>
+			<p class="exp_text" style="top:36918px; left:50px; width:50px;">133.682392915</p>
+			<p class="exp_text" style="top:37942px; left:50px; width:50px;">133.727085307</p>
+			<p class="exp_text" style="top:37942px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:37942px; left:968px; width:64px;">100</p>
+			<img class="quarter left" style="top:37888px; left:200px; z-index:37952;"/>
+			<img class="leftfoot" style="top:37888px; left:200px; z-index:37952;"/>
+			<p class="exp_text" style="top:38966px; left:50px; width:50px;">133.771807592</p>
+			<p class="exp_text" style="top:38966px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:38966px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:38912px; left:456px; z-index:38976;"/>
+			<img class="rightfoot" style="top:38912px; left:456px; z-index:38976;"/>
+			<p class="exp_text" style="top:39222px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:39222px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:39168px; left:456px; z-index:39232;"/>
+			<img class="rightfoot" style="top:39168px; left:456px; z-index:39232;"/>
+			<p class="exp_text" style="top:39478px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:39478px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:39424px; left:328px; z-index:39488;"/>
+			<img class="leftfoot" style="top:39424px; left:328px; z-index:39488;"/>
+			<p class="exp_text" style="top:39990px; left:50px; width:50px;">133.816559799</p>
+			<p class="exp_text" style="top:39990px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:39990px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:39936px; left:328px; z-index:40000;"/>
+			<img class="leftfoot" style="top:39936px; left:328px; z-index:40000;"/>
+			<p class="exp_text" style="top:40246px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:40246px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:40192px; left:584px; z-index:40256;"/>
+			<img class="rightfoot" style="top:40192px; left:584px; z-index:40256;"/>
+			<p class="exp_text" style="top:40502px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:40502px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:40448px; left:328px; z-index:40512;"/>
+			<img class="leftfoot" style="top:40448px; left:328px; z-index:40512;"/>
+			<p class="exp_text" style="top:40758px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:40758px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:40704px; left:584px; z-index:40768;"/>
+			<img class="rightfoot" style="top:40704px; left:584px; z-index:40768;"/>
+			<p class="exp_text" style="top:41014px; left:50px; width:50px;">133.86134196</p>
+			<p class="exp_text" style="top:41014px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:41014px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:40960px; left:328px; z-index:41024;"/>
+			<img class="leftfoot" style="top:40960px; left:328px; z-index:41024;"/>
+			<p class="exp_text" style="top:41270px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:41270px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:41216px; left:584px; z-index:41280;"/>
+			<img class="rightfoot" style="top:41216px; left:584px; z-index:41280;"/>
+			<p class="exp_text" style="top:41526px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:41526px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:41472px; left:200px; z-index:41536;"/>
+			<img class="leftfoot" style="top:41472px; left:200px; z-index:41536;"/>
+			<p class="exp_text" style="top:42038px; left:50px; width:50px;">133.89868333</p>
+			<p class="exp_text" style="top:42038px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:42038px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:41984px; left:456px; z-index:42048;"/>
+			<img class="rightfoot" style="top:41984px; left:456px; z-index:42048;"/>
+			<p class="exp_text" style="top:42806px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:42806px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:42752px; left:200px; z-index:42816;"/>
+			<img class="leftfoot" style="top:42752px; left:200px; z-index:42816;"/>
+			<p class="exp_text" style="top:43062px; left:50px; width:50px;">133.943520482</p>
+			<p class="exp_text" style="top:43318px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:43318px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:43264px; left:456px; z-index:43328;"/>
+			<img class="rightfoot" style="top:43264px; left:456px; z-index:43328;"/>
+			<p class="exp_text" style="top:44086px; left:50px; width:50px;">133.988387673</p>
+			<p class="exp_text" style="top:44086px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:44086px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:44032px; left:328px; z-index:44096;"/>
+			<img class="leftfoot" style="top:44032px; left:328px; z-index:44096;"/>
+			<p class="exp_text" style="top:45110px; left:50px; width:50px;">134.033284932</p>
+			<p class="exp_text" style="top:46134px; left:50px; width:50px;">134.070722306</p>
+			<p class="exp_text" style="top:47158px; left:50px; width:50px;">134.115674769</p>
+			<div id="holdbody" style="top:44096px; left:328px; height:3072px; z-index:44095;"></div>
+			<img class="holdcap" style="top:47168px; left:328px; z-index:44095;"/>
+			<p class="exp_text" style="top:47414px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:47414px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:47360px; left:328px; z-index:47424;"/>
+			<img class="leftfoot" style="top:47360px; left:328px; z-index:47424;"/>
+			<p class="exp_text" style="top:48182px; left:50px; width:50px;">134.153158189</p>
+			<div id="holdbody" style="top:47424px; left:328px; height:768px; z-index:47423;"></div>
+			<img class="holdcap" style="top:48192px; left:328px; z-index:47423;"/>
+			<p class="exp_text" style="top:49206px; left:50px; width:50px;">134.20567019</p>
+			<p class="exp_text" style="top:50230px; left:50px; width:50px;">134.243203938</p>
+			<p class="exp_text" style="top:50486px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:50486px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:50432px; left:584px; z-index:50496;"/>
+			<img class="rightfoot" style="top:50432px; left:584px; z-index:50496;"/>
+			<p class="exp_text" style="top:50998px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:50998px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:50944px; left:200px; z-index:51008;"/>
+			<img class="leftfoot" style="top:50944px; left:200px; z-index:51008;"/>
+			<p class="exp_text" style="top:51254px; left:50px; width:50px;">134.29578647</p>
+			<p class="exp_text" style="top:51254px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:51254px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:51200px; left:456px; z-index:51264;"/>
+			<img class="rightfoot" style="top:51200px; left:456px; z-index:51264;"/>
+			<p class="exp_text" style="top:52278px; left:50px; width:50px;">134.340890008</p>
+			<p class="exp_text" style="top:52278px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:52278px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:52224px; left:200px; z-index:52288;"/>
+			<img class="leftfoot" style="top:52224px; left:200px; z-index:52288;"/>
+			<p class="exp_text" style="top:52790px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:52790px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:52736px; left:328px; z-index:52800;"/>
+			<img class="rightfoot" style="top:52736px; left:328px; z-index:52800;"/>
+			<p class="exp_text" style="top:53302px; left:50px; width:50px;">134.39354911</p>
+			<p class="exp_text" style="top:53558px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:53558px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:53504px; left:456px; z-index:53568;"/>
+			<img class="leftfoot" style="top:53504px; left:456px; z-index:53568;"/>
+			<p class="exp_text" style="top:54326px; left:50px; width:50px;">134.44624951</p>
+			<p class="exp_text" style="top:54326px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:54326px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:54272px; left:584px; z-index:54336;"/>
+			<img class="rightfoot" style="top:54272px; left:584px; z-index:54336;"/>
+			<p class="exp_text" style="top:54582px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:54582px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:54528px; left:328px; z-index:54592;"/>
+			<img class="leftfoot" style="top:54528px; left:328px; z-index:54592;"/>
+			<p class="exp_text" style="top:55094px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:55094px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:55040px; left:456px; z-index:55104;"/>
+			<img class="rightfoot" style="top:55040px; left:456px; z-index:55104;"/>
+			<p class="exp_text" style="top:55350px; left:50px; width:50px;">134.506529171</p>
+			<p class="exp_text" style="top:56118px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:56118px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:56064px; left:328px; z-index:56128;"/>
+			<img class="leftfoot" style="top:56064px; left:328px; z-index:56128;"/>
+			<p class="exp_text" style="top:56374px; left:50px; width:50px;">134.559318233</p>
+			<p class="exp_text" style="top:57142px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:57142px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:57088px; left:584px; z-index:57152;"/>
+			<img class="rightfoot" style="top:57088px; left:584px; z-index:57152;"/>
+			<p class="exp_text" style="top:57398px; left:50px; width:50px;">134.619699349</p>
+			<p class="exp_text" style="top:57398px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:57398px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:57344px; left:200px; z-index:57408;"/>
+			<img class="leftfoot" style="top:57344px; left:200px; z-index:57408;"/>
+			<p class="exp_text" style="top:58422px; left:50px; width:50px;">134.68013468</p>
+			<p class="exp_text" style="top:58422px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:58422px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:58368px; left:328px; z-index:58432;"/>
+			<img class="rightfoot" style="top:58368px; left:328px; z-index:58432;"/>
+			<p class="exp_text" style="top:58678px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:58678px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:58624px; left:456px; z-index:58688;"/>
+			<img class="leftfoot" style="top:58624px; left:456px; z-index:58688;"/>
+			<p class="exp_text" style="top:59190px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:59190px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:59136px; left:584px; z-index:59200;"/>
+			<img class="rightfoot" style="top:59136px; left:584px; z-index:59200;"/>
+			<p class="exp_text" style="top:59446px; left:50px; width:50px;">134.748189321</p>
+			<p class="exp_text" style="top:59446px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:59446px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:59392px; left:328px; z-index:59456;"/>
+			<img class="leftfoot" style="top:59392px; left:328px; z-index:59456;"/>
+			<p class="exp_text" style="top:59702px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:59702px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:59648px; left:584px; z-index:59712;"/>
+			<img class="rightfoot" style="top:59648px; left:584px; z-index:59712;"/>
+			<p class="exp_text" style="top:59958px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:59958px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:59904px; left:200px; z-index:59968;"/>
+			<img class="leftfoot" style="top:59904px; left:200px; z-index:59968;"/>
+			<p class="exp_text" style="top:60470px; left:50px; width:50px;">134.823886299</p>
+			<p class="exp_text" style="top:60470px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:60470px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:60416px; left:456px; z-index:60480;"/>
+			<img class="rightfoot" style="top:60416px; left:456px; z-index:60480;"/>
+			<p class="exp_text" style="top:60982px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:60982px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:60928px; left:200px; z-index:60992;"/>
+			<img class="leftfoot" style="top:60928px; left:200px; z-index:60992;"/>
+			<p class="exp_text" style="top:61494px; left:50px; width:50px;">134.899668372</p>
+			<p class="exp_text" style="top:61494px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:61494px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:61440px; left:584px; z-index:61504;"/>
+			<img class="rightfoot" style="top:61440px; left:584px; z-index:61504;"/>
+			<p class="exp_text" style="top:61750px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:61750px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:61696px; left:456px; z-index:61760;"/>
+			<img class="leftfoot" style="top:61696px; left:456px; z-index:61760;"/>
+			<p class="exp_text" style="top:62006px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:62006px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:61952px; left:584px; z-index:62016;"/>
+			<img class="rightfoot" style="top:61952px; left:584px; z-index:62016;"/>
+			<p class="exp_text" style="top:62262px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:62262px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:62208px; left:456px; z-index:62272;"/>
+			<img class="leftfoot" style="top:62208px; left:456px; z-index:62272;"/>
+			<p class="exp_text" style="top:62518px; left:50px; width:50px;">134.975535684</p>
+			<p class="exp_text" style="top:62518px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:62518px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:62464px; left:584px; z-index:62528;"/>
+			<img class="rightfoot" style="top:62464px; left:584px; z-index:62528;"/>
+			<p class="exp_text" style="top:63030px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:63030px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:62976px; left:200px; z-index:63040;"/>
+			<img class="leftfoot" style="top:62976px; left:200px; z-index:63040;"/>
+			<p class="exp_text" style="top:63286px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:63286px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:63232px; left:328px; z-index:63296;"/>
+			<img class="rightfoot" style="top:63232px; left:328px; z-index:63296;"/>
+			<p class="exp_text" style="top:63542px; left:50px; width:50px;">135.05148838</p>
+			<p class="exp_text" style="top:63542px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:63542px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:63488px; left:200px; z-index:63552;"/>
+			<img class="leftfoot" style="top:63488px; left:200px; z-index:63552;"/>
+			<p class="exp_text" style="top:63798px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:63798px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:63744px; left:328px; z-index:63808;"/>
+			<img class="rightfoot" style="top:63744px; left:328px; z-index:63808;"/>
+			<p class="exp_text" style="top:64310px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:64310px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:64256px; left:456px; z-index:64320;"/>
+			<img class="leftfoot" style="top:64256px; left:456px; z-index:64320;"/>
+			<p class="exp_text" style="top:64566px; left:50px; width:50px;">135.15035477</p>
+			<p class="exp_text" style="top:65590px; left:50px; width:50px;">135.241744619</p>
+			<div id="holdbody" style="top:64320px; left:456px; height:1280px; z-index:64319;"></div>
+			<img class="holdcap" style="top:65600px; left:456px; z-index:64319;"/>
+			<p class="exp_text" style="top:66102px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:66102px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:66048px; left:328px; z-index:66112;"/>
+			<img class="rightfoot" style="top:66048px; left:328px; z-index:66112;"/>
+			<p class="exp_text" style="top:66358px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:66358px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:66304px; left:200px; z-index:66368;"/>
+			<img class="leftfoot" style="top:66304px; left:200px; z-index:66368;"/>
+			<p class="exp_text" style="top:66614px; left:50px; width:50px;">135.333258148</p>
+			<p class="exp_text" style="top:67126px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:67126px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:67072px; left:584px; z-index:67136;"/>
+			<img class="rightfoot" style="top:67072px; left:584px; z-index:67136;"/>
+			<p class="exp_text" style="top:67638px; left:50px; width:50px;">135.440180587</p>
+			<p class="exp_text" style="top:67638px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:67638px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:67584px; left:328px; z-index:67648;"/>
+			<img class="leftfoot" style="top:67584px; left:328px; z-index:67648;"/>
+			<p class="exp_text" style="top:67894px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:67894px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:67840px; left:456px; z-index:67904;"/>
+			<img class="rightfoot" style="top:67840px; left:456px; z-index:67904;"/>
+			<p class="exp_text" style="top:68662px; left:50px; width:50px;">135.554927986</p>
+			<p class="exp_text" style="top:68662px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:68662px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:68608px; left:200px; z-index:68672;"/>
+			<img class="leftfoot" style="top:68608px; left:200px; z-index:68672;"/>
+			<p class="exp_text" style="top:68918px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:68918px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:68864px; left:584px; z-index:68928;"/>
+			<img class="rightfoot" style="top:68864px; left:584px; z-index:68928;"/>
+			<p class="exp_text" style="top:69174px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:69174px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:69120px; left:200px; z-index:69184;"/>
+			<img class="leftfoot" style="top:69120px; left:200px; z-index:69184;"/>
+			<p class="exp_text" style="top:69430px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:69430px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:69376px; left:584px; z-index:69440;"/>
+			<img class="rightfoot" style="top:69376px; left:584px; z-index:69440;"/>
+			<p class="exp_text" style="top:69686px; left:50px; width:50px;">135.662201119</p>
+			<p class="exp_text" style="top:69686px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:69686px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:69632px; left:200px; z-index:69696;"/>
+			<img class="leftfoot" style="top:69632px; left:200px; z-index:69696;"/>
+			<p class="exp_text" style="top:69942px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:69942px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:69888px; left:584px; z-index:69952;"/>
+			<img class="rightfoot" style="top:69888px; left:584px; z-index:69952;"/>
+			<p class="exp_text" style="top:70198px; left:1032px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:70198px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:70144px; left:200px; z-index:70208;"/>
+			<img class="leftfoot" style="top:70144px; left:200px; z-index:70208;"/>
+			<p class="exp_text" style="top:70454px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:70454px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:70400px; left:328px; z-index:70464;"/>
+			<img class="rightfoot" style="top:70400px; left:328px; z-index:70464;"/>
+			<p class="exp_text" style="top:70710px; left:50px; width:50px;">135.792689827</p>
+			<div id="holdbody" style="top:70464px; left:328px; height:256px; z-index:70463;"></div>
+			<img class="holdcap" style="top:70720px; left:328px; z-index:70463;"/>
+			<p class="exp_text" style="top:70966px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:70966px; left:968px; width:64px;">0</p>
+			<img class="quarter up" style="top:70912px; left:456px; z-index:70976;"/>
+			<img class="leftfoot" style="top:70912px; left:456px; z-index:70976;"/>
+			<div id="holdbody" style="top:70976px; left:456px; height:256px; z-index:70975;"></div>
+			<img class="holdcap" style="top:71232px; left:456px; z-index:70975;"/>
+			<p class="exp_text" style="top:71478px; left:1288px; width:256px;">Same Arrow</p>
+			<p class="exp_text" style="top:71478px; left:968px; width:64px;">0</p>
+			<img class="quarter" style="top:71424px; left:328px; z-index:71488;"/>
+			<img class="rightfoot" style="top:71424px; left:328px; z-index:71488;"/>
+			<p class="exp_text" style="top:71734px; left:50px; width:50px;">135.792689827</p>
+			<div id="holdbody" style="top:71488px; left:328px; height:256px; z-index:71487;"></div>
+			<img class="holdcap" style="top:71744px; left:328px; z-index:71487;"/>
+			<p class="exp_text" style="top:71990px; left:1032px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:71990px; left:968px; width:64px;">0</p>
+			<img class="quarter left" style="top:71936px; left:200px; z-index:72000;"/>
+			<img class="leftfoot" style="top:71936px; left:200px; z-index:72000;"/>
+			<p class="exp_text" style="top:72246px; left:1288px; width:256px;">New Arrow</p>
+			<p class="exp_text" style="top:72246px; left:968px; width:64px;">0</p>
+			<img class="quarter right" style="top:72192px; left:584px; z-index:72256;"/>
+			<img class="rightfoot" style="top:72192px; left:584px; z-index:72256;"/>
+			<p class="exp_text" style="top:54px; left:150px; width:50px;">0</p>
+			<div class="m_mark" style="top:63px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:319px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:575px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:831px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:1078px; left:150px; width:50px;">1</p>
+			<div class="m_mark" style="top:1087px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:1343px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:1599px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:1855px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:2102px; left:150px; width:50px;">2</p>
+			<div class="m_mark" style="top:2111px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:2367px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:2623px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:2879px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:3126px; left:150px; width:50px;">3</p>
+			<div class="m_mark" style="top:3135px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:3391px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:3647px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:3903px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:4150px; left:150px; width:50px;">4</p>
+			<div class="m_mark" style="top:4159px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:4415px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:4671px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:4927px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:5174px; left:150px; width:50px;">5</p>
+			<div class="m_mark" style="top:5183px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:5439px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:5695px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:5951px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:6198px; left:150px; width:50px;">6</p>
+			<div class="m_mark" style="top:6207px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:6463px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:6719px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:6975px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:7222px; left:150px; width:50px;">7</p>
+			<div class="m_mark" style="top:7231px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:7487px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:7743px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:7999px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:8246px; left:150px; width:50px;">8</p>
+			<div class="m_mark" style="top:8255px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:8511px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:8767px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:9023px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:9270px; left:150px; width:50px;">9</p>
+			<div class="m_mark" style="top:9279px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:9535px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:9791px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:10047px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:10294px; left:150px; width:50px;">10</p>
+			<div class="m_mark" style="top:10303px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:10559px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:10815px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:11071px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:11318px; left:150px; width:50px;">11</p>
+			<div class="m_mark" style="top:11327px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:11583px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:11839px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:12095px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:12342px; left:150px; width:50px;">12</p>
+			<div class="m_mark" style="top:12351px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:12607px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:12863px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:13119px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:13366px; left:150px; width:50px;">13</p>
+			<div class="m_mark" style="top:13375px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:13631px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:13887px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:14143px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:14390px; left:150px; width:50px;">14</p>
+			<div class="m_mark" style="top:14399px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:14655px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:14911px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:15167px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:15414px; left:150px; width:50px;">15</p>
+			<div class="m_mark" style="top:15423px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:15679px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:15935px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:16191px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:16438px; left:150px; width:50px;">16</p>
+			<div class="m_mark" style="top:16447px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:16703px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:16959px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:17215px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:17462px; left:150px; width:50px;">17</p>
+			<div class="m_mark" style="top:17471px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:17727px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:17983px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:18239px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:18486px; left:150px; width:50px;">18</p>
+			<div class="m_mark" style="top:18495px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:18751px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:19007px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:19263px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:19510px; left:150px; width:50px;">19</p>
+			<div class="m_mark" style="top:19519px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:19775px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:20031px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:20287px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:20534px; left:150px; width:50px;">20</p>
+			<div class="m_mark" style="top:20543px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:20799px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:21055px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:21311px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:21558px; left:150px; width:50px;">21</p>
+			<div class="m_mark" style="top:21567px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:21823px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:22079px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:22335px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:22582px; left:150px; width:50px;">22</p>
+			<div class="m_mark" style="top:22591px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:22847px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:23103px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:23359px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:23606px; left:150px; width:50px;">23</p>
+			<div class="m_mark" style="top:23615px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:23871px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:24127px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:24383px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:24630px; left:150px; width:50px;">24</p>
+			<div class="m_mark" style="top:24639px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:24895px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:25151px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:25407px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:25654px; left:150px; width:50px;">25</p>
+			<div class="m_mark" style="top:25663px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:25919px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:26175px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:26431px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:26678px; left:150px; width:50px;">26</p>
+			<div class="m_mark" style="top:26687px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:26943px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:27199px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:27455px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:27702px; left:150px; width:50px;">27</p>
+			<div class="m_mark" style="top:27711px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:27967px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:28223px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:28479px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:28726px; left:150px; width:50px;">28</p>
+			<div class="m_mark" style="top:28735px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:28991px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:29247px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:29503px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:29750px; left:150px; width:50px;">29</p>
+			<div class="m_mark" style="top:29759px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:30015px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:30271px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:30527px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:30774px; left:150px; width:50px;">30</p>
+			<div class="m_mark" style="top:30783px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:31039px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:31295px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:31551px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:31798px; left:150px; width:50px;">31</p>
+			<div class="m_mark" style="top:31807px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:32063px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:32319px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:32575px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:32822px; left:150px; width:50px;">32</p>
+			<div class="m_mark" style="top:32831px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:33087px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:33343px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:33599px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:33846px; left:150px; width:50px;">33</p>
+			<div class="m_mark" style="top:33855px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:34111px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:34367px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:34623px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:34870px; left:150px; width:50px;">34</p>
+			<div class="m_mark" style="top:34879px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:35135px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:35391px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:35647px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:35894px; left:150px; width:50px;">35</p>
+			<div class="m_mark" style="top:35903px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:36159px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:36415px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:36671px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:36918px; left:150px; width:50px;">36</p>
+			<div class="m_mark" style="top:36927px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:37183px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:37439px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:37695px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:37942px; left:150px; width:50px;">37</p>
+			<div class="m_mark" style="top:37951px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:38207px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:38463px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:38719px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:38966px; left:150px; width:50px;">38</p>
+			<div class="m_mark" style="top:38975px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:39231px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:39487px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:39743px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:39990px; left:150px; width:50px;">39</p>
+			<div class="m_mark" style="top:39999px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:40255px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:40511px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:40767px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:41014px; left:150px; width:50px;">40</p>
+			<div class="m_mark" style="top:41023px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:41279px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:41535px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:41791px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:42038px; left:150px; width:50px;">41</p>
+			<div class="m_mark" style="top:42047px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:42303px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:42559px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:42815px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:43062px; left:150px; width:50px;">42</p>
+			<div class="m_mark" style="top:43071px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:43327px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:43583px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:43839px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:44086px; left:150px; width:50px;">43</p>
+			<div class="m_mark" style="top:44095px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:44351px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:44607px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:44863px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:45110px; left:150px; width:50px;">44</p>
+			<div class="m_mark" style="top:45119px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:45375px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:45631px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:45887px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:46134px; left:150px; width:50px;">45</p>
+			<div class="m_mark" style="top:46143px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:46399px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:46655px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:46911px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:47158px; left:150px; width:50px;">46</p>
+			<div class="m_mark" style="top:47167px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:47423px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:47679px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:47935px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:48182px; left:150px; width:50px;">47</p>
+			<div class="m_mark" style="top:48191px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:48447px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:48703px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:48959px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:49206px; left:150px; width:50px;">48</p>
+			<div class="m_mark" style="top:49215px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:49471px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:49727px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:49983px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:50230px; left:150px; width:50px;">49</p>
+			<div class="m_mark" style="top:50239px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:50495px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:50751px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:51007px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:51254px; left:150px; width:50px;">50</p>
+			<div class="m_mark" style="top:51263px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:51519px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:51775px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:52031px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:52278px; left:150px; width:50px;">51</p>
+			<div class="m_mark" style="top:52287px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:52543px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:52799px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:53055px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:53302px; left:150px; width:50px;">52</p>
+			<div class="m_mark" style="top:53311px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:53567px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:53823px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:54079px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:54326px; left:150px; width:50px;">53</p>
+			<div class="m_mark" style="top:54335px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:54591px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:54847px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:55103px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:55350px; left:150px; width:50px;">54</p>
+			<div class="m_mark" style="top:55359px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:55615px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:55871px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:56127px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:56374px; left:150px; width:50px;">55</p>
+			<div class="m_mark" style="top:56383px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:56639px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:56895px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:57151px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:57398px; left:150px; width:50px;">56</p>
+			<div class="m_mark" style="top:57407px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:57663px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:57919px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:58175px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:58422px; left:150px; width:50px;">57</p>
+			<div class="m_mark" style="top:58431px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:58687px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:58943px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:59199px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:59446px; left:150px; width:50px;">58</p>
+			<div class="m_mark" style="top:59455px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:59711px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:59967px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:60223px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:60470px; left:150px; width:50px;">59</p>
+			<div class="m_mark" style="top:60479px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:60735px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:60991px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:61247px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:61494px; left:150px; width:50px;">60</p>
+			<div class="m_mark" style="top:61503px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:61759px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:62015px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:62271px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:62518px; left:150px; width:50px;">61</p>
+			<div class="m_mark" style="top:62527px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:62783px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:63039px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:63295px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:63542px; left:150px; width:50px;">62</p>
+			<div class="m_mark" style="top:63551px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:63807px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:64063px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:64319px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:64566px; left:150px; width:50px;">63</p>
+			<div class="m_mark" style="top:64575px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:64831px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:65087px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:65343px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:65590px; left:150px; width:50px;">64</p>
+			<div class="m_mark" style="top:65599px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:65855px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:66111px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:66367px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:66614px; left:150px; width:50px;">65</p>
+			<div class="m_mark" style="top:66623px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:66879px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:67135px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:67391px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:67638px; left:150px; width:50px;">66</p>
+			<div class="m_mark" style="top:67647px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:67903px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:68159px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:68415px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:68662px; left:150px; width:50px;">67</p>
+			<div class="m_mark" style="top:68671px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:68927px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:69183px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:69439px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:69686px; left:150px; width:50px;">68</p>
+			<div class="m_mark" style="top:69695px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:69951px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:70207px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:70463px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:70710px; left:150px; width:50px;">69</p>
+			<div class="m_mark" style="top:70719px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:70975px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:71231px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:71487px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:71734px; left:150px; width:50px;">70</p>
+			<div class="m_mark" style="top:71743px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:71999px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:72255px; left:200px; width:512px;"></div>
+			<div class="b_mark" style="top:72511px; left:200px; width:512px;"></div>
+			<p class="exp_text" style="top:54px; left:1544px; width:50px;">4/4</p>
+			<p class="exp_text" style="top:54px; left:1594px; width:50px;">129.143349118</p>
+			<p class="exp_text" style="top:1078px; left:1594px; width:50px;">129.380053908</p>
+			<p class="exp_text" style="top:2102px; left:1594px; width:50px;">129.617627997</p>
+			<p class="exp_text" style="top:3126px; left:1594px; width:50px;">129.835001352</p>
+			<p class="exp_text" style="top:3126px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:3072px; left:2256px; z-index:3136;"/>
+			<img class="rightfoot" style="top:3072px; left:2256px; z-index:3136;"/>
+			<p class="exp_text" style="top:4150px; left:1594px; width:50px;">130.060152821</p>
+			<p class="exp_text" style="top:4150px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:4096px; left:1872px; z-index:4160;"/>
+			<img class="leftfoot" style="top:4096px; left:1872px; z-index:4160;"/>
+			<p class="exp_text" style="top:5174px; left:1594px; width:50px;">130.27194268</p>
+			<p class="exp_text" style="top:5686px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:5632px; left:2128px; z-index:5696;"/>
+			<img class="rightfoot" style="top:5632px; left:2128px; z-index:5696;"/>
+			<p class="exp_text" style="top:6198px; left:1594px; width:50px;">130.470236477</p>
+			<p class="exp_text" style="top:6198px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:6144px; left:1744px; z-index:6208;"/>
+			<img class="leftfoot" style="top:6144px; left:1744px; z-index:6208;"/>
+			<p class="exp_text" style="top:6966px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:6912px; left:2128px; z-index:6976;"/>
+			<img class="rightfoot" style="top:6912px; left:2128px; z-index:6976;"/>
+			<p class="exp_text" style="top:7222px; left:1594px; width:50px;">130.662020906</p>
+			<p class="exp_text" style="top:7222px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:7168px; left:1744px; z-index:7232;"/>
+			<img class="leftfoot" style="top:7168px; left:1744px; z-index:7232;"/>
+			<p class="exp_text" style="top:8246px; left:1594px; width:50px;">130.847235852</p>
+			<p class="exp_text" style="top:8246px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:8192px; left:2000px; z-index:8256;"/>
+			<img class="rightfoot" style="top:8192px; left:2000px; z-index:8256;"/>
+			<p class="exp_text" style="top:8758px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:8704px; left:1872px; z-index:8768;"/>
+			<img class="leftfoot" style="top:8704px; left:1872px; z-index:8768;"/>
+			<p class="exp_text" style="top:9270px; left:1594px; width:50px;">131.025823006</p>
+			<p class="exp_text" style="top:9270px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:9216px; left:2128px; z-index:9280;"/>
+			<img class="rightfoot" style="top:9216px; left:2128px; z-index:9280;"/>
+			<p class="exp_text" style="top:10294px; left:1594px; width:50px;">131.197725906</p>
+			<p class="exp_text" style="top:10294px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:10240px; left:1744px; z-index:10304;"/>
+			<img class="leftfoot" style="top:10240px; left:1744px; z-index:10304;"/>
+			<p class="exp_text" style="top:11318px; left:1594px; width:50px;">131.35570029</p>
+			<p class="exp_text" style="top:11318px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:11264px; left:2000px; z-index:11328;"/>
+			<img class="rightfoot" style="top:11264px; left:2000px; z-index:11328;"/>
+			<p class="exp_text" style="top:12086px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:12032px; left:1872px; z-index:12096;"/>
+			<img class="leftfoot" style="top:12032px; left:1872px; z-index:12096;"/>
+			<p class="exp_text" style="top:12342px; left:1594px; width:50px;">131.514055565</p>
+			<p class="exp_text" style="top:12342px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:12288px; left:2128px; z-index:12352;"/>
+			<img class="rightfoot" style="top:12288px; left:2128px; z-index:12352;"/>
+			<p class="exp_text" style="top:12598px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:12544px; left:1872px; z-index:12608;"/>
+			<img class="leftfoot" style="top:12544px; left:1872px; z-index:12608;"/>
+			<p class="exp_text" style="top:13110px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:13056px; left:2128px; z-index:13120;"/>
+			<img class="rightfoot" style="top:13056px; left:2128px; z-index:13120;"/>
+			<p class="exp_text" style="top:13366px; left:1594px; width:50px;">131.665569454</p>
+			<p class="exp_text" style="top:13366px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:13312px; left:1744px; z-index:13376;"/>
+			<img class="leftfoot" style="top:13312px; left:1744px; z-index:13376;"/>
+			<p class="exp_text" style="top:13622px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:13568px; left:2000px; z-index:13632;"/>
+			<img class="rightfoot" style="top:13568px; left:2000px; z-index:13632;"/>
+			<p class="exp_text" style="top:13878px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:13824px; left:1744px; z-index:13888;"/>
+			<img class="leftfoot" style="top:13824px; left:1744px; z-index:13888;"/>
+			<p class="exp_text" style="top:14134px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:14080px; left:2000px; z-index:14144;"/>
+			<img class="rightfoot" style="top:14080px; left:2000px; z-index:14144;"/>
+			<p class="exp_text" style="top:14390px; left:1594px; width:50px;">131.810193322</p>
+			<p class="exp_text" style="top:14390px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:14336px; left:1744px; z-index:14400;"/>
+			<img class="leftfoot" style="top:14336px; left:1744px; z-index:14400;"/>
+			<p class="exp_text" style="top:15158px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:15104px; left:2128px; z-index:15168;"/>
+			<img class="rightfoot" style="top:15104px; left:2128px; z-index:15168;"/>
+			<p class="exp_text" style="top:15414px; left:1594px; width:50px;">131.947880587</p>
+			<p class="exp_text" style="top:15414px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:15360px; left:1872px; z-index:15424;"/>
+			<img class="leftfoot" style="top:15360px; left:1872px; z-index:15424;"/>
+			<p class="exp_text" style="top:16438px; left:1594px; width:50px;">132.071318512</p>
+			<div id="holdbody" style="top:15424px; left:1872px; height:1024px; z-index:15423;"></div>
+			<img class="holdcap" style="top:16448px; left:1872px; z-index:15423;"/>
+			<p class="exp_text" style="top:16694px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:16640px; left:1872px; z-index:16704;"/>
+			<img class="leftfoot" style="top:16640px; left:1872px; z-index:16704;"/>
+			<p class="exp_text" style="top:17462px; left:1594px; width:50px;">132.202269472</p>
+			<div id="holdbody" style="top:16704px; left:1872px; height:768px; z-index:16703;"></div>
+			<img class="holdcap" style="top:17472px; left:1872px; z-index:16703;"/>
+			<p class="exp_text" style="top:17718px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:17664px; left:2128px; z-index:17728;"/>
+			<img class="rightfoot" style="top:17664px; left:2128px; z-index:17728;"/>
+			<p class="exp_text" style="top:18486px; left:1594px; width:50px;">132.318888521</p>
+			<div id="holdbody" style="top:17728px; left:2128px; height:768px; z-index:17727;"></div>
+			<img class="holdcap" style="top:18496px; left:2128px; z-index:17727;"/>
+			<p class="exp_text" style="top:18998px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:18944px; left:1744px; z-index:19008;"/>
+			<img class="leftfoot" style="top:18944px; left:1744px; z-index:19008;"/>
+			<p class="exp_text" style="top:19510px; left:1594px; width:50px;">132.428405893</p>
+			<p class="exp_text" style="top:19510px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:19456px; left:2000px; z-index:19520;"/>
+			<img class="rightfoot" style="top:19456px; left:2000px; z-index:19520;"/>
+			<p class="exp_text" style="top:20022px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:19968px; left:1744px; z-index:20032;"/>
+			<img class="leftfoot" style="top:19968px; left:1744px; z-index:20032;"/>
+			<p class="exp_text" style="top:20534px; left:1594px; width:50px;">132.538104705</p>
+			<p class="exp_text" style="top:20534px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:20480px; left:2128px; z-index:20544;"/>
+			<img class="rightfoot" style="top:20480px; left:2128px; z-index:20544;"/>
+			<p class="exp_text" style="top:20790px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:20736px; left:2128px; z-index:20800;"/>
+			<img class="rightfoot" style="top:20736px; left:2128px; z-index:20800;"/>
+			<p class="exp_text" style="top:21558px; left:1594px; width:50px;">132.640654361</p>
+			<div id="holdbody" style="top:20800px; left:2128px; height:768px; z-index:20799;"></div>
+			<img class="holdcap" style="top:21568px; left:2128px; z-index:20799;"/>
+			<p class="exp_text" style="top:22582px; left:1594px; width:50px;">132.736021238</p>
+			<p class="exp_text" style="top:22582px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:22528px; left:1744px; z-index:22592;"/>
+			<img class="leftfoot" style="top:22528px; left:1744px; z-index:22592;"/>
+			<p class="exp_text" style="top:23094px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:23040px; left:2128px; z-index:23104;"/>
+			<img class="rightfoot" style="top:23040px; left:2128px; z-index:23104;"/>
+			<p class="exp_text" style="top:23606px; left:1594px; width:50px;">132.824174</p>
+			<p class="exp_text" style="top:23606px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:23552px; left:1872px; z-index:23616;"/>
+			<img class="leftfoot" style="top:23552px; left:1872px; z-index:23616;"/>
+			<p class="exp_text" style="top:24630px; left:1594px; width:50px;">132.912443928</p>
+			<p class="exp_text" style="top:24630px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:24576px; left:2256px; z-index:24640;"/>
+			<img class="rightfoot" style="top:24576px; left:2256px; z-index:24640;"/>
+			<p class="exp_text" style="top:24886px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:24832px; left:2128px; z-index:24896;"/>
+			<img class="leftfoot" style="top:24832px; left:2128px; z-index:24896;"/>
+			<p class="exp_text" style="top:25142px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:25088px; left:2384px; z-index:25152;"/>
+			<img class="rightfoot" style="top:25088px; left:2384px; z-index:25152;"/>
+			<p class="exp_text" style="top:25654px; left:1594px; width:50px;">133.000831255</p>
+			<p class="exp_text" style="top:25910px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:25856px; left:2128px; z-index:25920;"/>
+			<img class="leftfoot" style="top:25856px; left:2128px; z-index:25920;"/>
+			<p class="exp_text" style="top:26166px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:26112px; left:2256px; z-index:26176;"/>
+			<img class="rightfoot" style="top:26112px; left:2256px; z-index:26176;"/>
+			<p class="exp_text" style="top:26678px; left:1594px; width:50px;">133.074577211</p>
+			<p class="exp_text" style="top:26678px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:26624px; left:2128px; z-index:26688;"/>
+			<img class="leftfoot" style="top:26624px; left:2128px; z-index:26688;"/>
+			<p class="exp_text" style="top:26934px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:26880px; left:2384px; z-index:26944;"/>
+			<img class="rightfoot" style="top:26880px; left:2384px; z-index:26944;"/>
+			<p class="exp_text" style="top:27190px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:27136px; left:2256px; z-index:27200;"/>
+			<img class="leftfoot" style="top:27136px; left:2256px; z-index:27200;"/>
+			<p class="exp_text" style="top:27702px; left:1594px; width:50px;">133.148404993</p>
+			<p class="exp_text" style="top:27702px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:27648px; left:2640px; z-index:27712;"/>
+			<img class="rightfoot" style="top:27648px; left:2640px; z-index:27712;"/>
+			<p class="exp_text" style="top:28470px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:28416px; left:2512px; z-index:28480;"/>
+			<img class="leftfoot" style="top:28416px; left:2512px; z-index:28480;"/>
+			<p class="exp_text" style="top:28726px; left:1594px; width:50px;">133.222314738</p>
+			<p class="exp_text" style="top:28726px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:28672px; left:2384px; z-index:28736;"/>
+			<img class="rightfoot" style="top:28672px; left:2384px; z-index:28736;"/>
+			<p class="exp_text" style="top:28982px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:28928px; left:2512px; z-index:28992;"/>
+			<img class="leftfoot" style="top:28928px; left:2512px; z-index:28992;"/>
+			<p class="exp_text" style="top:29238px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:29184px; left:2384px; z-index:29248;"/>
+			<img class="rightfoot" style="top:29184px; left:2384px; z-index:29248;"/>
+			<p class="exp_text" style="top:29494px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:29440px; left:2512px; z-index:29504;"/>
+			<img class="leftfoot" style="top:29440px; left:2512px; z-index:29504;"/>
+			<p class="exp_text" style="top:29750px; left:1594px; width:50px;">133.288903699</p>
+			<p class="exp_text" style="top:29750px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:29696px; left:2384px; z-index:29760;"/>
+			<img class="rightfoot" style="top:29696px; left:2384px; z-index:29760;"/>
+			<p class="exp_text" style="top:30518px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:30464px; left:2512px; z-index:30528;"/>
+			<img class="leftfoot" style="top:30464px; left:2512px; z-index:30528;"/>
+			<p class="exp_text" style="top:30774px; left:1594px; width:50px;">133.348149794</p>
+			<p class="exp_text" style="top:30774px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:30720px; left:2640px; z-index:30784;"/>
+			<img class="rightfoot" style="top:30720px; left:2640px; z-index:30784;"/>
+			<p class="exp_text" style="top:31798px; left:1594px; width:50px;">133.41486464</p>
+			<p class="exp_text" style="top:32822px; left:1594px; width:50px;">133.466800133</p>
+			<p class="exp_text" style="top:32822px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:32768px; left:2256px; z-index:32832;"/>
+			<img class="leftfoot" style="top:32768px; left:2256px; z-index:32832;"/>
+			<p class="exp_text" style="top:33846px; left:1594px; width:50px;">133.526204518</p>
+			<p class="exp_text" style="top:34870px; left:1594px; width:50px;">133.578226749</p>
+			<p class="exp_text" style="top:35894px; left:1594px; width:50px;">133.630289532</p>
+			<p class="exp_text" style="top:36918px; left:1594px; width:50px;">133.682392915</p>
+			<p class="exp_text" style="top:37942px; left:1594px; width:50px;">133.727085307</p>
+			<p class="exp_text" style="top:37942px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:37888px; left:2512px; z-index:37952;"/>
+			<img class="leftfoot" style="top:37888px; left:2512px; z-index:37952;"/>
+			<p class="exp_text" style="top:38966px; left:1594px; width:50px;">133.771807592</p>
+			<p class="exp_text" style="top:38966px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:38912px; left:2384px; z-index:38976;"/>
+			<img class="rightfoot" style="top:38912px; left:2384px; z-index:38976;"/>
+			<p class="exp_text" style="top:39222px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:39168px; left:2384px; z-index:39232;"/>
+			<img class="rightfoot" style="top:39168px; left:2384px; z-index:39232;"/>
+			<p class="exp_text" style="top:39478px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:39424px; left:2256px; z-index:39488;"/>
+			<img class="leftfoot" style="top:39424px; left:2256px; z-index:39488;"/>
+			<p class="exp_text" style="top:39990px; left:1594px; width:50px;">133.816559799</p>
+			<p class="exp_text" style="top:39990px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:39936px; left:2256px; z-index:40000;"/>
+			<img class="leftfoot" style="top:39936px; left:2256px; z-index:40000;"/>
+			<p class="exp_text" style="top:40246px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:40192px; left:2640px; z-index:40256;"/>
+			<img class="rightfoot" style="top:40192px; left:2640px; z-index:40256;"/>
+			<p class="exp_text" style="top:40502px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:40448px; left:2256px; z-index:40512;"/>
+			<img class="leftfoot" style="top:40448px; left:2256px; z-index:40512;"/>
+			<p class="exp_text" style="top:40758px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:40704px; left:2640px; z-index:40768;"/>
+			<img class="rightfoot" style="top:40704px; left:2640px; z-index:40768;"/>
+			<p class="exp_text" style="top:41014px; left:1594px; width:50px;">133.86134196</p>
+			<p class="exp_text" style="top:41014px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:40960px; left:2256px; z-index:41024;"/>
+			<img class="leftfoot" style="top:40960px; left:2256px; z-index:41024;"/>
+			<p class="exp_text" style="top:41270px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:41216px; left:2640px; z-index:41280;"/>
+			<img class="rightfoot" style="top:41216px; left:2640px; z-index:41280;"/>
+			<p class="exp_text" style="top:41526px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:41472px; left:2512px; z-index:41536;"/>
+			<img class="leftfoot" style="top:41472px; left:2512px; z-index:41536;"/>
+			<p class="exp_text" style="top:42038px; left:1594px; width:50px;">133.89868333</p>
+			<p class="exp_text" style="top:42038px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:41984px; left:2384px; z-index:42048;"/>
+			<img class="rightfoot" style="top:41984px; left:2384px; z-index:42048;"/>
+			<p class="exp_text" style="top:42806px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:42752px; left:2512px; z-index:42816;"/>
+			<img class="leftfoot" style="top:42752px; left:2512px; z-index:42816;"/>
+			<p class="exp_text" style="top:43062px; left:1594px; width:50px;">133.943520482</p>
+			<p class="exp_text" style="top:43318px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:43264px; left:2384px; z-index:43328;"/>
+			<img class="rightfoot" style="top:43264px; left:2384px; z-index:43328;"/>
+			<p class="exp_text" style="top:44086px; left:1594px; width:50px;">133.988387673</p>
+			<p class="exp_text" style="top:44086px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:44032px; left:2256px; z-index:44096;"/>
+			<img class="leftfoot" style="top:44032px; left:2256px; z-index:44096;"/>
+			<p class="exp_text" style="top:45110px; left:1594px; width:50px;">134.033284932</p>
+			<p class="exp_text" style="top:46134px; left:1594px; width:50px;">134.070722306</p>
+			<p class="exp_text" style="top:47158px; left:1594px; width:50px;">134.115674769</p>
+			<div id="holdbody" style="top:44096px; left:2256px; height:3072px; z-index:44095;"></div>
+			<img class="holdcap" style="top:47168px; left:2256px; z-index:44095;"/>
+			<p class="exp_text" style="top:47414px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:47360px; left:2256px; z-index:47424;"/>
+			<img class="leftfoot" style="top:47360px; left:2256px; z-index:47424;"/>
+			<p class="exp_text" style="top:48182px; left:1594px; width:50px;">134.153158189</p>
+			<div id="holdbody" style="top:47424px; left:2256px; height:768px; z-index:47423;"></div>
+			<img class="holdcap" style="top:48192px; left:2256px; z-index:47423;"/>
+			<p class="exp_text" style="top:49206px; left:1594px; width:50px;">134.20567019</p>
+			<p class="exp_text" style="top:50230px; left:1594px; width:50px;">134.243203938</p>
+			<p class="exp_text" style="top:50486px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:50432px; left:2640px; z-index:50496;"/>
+			<img class="rightfoot" style="top:50432px; left:2640px; z-index:50496;"/>
+			<p class="exp_text" style="top:50998px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:50944px; left:2512px; z-index:51008;"/>
+			<img class="leftfoot" style="top:50944px; left:2512px; z-index:51008;"/>
+			<p class="exp_text" style="top:51254px; left:1594px; width:50px;">134.29578647</p>
+			<p class="exp_text" style="top:51254px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:51200px; left:2384px; z-index:51264;"/>
+			<img class="rightfoot" style="top:51200px; left:2384px; z-index:51264;"/>
+			<p class="exp_text" style="top:52278px; left:1594px; width:50px;">134.340890008</p>
+			<p class="exp_text" style="top:52278px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:52224px; left:2512px; z-index:52288;"/>
+			<img class="leftfoot" style="top:52224px; left:2512px; z-index:52288;"/>
+			<p class="exp_text" style="top:52790px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:52736px; left:2640px; z-index:52800;"/>
+			<img class="rightfoot" style="top:52736px; left:2640px; z-index:52800;"/>
+			<p class="exp_text" style="top:53302px; left:1594px; width:50px;">134.39354911</p>
+			<p class="exp_text" style="top:53558px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:53504px; left:2256px; z-index:53568;"/>
+			<img class="leftfoot" style="top:53504px; left:2256px; z-index:53568;"/>
+			<p class="exp_text" style="top:54326px; left:1594px; width:50px;">134.44624951</p>
+			<p class="exp_text" style="top:54326px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:54272px; left:2384px; z-index:54336;"/>
+			<img class="rightfoot" style="top:54272px; left:2384px; z-index:54336;"/>
+			<p class="exp_text" style="top:54582px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:54528px; left:2128px; z-index:54592;"/>
+			<img class="leftfoot" style="top:54528px; left:2128px; z-index:54592;"/>
+			<p class="exp_text" style="top:55094px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:55040px; left:2512px; z-index:55104;"/>
+			<img class="rightfoot" style="top:55040px; left:2512px; z-index:55104;"/>
+			<p class="exp_text" style="top:55350px; left:1594px; width:50px;">134.506529171</p>
+			<p class="exp_text" style="top:56118px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:56064px; left:2128px; z-index:56128;"/>
+			<img class="leftfoot" style="top:56064px; left:2128px; z-index:56128;"/>
+			<p class="exp_text" style="top:56374px; left:1594px; width:50px;">134.559318233</p>
+			<p class="exp_text" style="top:57142px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:57088px; left:2256px; z-index:57152;"/>
+			<img class="rightfoot" style="top:57088px; left:2256px; z-index:57152;"/>
+			<p class="exp_text" style="top:57398px; left:1594px; width:50px;">134.619699349</p>
+			<p class="exp_text" style="top:57398px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:57344px; left:1872px; z-index:57408;"/>
+			<img class="leftfoot" style="top:57344px; left:1872px; z-index:57408;"/>
+			<p class="exp_text" style="top:58422px; left:1594px; width:50px;">134.68013468</p>
+			<p class="exp_text" style="top:58422px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:58368px; left:2128px; z-index:58432;"/>
+			<img class="rightfoot" style="top:58368px; left:2128px; z-index:58432;"/>
+			<p class="exp_text" style="top:58678px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:58624px; left:1744px; z-index:58688;"/>
+			<img class="leftfoot" style="top:58624px; left:1744px; z-index:58688;"/>
+			<p class="exp_text" style="top:59190px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:59136px; left:2000px; z-index:59200;"/>
+			<img class="rightfoot" style="top:59136px; left:2000px; z-index:59200;"/>
+			<p class="exp_text" style="top:59446px; left:1594px; width:50px;">134.748189321</p>
+			<p class="exp_text" style="top:59446px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:59392px; left:1872px; z-index:59456;"/>
+			<img class="leftfoot" style="top:59392px; left:1872px; z-index:59456;"/>
+			<p class="exp_text" style="top:59702px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:59648px; left:2000px; z-index:59712;"/>
+			<img class="rightfoot" style="top:59648px; left:2000px; z-index:59712;"/>
+			<p class="exp_text" style="top:59958px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:59904px; left:1744px; z-index:59968;"/>
+			<img class="leftfoot" style="top:59904px; left:1744px; z-index:59968;"/>
+			<p class="exp_text" style="top:60470px; left:1594px; width:50px;">134.823886299</p>
+			<p class="exp_text" style="top:60470px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:60416px; left:2128px; z-index:60480;"/>
+			<img class="rightfoot" style="top:60416px; left:2128px; z-index:60480;"/>
+			<p class="exp_text" style="top:60982px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:60928px; left:1744px; z-index:60992;"/>
+			<img class="leftfoot" style="top:60928px; left:1744px; z-index:60992;"/>
+			<p class="exp_text" style="top:61494px; left:1594px; width:50px;">134.899668372</p>
+			<p class="exp_text" style="top:61494px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:61440px; left:2000px; z-index:61504;"/>
+			<img class="rightfoot" style="top:61440px; left:2000px; z-index:61504;"/>
+			<p class="exp_text" style="top:61750px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:61696px; left:1872px; z-index:61760;"/>
+			<img class="leftfoot" style="top:61696px; left:1872px; z-index:61760;"/>
+			<p class="exp_text" style="top:62006px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:61952px; left:2000px; z-index:62016;"/>
+			<img class="rightfoot" style="top:61952px; left:2000px; z-index:62016;"/>
+			<p class="exp_text" style="top:62262px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter" style="top:62208px; left:1872px; z-index:62272;"/>
+			<img class="leftfoot" style="top:62208px; left:1872px; z-index:62272;"/>
+			<p class="exp_text" style="top:62518px; left:1594px; width:50px;">134.975535684</p>
+			<p class="exp_text" style="top:62518px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:62464px; left:2000px; z-index:62528;"/>
+			<img class="rightfoot" style="top:62464px; left:2000px; z-index:62528;"/>
+			<p class="exp_text" style="top:63030px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:62976px; left:1744px; z-index:63040;"/>
+			<img class="leftfoot" style="top:62976px; left:1744px; z-index:63040;"/>
+			<p class="exp_text" style="top:63286px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:63232px; left:2128px; z-index:63296;"/>
+			<img class="rightfoot" style="top:63232px; left:2128px; z-index:63296;"/>
+			<p class="exp_text" style="top:63542px; left:1594px; width:50px;">135.05148838</p>
+			<p class="exp_text" style="top:63542px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:63488px; left:1744px; z-index:63552;"/>
+			<img class="leftfoot" style="top:63488px; left:1744px; z-index:63552;"/>
+			<p class="exp_text" style="top:63798px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:63744px; left:2128px; z-index:63808;"/>
+			<img class="rightfoot" style="top:63744px; left:2128px; z-index:63808;"/>
+			<p class="exp_text" style="top:64310px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:64256px; left:1872px; z-index:64320;"/>
+			<img class="leftfoot" style="top:64256px; left:1872px; z-index:64320;"/>
+			<p class="exp_text" style="top:64566px; left:1594px; width:50px;">135.15035477</p>
+			<p class="exp_text" style="top:65590px; left:1594px; width:50px;">135.241744619</p>
+			<div id="holdbody" style="top:64320px; left:1872px; height:1280px; z-index:64319;"></div>
+			<img class="holdcap" style="top:65600px; left:1872px; z-index:64319;"/>
+			<p class="exp_text" style="top:66102px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:66048px; left:2128px; z-index:66112;"/>
+			<img class="rightfoot" style="top:66048px; left:2128px; z-index:66112;"/>
+			<p class="exp_text" style="top:66358px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:66304px; left:1744px; z-index:66368;"/>
+			<img class="leftfoot" style="top:66304px; left:1744px; z-index:66368;"/>
+			<p class="exp_text" style="top:66614px; left:1594px; width:50px;">135.333258148</p>
+			<p class="exp_text" style="top:67126px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:67072px; left:2000px; z-index:67136;"/>
+			<img class="rightfoot" style="top:67072px; left:2000px; z-index:67136;"/>
+			<p class="exp_text" style="top:67638px; left:1594px; width:50px;">135.440180587</p>
+			<p class="exp_text" style="top:67638px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:67584px; left:1872px; z-index:67648;"/>
+			<img class="leftfoot" style="top:67584px; left:1872px; z-index:67648;"/>
+			<p class="exp_text" style="top:67894px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:67840px; left:2128px; z-index:67904;"/>
+			<img class="rightfoot" style="top:67840px; left:2128px; z-index:67904;"/>
+			<p class="exp_text" style="top:68662px; left:1594px; width:50px;">135.554927986</p>
+			<p class="exp_text" style="top:68662px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:68608px; left:1744px; z-index:68672;"/>
+			<img class="leftfoot" style="top:68608px; left:1744px; z-index:68672;"/>
+			<p class="exp_text" style="top:68918px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:68864px; left:2000px; z-index:68928;"/>
+			<img class="rightfoot" style="top:68864px; left:2000px; z-index:68928;"/>
+			<p class="exp_text" style="top:69174px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:69120px; left:1744px; z-index:69184;"/>
+			<img class="leftfoot" style="top:69120px; left:1744px; z-index:69184;"/>
+			<p class="exp_text" style="top:69430px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:69376px; left:2000px; z-index:69440;"/>
+			<img class="rightfoot" style="top:69376px; left:2000px; z-index:69440;"/>
+			<p class="exp_text" style="top:69686px; left:1594px; width:50px;">135.662201119</p>
+			<p class="exp_text" style="top:69686px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:69632px; left:1744px; z-index:69696;"/>
+			<img class="leftfoot" style="top:69632px; left:1744px; z-index:69696;"/>
+			<p class="exp_text" style="top:69942px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter up" style="top:69888px; left:2000px; z-index:69952;"/>
+			<img class="rightfoot" style="top:69888px; left:2000px; z-index:69952;"/>
+			<p class="exp_text" style="top:70198px; left:2768px; width:256px;">Same Arrow</p>
+			<img class="quarter left" style="top:70144px; left:1744px; z-index:70208;"/>
+			<img class="leftfoot" style="top:70144px; left:1744px; z-index:70208;"/>
+			<p class="exp_text" style="top:70454px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter right" style="top:70400px; left:2128px; z-index:70464;"/>
+			<img class="rightfoot" style="top:70400px; left:2128px; z-index:70464;"/>
+			<p class="exp_text" style="top:70710px; left:1594px; width:50px;">135.792689827</p>
+			<div id="holdbody" style="top:70464px; left:2128px; height:256px; z-index:70463;"></div>
+			<img class="holdcap" style="top:70720px; left:2128px; z-index:70463;"/>
+			<p class="exp_text" style="top:70966px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter" style="top:70912px; left:1872px; z-index:70976;"/>
+			<img class="leftfoot" style="top:70912px; left:1872px; z-index:70976;"/>
+			<div id="holdbody" style="top:70976px; left:1872px; height:256px; z-index:70975;"></div>
+			<img class="holdcap" style="top:71232px; left:1872px; z-index:70975;"/>
+			<p class="exp_text" style="top:71478px; left:3024px; width:256px;">Same Arrow</p>
+			<img class="quarter right" style="top:71424px; left:2128px; z-index:71488;"/>
+			<img class="rightfoot" style="top:71424px; left:2128px; z-index:71488;"/>
+			<p class="exp_text" style="top:71734px; left:1594px; width:50px;">135.792689827</p>
+			<div id="holdbody" style="top:71488px; left:2128px; height:256px; z-index:71487;"></div>
+			<img class="holdcap" style="top:71744px; left:2128px; z-index:71487;"/>
+			<p class="exp_text" style="top:71990px; left:2768px; width:256px;">New Arrow</p>
+			<img class="quarter left" style="top:71936px; left:1744px; z-index:72000;"/>
+			<img class="leftfoot" style="top:71936px; left:1744px; z-index:72000;"/>
+			<p class="exp_text" style="top:72246px; left:3024px; width:256px;">New Arrow</p>
+			<img class="quarter up" style="top:72192px; left:2000px; z-index:72256;"/>
+			<img class="rightfoot" style="top:72192px; left:2000px; z-index:72256;"/>
+			<p class="exp_text" style="top:54px; left:1694px; width:50px;">0</p>
+			<div class="m_mark" style="top:63px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:319px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:575px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:831px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:1078px; left:1694px; width:50px;">1</p>
+			<div class="m_mark" style="top:1087px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:1343px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:1599px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:1855px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:2102px; left:1694px; width:50px;">2</p>
+			<div class="m_mark" style="top:2111px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:2367px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:2623px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:2879px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:3126px; left:1694px; width:50px;">3</p>
+			<div class="m_mark" style="top:3135px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:3391px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:3647px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:3903px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:4150px; left:1694px; width:50px;">4</p>
+			<div class="m_mark" style="top:4159px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:4415px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:4671px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:4927px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:5174px; left:1694px; width:50px;">5</p>
+			<div class="m_mark" style="top:5183px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:5439px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:5695px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:5951px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:6198px; left:1694px; width:50px;">6</p>
+			<div class="m_mark" style="top:6207px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:6463px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:6719px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:6975px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:7222px; left:1694px; width:50px;">7</p>
+			<div class="m_mark" style="top:7231px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:7487px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:7743px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:7999px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:8246px; left:1694px; width:50px;">8</p>
+			<div class="m_mark" style="top:8255px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:8511px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:8767px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:9023px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:9270px; left:1694px; width:50px;">9</p>
+			<div class="m_mark" style="top:9279px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:9535px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:9791px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:10047px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:10294px; left:1694px; width:50px;">10</p>
+			<div class="m_mark" style="top:10303px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:10559px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:10815px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:11071px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:11318px; left:1694px; width:50px;">11</p>
+			<div class="m_mark" style="top:11327px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:11583px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:11839px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:12095px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:12342px; left:1694px; width:50px;">12</p>
+			<div class="m_mark" style="top:12351px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:12607px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:12863px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:13119px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:13366px; left:1694px; width:50px;">13</p>
+			<div class="m_mark" style="top:13375px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:13631px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:13887px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:14143px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:14390px; left:1694px; width:50px;">14</p>
+			<div class="m_mark" style="top:14399px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:14655px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:14911px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:15167px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:15414px; left:1694px; width:50px;">15</p>
+			<div class="m_mark" style="top:15423px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:15679px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:15935px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:16191px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:16438px; left:1694px; width:50px;">16</p>
+			<div class="m_mark" style="top:16447px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:16703px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:16959px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:17215px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:17462px; left:1694px; width:50px;">17</p>
+			<div class="m_mark" style="top:17471px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:17727px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:17983px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:18239px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:18486px; left:1694px; width:50px;">18</p>
+			<div class="m_mark" style="top:18495px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:18751px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:19007px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:19263px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:19510px; left:1694px; width:50px;">19</p>
+			<div class="m_mark" style="top:19519px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:19775px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:20031px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:20287px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:20534px; left:1694px; width:50px;">20</p>
+			<div class="m_mark" style="top:20543px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:20799px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:21055px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:21311px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:21558px; left:1694px; width:50px;">21</p>
+			<div class="m_mark" style="top:21567px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:21823px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:22079px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:22335px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:22582px; left:1694px; width:50px;">22</p>
+			<div class="m_mark" style="top:22591px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:22847px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:23103px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:23359px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:23606px; left:1694px; width:50px;">23</p>
+			<div class="m_mark" style="top:23615px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:23871px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:24127px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:24383px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:24630px; left:1694px; width:50px;">24</p>
+			<div class="m_mark" style="top:24639px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:24895px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:25151px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:25407px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:25654px; left:1694px; width:50px;">25</p>
+			<div class="m_mark" style="top:25663px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:25919px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:26175px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:26431px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:26678px; left:1694px; width:50px;">26</p>
+			<div class="m_mark" style="top:26687px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:26943px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:27199px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:27455px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:27702px; left:1694px; width:50px;">27</p>
+			<div class="m_mark" style="top:27711px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:27967px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:28223px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:28479px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:28726px; left:1694px; width:50px;">28</p>
+			<div class="m_mark" style="top:28735px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:28991px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:29247px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:29503px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:29750px; left:1694px; width:50px;">29</p>
+			<div class="m_mark" style="top:29759px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:30015px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:30271px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:30527px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:30774px; left:1694px; width:50px;">30</p>
+			<div class="m_mark" style="top:30783px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:31039px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:31295px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:31551px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:31798px; left:1694px; width:50px;">31</p>
+			<div class="m_mark" style="top:31807px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:32063px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:32319px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:32575px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:32822px; left:1694px; width:50px;">32</p>
+			<div class="m_mark" style="top:32831px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:33087px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:33343px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:33599px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:33846px; left:1694px; width:50px;">33</p>
+			<div class="m_mark" style="top:33855px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:34111px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:34367px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:34623px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:34870px; left:1694px; width:50px;">34</p>
+			<div class="m_mark" style="top:34879px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:35135px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:35391px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:35647px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:35894px; left:1694px; width:50px;">35</p>
+			<div class="m_mark" style="top:35903px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:36159px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:36415px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:36671px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:36918px; left:1694px; width:50px;">36</p>
+			<div class="m_mark" style="top:36927px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:37183px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:37439px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:37695px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:37942px; left:1694px; width:50px;">37</p>
+			<div class="m_mark" style="top:37951px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:38207px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:38463px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:38719px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:38966px; left:1694px; width:50px;">38</p>
+			<div class="m_mark" style="top:38975px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:39231px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:39487px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:39743px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:39990px; left:1694px; width:50px;">39</p>
+			<div class="m_mark" style="top:39999px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:40255px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:40511px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:40767px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:41014px; left:1694px; width:50px;">40</p>
+			<div class="m_mark" style="top:41023px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:41279px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:41535px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:41791px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:42038px; left:1694px; width:50px;">41</p>
+			<div class="m_mark" style="top:42047px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:42303px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:42559px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:42815px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:43062px; left:1694px; width:50px;">42</p>
+			<div class="m_mark" style="top:43071px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:43327px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:43583px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:43839px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:44086px; left:1694px; width:50px;">43</p>
+			<div class="m_mark" style="top:44095px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:44351px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:44607px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:44863px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:45110px; left:1694px; width:50px;">44</p>
+			<div class="m_mark" style="top:45119px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:45375px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:45631px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:45887px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:46134px; left:1694px; width:50px;">45</p>
+			<div class="m_mark" style="top:46143px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:46399px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:46655px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:46911px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:47158px; left:1694px; width:50px;">46</p>
+			<div class="m_mark" style="top:47167px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:47423px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:47679px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:47935px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:48182px; left:1694px; width:50px;">47</p>
+			<div class="m_mark" style="top:48191px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:48447px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:48703px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:48959px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:49206px; left:1694px; width:50px;">48</p>
+			<div class="m_mark" style="top:49215px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:49471px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:49727px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:49983px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:50230px; left:1694px; width:50px;">49</p>
+			<div class="m_mark" style="top:50239px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:50495px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:50751px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:51007px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:51254px; left:1694px; width:50px;">50</p>
+			<div class="m_mark" style="top:51263px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:51519px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:51775px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:52031px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:52278px; left:1694px; width:50px;">51</p>
+			<div class="m_mark" style="top:52287px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:52543px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:52799px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:53055px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:53302px; left:1694px; width:50px;">52</p>
+			<div class="m_mark" style="top:53311px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:53567px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:53823px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:54079px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:54326px; left:1694px; width:50px;">53</p>
+			<div class="m_mark" style="top:54335px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:54591px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:54847px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:55103px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:55350px; left:1694px; width:50px;">54</p>
+			<div class="m_mark" style="top:55359px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:55615px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:55871px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:56127px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:56374px; left:1694px; width:50px;">55</p>
+			<div class="m_mark" style="top:56383px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:56639px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:56895px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:57151px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:57398px; left:1694px; width:50px;">56</p>
+			<div class="m_mark" style="top:57407px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:57663px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:57919px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:58175px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:58422px; left:1694px; width:50px;">57</p>
+			<div class="m_mark" style="top:58431px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:58687px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:58943px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:59199px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:59446px; left:1694px; width:50px;">58</p>
+			<div class="m_mark" style="top:59455px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:59711px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:59967px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:60223px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:60470px; left:1694px; width:50px;">59</p>
+			<div class="m_mark" style="top:60479px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:60735px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:60991px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:61247px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:61494px; left:1694px; width:50px;">60</p>
+			<div class="m_mark" style="top:61503px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:61759px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:62015px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:62271px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:62518px; left:1694px; width:50px;">61</p>
+			<div class="m_mark" style="top:62527px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:62783px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:63039px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:63295px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:63542px; left:1694px; width:50px;">62</p>
+			<div class="m_mark" style="top:63551px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:63807px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:64063px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:64319px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:64566px; left:1694px; width:50px;">63</p>
+			<div class="m_mark" style="top:64575px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:64831px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:65087px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:65343px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:65590px; left:1694px; width:50px;">64</p>
+			<div class="m_mark" style="top:65599px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:65855px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:66111px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:66367px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:66614px; left:1694px; width:50px;">65</p>
+			<div class="m_mark" style="top:66623px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:66879px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:67135px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:67391px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:67638px; left:1694px; width:50px;">66</p>
+			<div class="m_mark" style="top:67647px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:67903px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:68159px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:68415px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:68662px; left:1694px; width:50px;">67</p>
+			<div class="m_mark" style="top:68671px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:68927px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:69183px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:69439px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:69686px; left:1694px; width:50px;">68</p>
+			<div class="m_mark" style="top:69695px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:69951px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:70207px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:70463px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:70710px; left:1694px; width:50px;">69</p>
+			<div class="m_mark" style="top:70719px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:70975px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:71231px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:71487px; left:1744px; width:1024px;"></div>
+			<p class="exp_text" style="top:71734px; left:1694px; width:50px;">70</p>
+			<div class="m_mark" style="top:71743px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:71999px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:72255px; left:1744px; width:1024px;"></div>
+			<div class="b_mark" style="top:72511px; left:1744px; width:1024px;"></div>
+		</div>
+		<script>
+			window.onscroll = function() { updateSticky() };
+			var chartHeaders = document.getElementById("chartHeaders");
+			function updateSticky()
+			{
+				if (window.pageYOffset >= 164)
+				{
+					chartHeaders.style.position = "fixed";
+				}
+				else
+				{
+					chartHeaders.style.position = "static";
+				}
+				chartHeaders.style.top = "0px";
+				chartHeaders.style.left = `${-window.pageXOffset}px`;
+			}
+		</script>
+	</body>
+</html>

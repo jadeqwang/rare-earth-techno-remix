@@ -1,0 +1,211 @@
+{
+  "timing_preserved_exactly": true,
+  "bpm_segments": 71,
+  "charts": [
+    {
+      "type": "dance-double",
+      "difficulty": "Beginner",
+      "step_rows": 113,
+      "holds": 10,
+      "jumps": 0,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 1,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 46,
+        "NewArrow": 67
+      },
+      "official_orientations": {
+        "Normal": 113
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 1.598794372698956,
+      "full_pad_transitions": 2,
+      "full_pad_transition_beats": [
+        106.0,
+        228.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations/2026-10-05 21-51-41/model-singles.sm.Beginner.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Easy",
+      "step_rows": 175,
+      "holds": 42,
+      "jumps": 2,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 46,
+        "NewArrow": 131
+      },
+      "official_orientations": {
+        "Normal": 175
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 2.2540290769832976,
+      "full_pad_transitions": 8,
+      "full_pad_transition_beats": [
+        60.0,
+        78.0,
+        96.0,
+        116.0,
+        169.0,
+        218.0,
+        249.0,
+        265.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations/2026-10-05 21-51-41/model-singles.sm.Easy.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Medium",
+      "step_rows": 245,
+      "holds": 9,
+      "jumps": 12,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 119,
+        "NewArrow": 138
+      },
+      "official_orientations": {
+        "Normal": 245
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.0,
+      "max_foot_speed_panel_centers_per_second": 3.2006643937410835,
+      "full_pad_transitions": 8,
+      "full_pad_transition_beats": [
+        28.0,
+        40.0,
+        51.0,
+        71.0,
+        102.0,
+        169.0,
+        208.0,
+        247.0
+      ],
+      "sixteenth_burst_beats": 0,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations/2026-10-05 21-51-41/model-singles.sm.Medium.footwork.json"
+    },
+    {
+      "type": "dance-double",
+      "difficulty": "Hard",
+      "step_rows": 419,
+      "holds": 0,
+      "jumps": 1,
+      "all_notes_preserved": true,
+      "complete_hold_pairs": true,
+      "max_simultaneous_feet": 2,
+      "used_panels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "official_step_types": {
+        "SameArrow": 122,
+        "NewArrow": 298
+      },
+      "official_orientations": {
+        "Normal": 419
+      },
+      "bracket_beats": [],
+      "crossover_beats": [],
+      "inverted_beats": [],
+      "footswap_beats": [],
+      "max_stance_panel_centers": 2.23606797749979,
+      "max_foot_travel_panel_centers": 2.23606797749979,
+      "max_foot_speed_panel_centers_per_second": 6.401328787482167,
+      "full_pad_transitions": 27,
+      "full_pad_transition_beats": [
+        17.5,
+        27.5,
+        35.0,
+        40.5,
+        47.0,
+        55.0,
+        70.0,
+        87.0,
+        100.0,
+        111.5,
+        120.5,
+        127.5,
+        138.0,
+        162.0,
+        177.0,
+        193.5,
+        200.0,
+        207.0,
+        213.0,
+        219.0,
+        226.0,
+        238.0,
+        245.5,
+        263.0,
+        270.5,
+        274.0,
+        282.0
+      ],
+      "sixteenth_burst_beats": 5,
+      "sixteenth_cross_pad_beats": [],
+      "footwork_source": "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/selected-model-doubles/review/visualizations/2026-10-05 21-51-41/model-singles.sm.Hard.footwork.json"
+    }
+  ]
+}

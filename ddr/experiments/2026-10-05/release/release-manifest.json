@@ -1,0 +1,126 @@
+{
+  "preview-validation.json": {
+    "bytes": 5106,
+    "sha256": "c1d31d3ef23fe7ece2a84c0d894dc42ec85adeba6fc58efb73d2044a028475a2"
+  },
+  "chart-summary.json": {
+    "bytes": 2954,
+    "sha256": "067bdb76a050e310af3646e5ec5650889cd642a45e9e3dd9351c1dbaf3b40f6f"
+  },
+  "original-preservation.json": {
+    "bytes": 169,
+    "sha256": "60ff9107eadb1edc96b3c52c403248846d482ee0992079a011527594b4131617"
+  },
+  "validation.json": {
+    "bytes": 375503,
+    "sha256": "5ec30a5733cf22babfac2fe4abb6cc1125fe8306fc78a6d491fcec07d7a08689"
+  },
+  "Rare_Earth_Model_Edition_Step_Pack.zip": {
+    "bytes": 3413338,
+    "sha256": "618cd894e923a0b9890554695b18d22c3c8e15556e55ea3ba1abedad487a16d6"
+  },
+  "preview/Rare_Earth_Model_Edition_double_preview.mp4": {
+    "bytes": 7807244,
+    "sha256": "cbf5f461abb49577f28cf7252cf36aa313bcd5375a33b8fe5cc4f774f60b4c67"
+  },
+  "preview/hit-qa-double-02.png": {
+    "bytes": 170373,
+    "sha256": "3425d7c78cfd83a11983d2959eeac51c4d00d91ca7859d5233ce68d2afa856d0"
+  },
+  "preview/encode-double.log": {
+    "bytes": 16336,
+    "sha256": "c7402ca1af900ea830a2f50e73be675a2af06d4e2f4bdd8172d6df14b0dceb77"
+  },
+  "preview/single-18.8s.png": {
+    "bytes": 53545,
+    "sha256": "ac6fbe2465f5d697704a62508f0d2381385e37d7c9aea6139b65324ff73d1586"
+  },
+  "preview/hit-qa-single-04.png": {
+    "bytes": 161190,
+    "sha256": "0345d985c5f1d8c6ba76ea50ac329287324f3b8eb44e448d5439a4e65c35ea24"
+  },
+  "preview/double-54.9s.png": {
+    "bytes": 49925,
+    "sha256": "349f02a9713c6f93125a3c67342e4d6de6b2a81005333b8ef313fed2119a6ea9"
+  },
+  "preview/hit-qa-single-02.png": {
+    "bytes": 155650,
+    "sha256": "35ea1366f0c3e17376d5d1a5d65db3bf422ffd3df72da6a6dfeac311f99bcb76"
+  },
+  "preview/hit-qa-single-03.png": {
+    "bytes": 160337,
+    "sha256": "9b99bad545e590b5debe43f72419ea31ead0e9def61db93c827b02eb20124ecd"
+  },
+  "preview/Rare_Earth_Model_Edition_single_preview.mp4": {
+    "bytes": 7601966,
+    "sha256": "39e7021e4e3d2aa6297ad5462273f19357ae86c77ec491d7717bff448811bde0"
+  },
+  "preview/hit-qa-single-01.png": {
+    "bytes": 159485,
+    "sha256": "62f81a466f26a5e90a8a43c992600931b6d9a446e6fff6ff8b138f4f0ff1c1b7"
+  },
+  "preview/hit-qa-double-04.png": {
+    "bytes": 164695,
+    "sha256": "67b077e7a61c23eaa969947e61cbff94d3f1f324ca6174a762324bcaa0f7b43f"
+  },
+  "preview/hit-qa-double-03.png": {
+    "bytes": 162770,
+    "sha256": "c6683ad1da6611823eca7bdf8c7054c075932bc0f17608f845128bf03ea9a965"
+  },
+  "preview/single-54.9s.png": {
+    "bytes": 51686,
+    "sha256": "6be9fa7e6aac078bbf88dd6eb8ed51356ab407727a9d3d68aa6ec150c7e7bb9c"
+  },
+  "preview/encode-single.log": {
+    "bytes": 15444,
+    "sha256": "0d5b2429fbd52ec8ab41caf52f7ce12b4958c3beeea088efb21bd5d4087a9389"
+  },
+  "preview/double-112.5s.png": {
+    "bytes": 50144,
+    "sha256": "3c0e4318ca9a44840c398250ca68d16b20995e3c556f44b4f77fc32d902fbadf"
+  },
+  "preview/hit-qa-double-01.png": {
+    "bytes": 173703,
+    "sha256": "d08a393366be24f1070edf8e36e2cfb4808c3f8a871d0bcd721b28a2dd6fd5fe"
+  },
+  "preview/single-112.5s.png": {
+    "bytes": 54657,
+    "sha256": "fcdc2f1369638551966d6787a2a725bb7d7e757cb75eda2c738e7465b2d6aa24"
+  },
+  "preview/double-18.8s.png": {
+    "bytes": 51305,
+    "sha256": "2383671f9d6bbf74f7eb7bc4cc2b69f7a7b26a7ea36e029327307f66bcd7633f"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/banner.png": {
+    "bytes": 8061,
+    "sha256": "87510922885ec166f6528675f13e4641e462674facd89a0250ff444e2bb9f23d"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/Rare Earth (Techno Remix - Model Edition).ssc": {
+    "bytes": 718423,
+    "sha256": "c9f2f9999ef8c66fb9f29401b3becd69133e5bebd32825cf2c70a2a72a8e56da"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/README.txt": {
+    "bytes": 1818,
+    "sha256": "be283ddaca8a56f4e41e2c7e9fd5b7541429e9dde07daccd63d6961766f83ff8"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/Rare_Earth_DDR.mp3": {
+    "bytes": 2907868,
+    "sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/MODEL_PROVENANCE.json": {
+    "bytes": 6218,
+    "sha256": "a48dbd46d258e937bddfbb8ee7b20202dcf2ab6859931ed0548dea206cb2f986"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/jacket.png": {
+    "bytes": 13301,
+    "sha256": "9cb5a63d2058f6c7691ead5fa413f1ed54b01325f213344d3d9781f8098bc927"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/Rare Earth (Techno Remix - Model Edition).sm": {
+    "bytes": 717211,
+    "sha256": "0ed4efe77f572dfef6f93ab5654fcb30847280e15ab3cf5831d1feda49d79e5b"
+  },
+  "Songs/Rare Earth Model Pack/Rare Earth (Techno Remix - Model Edition)/background.jpg": {
+    "bytes": 474821,
+    "sha256": "9a1b6cc9aefa5dcd9ebe90be87477490ad1c5cab6dd597a092fab45110cda0c6"
+  }
+}

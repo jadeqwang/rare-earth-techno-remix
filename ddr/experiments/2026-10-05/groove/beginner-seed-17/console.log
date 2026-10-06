@@ -1,0 +1,20 @@
+2026-10-05 21:50:18.458 [INFO] [Main] Initializing directory for outputting visualizations: /home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/beginner-seed-17/review/visualizations/2026-10-05 21-50-18.
+2026-10-05 21:50:18.460 [INFO] [Main] Loading PadData from dance-single.json.
+2026-10-05 21:50:18.464 [INFO] [Main] Loading PadData from dance-double.json.
+2026-10-05 21:50:18.467 [INFO] [Main] Finished loading dance-single PadData.
+2026-10-05 21:50:18.467 [INFO] [Main] Finished loading dance-double PadData.
+2026-10-05 21:50:18.467 [INFO] [Main] Loading StepGraphs.
+2026-10-05 21:50:18.467 [INFO] [Main] Loading StepGraph from dance-single.fsg.
+2026-10-05 21:50:18.468 [INFO] [Main] Loading StepGraph from dance-double.fsg.
+2026-10-05 21:50:18.492 [INFO] [Main] Finished loading dance-single StepGraph.
+2026-10-05 21:50:18.664 [INFO] [Main] Finished loading dance-double StepGraph.
+2026-10-05 21:50:18.718 [INFO] [Main] Finished creating StepGraphs.
+2026-10-05 21:50:18.720 [INFO] [Main] Searching for songs in "/home/jade/Documents/rare-earth-techno-remix/ddr/experiments/2026-10-05/groove/beginner-seed-17/input"...
+2026-10-05 21:50:18.725 [INFO] [Main] Found 1 songs to process.
+2026-10-05 21:50:18.726 [INFO] [Main] [/beginner-seed-17.sm] Loading Song.
+2026-10-05 21:50:18.772 [INFO] [Main] [/beginner-seed-17.sm "Rare Earth"] Processing Song.
+2026-10-05 21:50:18.860 [INFO] [Main] [/beginner-seed-17.sm "Rare Earth" dance-double Beginner] Generated new dance-double Beginner Chart from dance-single Beginner Chart using ExpressedChartConfig "NoBrackets" (BracketParsingMethod NoBrackets) and PerformedChartConfig "ClassicLow".
+2026-10-05 21:50:18.866 [INFO] [Main] [/beginner-seed-17.sm "Rare Earth"] Generated 1 new dance-double Charts (replaced 0).
+2026-10-05 21:50:18.939 [INFO] [Main] Progress: 1/1 songs (100.00%). 0.07/0.07 MB (100.00%).
+2026-10-05 21:50:19.040 [INFO] [Main] Processed 1 songs and created 1 charts in 00:00:00.3144376.
+2026-10-05 21:50:19.040 [INFO] [Main] Done.
