@@ -1,8 +1,37 @@
-# RARE EARTH — music video
+# RARE EARTH — music video and DDR steps
 
 A music video for **"Rare Earth"** (DDR / techno version), a song about hoping to find intelligent
 life, written by Jade Q Wang and Charlie van Norman (Robot Ninja Apocalypse) for the SETI crowdfunding
 campaign in 2011.
+
+## Play Rare Earth in StepMania
+
+**[Download the DDR step pack (ZIP)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/Rare_Earth_DDR_Step_Pack.zip)**
+
+Eight charts for **StepMania 3.9 and StepMania 5**: Beginner, Easy, Standard,
+and Heavy for both four-panel single and eight-panel double. The ZIP includes
+the song, `.sm` and `.ssc` files, and artwork.
+
+| Difficulty | Single meter | Double meter |
+|---|---:|---:|
+| Beginner | 3 | 3 |
+| Easy | 4 | 5 |
+| Standard | 6 | 7 |
+| Heavy | 9 | 10 |
+
+**Watch the steps:** [Single preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_single_preview.mp4)
+· [Double preview](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/ddr/preview/Rare_Earth_DDR_double_preview.mp4).
+Each 60 fps preview shows all four levels. Tap arrows disappear when they reach the
+press point; holds remain until release.
+
+To install, extract the ZIP into StepMania's `Songs` folder, then reload songs
+or restart the game. Look for **Rare Earth Pack**. To update an existing copy,
+replace its song folder and reload the song cache.
+
+Meters use the classic DDR scale and remain provisional until pad playtesting.
+See the [installation details, chart descriptions, and validation](ddr/README.md).
+
+## Music video
 
 **▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09). DOT has the
 v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world

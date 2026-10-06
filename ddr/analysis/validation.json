@@ -1,0 +1,570 @@
+{
+  "status": "passed",
+  "parser": "simfile 2.1.1 (strict)",
+  "equivalent_sm_ssc": true,
+  "charts": 8,
+  "levels_per_mode": 4,
+  "original_charts_preserved": [
+    "Beginner Single",
+    "Standard Single",
+    "Heavy Single",
+    "Standard Double"
+  ],
+  "serialized_timing_max_error_ms": 0.0,
+  "original_audio_sha256": "b583f6ef4745c22344ea36abb63292ad582918151e2c2c037aeb1970183016ec",
+  "audio_unchanged": true,
+  "bpm_range": [
+    129.143,
+    135.793
+  ],
+  "duration_s": 127.96,
+  "limitations": "Programmatic file/timing/two-foot review. Difficulty meters are provisional; no physical pad playtest or game-engine launch was performed.",
+  "chart_summary": [
+    {
+      "name": "Beginner Single",
+      "type": "dance-single",
+      "difficulty": "Beginner",
+      "meter": 3,
+      "step_rows": 132,
+      "arrow_presses": 132,
+      "jumps": 0,
+      "holds": 13,
+      "mines": 0,
+      "max_simultaneous_feet": 1,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.5296,
+      "peak_2s_note_rows_per_second": 2.5,
+      "max_same_foot_travel_panel_units": 2.0,
+      "max_same_foot_speed_panel_units_per_second": 1.598,
+      "fractional_beat_positions": [
+        0.0
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          39.0,
+          2
+        ],
+        [
+          80.0,
+          83.0,
+          2
+        ],
+        [
+          88.0,
+          89.5,
+          3
+        ],
+        [
+          92.0,
+          93.5,
+          3
+        ],
+        [
+          96.0,
+          99.0,
+          3
+        ],
+        [
+          100.0,
+          103.0,
+          0
+        ],
+        [
+          152.0,
+          153.5,
+          1
+        ],
+        [
+          160.0,
+          163.0,
+          1
+        ],
+        [
+          196.0,
+          199.0,
+          0
+        ],
+        [
+          232.0,
+          233.5,
+          3
+        ],
+        [
+          240.0,
+          243.0,
+          1
+        ],
+        [
+          276.0,
+          277.5,
+          1
+        ],
+        [
+          280.0,
+          283.0,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "Easy Single",
+      "type": "dance-single",
+      "difficulty": "Easy",
+      "meter": 4,
+      "step_rows": 226,
+      "arrow_presses": 230,
+      "jumps": 4,
+      "holds": 8,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 2.5,
+      "max_same_foot_travel_panel_units": 2.0,
+      "max_same_foot_speed_panel_units_per_second": 3.183,
+      "fractional_beat_positions": [
+        0.0
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          38.5,
+          1
+        ],
+        [
+          80.0,
+          82.5,
+          2
+        ],
+        [
+          88.0,
+          90.5,
+          2
+        ],
+        [
+          92.0,
+          93.5,
+          3
+        ],
+        [
+          160.0,
+          162.5,
+          1
+        ],
+        [
+          240.0,
+          242.5,
+          0
+        ],
+        [
+          276.0,
+          277.5,
+          0
+        ],
+        [
+          280.0,
+          281.5,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "Standard Single",
+      "type": "dance-single",
+      "difficulty": "Medium",
+      "meter": 6,
+      "step_rows": 338,
+      "arrow_presses": 348,
+      "jumps": 10,
+      "holds": 7,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 5.0,
+      "max_same_foot_travel_panel_units": 2.0,
+      "max_same_foot_speed_panel_units_per_second": 6.395,
+      "fractional_beat_positions": [
+        0.0,
+        0.5
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          38.5,
+          0
+        ],
+        [
+          80.0,
+          82.5,
+          1
+        ],
+        [
+          88.0,
+          90.5,
+          0
+        ],
+        [
+          92.0,
+          93.5,
+          1
+        ],
+        [
+          160.0,
+          162.5,
+          3
+        ],
+        [
+          240.0,
+          242.5,
+          3
+        ],
+        [
+          276.0,
+          277.5,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "Heavy Single",
+      "type": "dance-single",
+      "difficulty": "Hard",
+      "meter": 9,
+      "step_rows": 490,
+      "arrow_presses": 505,
+      "jumps": 15,
+      "holds": 1,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 6.0,
+      "max_same_foot_travel_panel_units": 2.0,
+      "max_same_foot_speed_panel_units_per_second": 8.971,
+      "fractional_beat_positions": [
+        0.0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          88.0,
+          89.5,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "Beginner Double",
+      "type": "dance-double",
+      "difficulty": "Beginner",
+      "meter": 3,
+      "step_rows": 132,
+      "arrow_presses": 132,
+      "jumps": 0,
+      "holds": 13,
+      "mines": 0,
+      "max_simultaneous_feet": 1,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.5296,
+      "peak_2s_note_rows_per_second": 2.5,
+      "max_same_foot_travel_panel_units": 2.236,
+      "max_same_foot_speed_panel_units_per_second": 1.598,
+      "fractional_beat_positions": [
+        0.0
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          39.0,
+          6
+        ],
+        [
+          80.0,
+          83.0,
+          3
+        ],
+        [
+          88.0,
+          89.5,
+          4
+        ],
+        [
+          92.0,
+          93.5,
+          5
+        ],
+        [
+          96.0,
+          99.0,
+          7
+        ],
+        [
+          100.0,
+          103.0,
+          4
+        ],
+        [
+          152.0,
+          153.5,
+          3
+        ],
+        [
+          160.0,
+          163.0,
+          5
+        ],
+        [
+          196.0,
+          199.0,
+          0
+        ],
+        [
+          232.0,
+          233.5,
+          7
+        ],
+        [
+          240.0,
+          243.0,
+          5
+        ],
+        [
+          276.0,
+          277.5,
+          1
+        ],
+        [
+          280.0,
+          283.0,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "Easy Double",
+      "type": "dance-double",
+      "difficulty": "Easy",
+      "meter": 5,
+      "step_rows": 226,
+      "arrow_presses": 230,
+      "jumps": 4,
+      "holds": 8,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 2.5,
+      "max_same_foot_travel_panel_units": 2.236,
+      "max_same_foot_speed_panel_units_per_second": 3.157,
+      "fractional_beat_positions": [
+        0.0
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          38.5,
+          3
+        ],
+        [
+          80.0,
+          82.5,
+          2
+        ],
+        [
+          88.0,
+          90.5,
+          6
+        ],
+        [
+          92.0,
+          93.5,
+          7
+        ],
+        [
+          160.0,
+          162.5,
+          3
+        ],
+        [
+          240.0,
+          242.5,
+          3
+        ],
+        [
+          276.0,
+          277.5,
+          4
+        ],
+        [
+          280.0,
+          281.5,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Standard Double",
+      "type": "dance-double",
+      "difficulty": "Medium",
+      "meter": 7,
+      "step_rows": 278,
+      "arrow_presses": 284,
+      "jumps": 6,
+      "holds": 7,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 4.0,
+      "max_same_foot_travel_panel_units": 2.236,
+      "max_same_foot_speed_panel_units_per_second": 6.395,
+      "fractional_beat_positions": [
+        0.0,
+        0.5
+      ],
+      "verified_single_pad_sixteenth_bursts": 0,
+      "hold_pairs": [
+        [
+          36.0,
+          38.5,
+          1
+        ],
+        [
+          80.0,
+          82.5,
+          0
+        ],
+        [
+          88.0,
+          90.5,
+          6
+        ],
+        [
+          92.0,
+          93.5,
+          4
+        ],
+        [
+          160.0,
+          162.5,
+          6
+        ],
+        [
+          240.0,
+          242.5,
+          3
+        ],
+        [
+          276.0,
+          277.5,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "Heavy Double",
+      "type": "dance-double",
+      "difficulty": "Hard",
+      "meter": 10,
+      "step_rows": 490,
+      "arrow_presses": 505,
+      "jumps": 15,
+      "holds": 1,
+      "mines": 0,
+      "max_simultaneous_feet": 2,
+      "used_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_note_s": 3.7745,
+      "last_note_or_tail_s": 127.0878,
+      "peak_2s_note_rows_per_second": 6.0,
+      "max_same_foot_travel_panel_units": 2.236,
+      "max_same_foot_speed_panel_units_per_second": 8.971,
+      "fractional_beat_positions": [
+        0.0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "verified_single_pad_sixteenth_bursts": 10,
+      "hold_pairs": [
+        [
+          88.0,
+          89.5,
+          6
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.zip
+!Rare_Earth_DDR_Step_Pack.zip
+Rare_Earth_DDR_Step_Pack/
+preview/*
+!preview/Rare_Earth_DDR_single_preview.mp4
+!preview/Rare_Earth_DDR_double_preview.mp4
+!preview/hit-timing-review.png
