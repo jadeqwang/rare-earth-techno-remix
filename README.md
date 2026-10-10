@@ -117,6 +117,11 @@ a first draft pending an in-game load test and VR playtest.
 
 ## Music video
 
+**Final video soundtrack:** [Download MP3 (320 kbps)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/audio/Rare_Earth_DDR_video_mix.mp3)
+· [Download M4A (original AAC, copied without re-encoding)](https://github.com/jadeqwang/rare-earth-techno-remix/raw/refs/heads/main/audio/Rare_Earth_DDR_video_mix.m4a).
+Both include the video's intro radio voice, static, pings, and closing beacon, and run about 2:09.6.
+The underlying song is unchanged; [the original MP3](audio/Rare_Earth_DDR.mp3) is also available.
+
 **▶ [`out/rare_earth_1080p.mp4`](out/rare_earth_1080p.mp4)** (1920×1080, 24 fps, 2:09). DOT has the
 v3 hairstyle: centre part, long curtain bangs, long layers. This cut also renames the other world
 **Echo**, ends on its beacon rather than an impossible reply, and gives every shot of Echo its own
